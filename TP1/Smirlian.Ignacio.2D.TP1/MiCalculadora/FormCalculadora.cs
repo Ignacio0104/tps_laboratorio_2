@@ -57,5 +57,20 @@ namespace MiCalculadora
         {
             lblResultado.Text = Operar(txtNumero1.Text, txtNumero2.Text , cmbOperador.Text).ToString();
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnConvertirABinario_Click(object sender, EventArgs e)
+        {
+            lblResultado.Text = Operando.DecimalBinario(lblResultado.Text);
+        }
+
+        private void btnConvertirADecimal_Click(object sender, EventArgs e)
+        {
+            lblResultado.Text = Operando.BinarioDecimal(lblResultado.Text);
+        }
     }
 }

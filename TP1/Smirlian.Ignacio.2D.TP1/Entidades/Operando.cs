@@ -35,7 +35,7 @@ namespace Entidades
 
         }
 
-        private bool EsBinario(string binario)
+        private static bool EsBinario(string binario)
         {
             for (int i = 0; i < binario.Length; i++)
             {
@@ -48,21 +48,22 @@ namespace Entidades
             return true;
         }
 
-        public string DecimalBinario (double numero)
+        public static string DecimalBinario (double numero)
         {
             string numeroBinario = "";
+            int numeroInt = (int)numero;
   
-            while (numero > 0)
+            while (numeroInt > 0)
             {
-                string digito = (numero % 2).ToString();
+                string digito = (numeroInt % 2).ToString();
                 numeroBinario = digito + numeroBinario;
-                numero = Math.Abs(numero) / 2;
+                numeroInt = Math.Abs(numeroInt) / 2;
             }
 
             return numeroBinario;
         }
 
-        public string DecimalBinario(string numero)
+        public static string DecimalBinario(string numero)
         {
             double numeroRevisado = 0;
 
@@ -77,7 +78,7 @@ namespace Entidades
 
         }
 
-        public string BinarioDecimal(string binario)
+        public static string BinarioDecimal(string binario)
         {
             double result = 0;
             if (EsBinario(binario))
