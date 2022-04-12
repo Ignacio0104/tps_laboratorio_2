@@ -20,10 +20,11 @@ namespace MiCalculadora
 
         private void Limpiar()
         {
-            txtNumero1.Text = "";
-            txtNumero2.Text = "";
+            txtNumero1.Clear();
+            txtNumero2.Clear();
             lblResultado.Text = "0";
             cmbOperador.SelectedIndex = 0;
+           // lstOperaciones.Items.Clear();
         }
 
         private static double Operar(string numero1, string numero2,string operador)
@@ -32,7 +33,8 @@ namespace MiCalculadora
             Operando operadorDos = new Operando(numero2);
             double resultado = 0;
 
-            resultado = Calculadora.Operar(operadorUno, operadorDos, char.Parse(operador));
+
+            resultado = Calculadora.Operar(operadorUno, operadorDos, Convert.ToChar(operador));
             return resultado;
         }
 
@@ -44,8 +46,7 @@ namespace MiCalculadora
             cmbOperador.Items.Add('-');
             cmbOperador.Items.Add('/');
             cmbOperador.Items.Add('*');
-            cmbOperador.SelectedIndex = 0;
-
+            Limpiar();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -56,11 +57,17 @@ namespace MiCalculadora
         private void btnOperar_Click(object sender, EventArgs e)
         {
             lblResultado.Text = Operar(txtNumero1.Text, txtNumero2.Text , cmbOperador.Text).ToString();
+            lstOperaciones.Items.Add($"{txtNumero1.Text} {cmbOperador.Text} {txtNumero2.Text} = {lblResultado.Text} ");
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult opcion = MessageBox.Show("¿Esta seguro de que desea salir?", "Salir", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if(opcion == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            
         }
 
         private void btnConvertirABinario_Click(object sender, EventArgs e)
