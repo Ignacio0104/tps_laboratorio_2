@@ -88,8 +88,18 @@ namespace MiCalculadora
         /// <param name="e"></param>
         private void btnOperar_Click(object sender, EventArgs e)
         {
-            lblResultado.Text = Operar(txtNumero1.Text, txtNumero2.Text , cmbOperador.Text).ToString();
-            lstOperaciones.Items.Add($"{txtNumero1.Text} {cmbOperador.Text} {txtNumero2.Text} = {lblResultado.Text} ");
+            double resultado = Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.Text);
+            if (resultado == double.MinValue)
+            {
+                lblResultado.Text = "Operacion invalida";
+            }
+            else
+            {
+                lblResultado.Text = resultado.ToString();
+                lstOperaciones.Items.Add($"{txtNumero1.Text} {(cmbOperador.Text == "" ? "+" : cmbOperador.Text)} {txtNumero2.Text} = {lblResultado.Text} ");
+            }
+
+            
         }
 
         /// <summary>
@@ -129,6 +139,16 @@ namespace MiCalculadora
             lblResultado.Text = Operando.BinarioDecimal(lblResultado.Text);
             lstOperaciones.Items.Add($"{numeroOriginal}b = {lblResultado.Text}d");
             
+        }
+
+        private void FormCalculadora_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult opcion = MessageBox.Show("¿Esta seguro de que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (opcion == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+          
         }
     }
 }
