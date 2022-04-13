@@ -10,6 +10,14 @@ namespace Entidades
     {
         private double numero;
 
+        private string SetNumero
+        {
+            set
+            {
+                this.numero = ValidarOperando(value);
+            }
+        }
+
         public Operando():this(0)
         {
          
@@ -22,9 +30,14 @@ namespace Entidades
 
         public Operando (string numero)
         {
-            this.numero = ValidarOperando(numero);
+            this.SetNumero = numero;
         }
 
+        /// <summary>
+        /// Valida que el input sea efectivamente un numero valido
+        /// </summary>
+        /// <param name="strNumero">recibe el input en formato string</param>
+        /// <returns>Devuelve el string convertido a double o 0 si hubo un error</returns>
         private double ValidarOperando(string strNumero)
         {
             double numero = 0;
@@ -35,6 +48,11 @@ namespace Entidades
 
         }
 
+        /// <summary>
+        /// Valida que el input sea un numero binario valido
+        /// </summary>
+        /// <param name="binario">recibe el input en formato string</param>
+        /// <returns>Devuelve true si es binario o false si no lo es</returns>
         private static bool EsBinario(string binario)
         {
             for (int i = 0; i < binario.Length; i++)
@@ -48,6 +66,11 @@ namespace Entidades
             return true;
         }
 
+        /// <summary>
+        /// Convierte un numero (formato double) a binario (string)
+        /// </summary>
+        /// <param name="numero">recibe el numero en formato double</param>
+        /// <returns>Devuelve el numero convertido, o una cadena vacia si hubo un error</returns>
         public static string DecimalBinario (double numero)
         {
             string numeroBinario = "";
@@ -63,6 +86,11 @@ namespace Entidades
             return numeroBinario;
         }
 
+        /// <summary>
+        /// Convierte un numero (formato string) a binario (string)
+        /// </summary>
+        /// <param name="numero">recibe el numero en formato string</param>
+        /// <returns>Devuelve el numero binario convertido o mensaje de error</returns>
         public static string DecimalBinario(string numero)
         {
             double numeroRevisado = 0;
@@ -78,6 +106,11 @@ namespace Entidades
 
         }
 
+        /// <summary>
+        /// Convierte un numero binario (formato string) en decimal (string)
+        /// </summary>
+        /// <param name="binario">recibe el numero binario en formato string</param>
+        /// <returns>Devuelve el numero decimal en formato string o un mensaje de error</returns>
         public static string BinarioDecimal(string binario)
         {
             double result = 0;
@@ -101,6 +134,8 @@ namespace Entidades
             }
 
         }
+
+        ///Sobrecarga de operadores
 
         public static double operator + (Operando n1, Operando n2)
         {

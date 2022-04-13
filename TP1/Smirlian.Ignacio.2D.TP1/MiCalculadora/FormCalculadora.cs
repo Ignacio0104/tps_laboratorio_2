@@ -18,6 +18,9 @@ namespace MiCalculadora
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Limpia los campos de la calculadora
+        /// </summary>
         private void Limpiar()
         {
             txtNumero1.Clear();
@@ -27,18 +30,37 @@ namespace MiCalculadora
            // lstOperaciones.Items.Clear();
         }
 
+        /// <summary>
+        /// Invoca a la funcion Operar de la clase Calculadora
+        /// </summary>
+        /// <param name="numero1">Recibe un operando en formato string</param>
+        /// <param name="numero2">Recibe un operando en formato string</param>
+        /// <param name="operador">Recibe la operacion en formato string</param>
+        /// <returns>Devuelve el resultado de la operacion o cero si hubo error</returns>
         private static double Operar(string numero1, string numero2,string operador)
         {
             Operando operadorUno = new Operando(numero1);
             Operando operadorDos = new Operando(numero2);
             double resultado = 0;
 
-
-            resultado = Calculadora.Operar(operadorUno, operadorDos, Convert.ToChar(operador));
+            if(operador == "") //Valido que si el operador esta vacio, se asigne el +
+            {
+                resultado = Calculadora.Operar(operadorUno, operadorDos, '+');
+            }
+            else
+            {
+                resultado = Calculadora.Operar(operadorUno, operadorDos, Convert.ToChar(operador));
+            }
+            
             return resultado;
         }
 
 
+        /// <summary>
+        /// Carga de operadores al ComboBo cmbOperador al momento de carga del form. Llamada al metodo limpiar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FormCalculadora_Load(object sender, EventArgs e)
         {
             cmbOperador.Items.Add("");
@@ -49,17 +71,32 @@ namespace MiCalculadora
             Limpiar();
         }
 
+        /// <summary>
+        /// Invocacion al metodo limpiar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
         }
 
+        /// <summary>
+        /// Invocacion al metodo Operar (clase operando)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOperar_Click(object sender, EventArgs e)
         {
             lblResultado.Text = Operar(txtNumero1.Text, txtNumero2.Text , cmbOperador.Text).ToString();
             lstOperaciones.Items.Add($"{txtNumero1.Text} {cmbOperador.Text} {txtNumero2.Text} = {lblResultado.Text} ");
         }
 
+        /// <summary>
+        /// Consulta y cierre del formulario en consencuencia
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             DialogResult opcion = MessageBox.Show("¿Esta seguro de que desea salir?", "Salir", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
@@ -70,14 +107,28 @@ namespace MiCalculadora
             
         }
 
+        /// <summary>
+        /// Invocacion al metodo para convertir a binario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConvertirABinario_Click(object sender, EventArgs e)
         {
+            string numeroOriginal = lblResultado.Text;
             lblResultado.Text = Operando.DecimalBinario(lblResultado.Text);
+            lstOperaciones.Items.Add($"{numeroOriginal}d = {lblResultado.Text}b ");
         }
-
+        /// <summary>
+        /// Invocacion al metodo para convertir a decimal
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
+            string numeroOriginal = lblResultado.Text;
             lblResultado.Text = Operando.BinarioDecimal(lblResultado.Text);
+            lstOperaciones.Items.Add($"{numeroOriginal}b = {lblResultado.Text}d");
+            
         }
     }
 }
