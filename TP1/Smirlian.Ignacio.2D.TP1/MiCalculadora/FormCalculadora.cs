@@ -42,15 +42,11 @@ namespace MiCalculadora
             Operando operadorUno = new Operando(numero1);
             Operando operadorDos = new Operando(numero2);
             double resultado = 0;
+            char operadorVerificado = '+';
 
-            if(operador == "") //Valido que si el operador esta vacio, se asigne el +
-            {
-                resultado = Calculadora.Operar(operadorUno, operadorDos, '+');
-            }
-            else
-            {
-                resultado = Calculadora.Operar(operadorUno, operadorDos, Convert.ToChar(operador));
-            }
+            char.TryParse(operador, out operadorVerificado);
+            resultado = Calculadora.Operar(operadorUno, operadorDos, operadorVerificado);
+           
             
             return resultado;
         }
@@ -89,7 +85,10 @@ namespace MiCalculadora
         private void btnOperar_Click(object sender, EventArgs e)
         {
             double resultado = Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.Text);
-            if (resultado == double.MinValue)
+            double prueba;
+            if (resultado == double.MinValue 
+                || !(double.TryParse(txtNumero1.Text,out prueba))
+                || !(double.TryParse(txtNumero2.Text, out prueba)))
             {
                 lblResultado.Text = "Operacion invalida";
             }

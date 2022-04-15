@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jjmH6WmRGPCetOoG2U+AK/HZ5Zo8vKu3i4qvO9u2KbolmsYSY51w1w47t5yL+bwl6LhGLyXiZt9f3SorJf3rxg==",
+  "dgSpecHash": "AJfr5OvFLLCDhwQ2UoL5VrtHJAWCjG0H6eHlUqXiVgtkOuiNs59cuuSWIO2hSDRY75/+2cylg06It9GCYgr/Kg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Nacho\\Desktop\\Programacion\\UTN\\TPLaboratorio2\\TP1\\Smirlian.Ignacio.2D.TP1\\MiCalculadora\\MiCalculadora.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Nacho\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.16\\microsoft.netcore.app.host.win-x64.5.0.16.nupkg.sha512"
+  ],
   "logs": []
 }
