@@ -82,23 +82,20 @@ namespace MiCalculadora
         /// <param name="e"></param>
         private void btnOperar_Click(object sender, EventArgs e)
         {
+            double prueba = 0;
             double resultado = Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.Text);
-            double prueba;
-            if (resultado == double.MinValue
-                || !(double.TryParse(txtNumero1.Text,out prueba))
-                || !(double.TryParse(txtNumero2.Text, out prueba)))
+            if (resultado == double.MinValue)
             {
                 lblResultado.Text = "Operacion invalida";
             }
             else
             {
                 lblResultado.Text = resultado.ToString();
-                lstOperaciones.Items.Add($"{txtNumero1.Text} " +
+                lstOperaciones.Items.Add($"{(!double.TryParse(txtNumero1.Text,out prueba) ? "0" : txtNumero1.Text)} " +
                     $"{(cmbOperador.Text == "" ? "+" : cmbOperador.Text)} " +
-                    $"{txtNumero2.Text} = {lblResultado.Text} ");
+                    $"{(!double.TryParse(txtNumero2.Text, out prueba) ? "0" : txtNumero2.Text)} = {lblResultado.Text} ");
             }
 
-            
         }
 
         /// <summary>

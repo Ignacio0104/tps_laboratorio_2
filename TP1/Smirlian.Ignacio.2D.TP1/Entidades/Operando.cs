@@ -83,6 +83,11 @@ namespace Entidades
                 numeroInt = Math.Abs(numeroInt) / 2;
             }
 
+            while (numeroBinario.Length < 4)
+            {
+                numeroBinario = "0" + numeroBinario;
+            }
+
             return numeroBinario;
         }
 
