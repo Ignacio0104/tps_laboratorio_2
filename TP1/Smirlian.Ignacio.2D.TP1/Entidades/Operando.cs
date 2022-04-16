@@ -135,23 +135,45 @@ namespace Entidades
 
         }
 
-        ///Sobrecarga de operadores
-
+        /// <summary>
+        /// Recibe 2 objetos de clase Operando y devuelve la suma entre sus atributos numero
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns></returns>
         public static double operator + (Operando n1, Operando n2)
         {
             return n1.numero + n2.numero;
         }
 
+        /// <summary>
+        /// Recibe 2 objetos de clase Operando y devuelve la resta entre sus atributos numero
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns></returns>
         public static double operator -(Operando n1, Operando n2)
         {
             return n1.numero - n2.numero;
         }
 
+        /// <summary>
+        /// Recibe 2 objetos de clase Operando y devuelve la multriplicacion entre sus atributos numero
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns></returns>
         public static double operator *(Operando n1, Operando n2)
         {
             return n1.numero * n2.numero;
         }
 
+        /// <summary>
+        /// Recibe 2 objetos de clase Operando y devuelve la división entre sus atributos numero
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns>Devuelve el resultado o double.MinValue si se dividió por cero</returns>
         public static double operator /(Operando n1, Operando n2)
         {
             if (n2.numero == 0)

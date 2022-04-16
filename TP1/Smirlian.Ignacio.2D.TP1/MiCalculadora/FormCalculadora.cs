@@ -27,7 +27,6 @@ namespace MiCalculadora
             txtNumero2.Clear();
             lblResultado.Text = "0";
             cmbOperador.SelectedIndex = 0;
-           // lstOperaciones.Items.Clear();
         }
 
         /// <summary>
@@ -46,8 +45,7 @@ namespace MiCalculadora
 
             char.TryParse(operador, out operadorVerificado);
             resultado = Calculadora.Operar(operadorUno, operadorDos, operadorVerificado);
-           
-            
+
             return resultado;
         }
 
@@ -86,7 +84,7 @@ namespace MiCalculadora
         {
             double resultado = Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.Text);
             double prueba;
-            if (resultado == double.MinValue 
+            if (resultado == double.MinValue
                 || !(double.TryParse(txtNumero1.Text,out prueba))
                 || !(double.TryParse(txtNumero2.Text, out prueba)))
             {
@@ -95,25 +93,22 @@ namespace MiCalculadora
             else
             {
                 lblResultado.Text = resultado.ToString();
-                lstOperaciones.Items.Add($"{txtNumero1.Text} {(cmbOperador.Text == "" ? "+" : cmbOperador.Text)} {txtNumero2.Text} = {lblResultado.Text} ");
+                lstOperaciones.Items.Add($"{txtNumero1.Text} " +
+                    $"{(cmbOperador.Text == "" ? "+" : cmbOperador.Text)} " +
+                    $"{txtNumero2.Text} = {lblResultado.Text} ");
             }
 
             
         }
 
         /// <summary>
-        /// Consulta y cierre del formulario en consencuencia
+        /// Llamada al método form_closing
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            DialogResult opcion = MessageBox.Show("¿Esta seguro de que desea salir?", "Salir", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
-            if(opcion == DialogResult.Yes)
-            {
-                this.Close();
-            }
-            
+          this.Close();     
         }
 
         /// <summary>
@@ -139,7 +134,11 @@ namespace MiCalculadora
             lstOperaciones.Items.Add($"{numeroOriginal}b = {lblResultado.Text}d");
             
         }
-
+        /// <summary>
+        /// Consulta y cierre del formulario en consencuencia (desde la cruz)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FormCalculadora_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult opcion = MessageBox.Show("¿Esta seguro de que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
