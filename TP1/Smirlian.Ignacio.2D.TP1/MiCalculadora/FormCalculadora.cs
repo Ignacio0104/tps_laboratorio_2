@@ -120,7 +120,8 @@ namespace MiCalculadora
         {
             string numeroOriginal = lblResultado.Text;
             lblResultado.Text = Operando.DecimalBinario(lblResultado.Text);
-            lstOperaciones.Items.Add($"{numeroOriginal}d = {lblResultado.Text}b ");
+            lstOperaciones.Items.Add($"{(lblResultado.Text == "Valor invalido" ? "" : numeroOriginal + "b = ")}" +
+            $"{(lblResultado.Text == "Valor invalido" ? "Error" : lblResultado.Text + "d")}");
         }
         /// <summary>
         /// Invocacion al metodo para convertir a decimal
@@ -131,7 +132,8 @@ namespace MiCalculadora
         {
             string numeroOriginal = lblResultado.Text;
             lblResultado.Text = Operando.BinarioDecimal(lblResultado.Text);
-            lstOperaciones.Items.Add($"{numeroOriginal}b = {lblResultado.Text}d");
+            lstOperaciones.Items.Add($"{(lblResultado.Text == "Valor invalido" ? "" : numeroOriginal + "b = ")}" +
+                $"{(lblResultado.Text == "Valor invalido"? "Error" : lblResultado.Text + "d")}");
             
         }
         /// <summary>
