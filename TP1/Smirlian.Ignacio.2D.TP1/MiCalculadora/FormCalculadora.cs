@@ -83,7 +83,7 @@ namespace MiCalculadora
         private void btnOperar_Click(object sender, EventArgs e)
         {
             double prueba = 0;
-            double resultado = Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.Text);
+            double resultado = Operar(txtNumero1.Text.Replace('.',','), txtNumero2.Text.Replace('.', ','), cmbOperador.Text);
             if (resultado == double.MinValue)
             {
                 lblResultado.Text = "Operacion invalida";
