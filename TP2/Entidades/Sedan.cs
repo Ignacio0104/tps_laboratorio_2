@@ -47,10 +47,7 @@ namespace Entidades
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("SEDAN");
-            sb.AppendLine(base.Mostrar());
-            sb.AppendFormat("TAMAÑO : {0}", this.Tamanio);
-            sb.AppendLine("TIPO : " + this.tipo);
-            sb.AppendLine("");
+            sb.AppendLine($"{base.Mostrar()} TIPO: {this.tipo}");
             sb.AppendLine("---------------------");
 
             return sb.ToString();
