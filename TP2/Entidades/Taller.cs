@@ -15,7 +15,7 @@ namespace Entidades
         private int espacioDisponible;
         public enum ETipo
         {
-            Moto, Automovil, Camioneta, Todos
+            Ciclomotor, Sedan, SUV, Todos
         }
 
         #region "Constructores"
@@ -49,7 +49,7 @@ namespace Entidades
         /// <param name="taller">Elemento a exponer</param>
         /// <param name="ETipo">Tipos de ítems de la lista a mostrar</param>
         /// <returns></returns>
-        public string Listar(Taller taller, ETipo tipo)
+        public static string Listar(Taller taller, ETipo tipo)
         {
             StringBuilder sb = new StringBuilder();
             if (taller.vehiculos != null)
@@ -60,15 +60,15 @@ namespace Entidades
                 {
                     switch (tipo)
                     {
-                        case ETipo.Camioneta:
+                        case ETipo.SUV:
                             if(v is Suv)
                                 sb.AppendLine(v.Mostrar());
                             break;
-                        case ETipo.Moto:
+                        case ETipo.Ciclomotor:
                             if (v is Ciclomotor)
                                 sb.AppendLine(v.Mostrar());
                             break;
-                        case ETipo.Automovil:
+                        case ETipo.Sedan:
                             if (v is Sedan)
                                 sb.AppendLine(v.Mostrar());
                             break;
