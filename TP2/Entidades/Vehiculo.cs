@@ -19,10 +19,9 @@ namespace Entidades
         {
             Chico, Mediano, Grande
         }
-        protected EMarca marca;
-        protected ETamanio tamanio;
-        protected string chasis;
-        protected ConsoleColor color;
+        private EMarca marca;
+        private string chasis;
+        private ConsoleColor color;
 
         public Vehiculo(EMarca marca, string chasis, ConsoleColor color)
         {
@@ -35,7 +34,7 @@ namespace Entidades
         /// <summary>
         /// ReadOnly: Retornará el tamaño
         /// </summary>
-        public abstract ETamanio Tamanio { get; }
+        protected abstract ETamanio Tamanio { get; }
 
         /// <summary>
         /// Publica todos los datos del Vehiculo.

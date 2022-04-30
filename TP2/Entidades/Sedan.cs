@@ -11,7 +11,7 @@ namespace Entidades
     public class Sedan : Vehiculo
     {
         public enum ETipo { CuatroPuertas, CincoPuertas }
-        ETipo tipo;
+        private ETipo tipo;
 
         /// <summary>
         /// Por defecto, TIPO será CuatroPuertas
@@ -34,7 +34,7 @@ namespace Entidades
         /// <summary>
         /// Sedan son 'Mediano'
         /// </summary>
-        public override ETamanio Tamanio
+        protected override ETamanio Tamanio
         {
             get
             {
