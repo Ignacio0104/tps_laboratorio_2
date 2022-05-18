@@ -13,7 +13,7 @@ namespace BibliotecaDeClases
         private int duracionPelicula;
         private GenerosPeliculas generoPelicula;
 
-        public Pelicula(string tituloPelicula, int duracion,GenerosPeliculas generoPeliculas)
+        public Pelicula(string tituloPelicula, int duracion,GenerosPeliculas generoPelicula)
         {
             this.tituloPelicula = tituloPelicula;
             this.duracionPelicula = duracion;

@@ -33,7 +33,7 @@ namespace BibliotecaDeClases
         public string NombreSocio { get => nombreSocio; set => nombreSocio = value; }
         public string ApellidoSocio { get => apellidoSocio; set => apellidoSocio = value; }
         public string EmailSocio { get => emailSocio; set => emailSocio = value; }
-        public int TelefonoSocio { get => telefonoSocio; set => telefonoSocio = value; }
+        public uint TelefonoSocio { get => telefonoSocio; set => telefonoSocio = value; }
 
         protected virtual string Mostrar()
         {
