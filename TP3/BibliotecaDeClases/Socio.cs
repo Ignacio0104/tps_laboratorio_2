@@ -11,7 +11,7 @@ namespace BibliotecaDeClases
         private string nombreSocio;
         private string apellidoSocio;
         private string emailSocio;
-        private int telefonoSocio;
+        private uint telefonoSocio;
         private List<Alquiler> listaDeAlquileres;
 
         static Socio()
@@ -19,7 +19,7 @@ namespace BibliotecaDeClases
             ultimoId = 1000;
         }
 
-        public Socio(string nombre,string apellido,string email,int telefono)
+        public Socio(string nombre,string apellido,string email,uint telefono)
         {
             this.idSocio = ultimoId;
             this.nombreSocio = nombre;

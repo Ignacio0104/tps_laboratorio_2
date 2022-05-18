@@ -10,7 +10,7 @@ namespace BibliotecaDeClases
     {
         private double penalidad;
         private int limitePeliculas;
-        public SocioPremium(string nombre, string apellido, string email, int telefono) : base(nombre, apellido, email, telefono)
+        public SocioPremium(string nombre, string apellido, string email, uint telefono) : base(nombre, apellido, email, telefono)
         {
             this.penalidad = 30;
             this.limitePeliculas = 20;

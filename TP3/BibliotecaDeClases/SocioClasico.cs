@@ -11,7 +11,7 @@ namespace BibliotecaDeClases
         private double penalidad;
         private int limitePeliculas;
         private ulong tarjetaDeCredito;
-        public SocioClasico(string nombre, string apellido, string email, int telefono,ulong tarjetaDeCredito) : base(nombre, apellido, email, telefono)
+        public SocioClasico(string nombre, string apellido, string email, uint telefono,ulong tarjetaDeCredito) : base(nombre, apellido, email, telefono)
         {
             this.penalidad = 100;
             this.limitePeliculas = 5;
