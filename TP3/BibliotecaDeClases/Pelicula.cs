@@ -20,5 +20,8 @@ namespace BibliotecaDeClases
             this.generoPelicula = generoPelicula;
         }
 
+        public string TituloPelicula { get => tituloPelicula; set => tituloPelicula = value; }
+        public int DuracionPelicula { get => duracionPelicula; set => duracionPelicula = value; }
+        public GenerosPeliculas GeneroPelicula { get => generoPelicula; set => generoPelicula = value; }
     }
 }

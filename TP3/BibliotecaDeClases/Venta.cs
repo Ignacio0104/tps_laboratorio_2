@@ -11,6 +11,7 @@ namespace BibliotecaDeClases
         private Socio socioActual;
         private List<Alquiler> listaDeAlquileresPedido;
         private List<T> listaDeProductosPedido;
+        private double precioCuenta;
 
         public Venta(Socio socioActual,List<Alquiler> listaDeAlquileresPedido, List<T> listaDeProductosPedido)
         {
