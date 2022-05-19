@@ -6,14 +6,6 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "Blockbuster UI/1.0.0": {
-        "dependencies": {
-          "BibliotecaDeClases": "1.0.0"
-        },
-        "runtime": {
-          "Blockbuster UI.dll": {}
-        }
-      },
       "BibliotecaDeClases/1.0.0": {
         "runtime": {
           "BibliotecaDeClases.dll": {}
@@ -22,11 +14,6 @@
     }
   },
   "libraries": {
-    "Blockbuster UI/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "BibliotecaDeClases/1.0.0": {
       "type": "project",
       "serviceable": false,

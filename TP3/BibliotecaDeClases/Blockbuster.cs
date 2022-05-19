@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using static BibliotecaDeClases.Enumerados;
 
@@ -19,7 +21,12 @@ namespace BibliotecaDeClases
             listaDeEmpleados = new List<Usuario>();
             listaDePeliculas = new List<Pelicula>();
             listaDeSocios = new List<Socio>();
+            HardcodeoPeliculas();
         }
+
+        public static List<Usuario> ListaDeEmpleados { get => listaDeEmpleados; set => listaDeEmpleados = value; }
+        public static List<Pelicula> ListaDePeliculas { get => listaDePeliculas; set => listaDePeliculas = value; }
+        public static List<Socio> ListaDeSocios { get => listaDeSocios; set => listaDeSocios = value; }
 
         public static Usuario CheckLogIn(string usuario, string clave)
         {
@@ -35,7 +42,7 @@ namespace BibliotecaDeClases
             }
             return null;
         }
-
+     
         private static void HardcodeoPeliculas()
         {
             listaDePeliculas.Add(new Pelicula("El senor de los anillos La comunidad del anillo",123,GenerosPeliculas.CienciaFiccion,DiasCategoriasAlquiler.Clasica,PrecioCategoriasAlquiler.Clasica,10));

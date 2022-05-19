@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0-windows7.0": {}
+    "net5.0-windows7.0": {
+      "BibliotecaDeClases/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/BibliotecaDeClases.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BibliotecaDeClases.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "BibliotecaDeClases/1.0.0": {
+      "type": "project",
+      "path": "../BibliotecaDeClases/BibliotecaDeClases.csproj",
+      "msbuildProject": "../BibliotecaDeClases/BibliotecaDeClases.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0-windows7.0": []
+    "net5.0-windows7.0": [
+      "BibliotecaDeClases >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Nacho\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Nacho\\Desktop\\Programacion\\UTN\\TPLaboratorio2\\TP3\\BibliotecaDeClases\\BibliotecaDeClases.csproj": {
+              "projectPath": "C:\\Users\\Nacho\\Desktop\\Programacion\\UTN\\TPLaboratorio2\\TP3\\BibliotecaDeClases\\BibliotecaDeClases.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

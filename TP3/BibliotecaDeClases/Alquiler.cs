@@ -22,6 +22,7 @@ namespace BibliotecaDeClases
         }
 
         public T Pelicula { get => pelicula; set => pelicula = value; }
+
         public int Penalidad { get => penalidad; set => penalidad = value; }
         public DateTime FechaDeAlquiler { get => fechaDeAlquiler; set => fechaDeAlquiler = value; }
     }

@@ -12,7 +12,7 @@ namespace BibliotecaDeClases
         private string apellidoSocio;
         private string emailSocio;
         private uint telefonoSocio;
-        private List<Alquiler> listaDeAlquileres;
+        private List<Alquiler<Pelicula>> listaDeAlquileres;
 
         static Socio()
         {
@@ -26,7 +26,7 @@ namespace BibliotecaDeClases
             this.apellidoSocio = apellido;
             this.emailSocio = email;
             this.telefonoSocio = telefono;
-            this.listaDeAlquileres = new List<Alquiler>();
+            this.listaDeAlquileres = new List<Alquiler<Pelicula>>();
             ultimoId++;
         }
         public int IdSocio { get => idSocio; }

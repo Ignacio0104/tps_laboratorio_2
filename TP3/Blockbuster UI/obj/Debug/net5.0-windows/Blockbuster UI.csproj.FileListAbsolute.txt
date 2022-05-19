@@ -22,3 +22,6 @@ C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\De
 C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.Devolucion.resources
 C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.FormVenta.resources
 C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.Properties.Resources.resources
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\bin\Debug\net5.0-windows\BibliotecaDeClases.dll
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\bin\Debug\net5.0-windows\BibliotecaDeClases.pdb
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster UI.csproj.CopyComplete
