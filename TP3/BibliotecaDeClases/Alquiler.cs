@@ -7,27 +7,21 @@ using static BibliotecaDeClases.Enumerados;
 
 namespace BibliotecaDeClases
 {
-    public class Alquiler
+    public class Alquiler <T>
     {
-        private Pelicula pelicula;
-        private DiasCategoriasAlquiler diasDeAlquiler;
-        private PrecioCategoriasAlquiler precioDeAlquiler;
+        private T pelicula;
+
         private int penalidad;
         private DateTime fechaDeAlquiler;
 
-        public Alquiler(Pelicula pelicula, DiasCategoriasAlquiler diasDeAlquiler, 
-            PrecioCategoriasAlquiler precioDeAlquiler)
+        public Alquiler(T pelicula)
         {
             this.pelicula = pelicula;
-            this.diasDeAlquiler = diasDeAlquiler;
-            this.precioDeAlquiler = precioDeAlquiler;
             this.penalidad = 50;
             this.fechaDeAlquiler = DateTime.Now;
         }
 
-        public Pelicula Pelicula { get => pelicula; set => pelicula = value; }
-        public DiasCategoriasAlquiler DiasDeAlquiler { get => diasDeAlquiler; set => diasDeAlquiler = value; }
-        public PrecioCategoriasAlquiler PrecioDeAlquiler { get => precioDeAlquiler; set => precioDeAlquiler = value; }
+        public T Pelicula { get => pelicula; set => pelicula = value; }
         public int Penalidad { get => penalidad; set => penalidad = value; }
         public DateTime FechaDeAlquiler { get => fechaDeAlquiler; set => fechaDeAlquiler = value; }
     }

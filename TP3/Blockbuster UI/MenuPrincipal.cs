@@ -19,7 +19,7 @@ namespace Blockbuster_UI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CargarMenu(new ListaSocios());
+            CargarMenu(new FormVenta());
         }
 
         private void CargarMenu(Form formulario)
@@ -39,6 +39,16 @@ namespace Blockbuster_UI
         private void button2_Click(object sender, EventArgs e)
         {
             CargarMenu(new Inventario());
+        }
+
+        private void btnSocios_Click(object sender, EventArgs e)
+        {
+            CargarMenu(new ListaSocios());
+        }
+
+        private void btnDevolucion_Click(object sender, EventArgs e)
+        {
+            CargarMenu(new Devolucion());
         }
     }
 }

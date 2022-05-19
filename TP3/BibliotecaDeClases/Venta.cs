@@ -9,11 +9,11 @@ namespace BibliotecaDeClases
     public class Venta <T>
     {
         private Socio socioActual;
-        private List<Alquiler> listaDeAlquileresPedido;
-        private List<T> listaDeProductosPedido;
+        private List<T> listaDeAlquileresPedido;
+        private List<Producto> listaDeProductosPedido;
         private double precioCuenta;
 
-        public Venta(Socio socioActual,List<Alquiler> listaDeAlquileresPedido, List<T> listaDeProductosPedido)
+        public Venta(Socio socioActual,List<T> listaDeAlquileresPedido, List<Producto> listaDeProductosPedido)
         {
             this.socioActual = socioActual;
             this.listaDeAlquileresPedido = listaDeAlquileresPedido;
@@ -21,7 +21,7 @@ namespace BibliotecaDeClases
         }
 
         public Socio SocioActual { get => socioActual; set => socioActual = value; }
-        public List<Alquiler> ListaDeAlquileresPedido { get => listaDeAlquileresPedido; set => listaDeAlquileresPedido = value; }
-        public List<T> ListaDeProductosPedido { get => listaDeProductosPedido; set => listaDeProductosPedido = value; }
+        public List<T> ListaDeAlquileresPedido { get => listaDeAlquileresPedido; set => listaDeAlquileresPedido = value; }
+        public List<Producto> ListaDeProductosPedido { get => listaDeProductosPedido; set => listaDeProductosPedido = value; }
     }
 }

@@ -12,12 +12,21 @@ namespace BibliotecaDeClases
         private string tituloPelicula;
         private int duracionPelicula;
         private GenerosPeliculas generoPelicula;
+        private DiasCategoriasAlquiler diasDeAlquiler;
+        private PrecioCategoriasAlquiler precioDeAlquiler;
+        
+        public Pelicula()
+        {
 
-        public Pelicula(string tituloPelicula, int duracion,GenerosPeliculas generoPelicula)
+        }
+        public Pelicula(string tituloPelicula, int duracion,GenerosPeliculas generoPelicula,
+            DiasCategoriasAlquiler diasDeAlquiler, PrecioCategoriasAlquiler precioDeAlquiler)
         {
             this.tituloPelicula = tituloPelicula;
             this.duracionPelicula = duracion;
             this.generoPelicula = generoPelicula;
+            this.diasDeAlquiler = diasDeAlquiler;
+            this.precioDeAlquiler = precioDeAlquiler;
         }
 
         public string TituloPelicula { get => tituloPelicula; set => tituloPelicula = value; }
