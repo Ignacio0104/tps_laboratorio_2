@@ -28,7 +28,8 @@ namespace BibliotecaDeClases
             Comedia,
             Drama,
             Terror,
-            Suspenso
+            Suspenso,
+            Animada
         }
     }
 
