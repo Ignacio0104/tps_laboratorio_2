@@ -42,7 +42,7 @@ namespace BibliotecaDeClases
             return null;
         }
      
-        private static void HardcodeoPeliculas()
+       /* private static void HardcodeoPeliculas()
         {
             listaDePeliculas.Add(new Pelicula("El senor de los anillos La comunidad del anillo",123,GenerosPeliculas.CienciaFiccion,DiasCategoriasAlquiler.Clasica,PrecioCategoriasAlquiler.Clasica,10));
             listaDePeliculas.Add(new Pelicula("El senor de los anillos Las dos torres",133,GenerosPeliculas.CienciaFiccion,DiasCategoriasAlquiler.Clasica,PrecioCategoriasAlquiler.Clasica,5));
@@ -96,6 +96,6 @@ namespace BibliotecaDeClases
             listaDePeliculas.Add(new Pelicula("Avengers",129,GenerosPeliculas.CienciaFiccion,DiasCategoriasAlquiler.Regular,PrecioCategoriasAlquiler.Regular,19));
             listaDePeliculas.Add(new Pelicula("Shazam",122,GenerosPeliculas.CienciaFiccion,DiasCategoriasAlquiler.Regular,PrecioCategoriasAlquiler.Regular,3));
             listaDePeliculas.Add(new Pelicula("Tick tick boom!",129,GenerosPeliculas.Comedia,DiasCategoriasAlquiler.Estreno,PrecioCategoriasAlquiler.Estreno,6));
-        }
+        }*/
     }
 }

@@ -10,9 +10,9 @@ namespace BibliotecaDeClases
     {
         public enum PrecioCategoriasAlquiler
         {
-            Estreno = 300,
-            Regular= 200,
-            Clasica = 150,
+            Normal = 300,
+            Especial= 200,
+            Promo = 150,
         }
         public enum DiasCategoriasAlquiler
         {

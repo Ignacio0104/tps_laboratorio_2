@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 namespace BibliotecaDeClases
 {
@@ -26,7 +23,11 @@ namespace BibliotecaDeClases
                 {
                     Directory.CreateDirectory(ruta); //Aca la creamos
                 }
-                string objetoJson = JsonSerializer.Serialize(datos);
+                JsonSerializerOptions options = new JsonSerializerOptions
+                {
+                                Converters ={new JsonStringEnumConverter()}
+                };
+                string objetoJson = JsonSerializer.Serialize(datos,options);
 
                 File.WriteAllText(completa, objetoJson);
 
@@ -50,8 +51,13 @@ namespace BibliotecaDeClases
                 {
                     if (completa != null)
                     {
+                        JsonSerializerOptions options = new JsonSerializerOptions
+                        {
+                            Converters ={new JsonStringEnumConverter( JsonNamingPolicy.CamelCase)},
+
+                        };
                         string archivoJson = File.ReadAllText(completa);
-                        datos = JsonSerializer.Deserialize<T>(archivoJson);
+                        datos = JsonSerializer.Deserialize<T>(archivoJson,options);
                     }
                 }
                 return datos;

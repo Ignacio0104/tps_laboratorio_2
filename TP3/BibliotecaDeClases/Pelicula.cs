@@ -21,16 +21,7 @@ namespace BibliotecaDeClases
 
         }
 
-        /*public Pelicula(string tituloPelicula, int duracion, int generoPelicula,
-            int diasDeAlquiler, int precioDeAlquiler, int stock)
-        {
-            this.tituloPelicula = tituloPelicula;
-            this.duracionPelicula = duracion;
-            this.generoPelicula = (GenerosPeliculas)generoPelicula;
-            this.diasDeAlquiler = (DiasCategoriasAlquiler)diasDeAlquiler;
-            this.precioDeAlquiler = (PrecioCategoriasAlquiler)precioDeAlquiler;
-            this.stock = stock;
-        }*/
+
         public Pelicula(string tituloPelicula, int duracion,GenerosPeliculas generoPelicula,
             DiasCategoriasAlquiler diasDeAlquiler, PrecioCategoriasAlquiler precioDeAlquiler, int stock)
         {
@@ -56,7 +47,6 @@ namespace BibliotecaDeClases
             sb.AppendLine($"Titulo {tituloPelicula} - Duracion {duracionPelicula}min");
             sb.AppendLine($"Genero {generoPelicula} - Dias de alquiler {(int)diasDeAlquiler}");
             sb.AppendLine($"Precio ${(int)precioDeAlquiler} - Stock {stock}\n\n");
-
             return sb.ToString();
         }
     }
