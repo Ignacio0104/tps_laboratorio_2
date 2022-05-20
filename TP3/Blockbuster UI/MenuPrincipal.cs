@@ -1,5 +1,6 @@
 ﻿using BibliotecaDeClases;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Text.Json;
@@ -12,6 +13,7 @@ namespace Blockbuster_UI
         public MenuPrincipal()
         {
             InitializeComponent();
+            Blockbuster.ListaDePeliculas = ClaseSerializadora<List<Pelicula>>.Leer("baseDatosPeliculas");
         }
 
         private void button1_Click(object sender, EventArgs e)

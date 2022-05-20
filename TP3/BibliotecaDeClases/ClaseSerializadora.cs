@@ -13,9 +13,9 @@ namespace BibliotecaDeClases
             ruta = ".\\Recursos";//Conseguir la ruta desde cualquier PC
         }
 
-        public static void Escribir(T datos)
+        public static void Escribir(T datos,string archivo)
         {
-            string completa = ruta + @"/baseDatosPeliculas.json";
+            string completa = ruta + @"\" + archivo + ".json";
 
             try
             {
@@ -38,25 +38,33 @@ namespace BibliotecaDeClases
             }
         }
 
-
-        public static T Leer()
+        public static T Leer(string nombreArchivo)
         {
-            string archivo = string.Empty;
             T datos = default;
-            string completa = ruta + @"\baseDatosPeliculas.json";
-
+            string archivo = string.Empty;
+            string completa = ruta + @"\" + archivo + ".json";
             try
             {
                 if (Directory.Exists(ruta))//Esto significa que la carpeta NO EXISTE
                 {
-                    if (completa != null)
+                    string[] archivos = Directory.GetFiles(ruta); //Trae todas las rutas de los archivos
+
+                    foreach (string item in archivos)
+                    {
+                        if (item.Contains(nombreArchivo))
+                        {
+                            archivo = item;
+                            break;
+                        }
+                    }
+                    if (archivo != null)
                     {
                         JsonSerializerOptions options = new JsonSerializerOptions
                         {
                             Converters ={new JsonStringEnumConverter( JsonNamingPolicy.CamelCase)},
 
                         };
-                        string archivoJson = File.ReadAllText(completa);
+                        string archivoJson = File.ReadAllText(archivo);
                         datos = JsonSerializer.Deserialize<T>(archivoJson,options);
                     }
                 }

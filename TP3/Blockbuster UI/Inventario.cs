@@ -18,15 +18,6 @@ namespace Blockbuster_UI
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ClaseSerializadora<List<Pelicula>>.Escribir(Blockbuster.ListaDePeliculas);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Blockbuster.ListaDePeliculas = ClaseSerializadora<List<Pelicula>>.Leer();
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
