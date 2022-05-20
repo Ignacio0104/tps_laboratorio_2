@@ -21,7 +21,6 @@ namespace BibliotecaDeClases
             listaDeEmpleados = new List<Usuario>();
             listaDePeliculas = new List<Pelicula>();
             listaDeSocios = new List<Socio>();
-            HardcodeoPeliculas();
         }
 
         public static List<Usuario> ListaDeEmpleados { get => listaDeEmpleados; set => listaDeEmpleados = value; }
