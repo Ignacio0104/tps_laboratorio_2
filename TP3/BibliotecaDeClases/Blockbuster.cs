@@ -42,6 +42,22 @@ namespace BibliotecaDeClases
             return null;
         }
 
+        /// <summary>
+        /// Metodo para buscar un usuario por legajo
+        /// </summary>
+        /// <param name="legajo"></param>
+        /// <returns>Devuelve el indice o -1 si no se encontró</returns>
+        public static Usuario BuscarUsuario(int legajo)
+        {
+            for (int i = 0; i < listaDeEmpleados.Count; i++)
+            {
+                if (listaDeEmpleados[i].Legajo == legajo)
+                {
+                    return listaDeEmpleados[i];
+                }
+            }
+            return null;
+        }
 
         /* private static void HardcodeoPeliculas()
          {

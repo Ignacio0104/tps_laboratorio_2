@@ -35,12 +35,14 @@
             this.btnInventario = new System.Windows.Forms.Button();
             this.btnVenta = new System.Windows.Forms.Button();
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Controls.Add(this.lblNombreUsuario);
             this.panel1.Controls.Add(this.btnDevolucion);
             this.panel1.Controls.Add(this.btnSocios);
             this.panel1.Controls.Add(this.btnInventario);
@@ -53,7 +55,7 @@
             // 
             // btnDevolucion
             // 
-            this.btnDevolucion.Location = new System.Drawing.Point(0, 279);
+            this.btnDevolucion.Location = new System.Drawing.Point(0, 375);
             this.btnDevolucion.Name = "btnDevolucion";
             this.btnDevolucion.Size = new System.Drawing.Size(204, 41);
             this.btnDevolucion.TabIndex = 4;
@@ -63,7 +65,7 @@
             // 
             // btnSocios
             // 
-            this.btnSocios.Location = new System.Drawing.Point(0, 217);
+            this.btnSocios.Location = new System.Drawing.Point(0, 313);
             this.btnSocios.Name = "btnSocios";
             this.btnSocios.Size = new System.Drawing.Size(204, 41);
             this.btnSocios.TabIndex = 3;
@@ -73,7 +75,7 @@
             // 
             // btnInventario
             // 
-            this.btnInventario.Location = new System.Drawing.Point(0, 156);
+            this.btnInventario.Location = new System.Drawing.Point(0, 252);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Size = new System.Drawing.Size(204, 41);
             this.btnInventario.TabIndex = 2;
@@ -83,7 +85,7 @@
             // 
             // btnVenta
             // 
-            this.btnVenta.Location = new System.Drawing.Point(0, 98);
+            this.btnVenta.Location = new System.Drawing.Point(0, 194);
             this.btnVenta.Name = "btnVenta";
             this.btnVenta.Size = new System.Drawing.Size(204, 41);
             this.btnVenta.TabIndex = 1;
@@ -100,6 +102,16 @@
             this.panelPrincipal.Size = new System.Drawing.Size(896, 534);
             this.panelPrincipal.TabIndex = 1;
             // 
+            // lblNombreUsuario
+            // 
+            this.lblNombreUsuario.AutoSize = true;
+            this.lblNombreUsuario.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(12, 122);
+            this.lblNombreUsuario.Name = "lblNombreUsuario";
+            this.lblNombreUsuario.Size = new System.Drawing.Size(59, 25);
+            this.lblNombreUsuario.TabIndex = 2;
+            this.lblNombreUsuario.Text = "label1";
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -109,7 +121,9 @@
             this.Controls.Add(this.panel1);
             this.Name = "MenuPrincipal";
             this.Text = "MenuPrincipal";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MenuPrincipal_FormClosing);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -122,5 +136,6 @@
         private System.Windows.Forms.Panel panelPrincipal;
         private System.Windows.Forms.Button btnDevolucion;
         private System.Windows.Forms.Button btnSocios;
+        private System.Windows.Forms.Label lblNombreUsuario;
     }
 }

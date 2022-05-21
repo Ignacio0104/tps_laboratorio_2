@@ -10,7 +10,8 @@ namespace Blockbuster_UI
 {
     public partial class MenuPrincipal : Form
     {
-        public MenuPrincipal()
+        Usuario usuarioLogueado;
+        public MenuPrincipal(int numeroLegajo)
         {
             InitializeComponent();
             Blockbuster.ListaDePeliculas = ClaseSerializadora<List<Pelicula>>.Leer("baseDatosPeliculas");
@@ -18,6 +19,8 @@ namespace Blockbuster_UI
             List<SocioPremium> sociosPremiumAux = ClaseSerializadora<List<SocioPremium>>.Leer("baseDatosSocioPremium");
             Blockbuster.ListaDeSocios.AddRange(sociosAux);
             Blockbuster.ListaDeSocios.AddRange(sociosPremiumAux);
+            usuarioLogueado = Blockbuster.BuscarUsuario(numeroLegajo);
+            lblNombreUsuario.Text = $"{usuarioLogueado.Nombre} {usuarioLogueado.Apellido}";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -52,6 +55,11 @@ namespace Blockbuster_UI
         private void btnDevolucion_Click(object sender, EventArgs e)
         {
             CargarMenu(new Devolucion());
+        }
+
+        private void MenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

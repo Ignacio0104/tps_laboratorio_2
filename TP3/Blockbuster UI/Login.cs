@@ -27,7 +27,7 @@ namespace Blockbuster_UI
 
             if (usuarioSolicitado != null)
             {
-                MenuPrincipal frmPrincipal = new MenuPrincipal();
+                MenuPrincipal frmPrincipal = new MenuPrincipal(usuarioSolicitado.Legajo);
                 frmPrincipal.Show();
                 this.Hide();
             }
