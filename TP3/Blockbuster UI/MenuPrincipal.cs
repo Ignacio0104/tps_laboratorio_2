@@ -14,7 +14,6 @@ namespace Blockbuster_UI
         {
             InitializeComponent();
             Blockbuster.ListaDePeliculas = ClaseSerializadora<List<Pelicula>>.Leer("baseDatosPeliculas");
-            Blockbuster.ListaDeEmpleados = ClaseSerializadora<List<Usuario>>.Leer("baseDeDatosEmpleados");
             List<SocioClasico> sociosAux = ClaseSerializadora<List<SocioClasico>>.Leer("baseDatosSocioClasico");
             List<SocioPremium> sociosPremiumAux = ClaseSerializadora<List<SocioPremium>>.Leer("baseDatosSocioPremium");
             Blockbuster.ListaDeSocios.AddRange(sociosAux);

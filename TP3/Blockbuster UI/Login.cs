@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BibliotecaDeClases;
 
 namespace Blockbuster_UI
 {
@@ -15,13 +16,25 @@ namespace Blockbuster_UI
         public login()
         {
             InitializeComponent();
+            Blockbuster.ListaDeEmpleados = ClaseSerializadora<List<Usuario>>.Leer("baseDatosEmpleados");
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MenuPrincipal menu = new MenuPrincipal();
-            menu.Show();
+            string user = txtUsuario.Text;
+            string clave = txtClave.Text;
+            Usuario usuarioSolicitado = Blockbuster.CheckLogIn(user, clave);
+
+            if (usuarioSolicitado != null)
+            {
+                MenuPrincipal frmPrincipal = new MenuPrincipal();
+                frmPrincipal.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o Clave incorrecta.\n Favor vuelva a intentar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

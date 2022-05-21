@@ -23,9 +23,9 @@ namespace Blockbuster_UI
         {
             StringBuilder sb = new StringBuilder();
 
-            foreach (Socio item in Blockbuster.ListaDeSocios)
+            foreach (Usuario item in Blockbuster.ListaDeEmpleados)
             {
-                sb.AppendLine(item.Mostrar());
+                sb.AppendLine(item.ToString());
             }
 
             if (sb.Length < 1)
