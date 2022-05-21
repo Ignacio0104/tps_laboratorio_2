@@ -17,8 +17,8 @@ namespace Blockbuster_UI
             Blockbuster.ListaDePeliculas = ClaseSerializadora<List<Pelicula>>.Leer("baseDatosPeliculas");
             List<SocioClasico> sociosAux = ClaseSerializadora<List<SocioClasico>>.Leer("baseDatosSocioClasico");
             List<SocioPremium> sociosPremiumAux = ClaseSerializadora<List<SocioPremium>>.Leer("baseDatosSocioPremium");
-            Blockbuster.ListaDeSocios.AddRange(sociosAux);
             Blockbuster.ListaDeSocios.AddRange(sociosPremiumAux);
+            Blockbuster.ListaDeSocios.AddRange(sociosAux);
             usuarioLogueado = Blockbuster.BuscarUsuario(numeroLegajo);
             lblNombreUsuario.Text = $"{usuarioLogueado.Nombre} {usuarioLogueado.Apellido}";
         }

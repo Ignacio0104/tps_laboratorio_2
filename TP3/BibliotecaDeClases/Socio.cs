@@ -16,22 +16,21 @@ namespace BibliotecaDeClases
 
         static Socio()
         {
-            ultimoId = 1000;
+            ultimoId = 1000;       
         }
 
         public Socio()
         {
-
+            this.listaDeAlquileres = new List<Alquiler<Pelicula>>();
         }
 
-        public Socio(string nombre,string apellido,string email,string telefono)
+        public Socio(string nombre,string apellido,string email,string telefono):this()
         {
             this.idSocio = ultimoId;
             this.nombreSocio = nombre;
             this.apellidoSocio = apellido;
             this.emailSocio = email;
             this.telefonoSocio = telefono;
-            this.listaDeAlquileres = new List<Alquiler<Pelicula>>();
             ultimoId++;
         }
         public int IdSocio { get => idSocio; set => idSocio = value; }
@@ -48,6 +47,10 @@ namespace BibliotecaDeClases
             sb.AppendLine($"Apellido: {apellidoSocio}");
             sb.AppendLine($"Email: {emailSocio}");
             sb.AppendLine($"Teléfono: {telefonoSocio}");
+            foreach (Alquiler<Pelicula> item in listaDeAlquileres)
+            {
+                sb.AppendLine(item.ToString());
+            }
 
             return sb.ToString();
         }

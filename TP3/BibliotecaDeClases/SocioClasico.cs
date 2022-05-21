@@ -33,8 +33,8 @@ namespace BibliotecaDeClases
 
             sb.Append(base.Mostrar());
             sb.AppendLine($"Penalidad: {penalidad}%");
-            sb.AppendLine($"Limite peliculas: {limitePeliculas}%");
-            sb.AppendLine($"Tarjeta: {tarjetaDeCredito}%");
+            sb.AppendLine($"Limite peliculas: {limitePeliculas}");
+            sb.AppendLine($"Tarjeta: {tarjetaDeCredito}");
 
             return sb.ToString();
         }

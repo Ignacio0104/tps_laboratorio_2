@@ -25,5 +25,13 @@ namespace BibliotecaDeClases
 
         public int Penalidad { get => penalidad; set => penalidad = value; }
         public DateTime FechaDeAlquiler { get => fechaDeAlquiler; set => fechaDeAlquiler = value; }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Titulo: {pelicula}");
+
+            return sb.ToString();
+        }
     }
 }
