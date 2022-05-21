@@ -38,6 +38,7 @@ namespace BibliotecaDeClases
         public string ApellidoSocio { get => apellidoSocio; set => apellidoSocio = value; }
         public string EmailSocio { get => emailSocio; set => emailSocio = value; }
         public string TelefonoSocio { get => telefonoSocio; set => telefonoSocio = value; }
+        public List<Alquiler<Pelicula>> ListaDeAlquileres { get => listaDeAlquileres; set => listaDeAlquileres = value; }
 
         public virtual string Mostrar()
         {

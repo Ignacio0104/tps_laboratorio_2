@@ -29,7 +29,12 @@ namespace BibliotecaDeClases
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Titulo: {pelicula}");
+            if(pelicula is Pelicula peliAux)
+            {
+                sb.AppendLine($"Titulo: {peliAux.TituloPelicula}");
+            }
+            sb.AppendLine($"Se alquiló el día {fechaDeAlquiler}");
+            sb.AppendLine($"La penalidad por día de demora es de ${penalidad}");
 
             return sb.ToString();
         }

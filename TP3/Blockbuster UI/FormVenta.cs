@@ -30,6 +30,10 @@ namespace Blockbuster_UI
 
             if(socioAtendido is not null)
             {
+                socioAtendido.ListaDeAlquileres.Add(new Alquiler<Pelicula>(Blockbuster.ListaDePeliculas[1]));
+                socioAtendido.ListaDeAlquileres.Add(new Alquiler<Pelicula>(Blockbuster.ListaDePeliculas[5]));
+                socioAtendido.ListaDeAlquileres.Add(new Alquiler<Pelicula>(Blockbuster.ListaDePeliculas[50]));
+                socioAtendido.ListaDeAlquileres.Add(new Alquiler<Pelicula>(Blockbuster.ListaDePeliculas[8]));
                 richTextBox1.Text = socioAtendido.Mostrar();
                 lblError.Visible = false;
             }
