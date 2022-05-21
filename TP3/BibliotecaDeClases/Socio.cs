@@ -6,20 +6,25 @@ namespace BibliotecaDeClases
 {
     public abstract class Socio
     {
-        private static int ultimoId;
-        private int idSocio;
-        private string nombreSocio;
-        private string apellidoSocio;
-        private string emailSocio;
-        private uint telefonoSocio;
-        private List<Alquiler<Pelicula>> listaDeAlquileres;
+        protected static int ultimoId;
+        protected int idSocio;
+        protected string nombreSocio;
+        protected string apellidoSocio;
+        protected string emailSocio;
+        protected string telefonoSocio;
+        protected List<Alquiler<Pelicula>> listaDeAlquileres;
 
         static Socio()
         {
             ultimoId = 1000;
         }
 
-        public Socio(string nombre,string apellido,string email,uint telefono)
+        public Socio()
+        {
+
+        }
+
+        public Socio(string nombre,string apellido,string email,string telefono)
         {
             this.idSocio = ultimoId;
             this.nombreSocio = nombre;
@@ -29,13 +34,13 @@ namespace BibliotecaDeClases
             this.listaDeAlquileres = new List<Alquiler<Pelicula>>();
             ultimoId++;
         }
-        public int IdSocio { get => idSocio; }
+        public int IdSocio { get => idSocio; set => idSocio = value; }
         public string NombreSocio { get => nombreSocio; set => nombreSocio = value; }
         public string ApellidoSocio { get => apellidoSocio; set => apellidoSocio = value; }
         public string EmailSocio { get => emailSocio; set => emailSocio = value; }
-        public uint TelefonoSocio { get => telefonoSocio; set => telefonoSocio = value; }
+        public string TelefonoSocio { get => telefonoSocio; set => telefonoSocio = value; }
 
-        protected virtual string Mostrar()
+        public virtual string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 

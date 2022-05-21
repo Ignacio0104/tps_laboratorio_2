@@ -10,7 +10,7 @@ namespace BibliotecaDeClases
     {
         private string nombre;
         private string apellido;
-        private string dni;
+        private int dni;
         private string nombreUsuario;
         private string password;
         private static int ultimoLegajo;
@@ -22,11 +22,16 @@ namespace BibliotecaDeClases
 
         static Usuario()
         {
-            ultimoLegajo = 1;
+            ultimoLegajo = 50;
+        }
+
+        public Usuario()
+        {
+
         }
 
         public Usuario(string nombre, string apellido,
-            string dni, string nombreUsuario, string password, bool esAdmin,
+            int dni, string nombreUsuario, string password, bool esAdmin,
             DateTime fechaIngreso, DateTime fechaNacimiento, double salario)
         {
             this.legajo = ultimoLegajo;
@@ -34,7 +39,7 @@ namespace BibliotecaDeClases
             this.apellido = apellido;
             this.dni = dni;
             this.nombreUsuario = nombreUsuario;
-            this.password = password;
+            this.Password = password;
             this.esAdmin = esAdmin;
             this.fechaIngreso = fechaIngreso;
             this.fechaNacimiento = fechaNacimiento;
@@ -42,15 +47,16 @@ namespace BibliotecaDeClases
             ultimoLegajo++;
         }
 
-        public int Legajo { get => this.legajo; }
+        public int Legajo { get => this.legajo; set => this.legajo = value; }
         public string Nombre { get => this.nombre; set => this.nombre = value; }
         public string Apellido { get => this.apellido; set => this.apellido = value; }
-        public string Dni { get => this.dni; set => this.dni = value; }
+        public int Dni { get => this.dni; set => this.dni = value; }
         public string NombreUsuario { get => this.nombreUsuario; set => this.nombreUsuario = value; }
         public bool EsAdmin { get => esAdmin; set => esAdmin = value; }
-        public DateTime FechaIngreso { get => fechaIngreso; }
+        public DateTime FechaIngreso { get => fechaIngreso; set => fechaIngreso = value; }
         public DateTime FechaNacimiento { get => fechaNacimiento; set => fechaNacimiento = value; }
         public double Salario { get => salario; set => salario = value; }
+        public string Password { get => password; set => password = value; }
 
         /// <summary>
         /// Metodo para verificar contrasena
@@ -59,7 +65,7 @@ namespace BibliotecaDeClases
         /// <returns>Devuelve true si la contrasena ingresada fue correcta. False caso contrario</returns>
         public bool CheckPassword(string clave)
         {
-            return clave == this.password;
+            return clave == this.Password;
         }
 
         /// <summary>
@@ -72,7 +78,7 @@ namespace BibliotecaDeClases
         /// <param name="fechaNacimiento"></param>
         /// <param name="salario"></param>
         public void ActualizarDatos(string nombre, string apellido,
-            string dni, bool esAdmin, DateTime fechaNacimiento, double salario)
+            int dni, bool esAdmin, DateTime fechaNacimiento, double salario)
         {
             this.nombre = nombre;
             this.apellido = apellido;
@@ -82,5 +88,17 @@ namespace BibliotecaDeClases
             this.salario = salario;
         }
 
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            
+            sb.AppendLine($"ID :{legajo} - {nombre} - {apellido}");
+            sb.AppendLine($"DNI {dni} - Usuario: {nombreUsuario} - Clave: {Password}");
+            sb.AppendLine($"Es admin {esAdmin} - Fecha de ingreso: {fechaIngreso.ToShortDateString()} - Nacimiento: {fechaNacimiento.ToShortDateString()}");
+            sb.AppendLine($"Salario ${salario}");
+
+            return sb.ToString();
+        }
     }
 }

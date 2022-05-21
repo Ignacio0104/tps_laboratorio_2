@@ -23,9 +23,9 @@ namespace Blockbuster_UI
         {
             StringBuilder sb = new StringBuilder();
 
-            foreach (Pelicula item in Blockbuster.ListaDePeliculas)
+            foreach (Socio item in Blockbuster.ListaDeSocios)
             {
-                sb.AppendLine(item.ToString());
+                sb.AppendLine(item.Mostrar());
             }
 
             if (sb.Length < 1)
@@ -36,6 +36,11 @@ namespace Blockbuster_UI
             {
                 richTextBox1.Text = sb.ToString();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ClaseSerializadora<List<Socio>>.Escribir(Blockbuster.ListaDeSocios, "baseDeDatosMixta");
         }
     }
 }

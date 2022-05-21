@@ -42,7 +42,7 @@ namespace BibliotecaDeClases
         {
             T datos = default;
             string archivo = string.Empty;
-            string completa = ruta + @"\" + archivo + ".json";
+            string completa = ruta + @"\" + nombreArchivo + ".json";
             try
             {
                 if (Directory.Exists(ruta))//Esto significa que la carpeta NO EXISTE
@@ -72,7 +72,7 @@ namespace BibliotecaDeClases
             }
             catch (Exception e)
             {
-                throw new Exception($"Error en el archivo {completa}");
+                throw;
             }
         }
     }
