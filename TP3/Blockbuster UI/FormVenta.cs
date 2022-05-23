@@ -30,10 +30,7 @@ namespace Blockbuster_UI
 
             if(socioAtendido is not null)
             {
-                socioAtendido.ListaDeAlquileres.Add(new Alquiler<Pelicula>(Blockbuster.ListaDePeliculas[1]));
-                socioAtendido.ListaDeAlquileres.Add(new Alquiler<Pelicula>(Blockbuster.ListaDePeliculas[5]));
-                socioAtendido.ListaDeAlquileres.Add(new Alquiler<Pelicula>(Blockbuster.ListaDePeliculas[50]));
-                socioAtendido.ListaDeAlquileres.Add(new Alquiler<Pelicula>(Blockbuster.ListaDePeliculas[8]));
+             
                 richTextBox1.Text = socioAtendido.Mostrar();
                 lblError.Visible = false;
             }
@@ -42,5 +39,24 @@ namespace Blockbuster_UI
                 lblError.Visible = true;
             }
         }
+
+       /* private void button1_Click(object sender, EventArgs e)
+        {
+            List<SocioClasico> listaClasicosAux = new List<SocioClasico>();
+            List<SocioPremium> listaPremiumAux = new List<SocioPremium>();
+            foreach (Socio item in Blockbuster.ListaDeSocios)
+            {
+                if(item is SocioClasico)
+                {
+                    listaClasicosAux.Add((SocioClasico)item);
+                }
+                else
+                {
+                    listaPremiumAux.Add((SocioPremium)item);
+                }
+            }
+            ClaseSerializadora<List<SocioClasico>>.Escribir(listaClasicosAux, "socioClasicoPrueba");
+            ClaseSerializadora<List<SocioPremium>>.Escribir(listaPremiumAux, "socioPremiumPrueba");
+        }*/
     }
 }
