@@ -39,6 +39,9 @@ namespace BibliotecaDeClases
         public string EmailSocio { get => emailSocio; set => emailSocio = value; }
         public string TelefonoSocio { get => telefonoSocio; set => telefonoSocio = value; }
         public List<Alquiler<Pelicula>> ListaDeAlquileres { get => listaDeAlquileres; set => listaDeAlquileres = value; }
+        public abstract int LimitePeliculas { get; set; }
+        public abstract int Penalidad { get; set; }
+
 
         public virtual string Mostrar()
         {

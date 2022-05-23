@@ -58,6 +58,8 @@ namespace BibliotecaDeClases
         public double Salario { get => salario; set => salario = value; }
         public string Password { get => password; set => password = value; }
 
+
+
         /// <summary>
         /// Metodo para verificar contrasena
         /// </summary>

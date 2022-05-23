@@ -19,34 +19,44 @@ namespace Blockbuster_UI
             InitializeComponent();
         }
 
-        private void txtNumeroSocio_Leave(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
             int numeroSocio = -1;
 
-            if(int.TryParse(txtNumeroSocio.Text, out numeroSocio))
+            if (int.TryParse(txtNumeroSocio.Text, out numeroSocio))
             {
                 socioAtendido = Blockbuster.BuscarSocio(numeroSocio);
+
             }
 
-            if(socioAtendido is not null)
+            if (socioAtendido is not null)
             {
-             
-                richTextBox1.Text = socioAtendido.Mostrar();
+                lblID.Text = "ID: ";
+                lblLimite.Text = "Limite de peliculas: ";
+                lblDisponible.Text = "Limite disponible: ";
+                pnlInfoUsuario.Visible = true;
+
+                lblNombreUsuario.Text = socioAtendido.NombreSocio;
+                lblApellido.Text = socioAtendido.ApellidoSocio;
+                lblID.Text += socioAtendido.IdSocio;
+                lblLimite.Text += socioAtendido.LimitePeliculas.ToString();
+                lblDisponible.Text += (socioAtendido.LimitePeliculas -socioAtendido.ListaDeAlquileres.Count).ToString();
                 lblError.Visible = false;
             }
             else
             {
                 lblError.Visible = true;
+                pnlInfoUsuario.Visible = false;
             }
         }
 
-       /* private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             List<SocioClasico> listaClasicosAux = new List<SocioClasico>();
             List<SocioPremium> listaPremiumAux = new List<SocioPremium>();
             foreach (Socio item in Blockbuster.ListaDeSocios)
             {
-                if(item is SocioClasico)
+                if (item is SocioClasico)
                 {
                     listaClasicosAux.Add((SocioClasico)item);
                 }
@@ -55,8 +65,13 @@ namespace Blockbuster_UI
                     listaPremiumAux.Add((SocioPremium)item);
                 }
             }
-            ClaseSerializadora<List<SocioClasico>>.Escribir(listaClasicosAux, "socioClasicoPrueba");
-            ClaseSerializadora<List<SocioPremium>>.Escribir(listaPremiumAux, "socioPremiumPrueba");
-        }*/
+            ClaseSerializadora<List<SocioClasico>>.Escribir(listaClasicosAux, "baseDatosSocioClasico");
+            ClaseSerializadora<List<SocioPremium>>.Escribir(listaPremiumAux, "baseDatosSocioPremium");
+        }
+
+        /* private void button1_Click(object sender, EventArgs e)
+         {
+           
+         }*/
     }
 }

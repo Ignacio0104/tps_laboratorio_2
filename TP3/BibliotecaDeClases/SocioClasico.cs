@@ -8,7 +8,7 @@ namespace BibliotecaDeClases
 {
     public class SocioClasico : Socio
     {
-        private double penalidad;
+        private int penalidad;
         private int limitePeliculas;
         private string tarjetaDeCredito;
 
@@ -23,8 +23,8 @@ namespace BibliotecaDeClases
         }
 
 
-        public double Penalidad { get => penalidad; set => penalidad = value; }
-        public int LimitePeliculas { get => limitePeliculas; set => limitePeliculas = value; }
+        public override int Penalidad { get => penalidad; set => penalidad = value; }
+        public override int LimitePeliculas { get => limitePeliculas; set => limitePeliculas = value; }
         public string TarjetaDeCredito { get => tarjetaDeCredito; set => tarjetaDeCredito = value; }
 
         public override string Mostrar()
