@@ -17,12 +17,30 @@ namespace Blockbuster_UI
         public FormVenta()
         {
             InitializeComponent();
+
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            int numeroSocio = -1;
+            CargarInformacionSocios();
+        }
 
+        private void btnAgregarAlquiler_Click(object sender, EventArgs e)
+        {
+            AgregarAlquiler frmAlquiler = new AgregarAlquiler(socioAtendido);
+
+            frmAlquiler.ShowDialog();
+
+            if(frmAlquiler.DialogResult == DialogResult.OK)
+            {
+                socioAtendido.ListaDeAlquileres.AddRange(frmAlquiler.listaAlquilerAux);
+                CargarInformacionSocios();
+            }
+        }
+
+        private void CargarInformacionSocios()
+        {
+            int numeroSocio = -1;
             if (int.TryParse(txtNumeroSocio.Text, out numeroSocio))
             {
                 socioAtendido = Blockbuster.BuscarSocio(numeroSocio);
@@ -50,7 +68,7 @@ namespace Blockbuster_UI
                         dGridAlquileres.Rows[indice].Cells[4].Value = socioAtendido.ListaDeAlquileres[i].FechaDeAlquiler.ToShortDateString();
                         indice++;
                     }
-                    if(socioAtendido.ListaDeAlquileres.Count >= socioAtendido.LimitePeliculas)
+                    if (socioAtendido.ListaDeAlquileres.Count >= socioAtendido.LimitePeliculas)
                     {
                         btnAgregarAlquiler.Enabled = false;
                     }
@@ -69,7 +87,7 @@ namespace Blockbuster_UI
                 lblApellido.Text = socioAtendido.ApellidoSocio;
                 lblID.Text += socioAtendido.IdSocio;
                 lblLimite.Text += socioAtendido.LimitePeliculas.ToString();
-                lblDisponible.Text += (socioAtendido.LimitePeliculas -socioAtendido.ListaDeAlquileres.Count).ToString();
+                lblDisponible.Text += (socioAtendido.LimitePeliculas - socioAtendido.ListaDeAlquileres.Count).ToString();
                 lblError.Visible = false;
             }
             else
@@ -77,13 +95,6 @@ namespace Blockbuster_UI
                 lblError.Visible = true;
                 pnlInfoUsuario.Visible = false;
             }
-        }
-
-        private void btnAgregarAlquiler_Click(object sender, EventArgs e)
-        {
-            AgregarAlquiler frmAlquiler = new AgregarAlquiler(socioAtendido);
-
-            frmAlquiler.ShowDialog();
         }
     }
 }

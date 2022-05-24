@@ -13,8 +13,8 @@ namespace Blockbuster_UI
 {
     public partial class AgregarAlquiler : Form
     {
-        Socio socioAtendido;
-        List<Alquiler<Pelicula>> listaAlquilerAux;
+        public Socio socioAtendido;
+        public List<Alquiler<Pelicula>> listaAlquilerAux;
         public AgregarAlquiler(Socio socioAtendido)
         {
             InitializeComponent();
@@ -74,7 +74,11 @@ namespace Blockbuster_UI
             }
 
         }
-    }
 
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
+    }
 
 }

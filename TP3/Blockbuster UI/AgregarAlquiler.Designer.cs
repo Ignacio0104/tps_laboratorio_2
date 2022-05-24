@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             this.dGridPeliculas = new System.Windows.Forms.DataGridView();
-            this.richAlquileresParcial = new System.Windows.Forms.RichTextBox();
             this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDuracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.richAlquileresParcial = new System.Windows.Forms.RichTextBox();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGridPeliculas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,14 +57,6 @@
             this.dGridPeliculas.Size = new System.Drawing.Size(604, 258);
             this.dGridPeliculas.TabIndex = 0;
             this.dGridPeliculas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridPeliculas_CellClick);
-            // 
-            // richAlquileresParcial
-            // 
-            this.richAlquileresParcial.Location = new System.Drawing.Point(12, 307);
-            this.richAlquileresParcial.Name = "richAlquileresParcial";
-            this.richAlquileresParcial.Size = new System.Drawing.Size(604, 96);
-            this.richAlquileresParcial.TabIndex = 1;
-            this.richAlquileresParcial.Text = "";
             // 
             // colId
             // 
@@ -100,11 +94,40 @@
             this.colPrecio.Name = "colPrecio";
             this.colPrecio.Width = 70;
             // 
+            // richAlquileresParcial
+            // 
+            this.richAlquileresParcial.Location = new System.Drawing.Point(12, 307);
+            this.richAlquileresParcial.Name = "richAlquileresParcial";
+            this.richAlquileresParcial.Size = new System.Drawing.Size(604, 96);
+            this.richAlquileresParcial.TabIndex = 1;
+            this.richAlquileresParcial.Text = "";
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Location = new System.Drawing.Point(12, 419);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(179, 41);
+            this.btnAceptar.TabIndex = 2;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(437, 419);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(179, 41);
+            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
             // AgregarAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(628, 483);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.richAlquileresParcial);
             this.Controls.Add(this.dGridPeliculas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -127,5 +150,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colGenero;
         private System.Windows.Forms.DataGridViewTextBoxColumn colStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
+        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
