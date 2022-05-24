@@ -37,9 +37,17 @@
             this.lblLimite = new System.Windows.Forms.Label();
             this.lblDisponible = new System.Windows.Forms.Label();
             this.pnlInfoUsuario = new System.Windows.Forms.Panel();
+            this.lblNoHayPeliculas = new System.Windows.Forms.Label();
+            this.dGridAlquileres = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.colTitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDuracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlInfoUsuario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dGridAlquileres)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,6 +122,8 @@
             // 
             // pnlInfoUsuario
             // 
+            this.pnlInfoUsuario.Controls.Add(this.lblNoHayPeliculas);
+            this.pnlInfoUsuario.Controls.Add(this.dGridAlquileres);
             this.pnlInfoUsuario.Controls.Add(this.lblDisponible);
             this.pnlInfoUsuario.Controls.Add(this.lblLimite);
             this.pnlInfoUsuario.Controls.Add(this.lblID);
@@ -124,6 +134,33 @@
             this.pnlInfoUsuario.Size = new System.Drawing.Size(693, 535);
             this.pnlInfoUsuario.TabIndex = 8;
             this.pnlInfoUsuario.Visible = false;
+            // 
+            // lblNoHayPeliculas
+            // 
+            this.lblNoHayPeliculas.AutoSize = true;
+            this.lblNoHayPeliculas.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNoHayPeliculas.Location = new System.Drawing.Point(71, 218);
+            this.lblNoHayPeliculas.Name = "lblNoHayPeliculas";
+            this.lblNoHayPeliculas.Size = new System.Drawing.Size(473, 37);
+            this.lblNoHayPeliculas.TabIndex = 9;
+            this.lblNoHayPeliculas.Text = "Este usuario no tiene alquileres activos";
+            this.lblNoHayPeliculas.Visible = false;
+            // 
+            // dGridAlquileres
+            // 
+            this.dGridAlquileres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGridAlquileres.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colTitulo,
+            this.colDuracion,
+            this.colPrecio,
+            this.colDias,
+            this.colFecha});
+            this.dGridAlquileres.Location = new System.Drawing.Point(34, 157);
+            this.dGridAlquileres.Name = "dGridAlquileres";
+            this.dGridAlquileres.RowTemplate.Height = 25;
+            this.dGridAlquileres.Size = new System.Drawing.Size(583, 196);
+            this.dGridAlquileres.TabIndex = 8;
+            this.dGridAlquileres.Visible = false;
             // 
             // pictureBox1
             // 
@@ -145,6 +182,35 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // colTitulo
+            // 
+            this.colTitulo.HeaderText = "Titulo";
+            this.colTitulo.Name = "colTitulo";
+            this.colTitulo.Width = 200;
+            // 
+            // colDuracion
+            // 
+            this.colDuracion.HeaderText = "Duracion";
+            this.colDuracion.Name = "colDuracion";
+            this.colDuracion.Width = 80;
+            // 
+            // colPrecio
+            // 
+            this.colPrecio.HeaderText = "Precio";
+            this.colPrecio.Name = "colPrecio";
+            this.colPrecio.Width = 80;
+            // 
+            // colDias
+            // 
+            this.colDias.HeaderText = "Dias de Alquiler";
+            this.colDias.Name = "colDias";
+            this.colDias.Width = 80;
+            // 
+            // colFecha
+            // 
+            this.colFecha.HeaderText = "Fecha Alquiler";
+            this.colFecha.Name = "colFecha";
+            // 
             // FormVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -161,6 +227,7 @@
             this.Text = "FormVenta";
             this.pnlInfoUsuario.ResumeLayout(false);
             this.pnlInfoUsuario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dGridAlquileres)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -179,5 +246,12 @@
         private System.Windows.Forms.Panel pnlInfoUsuario;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.DataGridView dGridAlquileres;
+        private System.Windows.Forms.Label lblNoHayPeliculas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTitulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDuracion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFecha;
     }
 }

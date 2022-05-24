@@ -36,6 +36,27 @@ namespace Blockbuster_UI
                 lblDisponible.Text = "Limite disponible: ";
                 pnlInfoUsuario.Visible = true;
 
+                if (socioAtendido.ListaDeAlquileres.Count > 0)
+                {
+                    dGridAlquileres.Visible = true;
+                    lblNoHayPeliculas.Visible = false;
+                    for (int i = 0; i < socioAtendido.ListaDeAlquileres.Count; i++)
+                    {
+                        int indice = dGridAlquileres.Rows.Add();
+                        dGridAlquileres.Rows[indice].Cells[0].Value = socioAtendido.ListaDeAlquileres[i].Pelicula.TituloPelicula;
+                        dGridAlquileres.Rows[indice].Cells[1].Value = socioAtendido.ListaDeAlquileres[i].Pelicula.DuracionPelicula + " min";
+                        dGridAlquileres.Rows[indice].Cells[2].Value = "$ " + (int)socioAtendido.ListaDeAlquileres[i].Pelicula.PrecioDeAlquiler;
+                        dGridAlquileres.Rows[indice].Cells[3].Value = (int)socioAtendido.ListaDeAlquileres[i].Pelicula.DiasDeAlquiler;
+                        dGridAlquileres.Rows[indice].Cells[4].Value = socioAtendido.ListaDeAlquileres[i].FechaDeAlquiler.ToShortDateString();
+                        indice++;
+                    }
+                }
+                else
+                {
+                    dGridAlquileres.Visible = false;
+                    lblNoHayPeliculas.Visible = true;
+                }
+
                 lblNombreUsuario.Text = socioAtendido.NombreSocio;
                 lblApellido.Text = socioAtendido.ApellidoSocio;
                 lblID.Text += socioAtendido.IdSocio;
