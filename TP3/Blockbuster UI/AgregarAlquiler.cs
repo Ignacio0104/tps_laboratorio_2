@@ -39,24 +39,40 @@ namespace Blockbuster_UI
 
         private void dGridPeliculas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            try
             {
-                DataGridViewTextBoxCell cell = (DataGridViewTextBoxCell)dGridPeliculas.Rows[e.RowIndex].Cells[0];
-                listaAlquilerAux.Add(new Alquiler<Pelicula>(Blockbuster.ListaDePeliculas[(int)cell.Value - 1]));
-                //restaurante -= restaurante.Inventario[(int)cell.Value - 1];
-               // dGridProductos.Rows.Clear();
-                //CargarProductos(); //Se actualiza la lista para mostrar el stock actual
-                StringBuilder sb = new StringBuilder();
-                richAlquileresParcial.Text = "";
-                if (listaAlquilerAux.Count > 0)
+                if (e.RowIndex >= 0)
                 {
-                    foreach (Alquiler<Pelicula> item in listaAlquilerAux)
+                    if ((listaAlquilerAux.Count + socioAtendido.ListaDeAlquileres.Count) < socioAtendido.LimitePeliculas)
                     {
-                        sb.AppendLine($"{item.Pelicula.TituloPelicula}");
+                        DataGridViewTextBoxCell cell = (DataGridViewTextBoxCell)dGridPeliculas.Rows[e.RowIndex].Cells[0];
+                        listaAlquilerAux.Add(new Alquiler<Pelicula>(Blockbuster.BuscarPelicula((int)cell.Value)));
+                        //restaurante -= restaurante.Inventario[(int)cell.Value - 1];
+                        // dGridProductos.Rows.Clear();
+                        //CargarProductos(); //Se actualiza la lista para mostrar el stock actual
+                        StringBuilder sb = new StringBuilder();
+                        richAlquileresParcial.Text = "";
+                        if (listaAlquilerAux.Count > 0)
+                        {
+                            foreach (Alquiler<Pelicula> item in listaAlquilerAux)
+                            {
+                                sb.AppendLine($"{item.Pelicula.TituloPelicula}");
+                            }
+                        }
+                        richAlquileresParcial.Text = sb.ToString();
                     }
+                    else
+                    {
+                        throw new Exception("Error, no hay mas lugar");
+                    }
+
                 }
-                richAlquileresParcial.Text = sb.ToString();
+   
+            }catch(Exception exception)
+            {
+                MessageBox.Show(exception.Message);
             }
+
         }
     }
 

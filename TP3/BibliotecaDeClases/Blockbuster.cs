@@ -71,6 +71,20 @@ namespace BibliotecaDeClases
             return null;
         }
 
+        public static Pelicula BuscarPelicula(int idPelicula)
+        {
+            for (int i = 0; i < listaDePeliculas.Count; i++)
+            {
+                if (listaDePeliculas[i].IdPelicula == idPelicula)
+                {
+                    return listaDePeliculas[i];
+                }
+            }
+            return null;
+        }
+
+        
+
         /* private static void HardcodeoPeliculas()
          {
              listaDePeliculas.Add(new Pelicula("El senor de los anillos La comunidad del anillo",123,GenerosPeliculas.CienciaFiccion,DiasCategoriasAlquiler.Clasica,PrecioCategoriasAlquiler.Clasica,10));
