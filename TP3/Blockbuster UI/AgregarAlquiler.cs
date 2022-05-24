@@ -47,9 +47,9 @@ namespace Blockbuster_UI
                     {
                         DataGridViewTextBoxCell cell = (DataGridViewTextBoxCell)dGridPeliculas.Rows[e.RowIndex].Cells[0];
                         listaAlquilerAux.Add(new Alquiler<Pelicula>(Blockbuster.BuscarPelicula((int)cell.Value)));
-                        //restaurante -= restaurante.Inventario[(int)cell.Value - 1];
-                        // dGridProductos.Rows.Clear();
-                        //CargarProductos(); //Se actualiza la lista para mostrar el stock actual
+                        Blockbuster.BuscarPelicula((int)cell.Value).Stock--;
+                        dGridPeliculas.Rows.Clear();
+                        CargarPeliculas();
                         StringBuilder sb = new StringBuilder();
                         richAlquileresParcial.Text = "";
                         if (listaAlquilerAux.Count > 0)
@@ -78,6 +78,11 @@ namespace Blockbuster_UI
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
         }
     }
 

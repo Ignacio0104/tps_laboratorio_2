@@ -36,6 +36,13 @@ namespace Blockbuster_UI
                 socioAtendido.ListaDeAlquileres.AddRange(frmAlquiler.listaAlquilerAux);
                 CargarInformacionSocios();
             }
+            else
+            {
+                foreach (Alquiler<Pelicula> item in frmAlquiler.listaAlquilerAux)
+                {
+                    Blockbuster.ListaDePeliculas[Blockbuster.BuscarIndicePelicula(item.Pelicula)].Stock++;
+                }
+            }
         }
 
         private void CargarInformacionSocios()
@@ -52,7 +59,14 @@ namespace Blockbuster_UI
                 lblLimite.Text = "Limite de peliculas: ";
                 lblDisponible.Text = "Limite disponible: ";
                 pnlInfoUsuario.Visible = true;
-
+                if (socioAtendido.ListaDeAlquileres.Count >= socioAtendido.LimitePeliculas)
+                {
+                    btnAgregarAlquiler.Enabled = false;
+                }
+                else
+                {
+                    btnAgregarAlquiler.Enabled = true;
+                }
                 if (socioAtendido.ListaDeAlquileres.Count > 0)
                 {
                     dGridAlquileres.Visible = true;
@@ -67,14 +81,6 @@ namespace Blockbuster_UI
                         dGridAlquileres.Rows[indice].Cells[3].Value = (int)socioAtendido.ListaDeAlquileres[i].Pelicula.DiasDeAlquiler;
                         dGridAlquileres.Rows[indice].Cells[4].Value = socioAtendido.ListaDeAlquileres[i].FechaDeAlquiler.ToShortDateString();
                         indice++;
-                    }
-                    if (socioAtendido.ListaDeAlquileres.Count >= socioAtendido.LimitePeliculas)
-                    {
-                        btnAgregarAlquiler.Enabled = false;
-                    }
-                    else
-                    {
-                        btnAgregarAlquiler.Enabled = true;
                     }
                 }
                 else

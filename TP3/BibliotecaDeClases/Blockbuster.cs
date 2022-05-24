@@ -83,7 +83,20 @@ namespace BibliotecaDeClases
             return null;
         }
 
-        
+        public static int BuscarIndicePelicula(Pelicula pelicula)
+        {
+            int indice = -1;
+            for (int i = 0; i < listaDePeliculas.Count; i++)
+            {
+                if (listaDePeliculas[i].IdPelicula == pelicula.IdPelicula)
+                {
+                    indice = i;
+                }
+            }
+            return indice;
+        }
+
+
 
         /* private static void HardcodeoPeliculas()
          {

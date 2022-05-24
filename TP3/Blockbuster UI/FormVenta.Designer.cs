@@ -63,6 +63,7 @@
             // lblError
             // 
             this.lblError.AutoSize = true;
+            this.lblError.BackColor = System.Drawing.SystemColors.Control;
             this.lblError.ForeColor = System.Drawing.Color.Red;
             this.lblError.Location = new System.Drawing.Point(33, 47);
             this.lblError.Name = "lblError";
@@ -206,9 +207,9 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 143);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 157);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 392);
+            this.pictureBox1.Size = new System.Drawing.Size(204, 378);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
@@ -228,10 +229,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(896, 534);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pnlInfoUsuario);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.txtNumeroSocio);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
