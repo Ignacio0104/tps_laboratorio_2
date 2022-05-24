@@ -30,18 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.btnDevolucion = new System.Windows.Forms.Button();
             this.btnSocios = new System.Windows.Forms.Button();
             this.btnInventario = new System.Windows.Forms.Button();
             this.btnVenta = new System.Windows.Forms.Button();
             this.panelPrincipal = new System.Windows.Forms.Panel();
-            this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Controls.Add(this.btnGuardar);
             this.panel1.Controls.Add(this.lblNombreUsuario);
             this.panel1.Controls.Add(this.btnDevolucion);
             this.panel1.Controls.Add(this.btnSocios);
@@ -52,6 +54,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(204, 534);
             this.panel1.TabIndex = 0;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(55, 446);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(91, 25);
+            this.btnGuardar.TabIndex = 5;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // lblNombreUsuario
+            // 
+            this.lblNombreUsuario.AutoSize = true;
+            this.lblNombreUsuario.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(12, 122);
+            this.lblNombreUsuario.Name = "lblNombreUsuario";
+            this.lblNombreUsuario.Size = new System.Drawing.Size(59, 25);
+            this.lblNombreUsuario.TabIndex = 2;
+            this.lblNombreUsuario.Text = "label1";
             // 
             // btnDevolucion
             // 
@@ -102,16 +124,6 @@
             this.panelPrincipal.Size = new System.Drawing.Size(896, 534);
             this.panelPrincipal.TabIndex = 1;
             // 
-            // lblNombreUsuario
-            // 
-            this.lblNombreUsuario.AutoSize = true;
-            this.lblNombreUsuario.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNombreUsuario.Location = new System.Drawing.Point(12, 122);
-            this.lblNombreUsuario.Name = "lblNombreUsuario";
-            this.lblNombreUsuario.Size = new System.Drawing.Size(59, 25);
-            this.lblNombreUsuario.TabIndex = 2;
-            this.lblNombreUsuario.Text = "label1";
-            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -137,5 +149,6 @@
         private System.Windows.Forms.Button btnDevolucion;
         private System.Windows.Forms.Button btnSocios;
         private System.Windows.Forms.Label lblNombreUsuario;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }
