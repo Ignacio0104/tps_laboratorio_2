@@ -38,6 +38,7 @@ namespace Blockbuster_UI
                 if (socioAtendido.ListaDeAlquileres.Count > 0)
                 {
                     dGridAlquileres.Visible = true;
+                    dGridAlquileres.Rows.Clear();
                     lblNoHayPeliculas.Visible = false;
                     for (int i = 0; i < socioAtendido.ListaDeAlquileres.Count; i++)
                     {
@@ -78,5 +79,11 @@ namespace Blockbuster_UI
             }
         }
 
+        private void btnAgregarAlquiler_Click(object sender, EventArgs e)
+        {
+            AgregarAlquiler frmAlquiler = new AgregarAlquiler(socioAtendido);
+
+            frmAlquiler.ShowDialog();
+        }
     }
 }

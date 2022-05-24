@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.dGridPeliculas = new System.Windows.Forms.DataGridView();
+            this.richAlquileresParcial = new System.Windows.Forms.RichTextBox();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDuracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,16 +43,32 @@
             // 
             this.dGridPeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGridPeliculas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colId,
             this.colTitulo,
             this.colDuracion,
             this.colGenero,
             this.colStock,
             this.colPrecio});
-            this.dGridPeliculas.Location = new System.Drawing.Point(12, 39);
+            this.dGridPeliculas.Location = new System.Drawing.Point(12, 30);
             this.dGridPeliculas.Name = "dGridPeliculas";
             this.dGridPeliculas.RowTemplate.Height = 25;
-            this.dGridPeliculas.Size = new System.Drawing.Size(533, 269);
+            this.dGridPeliculas.Size = new System.Drawing.Size(604, 258);
             this.dGridPeliculas.TabIndex = 0;
+            this.dGridPeliculas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridPeliculas_CellClick);
+            // 
+            // richAlquileresParcial
+            // 
+            this.richAlquileresParcial.Location = new System.Drawing.Point(12, 307);
+            this.richAlquileresParcial.Name = "richAlquileresParcial";
+            this.richAlquileresParcial.Size = new System.Drawing.Size(604, 96);
+            this.richAlquileresParcial.TabIndex = 1;
+            this.richAlquileresParcial.Text = "";
+            // 
+            // colId
+            // 
+            this.colId.HeaderText = "ID";
+            this.colId.Name = "colId";
+            this.colId.Width = 70;
             // 
             // colTitulo
             // 
@@ -86,7 +104,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(565, 415);
+            this.ClientSize = new System.Drawing.Size(628, 483);
+            this.Controls.Add(this.richAlquileresParcial);
             this.Controls.Add(this.dGridPeliculas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -101,6 +120,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dGridPeliculas;
+        private System.Windows.Forms.RichTextBox richAlquileresParcial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colId;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTitulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDuracion;
         private System.Windows.Forms.DataGridViewTextBoxColumn colGenero;

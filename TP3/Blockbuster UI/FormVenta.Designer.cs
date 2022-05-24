@@ -37,6 +37,7 @@
             this.lblLimite = new System.Windows.Forms.Label();
             this.lblDisponible = new System.Windows.Forms.Label();
             this.pnlInfoUsuario = new System.Windows.Forms.Panel();
+            this.btnAgregarAlquiler = new System.Windows.Forms.Button();
             this.lblNoHayPeliculas = new System.Windows.Forms.Label();
             this.dGridAlquileres = new System.Windows.Forms.DataGridView();
             this.colTitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,7 +47,6 @@
             this.colFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnAgregarAlquiler = new System.Windows.Forms.Button();
             this.pnlInfoUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGridAlquileres)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -131,11 +131,20 @@
             this.pnlInfoUsuario.Controls.Add(this.lblID);
             this.pnlInfoUsuario.Controls.Add(this.lblApellido);
             this.pnlInfoUsuario.Controls.Add(this.lblNombreUsuario);
-            this.pnlInfoUsuario.Enabled = false;
             this.pnlInfoUsuario.Location = new System.Drawing.Point(204, 0);
             this.pnlInfoUsuario.Name = "pnlInfoUsuario";
             this.pnlInfoUsuario.Size = new System.Drawing.Size(693, 535);
             this.pnlInfoUsuario.TabIndex = 8;
+            // 
+            // btnAgregarAlquiler
+            // 
+            this.btnAgregarAlquiler.Location = new System.Drawing.Point(480, 395);
+            this.btnAgregarAlquiler.Name = "btnAgregarAlquiler";
+            this.btnAgregarAlquiler.Size = new System.Drawing.Size(137, 45);
+            this.btnAgregarAlquiler.TabIndex = 10;
+            this.btnAgregarAlquiler.Text = "Agregar +";
+            this.btnAgregarAlquiler.UseVisualStyleBackColor = true;
+            this.btnAgregarAlquiler.Click += new System.EventHandler(this.btnAgregarAlquiler_Click);
             // 
             // lblNoHayPeliculas
             // 
@@ -212,16 +221,6 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnAgregarAlquiler
-            // 
-            this.btnAgregarAlquiler.Location = new System.Drawing.Point(480, 395);
-            this.btnAgregarAlquiler.Name = "btnAgregarAlquiler";
-            this.btnAgregarAlquiler.Size = new System.Drawing.Size(137, 45);
-            this.btnAgregarAlquiler.TabIndex = 10;
-            this.btnAgregarAlquiler.Text = "Agregar +";
-            this.btnAgregarAlquiler.UseVisualStyleBackColor = true;
-            this.btnAgregarAlquiler.Visible = false;
             // 
             // FormVenta
             // 
