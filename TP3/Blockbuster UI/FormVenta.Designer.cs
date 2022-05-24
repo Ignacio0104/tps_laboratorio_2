@@ -39,13 +39,14 @@
             this.pnlInfoUsuario = new System.Windows.Forms.Panel();
             this.lblNoHayPeliculas = new System.Windows.Forms.Label();
             this.dGridAlquileres = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.colTitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDuracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnAgregarAlquiler = new System.Windows.Forms.Button();
             this.pnlInfoUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGridAlquileres)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -122,6 +123,7 @@
             // 
             // pnlInfoUsuario
             // 
+            this.pnlInfoUsuario.Controls.Add(this.btnAgregarAlquiler);
             this.pnlInfoUsuario.Controls.Add(this.lblNoHayPeliculas);
             this.pnlInfoUsuario.Controls.Add(this.dGridAlquileres);
             this.pnlInfoUsuario.Controls.Add(this.lblDisponible);
@@ -129,11 +131,11 @@
             this.pnlInfoUsuario.Controls.Add(this.lblID);
             this.pnlInfoUsuario.Controls.Add(this.lblApellido);
             this.pnlInfoUsuario.Controls.Add(this.lblNombreUsuario);
+            this.pnlInfoUsuario.Enabled = false;
             this.pnlInfoUsuario.Location = new System.Drawing.Point(204, 0);
             this.pnlInfoUsuario.Name = "pnlInfoUsuario";
             this.pnlInfoUsuario.Size = new System.Drawing.Size(693, 535);
             this.pnlInfoUsuario.TabIndex = 8;
-            this.pnlInfoUsuario.Visible = false;
             // 
             // lblNoHayPeliculas
             // 
@@ -161,26 +163,6 @@
             this.dGridAlquileres.Size = new System.Drawing.Size(583, 196);
             this.dGridAlquileres.TabIndex = 8;
             this.dGridAlquileres.Visible = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 143);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 392);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(12, 94);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(181, 33);
-            this.btnBuscar.TabIndex = 10;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // colTitulo
             // 
@@ -210,6 +192,36 @@
             // 
             this.colFecha.HeaderText = "Fecha Alquiler";
             this.colFecha.Name = "colFecha";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 143);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(204, 392);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(12, 94);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(181, 33);
+            this.btnBuscar.TabIndex = 10;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnAgregarAlquiler
+            // 
+            this.btnAgregarAlquiler.Location = new System.Drawing.Point(480, 395);
+            this.btnAgregarAlquiler.Name = "btnAgregarAlquiler";
+            this.btnAgregarAlquiler.Size = new System.Drawing.Size(137, 45);
+            this.btnAgregarAlquiler.TabIndex = 10;
+            this.btnAgregarAlquiler.Text = "Agregar +";
+            this.btnAgregarAlquiler.UseVisualStyleBackColor = true;
+            this.btnAgregarAlquiler.Visible = false;
             // 
             // FormVenta
             // 
@@ -253,5 +265,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDias;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFecha;
+        private System.Windows.Forms.Button btnAgregarAlquiler;
     }
 }

@@ -28,7 +28,6 @@ namespace Blockbuster_UI
                 socioAtendido = Blockbuster.BuscarSocio(numeroSocio);
 
             }
-
             if (socioAtendido is not null)
             {
                 lblID.Text = "ID: ";
@@ -49,6 +48,14 @@ namespace Blockbuster_UI
                         dGridAlquileres.Rows[indice].Cells[3].Value = (int)socioAtendido.ListaDeAlquileres[i].Pelicula.DiasDeAlquiler;
                         dGridAlquileres.Rows[indice].Cells[4].Value = socioAtendido.ListaDeAlquileres[i].FechaDeAlquiler.ToShortDateString();
                         indice++;
+                    }
+                    if(socioAtendido.ListaDeAlquileres.Count >= socioAtendido.LimitePeliculas)
+                    {
+                        btnAgregarAlquiler.Enabled = false;
+                    }
+                    else
+                    {
+                        btnAgregarAlquiler.Enabled = true;
                     }
                 }
                 else
