@@ -173,6 +173,7 @@
             this.dGridAlquileres.Size = new System.Drawing.Size(583, 196);
             this.dGridAlquileres.TabIndex = 8;
             this.dGridAlquileres.Visible = false;
+            this.dGridAlquileres.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridAlquileres_CellClick);
             // 
             // colTitulo
             // 

@@ -54,7 +54,7 @@ namespace Blockbuster_UI
 
         private void btnDevolucion_Click(object sender, EventArgs e)
         {
-            CargarMenu(new Devolucion());
+            //CargarMenu(new Devolucion());
         }
 
         private void MenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)

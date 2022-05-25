@@ -103,5 +103,22 @@ namespace Blockbuster_UI
                 pnlInfoUsuario.Visible = false;
             }
         }
+
+        private void dGridAlquileres_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex >= 0)
+                {
+                    Devolucion frmDevolucion = new Devolucion(socioAtendido.ListaDeAlquileres[e.RowIndex]);
+                    frmDevolucion.ShowDialog();  
+                }
+
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
     }
 }

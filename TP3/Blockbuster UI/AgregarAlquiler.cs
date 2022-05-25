@@ -88,11 +88,6 @@ namespace Blockbuster_UI
             this.DialogResult = DialogResult.OK;
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.Cancel;
-        }
-
         private void dGridProducto_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
