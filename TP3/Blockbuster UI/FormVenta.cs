@@ -111,7 +111,13 @@ namespace Blockbuster_UI
                 if (e.RowIndex >= 0)
                 {
                     Devolucion frmDevolucion = new Devolucion(socioAtendido.ListaDeAlquileres[e.RowIndex],socioAtendido is SocioPremium);
-                    frmDevolucion.ShowDialog();  
+                    frmDevolucion.ShowDialog();
+
+                    if (frmDevolucion.DialogResult == DialogResult.OK)
+                    {
+                        socioAtendido.ListaDeAlquileres.RemoveAt(e.RowIndex);
+                        CargarInformacionSocios();
+                    }
                 }
 
             }

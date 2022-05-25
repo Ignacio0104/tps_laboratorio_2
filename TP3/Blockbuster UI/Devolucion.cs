@@ -45,6 +45,10 @@ namespace Blockbuster_UI
 
             return penalidad;
         }
-        
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
     }
 }
