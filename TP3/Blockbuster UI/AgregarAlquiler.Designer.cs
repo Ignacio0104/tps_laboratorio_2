@@ -41,6 +41,11 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.dGridProducto = new System.Windows.Forms.DataGridView();
             this.picLogoBlockbuster = new System.Windows.Forms.PictureBox();
+            this.lblFacturacion = new System.Windows.Forms.Label();
+            this.colIdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dGridPeliculas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGridProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoBlockbuster)).BeginInit();
@@ -146,6 +151,11 @@
             this.dGridProducto.AllowUserToOrderColumns = true;
             this.dGridProducto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGridProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGridProducto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colIdProducto,
+            this.colNombre,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn1});
             this.dGridProducto.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.dGridProducto.Location = new System.Drawing.Point(12, 265);
             this.dGridProducto.MultiSelect = false;
@@ -166,17 +176,56 @@
             this.picLogoBlockbuster.TabIndex = 5;
             this.picLogoBlockbuster.TabStop = false;
             // 
+            // lblFacturacion
+            // 
+            this.lblFacturacion.AutoSize = true;
+            this.lblFacturacion.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblFacturacion.Location = new System.Drawing.Point(734, 476);
+            this.lblFacturacion.Name = "lblFacturacion";
+            this.lblFacturacion.Size = new System.Drawing.Size(132, 28);
+            this.lblFacturacion.TabIndex = 7;
+            this.lblFacturacion.Text = "Facturacion: $";
+            // 
+            // colIdProducto
+            // 
+            this.colIdProducto.FillWeight = 65.65144F;
+            this.colIdProducto.HeaderText = "ID";
+            this.colIdProducto.Name = "colIdProducto";
+            this.colIdProducto.ReadOnly = true;
+            // 
+            // colNombre
+            // 
+            this.colNombre.FillWeight = 203.0457F;
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.FillWeight = 65.65144F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Precio";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.FillWeight = 65.65144F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Stock";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
             // AgregarAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1154, 541);
+            this.Controls.Add(this.lblFacturacion);
             this.Controls.Add(this.picLogoBlockbuster);
-            this.Controls.Add(this.dGridProducto);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.richAlquileresParcial);
             this.Controls.Add(this.dGridPeliculas);
+            this.Controls.Add(this.dGridProducto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -186,6 +235,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dGridProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoBlockbuster)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -203,5 +253,10 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.DataGridView dGridProducto;
         private System.Windows.Forms.PictureBox picLogoBlockbuster;
+        private System.Windows.Forms.Label lblFacturacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colIdProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     }
 }

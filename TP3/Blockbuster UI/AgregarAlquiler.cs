@@ -16,6 +16,7 @@ namespace Blockbuster_UI
         public Socio socioAtendido;
         public List<Alquiler<Pelicula>> listaAlquilerAux;
         public List<Producto> listaProductosAux;
+        public double acumuladorPrecio;
         public AgregarAlquiler(Socio socioAtendido)
         {
             InitializeComponent();
@@ -23,7 +24,7 @@ namespace Blockbuster_UI
             listaProductosAux = new List<Producto>();
             this.socioAtendido = socioAtendido;
             CargarPeliculas();
-            dGridProducto.DataSource = Blockbuster.ListaDeProductos;
+            CargarProductos();
         }
         public void CargarPeliculas()
         {
@@ -36,6 +37,19 @@ namespace Blockbuster_UI
                 dGridPeliculas.Rows[indice].Cells[3].Value = item.GeneroPelicula.ToString();
                 dGridPeliculas.Rows[indice].Cells[4].Value = item.Stock.ToString();
                 dGridPeliculas.Rows[indice].Cells[5].Value = "$" + (int)item.PrecioDeAlquiler;
+                indice++;
+            }
+        }
+
+        public void CargarProductos()
+        {
+            foreach (Producto item in Blockbuster.ListaDeProductos)
+            {
+                int indice = dGridProducto.Rows.Add();
+                dGridProducto.Rows[indice].Cells[0].Value = item.IdProducto;
+                dGridProducto.Rows[indice].Cells[1].Value = item.NombreProducto;
+                dGridProducto.Rows[indice].Cells[2].Value = "$" + item.PrecioProducto;
+                dGridProducto.Rows[indice].Cells[3].Value = item.StockProducto;
                 indice++;
             }
         }
@@ -88,9 +102,9 @@ namespace Blockbuster_UI
                     DataGridViewTextBoxCell cell = (DataGridViewTextBoxCell)dGridProducto.Rows[e.RowIndex].Cells[0];
                     listaProductosAux.Add(Blockbuster.BuscarProducto((int)cell.Value));
                     Blockbuster.BuscarProducto((int)cell.Value).StockProducto--;
-                    dGridProducto.DataSource = Blockbuster.ListaDeProductos;
+                    dGridProducto.Rows.Clear();
+                    CargarProductos();
                     ActualizarCuenta();
-
                 }
 
             }
@@ -104,12 +118,14 @@ namespace Blockbuster_UI
         {
             StringBuilder sb = new StringBuilder();
             richAlquileresParcial.Text = "";
+            acumuladorPrecio = 0;
             if (listaAlquilerAux.Count > 0)
             {
                 foreach (Alquiler<Pelicula> item in listaAlquilerAux)
                 {
                     sb.AppendLine($"{item.Pelicula.ToString()}");
                     sb.AppendLine("---------------------------");
+                    acumuladorPrecio += (int)item.Pelicula.PrecioDeAlquiler;
                 }
             }
 
@@ -119,10 +135,12 @@ namespace Blockbuster_UI
                 {
                     sb.AppendLine($"{item.ToString()}");
                     sb.AppendLine("---------------------------");
+                    acumuladorPrecio += item.PrecioProducto;
                 }
             }
 
             richAlquileresParcial.Text = sb.ToString();
+            lblFacturacion.Text = $"Facturacion: ${acumuladorPrecio}";
         }
     }
 

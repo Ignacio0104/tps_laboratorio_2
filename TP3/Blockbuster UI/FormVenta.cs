@@ -17,6 +17,7 @@ namespace Blockbuster_UI
         public FormVenta()
         {
             InitializeComponent();
+            pnlInfoUsuario.Visible = false;
 
         }
 
