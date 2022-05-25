@@ -55,8 +55,8 @@ namespace BibliotecaDeClases
 
             sb.AppendLine($"Titulo {tituloPelicula} - Duracion {duracionPelicula}min");
             sb.AppendLine($"Genero {generoPelicula} - Dias de alquiler {(int)diasDeAlquiler}");
-            sb.AppendLine($"Precio ${(int)precioDeAlquiler} - Stock {stock}\n\n");
+            sb.Append($"Precio ${(int)precioDeAlquiler}");
             return sb.ToString();
         }
     }
-}
+}   

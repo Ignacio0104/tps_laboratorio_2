@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -41,16 +41,6 @@
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(597, 382);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 39);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Mostrar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(628, 89);
@@ -60,6 +50,16 @@
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(597, 382);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(144, 39);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Mostrar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Inventario
             // 
@@ -78,10 +78,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
