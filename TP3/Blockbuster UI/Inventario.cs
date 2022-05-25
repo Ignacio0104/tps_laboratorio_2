@@ -16,31 +16,8 @@ namespace Blockbuster_UI
         public Inventario()
         {
             InitializeComponent();
+            dGridInventario.DataSource = Blockbuster.ListaDePeliculas;
         }
 
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            StringBuilder sb = new StringBuilder();
-
-            foreach (Usuario item in Blockbuster.ListaDeEmpleados)
-            {
-                sb.AppendLine(item.ToString());
-            }
-
-            if (sb.Length < 1)
-            {
-                richTextBox1.Text = "No hay peliculas";
-            }
-            else
-            {
-                richTextBox1.Text = sb.ToString();
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            ClaseSerializadora<List<Socio>>.Escribir(Blockbuster.ListaDeSocios, "baseDeDatosMixta");
-        }
     }
 }
