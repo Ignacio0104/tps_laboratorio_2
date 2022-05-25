@@ -16,8 +16,22 @@ namespace Blockbuster_UI
         public Inventario()
         {
             InitializeComponent();
-            dGridInventario.DataSource = Blockbuster.ListaDePeliculas;
+            cmbFiltroBusqueda.Items.Add("Peliculas");
+            cmbFiltroBusqueda.Items.Add("Productos");
+            cmbFiltroBusqueda.SelectedIndex = 0;
         }
 
+        private void cmbFiltroBusqueda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbFiltroBusqueda.SelectedItem == "Peliculas")
+            {
+                dGridInventario.DataSource = Blockbuster.ListaDePeliculas;
+            }
+            else
+            {
+                dGridInventario.DataSource = Blockbuster.ListaDeProductos;
+            }
+            
+        }
     }
 }

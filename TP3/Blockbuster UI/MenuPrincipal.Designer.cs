@@ -103,7 +103,7 @@
             this.btnInventario.TabIndex = 2;
             this.btnInventario.Text = "Inventario";
             this.btnInventario.UseVisualStyleBackColor = true;
-            this.btnInventario.Click += new System.EventHandler(this.button2_Click);
+            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
             // 
             // btnVenta
             // 
@@ -113,7 +113,7 @@
             this.btnVenta.TabIndex = 1;
             this.btnVenta.Text = "Nueva venta";
             this.btnVenta.UseVisualStyleBackColor = true;
-            this.btnVenta.Click += new System.EventHandler(this.button1_Click);
+            this.btnVenta.Click += new System.EventHandler(this.btnVenta_Click);
             // 
             // panelPrincipal
             // 

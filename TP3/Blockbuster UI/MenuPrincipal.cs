@@ -24,10 +24,17 @@ namespace Blockbuster_UI
             lblNombreUsuario.Text = $"{usuarioLogueado.Nombre} {usuarioLogueado.Apellido}";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnVenta_Click(object sender, EventArgs e)
         {
             CargarMenu(new FormVenta());
         }
+
+        private void btnInventario_Click(object sender, EventArgs e)
+        {
+            CargarMenu(new Inventario());
+        }
+
+
 
         private void CargarMenu(Form formulario)
         {
@@ -43,10 +50,7 @@ namespace Blockbuster_UI
             formulario.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            CargarMenu(new Inventario());
-        }
+ 
 
         private void btnSocios_Click(object sender, EventArgs e)
         {
@@ -82,5 +86,7 @@ namespace Blockbuster_UI
         {
 
         }
+
+
     }
 }
