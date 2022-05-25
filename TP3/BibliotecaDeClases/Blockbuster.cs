@@ -23,7 +23,7 @@ namespace BibliotecaDeClases
             listaDePeliculas = new List<Pelicula>();
             listaDeSocios = new List<Socio>();
             listaDeProductos = new List<Producto>();
-            HardcodeoProductos();
+            //HardcodeoProductos();
         }
 
         public static List<Usuario> ListaDeEmpleados { get => listaDeEmpleados; set => listaDeEmpleados = value; }
@@ -115,7 +115,7 @@ namespace BibliotecaDeClases
 
 
 
-        private static void HardcodeoProductos()
+      /*  private static void HardcodeoProductos()
         {
             listaDeProductos.Add(new Producto("Pochoclos Grandes", 600, 50));
             listaDeProductos.Add(new Producto("Pochoclos Medianos", 450, 60));
@@ -136,6 +136,6 @@ namespace BibliotecaDeClases
             listaDeProductos.Add(new Producto("Nugaton", 200, 40));
             listaDeProductos.Add(new Producto("Galletitas Oreo", 400, 20));
             listaDeProductos.Add(new Producto("Mentitas", 70, 20));
-        }
+        }*/
     }
 }

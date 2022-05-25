@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
-            this.btnDevolucion = new System.Windows.Forms.Button();
+            this.btnEmpleados = new System.Windows.Forms.Button();
             this.btnSocios = new System.Windows.Forms.Button();
             this.btnInventario = new System.Windows.Forms.Button();
             this.btnVenta = new System.Windows.Forms.Button();
@@ -45,7 +45,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel1.Controls.Add(this.btnGuardar);
             this.panel1.Controls.Add(this.lblNombreUsuario);
-            this.panel1.Controls.Add(this.btnDevolucion);
+            this.panel1.Controls.Add(this.btnEmpleados);
             this.panel1.Controls.Add(this.btnSocios);
             this.panel1.Controls.Add(this.btnInventario);
             this.panel1.Controls.Add(this.btnVenta);
@@ -75,15 +75,15 @@
             this.lblNombreUsuario.TabIndex = 2;
             this.lblNombreUsuario.Text = "label1";
             // 
-            // btnDevolucion
+            // btnEmpleados
             // 
-            this.btnDevolucion.Location = new System.Drawing.Point(0, 375);
-            this.btnDevolucion.Name = "btnDevolucion";
-            this.btnDevolucion.Size = new System.Drawing.Size(204, 41);
-            this.btnDevolucion.TabIndex = 4;
-            this.btnDevolucion.Text = "Devolucion";
-            this.btnDevolucion.UseVisualStyleBackColor = true;
-            this.btnDevolucion.Click += new System.EventHandler(this.btnDevolucion_Click);
+            this.btnEmpleados.Location = new System.Drawing.Point(0, 375);
+            this.btnEmpleados.Name = "btnEmpleados";
+            this.btnEmpleados.Size = new System.Drawing.Size(204, 41);
+            this.btnEmpleados.TabIndex = 4;
+            this.btnEmpleados.Text = "Lista de empleados";
+            this.btnEmpleados.UseVisualStyleBackColor = true;
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
             // btnSocios
             // 
@@ -146,7 +146,7 @@
         private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.Button btnVenta;
         private System.Windows.Forms.Panel panelPrincipal;
-        private System.Windows.Forms.Button btnDevolucion;
+        private System.Windows.Forms.Button btnEmpleados;
         private System.Windows.Forms.Button btnSocios;
         private System.Windows.Forms.Label lblNombreUsuario;
         private System.Windows.Forms.Button btnGuardar;

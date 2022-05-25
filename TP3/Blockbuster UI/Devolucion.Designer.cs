@@ -53,7 +53,7 @@
             // 
             this.lblTituloPelicula.AutoSize = true;
             this.lblTituloPelicula.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTituloPelicula.Location = new System.Drawing.Point(158, 31);
+            this.lblTituloPelicula.Location = new System.Drawing.Point(29, 77);
             this.lblTituloPelicula.Name = "lblTituloPelicula";
             this.lblTituloPelicula.Size = new System.Drawing.Size(142, 25);
             this.lblTituloPelicula.TabIndex = 1;
@@ -63,7 +63,7 @@
             // 
             this.lblFechaAlquiler.AutoSize = true;
             this.lblFechaAlquiler.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblFechaAlquiler.Location = new System.Drawing.Point(29, 98);
+            this.lblFechaAlquiler.Location = new System.Drawing.Point(38, 151);
             this.lblFechaAlquiler.Name = "lblFechaAlquiler";
             this.lblFechaAlquiler.Size = new System.Drawing.Size(164, 31);
             this.lblFechaAlquiler.TabIndex = 2;
@@ -73,7 +73,7 @@
             // 
             this.lblAlquiler.AutoSize = true;
             this.lblAlquiler.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblAlquiler.Location = new System.Drawing.Point(249, 105);
+            this.lblAlquiler.Location = new System.Drawing.Point(258, 158);
             this.lblAlquiler.Name = "lblAlquiler";
             this.lblAlquiler.Size = new System.Drawing.Size(119, 25);
             this.lblAlquiler.TabIndex = 3;
@@ -83,7 +83,7 @@
             // 
             this.lblFechaDevolucion.AutoSize = true;
             this.lblFechaDevolucion.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblFechaDevolucion.Location = new System.Drawing.Point(29, 162);
+            this.lblFechaDevolucion.Location = new System.Drawing.Point(38, 215);
             this.lblFechaDevolucion.Name = "lblFechaDevolucion";
             this.lblFechaDevolucion.Size = new System.Drawing.Size(198, 31);
             this.lblFechaDevolucion.TabIndex = 4;
@@ -93,7 +93,7 @@
             // 
             this.lblDevolucion.AutoSize = true;
             this.lblDevolucion.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDevolucion.Location = new System.Drawing.Point(249, 162);
+            this.lblDevolucion.Location = new System.Drawing.Point(258, 215);
             this.lblDevolucion.Name = "lblDevolucion";
             this.lblDevolucion.Size = new System.Drawing.Size(149, 25);
             this.lblDevolucion.TabIndex = 5;
@@ -103,7 +103,7 @@
             // 
             this.lblPenalidad.AutoSize = true;
             this.lblPenalidad.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPenalidad.Location = new System.Drawing.Point(29, 220);
+            this.lblPenalidad.Location = new System.Drawing.Point(38, 273);
             this.lblPenalidad.Name = "lblPenalidad";
             this.lblPenalidad.Size = new System.Drawing.Size(126, 31);
             this.lblPenalidad.TabIndex = 6;
@@ -113,7 +113,7 @@
             // 
             this.lblPenalidadFinal.AutoSize = true;
             this.lblPenalidadFinal.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPenalidadFinal.Location = new System.Drawing.Point(249, 220);
+            this.lblPenalidadFinal.Location = new System.Drawing.Point(258, 273);
             this.lblPenalidadFinal.Name = "lblPenalidadFinal";
             this.lblPenalidadFinal.Size = new System.Drawing.Size(88, 25);
             this.lblPenalidadFinal.TabIndex = 7;
@@ -121,7 +121,7 @@
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(262, 292);
+            this.btnConfirmar.Location = new System.Drawing.Point(262, 344);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(136, 39);
             this.btnConfirmar.TabIndex = 8;
@@ -133,7 +133,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 343);
+            this.ClientSize = new System.Drawing.Size(434, 410);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.lblPenalidadFinal);
             this.Controls.Add(this.lblPenalidad);

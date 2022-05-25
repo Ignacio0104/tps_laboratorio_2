@@ -14,6 +14,7 @@ namespace Blockbuster_UI
         public MenuPrincipal(int numeroLegajo)
         {
             InitializeComponent();
+            Blockbuster.ListaDeProductos = ClaseSerializadora<List<Producto>>.Leer("baseDatosProductos");
             Blockbuster.ListaDePeliculas = ClaseSerializadora<List<Pelicula>>.Leer("baseDatosPeliculas");
             List<SocioClasico> sociosAux = ClaseSerializadora<List<SocioClasico>>.Leer("baseDatosSocioClasico");
             List<SocioPremium> sociosPremiumAux = ClaseSerializadora<List<SocioPremium>>.Leer("baseDatosSocioPremium");
@@ -52,11 +53,6 @@ namespace Blockbuster_UI
             CargarMenu(new ListaSocios());
         }
 
-        private void btnDevolucion_Click(object sender, EventArgs e)
-        {
-            //CargarMenu(new Devolucion());
-        }
-
         private void MenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -79,6 +75,12 @@ namespace Blockbuster_UI
             }
             ClaseSerializadora<List<SocioClasico>>.Escribir(listaClasicosAux, "baseDatosSocioClasico");
             ClaseSerializadora<List<SocioPremium>>.Escribir(listaPremiumAux, "baseDatosSocioPremium");
+            ClaseSerializadora<List<Producto>>.Escribir(Blockbuster.ListaDeProductos, "baseDatosProductos");
+        }
+
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
