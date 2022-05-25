@@ -53,7 +53,7 @@
             // 
             this.lblTituloPelicula.AutoSize = true;
             this.lblTituloPelicula.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTituloPelicula.Location = new System.Drawing.Point(190, 31);
+            this.lblTituloPelicula.Location = new System.Drawing.Point(158, 31);
             this.lblTituloPelicula.Name = "lblTituloPelicula";
             this.lblTituloPelicula.Size = new System.Drawing.Size(142, 25);
             this.lblTituloPelicula.TabIndex = 1;
@@ -132,7 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 343);
+            this.ClientSize = new System.Drawing.Size(430, 343);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.lblPenalidadFinal);
             this.Controls.Add(this.lblPenalidad);

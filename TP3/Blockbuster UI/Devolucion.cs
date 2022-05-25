@@ -14,14 +14,37 @@ namespace Blockbuster_UI
     public partial class Devolucion : Form
     {
         Alquiler<Pelicula> alquilerDevolver;
-        public Devolucion(Alquiler <Pelicula> alquiler)
+        bool esPremium;
+        public Devolucion(Alquiler <Pelicula> alquiler,bool esPremium)
         {
             InitializeComponent();
             this.alquilerDevolver = alquiler;
-            lblTituloPelicula.Text = alquiler.Pelicula.TituloPelicula;
-            lblAlquiler.Text = alquiler.FechaDeAlquiler.ToShortDateString();
+            this.esPremium = esPremium;
+            lblTituloPelicula.Text = alquilerDevolver.Pelicula.TituloPelicula;
+            lblAlquiler.Text = alquilerDevolver.FechaDeAlquiler.ToShortDateString();
             lblDevolucion.Text = DateTime.Now.ToShortDateString();
-            lblPenalidad.Text = (DateTime.Now.Day - alquiler.FechaDeAlquiler.Day).ToString();
+            lblPenalidadFinal.Text = $"$ {CalculoPenalidad()}";
         }
+
+        private double CalculoPenalidad()
+        {
+            int difereciaDias = DateTime.Now.Day - alquilerDevolver.FechaDeAlquiler.Day;
+            int penalidad = 0;
+
+            if (difereciaDias > (int)alquilerDevolver.Pelicula.DiasDeAlquiler)
+            {
+                if (esPremium)
+                {
+                    penalidad = (alquilerDevolver.Penalidad * 30) / 100 * difereciaDias;
+                }
+                else
+                {
+                    penalidad = alquilerDevolver.Penalidad * difereciaDias;
+                }
+            }
+
+            return penalidad;
+        }
+        
     }
 }

@@ -110,7 +110,7 @@ namespace Blockbuster_UI
             {
                 if (e.RowIndex >= 0)
                 {
-                    Devolucion frmDevolucion = new Devolucion(socioAtendido.ListaDeAlquileres[e.RowIndex]);
+                    Devolucion frmDevolucion = new Devolucion(socioAtendido.ListaDeAlquileres[e.RowIndex],socioAtendido is SocioPremium);
                     frmDevolucion.ShowDialog();  
                 }
 
