@@ -36,11 +36,14 @@
             // 
             // dGridInventario
             // 
+            this.dGridInventario.AllowUserToAddRows = false;
+            this.dGridInventario.AllowUserToDeleteRows = false;
             this.dGridInventario.AllowUserToOrderColumns = true;
             this.dGridInventario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGridInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGridInventario.Location = new System.Drawing.Point(31, 57);
             this.dGridInventario.Name = "dGridInventario";
+            this.dGridInventario.ReadOnly = true;
             this.dGridInventario.RowTemplate.Height = 25;
             this.dGridInventario.Size = new System.Drawing.Size(825, 392);
             this.dGridInventario.TabIndex = 0;

@@ -42,17 +42,30 @@ namespace Blockbuster_UI
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if (rdtPeliculas.Checked)
+            try
             {
-                string nombrePelicula = txtBoxTituloPelicula.Text;
-                int duracionPelicula = (int)nupDuracion.Value;
-                Enumerados.DiasCategoriasAlquiler diasAlquiler = (Enumerados.DiasCategoriasAlquiler)cmbDiasDeAlquiler.SelectedItem;
-                Enumerados.PrecioCategoriasAlquiler precioAlquiler = (Enumerados.PrecioCategoriasAlquiler)cmbPrecioAlquiler.SelectedItem;
-                int stockPelicula = (int)nupStock.Value;
+                if (rdtPeliculas.Checked)
+                {
+                    string nombrePelicula = txtBoxTituloPelicula.Text;
+                    int duracionPelicula = (int)nupDuracion.Value;
+                    Enumerados.DiasCategoriasAlquiler diasAlquiler = (Enumerados.DiasCategoriasAlquiler)cmbDiasDeAlquiler.SelectedItem;
+                    Enumerados.PrecioCategoriasAlquiler precioAlquiler = (Enumerados.PrecioCategoriasAlquiler)cmbPrecioAlquiler.SelectedItem;
+                    int stockPelicula = (int)nupStock.Value;
 
-                Blockbuster.ListaDePeliculas.Add(new(nombrePelicula, duracionPelicula, generoSeleccionado, diasAlquiler, precioAlquiler, stockPelicula));
-                
+                    Blockbuster.ListaDePeliculas.Add(new(nombrePelicula, duracionPelicula, generoSeleccionado, diasAlquiler, precioAlquiler, stockPelicula));
+
+                }
+                else
+                {
+                    Blockbuster.ListaDeProductos.Add(new Producto(txtBoxNombreProducto.Text, (int)nupPrecioProducto.Value, (int)nupStockProducto.Value));
+                }
+
+                this.DialogResult = DialogResult.OK;
+            }catch(Exception exc)
+            {
+                MessageBox.Show("Favor verificar los datos");
             }
+
         }
 
         private void rdtAccion_CheckedChanged(object sender, EventArgs e)

@@ -23,15 +23,7 @@ namespace Blockbuster_UI
 
         private void cmbFiltroBusqueda_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cmbFiltroBusqueda.SelectedItem == "Peliculas")
-            {
-                dGridInventario.DataSource = Blockbuster.ListaDePeliculas;
-            }
-            else
-            {
-                dGridInventario.DataSource = Blockbuster.ListaDeProductos;
-            }
-            
+            ActualizarInfo();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -39,6 +31,23 @@ namespace Blockbuster_UI
             AgregarProducto frmAgregar = new AgregarProducto();
 
             frmAgregar.ShowDialog();
+
+            if(frmAgregar.DialogResult == DialogResult.OK)
+            {
+                ActualizarInfo();
+            }
+        }
+
+        private void ActualizarInfo()
+        {
+            if (cmbFiltroBusqueda.SelectedItem == "Peliculas")
+            {
+                dGridInventario.DataSource = Blockbuster.ListaDePeliculas;
+            }
+            else
+            {
+                dGridInventario.DataSource = Blockbuster.ListaDeProductos;
+            }
         }
     }
 }

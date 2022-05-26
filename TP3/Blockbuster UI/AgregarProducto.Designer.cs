@@ -33,14 +33,6 @@
             this.rdtProductos = new System.Windows.Forms.RadioButton();
             this.panPeliculas = new System.Windows.Forms.Panel();
             this.lblStock = new System.Windows.Forms.Label();
-            this.panProductos = new System.Windows.Forms.Panel();
-            this.picPopcorn = new System.Windows.Forms.PictureBox();
-            this.lblStockProducto = new System.Windows.Forms.Label();
-            this.nupStockProducto = new System.Windows.Forms.NumericUpDown();
-            this.lblPrecioProducto = new System.Windows.Forms.Label();
-            this.nupPrecioProducto = new System.Windows.Forms.NumericUpDown();
-            this.lblNombreProducto = new System.Windows.Forms.Label();
-            this.txtBoxNombreProducto = new System.Windows.Forms.TextBox();
             this.nupStock = new System.Windows.Forms.NumericUpDown();
             this.lblPrecioAlquiler = new System.Windows.Forms.Label();
             this.cmbPrecioAlquiler = new System.Windows.Forms.ComboBox();
@@ -59,15 +51,23 @@
             this.nupDuracion = new System.Windows.Forms.NumericUpDown();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.txtBoxTituloPelicula = new System.Windows.Forms.TextBox();
+            this.panProductos = new System.Windows.Forms.Panel();
+            this.picPopcorn = new System.Windows.Forms.PictureBox();
+            this.lblStockProducto = new System.Windows.Forms.Label();
+            this.nupStockProducto = new System.Windows.Forms.NumericUpDown();
+            this.lblPrecioProducto = new System.Windows.Forms.Label();
+            this.nupPrecioProducto = new System.Windows.Forms.NumericUpDown();
+            this.lblNombreProducto = new System.Windows.Forms.Label();
+            this.txtBoxNombreProducto = new System.Windows.Forms.TextBox();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.panPeliculas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupStock)).BeginInit();
+            this.grpGenero.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupDuracion)).BeginInit();
             this.panProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPopcorn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupStockProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupPrecioProducto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupStock)).BeginInit();
-            this.grpGenero.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nupDuracion)).BeginInit();
             this.SuspendLayout();
             // 
             // rdtPeliculas
@@ -123,83 +123,6 @@
             this.lblStock.Size = new System.Drawing.Size(54, 21);
             this.lblStock.TabIndex = 11;
             this.lblStock.Text = "Stock: ";
-            // 
-            // panProductos
-            // 
-            this.panProductos.Controls.Add(this.picPopcorn);
-            this.panProductos.Controls.Add(this.lblStockProducto);
-            this.panProductos.Controls.Add(this.nupStockProducto);
-            this.panProductos.Controls.Add(this.lblPrecioProducto);
-            this.panProductos.Controls.Add(this.nupPrecioProducto);
-            this.panProductos.Controls.Add(this.lblNombreProducto);
-            this.panProductos.Controls.Add(this.txtBoxNombreProducto);
-            this.panProductos.Location = new System.Drawing.Point(12, 82);
-            this.panProductos.Name = "panProductos";
-            this.panProductos.Size = new System.Drawing.Size(389, 296);
-            this.panProductos.TabIndex = 12;
-            this.panProductos.Visible = false;
-            // 
-            // picPopcorn
-            // 
-            this.picPopcorn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picPopcorn.BackgroundImage")));
-            this.picPopcorn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picPopcorn.Location = new System.Drawing.Point(239, 88);
-            this.picPopcorn.Name = "picPopcorn";
-            this.picPopcorn.Size = new System.Drawing.Size(125, 141);
-            this.picPopcorn.TabIndex = 12;
-            this.picPopcorn.TabStop = false;
-            // 
-            // lblStockProducto
-            // 
-            this.lblStockProducto.AutoSize = true;
-            this.lblStockProducto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblStockProducto.Location = new System.Drawing.Point(22, 127);
-            this.lblStockProducto.Name = "lblStockProducto";
-            this.lblStockProducto.Size = new System.Drawing.Size(54, 21);
-            this.lblStockProducto.TabIndex = 11;
-            this.lblStockProducto.Text = "Stock: ";
-            // 
-            // nupStockProducto
-            // 
-            this.nupStockProducto.Location = new System.Drawing.Point(128, 127);
-            this.nupStockProducto.Name = "nupStockProducto";
-            this.nupStockProducto.Size = new System.Drawing.Size(67, 23);
-            this.nupStockProducto.TabIndex = 10;
-            // 
-            // lblPrecioProducto
-            // 
-            this.lblPrecioProducto.AutoSize = true;
-            this.lblPrecioProducto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPrecioProducto.Location = new System.Drawing.Point(22, 67);
-            this.lblPrecioProducto.Name = "lblPrecioProducto";
-            this.lblPrecioProducto.Size = new System.Drawing.Size(60, 21);
-            this.lblPrecioProducto.TabIndex = 3;
-            this.lblPrecioProducto.Text = "Precio: ";
-            // 
-            // nupPrecioProducto
-            // 
-            this.nupPrecioProducto.DecimalPlaces = 2;
-            this.nupPrecioProducto.Location = new System.Drawing.Point(128, 70);
-            this.nupPrecioProducto.Name = "nupPrecioProducto";
-            this.nupPrecioProducto.Size = new System.Drawing.Size(67, 23);
-            this.nupPrecioProducto.TabIndex = 2;
-            // 
-            // lblNombreProducto
-            // 
-            this.lblNombreProducto.AutoSize = true;
-            this.lblNombreProducto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNombreProducto.Location = new System.Drawing.Point(22, 12);
-            this.lblNombreProducto.Name = "lblNombreProducto";
-            this.lblNombreProducto.Size = new System.Drawing.Size(73, 21);
-            this.lblNombreProducto.TabIndex = 1;
-            this.lblNombreProducto.Text = "Producto";
-            // 
-            // txtBoxNombreProducto
-            // 
-            this.txtBoxNombreProducto.Location = new System.Drawing.Point(22, 36);
-            this.txtBoxNombreProducto.Name = "txtBoxNombreProducto";
-            this.txtBoxNombreProducto.Size = new System.Drawing.Size(342, 23);
-            this.txtBoxNombreProducto.TabIndex = 0;
             // 
             // nupStock
             // 
@@ -366,6 +289,11 @@
             // nupDuracion
             // 
             this.nupDuracion.Location = new System.Drawing.Point(128, 70);
+            this.nupDuracion.Maximum = new decimal(new int[] {
+            6000,
+            0,
+            0,
+            0});
             this.nupDuracion.Name = "nupDuracion";
             this.nupDuracion.Size = new System.Drawing.Size(67, 23);
             this.nupDuracion.TabIndex = 2;
@@ -387,6 +315,93 @@
             this.txtBoxTituloPelicula.Size = new System.Drawing.Size(342, 23);
             this.txtBoxTituloPelicula.TabIndex = 0;
             // 
+            // panProductos
+            // 
+            this.panProductos.Controls.Add(this.picPopcorn);
+            this.panProductos.Controls.Add(this.lblStockProducto);
+            this.panProductos.Controls.Add(this.nupStockProducto);
+            this.panProductos.Controls.Add(this.lblPrecioProducto);
+            this.panProductos.Controls.Add(this.nupPrecioProducto);
+            this.panProductos.Controls.Add(this.lblNombreProducto);
+            this.panProductos.Controls.Add(this.txtBoxNombreProducto);
+            this.panProductos.Location = new System.Drawing.Point(12, 82);
+            this.panProductos.Name = "panProductos";
+            this.panProductos.Size = new System.Drawing.Size(389, 296);
+            this.panProductos.TabIndex = 12;
+            this.panProductos.Visible = false;
+            // 
+            // picPopcorn
+            // 
+            this.picPopcorn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picPopcorn.BackgroundImage")));
+            this.picPopcorn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picPopcorn.Location = new System.Drawing.Point(239, 88);
+            this.picPopcorn.Name = "picPopcorn";
+            this.picPopcorn.Size = new System.Drawing.Size(125, 141);
+            this.picPopcorn.TabIndex = 12;
+            this.picPopcorn.TabStop = false;
+            // 
+            // lblStockProducto
+            // 
+            this.lblStockProducto.AutoSize = true;
+            this.lblStockProducto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblStockProducto.Location = new System.Drawing.Point(22, 127);
+            this.lblStockProducto.Name = "lblStockProducto";
+            this.lblStockProducto.Size = new System.Drawing.Size(54, 21);
+            this.lblStockProducto.TabIndex = 11;
+            this.lblStockProducto.Text = "Stock: ";
+            // 
+            // nupStockProducto
+            // 
+            this.nupStockProducto.Location = new System.Drawing.Point(128, 127);
+            this.nupStockProducto.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.nupStockProducto.Name = "nupStockProducto";
+            this.nupStockProducto.Size = new System.Drawing.Size(67, 23);
+            this.nupStockProducto.TabIndex = 10;
+            // 
+            // lblPrecioProducto
+            // 
+            this.lblPrecioProducto.AutoSize = true;
+            this.lblPrecioProducto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPrecioProducto.Location = new System.Drawing.Point(22, 67);
+            this.lblPrecioProducto.Name = "lblPrecioProducto";
+            this.lblPrecioProducto.Size = new System.Drawing.Size(60, 21);
+            this.lblPrecioProducto.TabIndex = 3;
+            this.lblPrecioProducto.Text = "Precio: ";
+            // 
+            // nupPrecioProducto
+            // 
+            this.nupPrecioProducto.DecimalPlaces = 2;
+            this.nupPrecioProducto.Location = new System.Drawing.Point(128, 70);
+            this.nupPrecioProducto.Maximum = new decimal(new int[] {
+            6000,
+            0,
+            0,
+            0});
+            this.nupPrecioProducto.Name = "nupPrecioProducto";
+            this.nupPrecioProducto.Size = new System.Drawing.Size(67, 23);
+            this.nupPrecioProducto.TabIndex = 2;
+            // 
+            // lblNombreProducto
+            // 
+            this.lblNombreProducto.AutoSize = true;
+            this.lblNombreProducto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNombreProducto.Location = new System.Drawing.Point(22, 12);
+            this.lblNombreProducto.Name = "lblNombreProducto";
+            this.lblNombreProducto.Size = new System.Drawing.Size(73, 21);
+            this.lblNombreProducto.TabIndex = 1;
+            this.lblNombreProducto.Text = "Producto";
+            // 
+            // txtBoxNombreProducto
+            // 
+            this.txtBoxNombreProducto.Location = new System.Drawing.Point(22, 36);
+            this.txtBoxNombreProducto.Name = "txtBoxNombreProducto";
+            this.txtBoxNombreProducto.Size = new System.Drawing.Size(342, 23);
+            this.txtBoxNombreProducto.TabIndex = 0;
+            // 
             // btnConfirmar
             // 
             this.btnConfirmar.Location = new System.Drawing.Point(228, 393);
@@ -403,23 +418,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(418, 448);
             this.Controls.Add(this.btnConfirmar);
-            this.Controls.Add(this.panPeliculas);
             this.Controls.Add(this.rdtProductos);
             this.Controls.Add(this.rdtPeliculas);
             this.Controls.Add(this.panProductos);
+            this.Controls.Add(this.panPeliculas);
             this.Name = "AgregarProducto";
             this.Text = "AgregarProducto";
             this.panPeliculas.ResumeLayout(false);
             this.panPeliculas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupStock)).EndInit();
+            this.grpGenero.ResumeLayout(false);
+            this.grpGenero.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupDuracion)).EndInit();
             this.panProductos.ResumeLayout(false);
             this.panProductos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPopcorn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupStockProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupPrecioProducto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupStock)).EndInit();
-            this.grpGenero.ResumeLayout(false);
-            this.grpGenero.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nupDuracion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
