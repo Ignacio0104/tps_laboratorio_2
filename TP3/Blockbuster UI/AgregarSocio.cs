@@ -21,5 +21,17 @@ namespace Blockbuster_UI
         {
 
         }
+
+        private void rdtSocioPremium_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdtSocioPremium.Checked)
+            {
+                panTarjeta.Visible = false;
+            }
+            else
+            {
+                panTarjeta.Visible = true;
+            }
+        }
     }
 }

@@ -40,5 +40,12 @@ namespace Blockbuster_UI
         {
             CargarSocios();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            AgregarSocio frmSocio = new AgregarSocio();
+
+            frmSocio.ShowDialog();
+        }
     }
 }
