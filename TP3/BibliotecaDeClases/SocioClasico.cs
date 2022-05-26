@@ -14,12 +14,13 @@ namespace BibliotecaDeClases
 
         public SocioClasico()
         {
-            this.penalidad = 100;
-            this.limitePeliculas = 5;
+
         }
         public SocioClasico(string nombre, string apellido, string email, string telefono,string tarjetaDeCredito) : base(nombre, apellido, email, telefono)
         {
             this.tarjetaDeCredito = tarjetaDeCredito;
+            this.penalidad = 100;
+            this.limitePeliculas = 5;
         }
 
 

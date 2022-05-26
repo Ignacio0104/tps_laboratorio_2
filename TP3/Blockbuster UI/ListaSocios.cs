@@ -46,6 +46,12 @@ namespace Blockbuster_UI
             AgregarSocio frmSocio = new AgregarSocio();
 
             frmSocio.ShowDialog();
+
+            if(frmSocio.DialogResult == DialogResult.OK)
+            {
+                dGridSocios.Rows.Clear();
+                CargarSocios();
+            }
         }
     }
 }

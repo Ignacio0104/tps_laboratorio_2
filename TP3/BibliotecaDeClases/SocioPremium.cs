@@ -13,8 +13,7 @@ namespace BibliotecaDeClases
 
         public SocioPremium()
         {
-            this.penalidad = 30;
-            this.limitePeliculas = 20;
+
         }
         public SocioPremium(string nombre, string apellido, string email, string telefono) : base(nombre, apellido, email, telefono)
         {

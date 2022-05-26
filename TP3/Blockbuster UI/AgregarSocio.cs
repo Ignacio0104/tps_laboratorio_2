@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BibliotecaDeClases;
 
 namespace Blockbuster_UI
 {
@@ -31,6 +32,28 @@ namespace Blockbuster_UI
             else
             {
                 panTarjeta.Visible = true;
+            }
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (rdtSocioClasico.Checked)
+                {
+                    Blockbuster.ListaDeSocios.Add(new SocioClasico(txtBoxNombreSocio.Text, txtBoxApellidoSocio.Text,
+                        txtBoxEmailSocio.Text, txtBoxTelefono.Text, txtBoxTarjetaSocio.Text));
+                }
+                else
+                {
+                    Blockbuster.ListaDeSocios.Add(new SocioPremium(txtBoxNombreSocio.Text, txtBoxApellidoSocio.Text,
+                                           txtBoxEmailSocio.Text, txtBoxTelefono.Text));
+                }
+
+                this.DialogResult = DialogResult.OK;
+            }catch(Exception exc)
+            {
+                MessageBox.Show("Favor chequear datos");
             }
         }
     }

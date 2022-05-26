@@ -37,12 +37,13 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtBoxEmailSocio = new System.Windows.Forms.TextBox();
             this.lblTelefono = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBoxTelefono = new System.Windows.Forms.TextBox();
             this.rdtSocioClasico = new System.Windows.Forms.RadioButton();
             this.rdtSocioPremium = new System.Windows.Forms.RadioButton();
             this.panTarjeta = new System.Windows.Forms.Panel();
             this.lblTarjetaSocio = new System.Windows.Forms.Label();
             this.txtBoxTarjetaSocio = new System.Windows.Forms.TextBox();
+            this.btnConfirmar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picMemberCard)).BeginInit();
             this.panTarjeta.SuspendLayout();
             this.SuspendLayout();
@@ -114,12 +115,12 @@
             this.lblTelefono.TabIndex = 8;
             this.lblTelefono.Text = "Telefono :";
             // 
-            // textBox1
+            // txtBoxTelefono
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 368);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 23);
-            this.textBox1.TabIndex = 7;
+            this.txtBoxTelefono.Location = new System.Drawing.Point(12, 368);
+            this.txtBoxTelefono.Name = "txtBoxTelefono";
+            this.txtBoxTelefono.Size = new System.Drawing.Size(177, 23);
+            this.txtBoxTelefono.TabIndex = 7;
             // 
             // rdtSocioClasico
             // 
@@ -172,16 +173,27 @@
             this.txtBoxTarjetaSocio.Size = new System.Drawing.Size(177, 23);
             this.txtBoxTarjetaSocio.TabIndex = 12;
             // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.Location = new System.Drawing.Point(152, 441);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(156, 44);
+            this.btnConfirmar.TabIndex = 12;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
+            // 
             // AgregarSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 455);
+            this.ClientSize = new System.Drawing.Size(480, 497);
+            this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.panTarjeta);
             this.Controls.Add(this.rdtSocioPremium);
             this.Controls.Add(this.rdtSocioClasico);
             this.Controls.Add(this.lblTelefono);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBoxTelefono);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txtBoxEmailSocio);
             this.Controls.Add(this.lblApellido);
@@ -189,6 +201,9 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txtBoxNombreSocio);
             this.Controls.Add(this.picMemberCard);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AgregarSocio";
             this.Text = "AgregarSocio";
             this.Load += new System.EventHandler(this.AgregarSocio_Load);
@@ -210,11 +225,12 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtBoxEmailSocio;
         private System.Windows.Forms.Label lblTelefono;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBoxTelefono;
         private System.Windows.Forms.RadioButton rdtSocioClasico;
         private System.Windows.Forms.RadioButton rdtSocioPremium;
         private System.Windows.Forms.Panel panTarjeta;
         private System.Windows.Forms.Label lblTarjetaSocio;
         private System.Windows.Forms.TextBox txtBoxTarjetaSocio;
+        private System.Windows.Forms.Button btnConfirmar;
     }
 }
