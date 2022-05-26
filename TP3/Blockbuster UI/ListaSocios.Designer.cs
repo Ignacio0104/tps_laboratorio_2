@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dGridSocios = new System.Windows.Forms.DataGridView();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,7 +39,6 @@
             this.colLimitePeliculas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPenalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTarjetaCredito = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAgregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGridSocios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,12 +57,22 @@
             this.colPenalidad,
             this.colTarjetaCredito});
             this.dGridSocios.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dGridSocios.Location = new System.Drawing.Point(34, 77);
+            this.dGridSocios.Location = new System.Drawing.Point(12, 75);
             this.dGridSocios.Name = "dGridSocios";
             this.dGridSocios.RowTemplate.Height = 25;
             this.dGridSocios.ShowEditingIcon = false;
-            this.dGridSocios.Size = new System.Drawing.Size(850, 378);
+            this.dGridSocios.Size = new System.Drawing.Size(872, 378);
             this.dGridSocios.TabIndex = 0;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(696, 476);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(188, 46);
+            this.btnAgregar.TabIndex = 1;
+            this.btnAgregar.Text = "Agregar +";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // colId
             // 
@@ -105,22 +115,12 @@
             this.colPenalidad.DefaultCellStyle = dataGridViewCellStyle1;
             this.colPenalidad.HeaderText = "Penalidad";
             this.colPenalidad.Name = "colPenalidad";
-            this.colPenalidad.Width = 50;
+            this.colPenalidad.Width = 70;
             // 
             // colTarjetaCredito
             // 
             this.colTarjetaCredito.HeaderText = "Tarjeta garantia";
             this.colTarjetaCredito.Name = "colTarjetaCredito";
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(696, 476);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(188, 46);
-            this.btnAgregar.TabIndex = 1;
-            this.btnAgregar.Text = "Agregar +";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // ListaSocios
             // 
@@ -142,6 +142,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dGridSocios;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colId;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn colApellido;
@@ -150,6 +151,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colLimitePeliculas;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPenalidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTarjetaCredito;
-        private System.Windows.Forms.Button btnAgregar;
     }
 }

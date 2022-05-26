@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BibliotecaDeClases;
+using BibliotecaDeClases.Excepciones;
 
 namespace Blockbuster_UI
 {
@@ -54,6 +56,19 @@ namespace Blockbuster_UI
             }catch(Exception exc)
             {
                 MessageBox.Show("Favor chequear datos");
+            }
+        }
+
+        private void Validaciones()
+        {
+            if(!txtBoxNombreSocio.Text.Any(char.IsLetter)||!txtBoxApellidoSocio.Text.Any(char.IsLetter))
+            {
+                throw new NombreOApellidoInvalido("Los campos nombre y apellido solo deben contener letras");
+            }
+
+            if(!new EmailAddressAttribute().IsValid(txtBoxEmailSocio.Text))
+            {
+                throw new EmailInvalido("Favor verificar el E-mail ingresado");
             }
         }
     }
