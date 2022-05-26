@@ -16,7 +16,6 @@ namespace Blockbuster_UI
         public login()
         {
             InitializeComponent();
-            Blockbuster.ListaDeEmpleados = ClaseSerializadora<List<Usuario>>.Leer("baseDatosEmpleados");
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -35,6 +34,11 @@ namespace Blockbuster_UI
             {
                 MessageBox.Show("Usuario o Clave incorrecta.\n Favor vuelva a intentar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+            Blockbuster.ListaDeEmpleados = ClaseSerializadora<List<Usuario>>.Leer("baseDatosEmpleados");
         }
     }
 }

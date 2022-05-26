@@ -18,12 +18,6 @@ namespace Blockbuster_UI
         public AgregarProducto()
         {
             InitializeComponent();
-            cmbDiasDeAlquiler.Items.Add(Enumerados.DiasCategoriasAlquiler.Clasica);
-            cmbDiasDeAlquiler.Items.Add(Enumerados.DiasCategoriasAlquiler.Estreno);
-            cmbDiasDeAlquiler.Items.Add(Enumerados.DiasCategoriasAlquiler.Regular);
-            cmbPrecioAlquiler.Items.Add(Enumerados.PrecioCategoriasAlquiler.Especial);
-            cmbPrecioAlquiler.Items.Add(Enumerados.PrecioCategoriasAlquiler.Normal);
-            cmbPrecioAlquiler.Items.Add(Enumerados.PrecioCategoriasAlquiler.Promo);
         }
 
         private void rdtPeliculas_CheckedChanged(object sender, EventArgs e)
@@ -97,6 +91,16 @@ namespace Blockbuster_UI
                         break;
                 }
             }
+        }
+
+        private void AgregarProducto_Load(object sender, EventArgs e)
+        {
+            cmbDiasDeAlquiler.Items.Add(Enumerados.DiasCategoriasAlquiler.Clasica);
+            cmbDiasDeAlquiler.Items.Add(Enumerados.DiasCategoriasAlquiler.Estreno);
+            cmbDiasDeAlquiler.Items.Add(Enumerados.DiasCategoriasAlquiler.Regular);
+            cmbPrecioAlquiler.Items.Add(Enumerados.PrecioCategoriasAlquiler.Especial);
+            cmbPrecioAlquiler.Items.Add(Enumerados.PrecioCategoriasAlquiler.Normal);
+            cmbPrecioAlquiler.Items.Add(Enumerados.PrecioCategoriasAlquiler.Promo);
         }
     }
 }

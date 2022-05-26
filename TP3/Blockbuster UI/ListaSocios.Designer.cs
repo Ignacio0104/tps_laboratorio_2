@@ -38,6 +38,7 @@
             this.colLimitePeliculas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPenalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTarjetaCredito = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAgregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGridSocios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,16 +112,27 @@
             this.colTarjetaCredito.HeaderText = "Tarjeta garantia";
             this.colTarjetaCredito.Name = "colTarjetaCredito";
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(696, 476);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(188, 46);
+            this.btnAgregar.TabIndex = 1;
+            this.btnAgregar.Text = "Agregar +";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            // 
             // ListaSocios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(896, 534);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dGridSocios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListaSocios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListaSocios";
+            this.Load += new System.EventHandler(this.ListaSocios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGridSocios)).EndInit();
             this.ResumeLayout(false);
 
@@ -137,5 +149,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colLimitePeliculas;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPenalidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTarjetaCredito;
+        private System.Windows.Forms.Button btnAgregar;
     }
 }

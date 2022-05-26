@@ -22,11 +22,10 @@ namespace Blockbuster_UI
             InitializeComponent();
             listaAlquilerAux = new List<Alquiler<Pelicula>>();
             listaProductosAux = new List<Producto>();
-            this.socioAtendido = socioAtendido;
-            CargarPeliculas();
-            CargarProductos();
+            this.socioAtendido = socioAtendido;        
         }
-        public void CargarPeliculas()
+
+        private void CargarPeliculas()
         {
             foreach (Pelicula item in Blockbuster.ListaDePeliculas)
             {
@@ -41,7 +40,7 @@ namespace Blockbuster_UI
             }
         }
 
-        public void CargarProductos()
+        private void CargarProductos()
         {
             foreach (Producto item in Blockbuster.ListaDeProductos)
             {
@@ -136,6 +135,12 @@ namespace Blockbuster_UI
 
             richAlquileresParcial.Text = sb.ToString();
             lblFacturacion.Text = $"Facturacion: ${acumuladorPrecio}";
+        }
+
+        private void AgregarAlquiler_Load(object sender, EventArgs e)
+        {
+            CargarPeliculas();
+            CargarProductos();
         }
     }
 

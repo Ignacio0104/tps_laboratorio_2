@@ -11,17 +11,11 @@ namespace Blockbuster_UI
     public partial class MenuPrincipal : Form
     {
         Usuario usuarioLogueado;
+        int numeroLegajo;
         public MenuPrincipal(int numeroLegajo)
         {
             InitializeComponent();
-            Blockbuster.ListaDeProductos = ClaseSerializadora<List<Producto>>.Leer("baseDatosProductos");
-            Blockbuster.ListaDePeliculas = ClaseSerializadora<List<Pelicula>>.Leer("baseDatosPeliculas");
-            List<SocioClasico> sociosAux = ClaseSerializadora<List<SocioClasico>>.Leer("baseDatosSocioClasico");
-            List<SocioPremium> sociosPremiumAux = ClaseSerializadora<List<SocioPremium>>.Leer("baseDatosSocioPremium");
-            Blockbuster.ListaDeSocios.AddRange(sociosPremiumAux);
-            Blockbuster.ListaDeSocios.AddRange(sociosAux);
-            usuarioLogueado = Blockbuster.BuscarUsuario(numeroLegajo);
-            lblNombreUsuario.Text = $"{usuarioLogueado.Nombre} {usuarioLogueado.Apellido}";
+            this.numeroLegajo = numeroLegajo;
         }
 
         private void btnVenta_Click(object sender, EventArgs e)
@@ -88,6 +82,16 @@ namespace Blockbuster_UI
 
         }
 
-
+        private void MenuPrincipal_Load(object sender, EventArgs e)
+        {
+            Blockbuster.ListaDeProductos = ClaseSerializadora<List<Producto>>.Leer("baseDatosProductos");
+            Blockbuster.ListaDePeliculas = ClaseSerializadora<List<Pelicula>>.Leer("baseDatosPeliculas");
+            List<SocioClasico> sociosAux = ClaseSerializadora<List<SocioClasico>>.Leer("baseDatosSocioClasico");
+            List<SocioPremium> sociosPremiumAux = ClaseSerializadora<List<SocioPremium>>.Leer("baseDatosSocioPremium");
+            Blockbuster.ListaDeSocios.AddRange(sociosPremiumAux);
+            Blockbuster.ListaDeSocios.AddRange(sociosAux);
+            usuarioLogueado = Blockbuster.BuscarUsuario(numeroLegajo);
+            lblNombreUsuario.Text = $"{usuarioLogueado.Nombre} {usuarioLogueado.Apellido}";
+        }
     }
 }

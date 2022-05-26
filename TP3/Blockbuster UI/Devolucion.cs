@@ -20,10 +20,6 @@ namespace Blockbuster_UI
             InitializeComponent();
             this.alquilerDevolver = alquiler;
             this.esPremium = esPremium;
-            lblTituloPelicula.Text = alquilerDevolver.Pelicula.TituloPelicula;
-            lblAlquiler.Text = alquilerDevolver.FechaDeAlquiler.ToShortDateString();
-            lblDevolucion.Text = DateTime.Now.ToShortDateString();
-            lblPenalidadFinal.Text = $"$ {CalculoPenalidad()}";
         }
 
         private double CalculoPenalidad()
@@ -49,6 +45,14 @@ namespace Blockbuster_UI
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+        }
+
+        private void Devolucion_Load(object sender, EventArgs e)
+        {
+            lblTituloPelicula.Text = alquilerDevolver.Pelicula.TituloPelicula;
+            lblAlquiler.Text = alquilerDevolver.FechaDeAlquiler.ToShortDateString();
+            lblDevolucion.Text = DateTime.Now.ToShortDateString();
+            lblPenalidadFinal.Text = $"$ {CalculoPenalidad()}";
         }
     }
 }

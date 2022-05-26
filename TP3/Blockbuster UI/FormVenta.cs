@@ -17,7 +17,6 @@ namespace Blockbuster_UI
         public FormVenta()
         {
             InitializeComponent();
-            pnlInfoUsuario.Visible = false;
 
         }
 
@@ -130,6 +129,11 @@ namespace Blockbuster_UI
             {
                 MessageBox.Show(exception.Message);
             }
+        }
+
+        private void FormVenta_Load(object sender, EventArgs e)
+        {
+            pnlInfoUsuario.Visible = false;
         }
     }
 }

@@ -424,6 +424,7 @@
             this.Controls.Add(this.panPeliculas);
             this.Name = "AgregarProducto";
             this.Text = "AgregarProducto";
+            this.Load += new System.EventHandler(this.AgregarProducto_Load);
             this.panPeliculas.ResumeLayout(false);
             this.panPeliculas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupStock)).EndInit();

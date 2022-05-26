@@ -15,8 +15,7 @@ namespace Blockbuster_UI
     {
         public ListaSocios()
         {
-            InitializeComponent();
-            CargarSocios();
+            InitializeComponent();    
         }
 
         private void CargarSocios()
@@ -37,6 +36,9 @@ namespace Blockbuster_UI
             }
         }
 
-
+        private void ListaSocios_Load(object sender, EventArgs e)
+        {
+            CargarSocios();
+        }
     }
 }

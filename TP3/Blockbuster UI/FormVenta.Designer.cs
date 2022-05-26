@@ -238,6 +238,7 @@
             this.Name = "FormVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormVenta";
+            this.Load += new System.EventHandler(this.FormVenta_Load);
             this.pnlInfoUsuario.ResumeLayout(false);
             this.pnlInfoUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGridAlquileres)).EndInit();

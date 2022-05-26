@@ -16,9 +16,7 @@ namespace Blockbuster_UI
         public Inventario()
         {
             InitializeComponent();
-            cmbFiltroBusqueda.Items.Add("Peliculas");
-            cmbFiltroBusqueda.Items.Add("Productos");
-            cmbFiltroBusqueda.SelectedIndex = 0;
+
         }
 
         private void cmbFiltroBusqueda_SelectedIndexChanged(object sender, EventArgs e)
@@ -49,6 +47,13 @@ namespace Blockbuster_UI
             {
                 dGridInventario.DataSource = Blockbuster.ListaDeProductos;
             }
+        }
+
+        private void Inventario_Load(object sender, EventArgs e)
+        {
+            cmbFiltroBusqueda.Items.Add("Peliculas");
+            cmbFiltroBusqueda.Items.Add("Productos");
+            cmbFiltroBusqueda.SelectedIndex = 0;
         }
     }
 }

@@ -219,6 +219,7 @@
             this.MinimizeBox = false;
             this.Name = "AgregarAlquiler";
             this.Text = "AgregarAlquiler";
+            this.Load += new System.EventHandler(this.AgregarAlquiler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGridPeliculas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGridProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoBlockbuster)).EndInit();
