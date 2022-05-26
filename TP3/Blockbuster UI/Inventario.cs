@@ -33,5 +33,12 @@ namespace Blockbuster_UI
             }
             
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            AgregarProducto frmAgregar = new AgregarProducto();
+
+            frmAgregar.ShowDialog();
+        }
     }
 }

@@ -26,3 +26,4 @@ C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\bin\De
 C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\bin\Debug\net5.0-windows\BibliotecaDeClases.pdb
 C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster UI.csproj.CopyComplete
 C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.AgregarAlquiler.resources
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.AgregarProducto.resources
