@@ -28,36 +28,110 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dGridSocios = new System.Windows.Forms.DataGridView();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLimitePeliculas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPenalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTarjetaCredito = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dGridSocios)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // dGridSocios
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(248, 188);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(317, 54);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Lista de usuarios";
+            this.dGridSocios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGridSocios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colId,
+            this.colNombre,
+            this.colApellido,
+            this.colEmail,
+            this.colTelefono,
+            this.colLimitePeliculas,
+            this.colPenalidad,
+            this.colTarjetaCredito});
+            this.dGridSocios.Location = new System.Drawing.Point(34, 77);
+            this.dGridSocios.Name = "dGridSocios";
+            this.dGridSocios.RowTemplate.Height = 25;
+            this.dGridSocios.Size = new System.Drawing.Size(850, 378);
+            this.dGridSocios.TabIndex = 0;
+            // 
+            // colId
+            // 
+            this.colId.HeaderText = "Id Socio";
+            this.colId.Name = "colId";
+            this.colId.Width = 60;
+            // 
+            // colNombre
+            // 
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.Width = 150;
+            // 
+            // colApellido
+            // 
+            this.colApellido.HeaderText = "Apellido";
+            this.colApellido.Name = "colApellido";
+            this.colApellido.Width = 150;
+            // 
+            // colEmail
+            // 
+            this.colEmail.HeaderText = "E-mail";
+            this.colEmail.Name = "colEmail";
+            this.colEmail.Width = 150;
+            // 
+            // colTelefono
+            // 
+            this.colTelefono.HeaderText = "Telefono";
+            this.colTelefono.Name = "colTelefono";
+            // 
+            // colLimitePeliculas
+            // 
+            this.colLimitePeliculas.HeaderText = "Limite";
+            this.colLimitePeliculas.Name = "colLimitePeliculas";
+            this.colLimitePeliculas.Width = 50;
+            // 
+            // colPenalidad
+            // 
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.colPenalidad.DefaultCellStyle = dataGridViewCellStyle1;
+            this.colPenalidad.HeaderText = "Penalidad";
+            this.colPenalidad.Name = "colPenalidad";
+            this.colPenalidad.Width = 50;
+            // 
+            // colTarjetaCredito
+            // 
+            this.colTarjetaCredito.HeaderText = "Tarjeta garantia";
+            this.colTarjetaCredito.Name = "colTarjetaCredito";
             // 
             // ListaSocios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(896, 534);
+            this.Controls.Add(this.dGridSocios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListaSocios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListaSocios";
+            ((System.ComponentModel.ISupportInitialize)(this.dGridSocios)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dGridSocios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colApellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTelefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colLimitePeliculas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPenalidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTarjetaCredito;
     }
 }
