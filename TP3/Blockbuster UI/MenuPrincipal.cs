@@ -80,6 +80,7 @@ namespace Blockbuster_UI
             ClaseSerializadora<List<SocioClasico>>.Escribir(listaClasicosAux, "baseDatosSocioClasico");
             ClaseSerializadora<List<SocioPremium>>.Escribir(listaPremiumAux, "baseDatosSocioPremium");
             ClaseSerializadora<List<Producto>>.Escribir(Blockbuster.ListaDeProductos, "baseDatosProductos");
+            ClaseSerializadora<List<Pelicula>>.Escribir(Blockbuster.ListaDePeliculas, "baseDatosPeliculas");
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)

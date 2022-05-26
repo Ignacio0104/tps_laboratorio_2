@@ -81,7 +81,12 @@ namespace Blockbuster_UI
                         dGridAlquileres.Rows[indice].Cells[2].Value = "$ " + (int)socioAtendido.ListaDeAlquileres[i].Pelicula.PrecioDeAlquiler;
                         dGridAlquileres.Rows[indice].Cells[3].Value = (int)socioAtendido.ListaDeAlquileres[i].Pelicula.DiasDeAlquiler;
                         dGridAlquileres.Rows[indice].Cells[4].Value = socioAtendido.ListaDeAlquileres[i].FechaDeAlquiler.ToShortDateString();
-                        indice++;
+                        int difereciaDias = DateTime.Now.Day - socioAtendido.ListaDeAlquileres[i].FechaDeAlquiler.Day;
+
+                        if (difereciaDias > (int)socioAtendido.ListaDeAlquileres[i].Pelicula.DiasDeAlquiler)
+                            dGridAlquileres.Rows[indice].DefaultCellStyle.BackColor = Color.Red;
+                        else if(difereciaDias == (int)socioAtendido.ListaDeAlquileres[i].Pelicula.DiasDeAlquiler)
+                            dGridAlquileres.Rows[indice].DefaultCellStyle.BackColor = Color.Orange;
                     }
                 }
                 else

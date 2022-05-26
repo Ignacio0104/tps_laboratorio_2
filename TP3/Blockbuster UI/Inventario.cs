@@ -34,6 +34,7 @@ namespace Blockbuster_UI
 
             if(frmAgregar.DialogResult == DialogResult.OK)
             {
+                dGridInventario.DataSource = null;
                 ActualizarInfo();
             }
         }
