@@ -43,6 +43,8 @@
             // 
             // dGridSocios
             // 
+            this.dGridSocios.AllowUserToAddRows = false;
+            this.dGridSocios.AllowUserToDeleteRows = false;
             this.dGridSocios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGridSocios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colId,
@@ -53,9 +55,11 @@
             this.colLimitePeliculas,
             this.colPenalidad,
             this.colTarjetaCredito});
+            this.dGridSocios.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dGridSocios.Location = new System.Drawing.Point(34, 77);
             this.dGridSocios.Name = "dGridSocios";
             this.dGridSocios.RowTemplate.Height = 25;
+            this.dGridSocios.ShowEditingIcon = false;
             this.dGridSocios.Size = new System.Drawing.Size(850, 378);
             this.dGridSocios.TabIndex = 0;
             // 
