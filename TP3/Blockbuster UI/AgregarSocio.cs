@@ -41,6 +41,7 @@ namespace Blockbuster_UI
         {
             try
             {
+                Validaciones();
                 if (rdtSocioClasico.Checked)
                 {
                     Blockbuster.ListaDeSocios.Add(new SocioClasico(txtBoxNombreSocio.Text, txtBoxApellidoSocio.Text,
@@ -51,11 +52,12 @@ namespace Blockbuster_UI
                     Blockbuster.ListaDeSocios.Add(new SocioPremium(txtBoxNombreSocio.Text, txtBoxApellidoSocio.Text,
                                            txtBoxEmailSocio.Text, txtBoxTelefono.Text));
                 }
-
+                lblError.Visible = false; ;
                 this.DialogResult = DialogResult.OK;
             }catch(Exception exc)
             {
-                MessageBox.Show("Favor chequear datos");
+                lblError.Visible = true;
+                lblError.Text = $"* {exc.Message}";
             }
         }
 
@@ -69,6 +71,17 @@ namespace Blockbuster_UI
             if(!new EmailAddressAttribute().IsValid(txtBoxEmailSocio.Text))
             {
                 throw new EmailInvalido("Favor verificar el E-mail ingresado");
+            }
+
+            if (!Logica.VerificarTelefonoArgentina(txtBoxTelefono.Text))
+            {
+                throw new TelefonoArgInvalido("Favor verificar el telefono ingresado");
+            }
+
+            if (!Logica.VerificarTarjetaCredito(txtBoxTarjetaSocio.Text))
+            {
+                if(rdtSocioClasico.Checked)
+                    throw new TarjetaCreditoInvalida("Favor verificar la tarjeta de crédito ingresada");
             }
         }
     }
