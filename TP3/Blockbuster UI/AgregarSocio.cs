@@ -68,7 +68,7 @@ namespace Blockbuster_UI
                 throw new NombreOApellidoInvalido("Los campos nombre y apellido solo deben contener letras");
             }
 
-            if(!Logica.VerificarEmail(txtBoxEmailSocio.Text))
+            if(!Logica.VerificarEmail(txtBoxEmailSocio.Text.Trim().ToLower()))
             {
                 throw new EmailInvalido("Favor verificar el E-mail ingresado");
             }

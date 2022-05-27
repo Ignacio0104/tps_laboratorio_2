@@ -11,7 +11,7 @@ namespace BibliotecaDeClases
     {
         public static bool VerificarTelefonoArgentina(string dato)
         {
-            if (!dato.All(char.IsDigit) || (dato.Length != 8 || dato.Length != 10))
+            if (!dato.All(char.IsDigit) || (dato.Length<8 || dato.Length>10))
             {
                 return false;
             }
@@ -55,9 +55,7 @@ namespace BibliotecaDeClases
                         return false;
                     }
                 }                                      
-
             }
-
             if (finalEmail.ToString().Any(char.IsPunctuation))
             {
                 contadorPuntos++;
