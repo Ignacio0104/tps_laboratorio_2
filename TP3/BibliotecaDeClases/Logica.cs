@@ -31,39 +31,46 @@ namespace BibliotecaDeClases
         }
 
         public static bool VerificarEmail(string dato)
-        {
-            if (!new EmailAddressAttribute().IsValid(dato))
+        { 
+            if (dato.Length < 6)
+                return false;
+            StringBuilder finalEmail = new StringBuilder();    
+            int indexArroba = 0;
+            int contadorArroba = 0;
+            int contadorPuntos = 0;
+            for (int i = 0; i < dato.Length; i++)
             {
-                if (dato.Length < 6)
-                    return false;
-                string finalEmail = "";    
-                int indexArroba = 0;
-                int contadorPuntos = 0;
-                for (int i = 0; i < dato.Length; i++)
+                if (dato[i] == '@')
                 {
-                    if (dato[i] == '@')
-                    {
-                        indexArroba = i;
-                    }
+                    indexArroba = i;
+                    contadorArroba++;
+                }
 
-                    if(indexArroba>0)
-                    {
+                if(indexArroba>0)
+                {
+                    if(dato[i]!='@')
                         finalEmail.Append(dato[i]);
-                    }                                      
-                    if (indexArroba != 1)
-                        return false;
-                    if (finalEmail.Any(char.IsDigit))
+                    if (finalEmail.ToString().Any(char.IsNumber))
                     {
                         return false;
                     }
+                }                                      
 
-                    if (!finalEmail.Any(char.IsPunctuation))
-                    {
-                        return false;
-                    }
+            }
+
+            if (finalEmail.ToString().Any(char.IsPunctuation))
+            {
+                contadorPuntos++;
+                if (contadorPuntos > 3)
+                {
+                    return false;
                 }
             }
-            return true;
+            if (finalEmail.ToString().Length<3)
+                return false;
+            if (contadorArroba != 1)
+                return false;
+            return true;    
         }
     }
 }

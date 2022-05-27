@@ -34,7 +34,7 @@ namespace TestUnitarios
         }
 
         [TestMethod]
-        public void ValidarEmail_SiIngresoUnMailSinArroba_DebeDevolverTrue()
+        public void ValidarEmail_SiIngresoUnMailSinArroba_DebeDevolverFalse()
         {
             bool expected = false;
 
@@ -43,8 +43,31 @@ namespace TestUnitarios
             bool actual = Logica.VerificarEmail(cadena);
 
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ValidarEmail_SiIngresoUnMailMasDeUnArroba_DebeDevolverFalse()
+        {
+            bool expected = false;
+
+            string cadena = "ig@nacio@gmail.com";
+
+            bool actual = Logica.VerificarEmail(cadena);
+
+            Assert.AreEqual(expected, actual);
+        }
 
 
+        [TestMethod]
+        public void ValidarEmail_SiIngresoNumerosDespuesDelArroba_DebeDevolverFalse()
+        {
+            bool expected = false;
+
+            string cadena = "ignacio@gma23il.com";
+
+            bool actual = Logica.VerificarEmail(cadena);
+
+            Assert.AreEqual(expected, actual);
         }
     }
 }
