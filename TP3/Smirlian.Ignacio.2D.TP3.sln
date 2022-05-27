@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blockbuster UI", "Blockbuster UI\Blockbuster UI.csproj", "{0683B9F1-855B-4325-83C5-64D06869CDEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blockbuster UI", "Blockbuster UI\Blockbuster UI.csproj", "{0683B9F1-855B-4325-83C5-64D06869CDEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaDeClases", "BibliotecaDeClases\BibliotecaDeClases.csproj", "{F7857BD2-74D6-49A6-BEE5-C6F0B744358C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BibliotecaDeClases", "BibliotecaDeClases\BibliotecaDeClases.csproj", "{F7857BD2-74D6-49A6-BEE5-C6F0B744358C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUnitarios", "TestUnitarios\TestUnitarios.csproj", "{D6F96C4F-602F-4317-837C-59D866477AD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F7857BD2-74D6-49A6-BEE5-C6F0B744358C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7857BD2-74D6-49A6-BEE5-C6F0B744358C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7857BD2-74D6-49A6-BEE5-C6F0B744358C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6F96C4F-602F-4317-837C-59D866477AD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6F96C4F-602F-4317-837C-59D866477AD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6F96C4F-602F-4317-837C-59D866477AD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6F96C4F-602F-4317-837C-59D866477AD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
