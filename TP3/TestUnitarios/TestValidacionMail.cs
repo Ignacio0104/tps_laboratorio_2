@@ -7,11 +7,38 @@ namespace TestUnitarios
     public class TestValidacionMail
     {
         [TestMethod]
-        public void ValidarEmail_SinIngresoTodosNumeros_DebeDevolverFalse()
+        public void ValidarEmail_SiIngresoTodosNumeros_DebeDevolverFalse()
         {
             bool expected = false;
 
             string cadena = "1233663";
+
+            bool actual = Logica.VerificarEmail(cadena);
+
+            Assert.AreEqual(expected, actual);
+
+        }
+
+        [TestMethod]
+        public void ValidarEmail_SiIngresoUnMailCorrecto_DebeDevolverTrue()
+        {
+            bool expected = true;
+
+            string cadena = "ignacio@gmail.com";
+
+            bool actual = Logica.VerificarEmail(cadena);
+
+            Assert.AreEqual(expected, actual);
+
+
+        }
+
+        [TestMethod]
+        public void ValidarEmail_SiIngresoUnMailSinArroba_DebeDevolverTrue()
+        {
+            bool expected = false;
+
+            string cadena = "ignaciogmail.com";
 
             bool actual = Logica.VerificarEmail(cadena);
 

@@ -32,13 +32,38 @@ namespace BibliotecaDeClases
 
         public static bool VerificarEmail(string dato)
         {
-            if (new EmailAddressAttribute().IsValid(dato))
+            if (!new EmailAddressAttribute().IsValid(dato))
             {
-                if ((int)dato[dato.Length] < 122 && (int)dato[dato.Length] > 97)
-                    return true;
-            }
+                if (dato.Length < 6)
+                    return false;
+                string finalEmail = "";    
+                int indexArroba = 0;
+                int contadorPuntos = 0;
+                for (int i = 0; i < dato.Length; i++)
+                {
+                    if (dato[i] == '@')
+                    {
+                        indexArroba = i;
+                    }
 
-            return false;
+                    if(indexArroba>0)
+                    {
+                        finalEmail.Append(dato[i]);
+                    }                                      
+                    if (indexArroba != 1)
+                        return false;
+                    if (finalEmail.Any(char.IsDigit))
+                    {
+                        return false;
+                    }
+
+                    if (!finalEmail.Any(char.IsPunctuation))
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
         }
     }
 }
