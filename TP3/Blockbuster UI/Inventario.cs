@@ -26,7 +26,7 @@ namespace Blockbuster_UI
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            AgregarProducto frmAgregar = new AgregarProducto();
+            AgregarProducto frmAgregar = new AgregarProducto(Blockbuster.ListaDePeliculas[4]);
 
             frmAgregar.ShowDialog();
 
@@ -54,6 +54,38 @@ namespace Blockbuster_UI
             cmbFiltroBusqueda.Items.Add("Peliculas");
             cmbFiltroBusqueda.Items.Add("Productos");
             cmbFiltroBusqueda.SelectedIndex = 0;
+        }
+
+        private void dGridInventario_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                try
+                {
+                    AgregarProducto frmModificacion = new AgregarProducto();
+                    int id = (int)dGridInventario.Rows[e.RowIndex].Cells[0].Value;
+                    if (cmbFiltroBusqueda.SelectedIndex == 0)
+                    {
+                        Pelicula peliculaAux = Blockbuster.BuscarPelicula(id);
+                        frmModificacion = new AgregarProducto(peliculaAux);
+                    }
+                    else
+                    {
+                        Producto productoAux = Blockbuster.BuscarProducto(id);
+                        frmModificacion = new AgregarProducto(productoAux);
+                    }             
+                    frmModificacion.ShowDialog();
+                    if (frmModificacion.DialogResult == DialogResult.OK)
+                    {
+                        dGridInventario.DataSource = null;
+                        ActualizarInfo();
+                    }
+                }catch(Exception ex)
+                {
+
+                }
+     
+            }
         }
     }
 }

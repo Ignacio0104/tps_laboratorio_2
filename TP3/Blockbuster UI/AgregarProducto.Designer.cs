@@ -433,8 +433,8 @@
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.rdtProductos);
             this.Controls.Add(this.rdtPeliculas);
-            this.Controls.Add(this.panProductos);
             this.Controls.Add(this.panPeliculas);
+            this.Controls.Add(this.panProductos);
             this.Name = "AgregarProducto";
             this.Text = "AgregarProducto";
             this.Load += new System.EventHandler(this.AgregarProducto_Load);

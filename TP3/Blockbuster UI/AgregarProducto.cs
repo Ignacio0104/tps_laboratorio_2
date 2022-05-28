@@ -12,12 +12,26 @@ using BibliotecaDeClases;
 
 namespace Blockbuster_UI
 {
-    public partial class AgregarProducto : Form
+    public partial class AgregarProducto : Form, IModificarse
     {
         Enumerados.GenerosPeliculas generoSeleccionado;
+        Producto productoElegido;
+        Pelicula peliculaElegida;
         public AgregarProducto()
         {
             InitializeComponent();
+        }
+
+        public AgregarProducto(Pelicula peliculaElegida):this()
+        {
+            this.peliculaElegida = peliculaElegida;
+            this.productoElegido = null;
+        }
+
+        public AgregarProducto(Producto productoElegido) : this()
+        {
+            this.productoElegido = productoElegido;
+            this.peliculaElegida = null;
         }
 
         private void rdtPeliculas_CheckedChanged(object sender, EventArgs e)
@@ -38,22 +52,28 @@ namespace Blockbuster_UI
         {
             try
             {
-                if (rdtPeliculas.Checked)
+                if(productoElegido is not null || peliculaElegida is not null)
                 {
-                    string nombrePelicula = txtBoxTituloPelicula.Text;
-                    int duracionPelicula = (int)nupDuracion.Value;
-                    Enumerados.DiasCategoriasAlquiler diasAlquiler = (Enumerados.DiasCategoriasAlquiler)cmbDiasDeAlquiler.SelectedItem;
-                    Enumerados.PrecioCategoriasAlquiler precioAlquiler = (Enumerados.PrecioCategoriasAlquiler)cmbPrecioAlquiler.SelectedItem;
-                    int stockPelicula = (int)nupStock.Value;
-
-                    Blockbuster.ListaDePeliculas.Add(new(nombrePelicula, duracionPelicula, generoSeleccionado, diasAlquiler, precioAlquiler, stockPelicula));
-
+                    ActualizarInfo();
                 }
                 else
                 {
-                    Blockbuster.ListaDeProductos.Add(new Producto(txtBoxNombreProducto.Text, (int)nupPrecioProducto.Value, (int)nupStockProducto.Value));
-                }
+                    if (rdtPeliculas.Checked)
+                    {
+                        string nombrePelicula = txtBoxTituloPelicula.Text;
+                        int duracionPelicula = (int)nupDuracion.Value;
+                        Enumerados.DiasCategoriasAlquiler diasAlquiler = (Enumerados.DiasCategoriasAlquiler)cmbDiasDeAlquiler.SelectedItem;
+                        Enumerados.PrecioCategoriasAlquiler precioAlquiler = (Enumerados.PrecioCategoriasAlquiler)cmbPrecioAlquiler.SelectedItem;
+                        int stockPelicula = (int)nupStock.Value;
 
+                        Blockbuster.ListaDePeliculas.Add(new(nombrePelicula, duracionPelicula, generoSeleccionado, diasAlquiler, precioAlquiler, stockPelicula));
+
+                    }
+                    else
+                    {
+                        Blockbuster.ListaDeProductos.Add(new Producto(txtBoxNombreProducto.Text, (int)nupPrecioProducto.Value, (int)nupStockProducto.Value));
+                    }
+                }
                 this.DialogResult = DialogResult.OK;
             }catch(Exception ex)
             {
@@ -101,6 +121,48 @@ namespace Blockbuster_UI
             cmbPrecioAlquiler.Items.Add(Enumerados.PrecioCategoriasAlquiler.Especial);
             cmbPrecioAlquiler.Items.Add(Enumerados.PrecioCategoriasAlquiler.Normal);
             cmbPrecioAlquiler.Items.Add(Enumerados.PrecioCategoriasAlquiler.Promo);
+
+            if(productoElegido is not null)
+            {
+                txtBoxNombreProducto.Text = productoElegido.NombreProducto;
+                nupPrecioProducto.Value = (decimal)productoElegido.PrecioProducto;
+                nupStockProducto.Value = productoElegido.StockProducto;
+                rdtProductos.Checked = true;
+                rdtPeliculas.Enabled = false;
+            }
+            else
+            {
+                txtBoxTituloPelicula.Text = peliculaElegida.TituloPelicula;
+                nupDuracion.Value = peliculaElegida.DuracionPelicula;
+                cmbDiasDeAlquiler.SelectedItem = peliculaElegida.DiasDeAlquiler;
+                cmbPrecioAlquiler.SelectedItem = peliculaElegida.PrecioDeAlquiler;
+                nupStock.Value = peliculaElegida.Stock;                      
+                rdtProductos.Enabled = false;
+                rdtPeliculas.Checked = true;
+            }
         }
+
+        public void ActualizarInfo()
+        {
+            if (peliculaElegida is not null)
+            {
+                peliculaElegida.TituloPelicula = txtBoxTituloPelicula.Text;
+                peliculaElegida.DuracionPelicula = (int)nupDuracion.Value;
+                peliculaElegida.DiasDeAlquiler= (Enumerados.DiasCategoriasAlquiler)cmbDiasDeAlquiler.SelectedItem;
+                cmbPrecioAlquiler.SelectedItem = (Enumerados.PrecioCategoriasAlquiler)cmbPrecioAlquiler.SelectedItem;
+                peliculaElegida.Stock = (int)nupStock.Value;
+                peliculaElegida.GeneroPelicula = generoSeleccionado;
+            }
+            else
+            {
+                if(productoElegido is not null)
+                {
+                    productoElegido.NombreProducto = txtBoxNombreProducto.Text;
+                    productoElegido.StockProducto = (int)nupStockProducto.Value;
+                    productoElegido.PrecioProducto = (double)nupPrecioProducto.Value;
+                }
+            }
+        }
+
     }
 }

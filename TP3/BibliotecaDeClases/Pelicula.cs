@@ -41,13 +41,13 @@ namespace BibliotecaDeClases
             ultimoId++;
         }
 
+        public int IdPelicula { get => idPelicula; set => idPelicula = value; }
         public string TituloPelicula { get => tituloPelicula; set => tituloPelicula = value; }
         public int DuracionPelicula { get => duracionPelicula; set => duracionPelicula = value; }
         public GenerosPeliculas GeneroPelicula { get => generoPelicula; set => generoPelicula = value; }
         public DiasCategoriasAlquiler DiasDeAlquiler { get => diasDeAlquiler; set => diasDeAlquiler = value; }
         public PrecioCategoriasAlquiler PrecioDeAlquiler { get => precioDeAlquiler; set => precioDeAlquiler = value; }
         public int Stock { get => stock; set => stock = value; }
-        public int IdPelicula { get => idPelicula; set => idPelicula = value; }
 
         public override string ToString()
         {

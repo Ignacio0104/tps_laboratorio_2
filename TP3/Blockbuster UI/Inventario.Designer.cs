@@ -47,6 +47,7 @@
             this.dGridInventario.RowTemplate.Height = 25;
             this.dGridInventario.Size = new System.Drawing.Size(825, 392);
             this.dGridInventario.TabIndex = 0;
+            this.dGridInventario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridInventario_CellClick);
             // 
             // cmbFiltroBusqueda
             // 
