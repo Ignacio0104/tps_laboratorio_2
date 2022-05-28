@@ -9,5 +9,6 @@ namespace BibliotecaDeClases
     public interface IModificarse 
     {
         public void ActualizarInfo();
+        public void EliminarObjeto();
     }
 }

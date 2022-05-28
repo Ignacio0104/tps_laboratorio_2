@@ -16,7 +16,6 @@ namespace Blockbuster_UI
         public Inventario()
         {
             InitializeComponent();
-
         }
 
         private void cmbFiltroBusqueda_SelectedIndexChanged(object sender, EventArgs e)
@@ -26,7 +25,7 @@ namespace Blockbuster_UI
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            AgregarProducto frmAgregar = new AgregarProducto(Blockbuster.ListaDePeliculas[4]);
+            AgregarProducto frmAgregar = new AgregarProducto();
 
             frmAgregar.ShowDialog();
 

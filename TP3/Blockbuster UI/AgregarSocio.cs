@@ -136,5 +136,9 @@ namespace Blockbuster_UI
                 lblId.Visible = false;
             }
         }
+        public void EliminarObjeto()
+        {
+
+        }
     }
 }

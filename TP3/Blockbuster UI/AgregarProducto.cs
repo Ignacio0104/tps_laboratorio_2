@@ -122,24 +122,29 @@ namespace Blockbuster_UI
             cmbPrecioAlquiler.Items.Add(Enumerados.PrecioCategoriasAlquiler.Normal);
             cmbPrecioAlquiler.Items.Add(Enumerados.PrecioCategoriasAlquiler.Promo);
 
-            if(productoElegido is not null)
+            if (productoElegido is not null || peliculaElegida is not null)
             {
-                txtBoxNombreProducto.Text = productoElegido.NombreProducto;
-                nupPrecioProducto.Value = (decimal)productoElegido.PrecioProducto;
-                nupStockProducto.Value = productoElegido.StockProducto;
-                rdtProductos.Checked = true;
-                rdtPeliculas.Enabled = false;
+                btnBorrar.Visible = true;
+                if (productoElegido is not null)
+                {
+                    txtBoxNombreProducto.Text = productoElegido.NombreProducto;
+                    nupPrecioProducto.Value = (decimal)productoElegido.PrecioProducto;
+                    nupStockProducto.Value = productoElegido.StockProducto;
+                    rdtProductos.Checked = true;
+                    rdtPeliculas.Enabled = false;
+                }
+                else
+                {
+                    txtBoxTituloPelicula.Text = peliculaElegida.TituloPelicula;
+                    nupDuracion.Value = peliculaElegida.DuracionPelicula;
+                    cmbDiasDeAlquiler.SelectedItem = peliculaElegida.DiasDeAlquiler;
+                    cmbPrecioAlquiler.SelectedItem = peliculaElegida.PrecioDeAlquiler;
+                    nupStock.Value = peliculaElegida.Stock;
+                    rdtProductos.Enabled = false;
+                    rdtPeliculas.Checked = true;
+                }
             }
-            else
-            {
-                txtBoxTituloPelicula.Text = peliculaElegida.TituloPelicula;
-                nupDuracion.Value = peliculaElegida.DuracionPelicula;
-                cmbDiasDeAlquiler.SelectedItem = peliculaElegida.DiasDeAlquiler;
-                cmbPrecioAlquiler.SelectedItem = peliculaElegida.PrecioDeAlquiler;
-                nupStock.Value = peliculaElegida.Stock;                      
-                rdtProductos.Enabled = false;
-                rdtPeliculas.Checked = true;
-            }
+
         }
 
         public void ActualizarInfo()
@@ -164,5 +169,26 @@ namespace Blockbuster_UI
             }
         }
 
+        public void EliminarObjeto()
+        {
+            if(peliculaElegida is not null)
+            {
+                Blockbuster.ListaDePeliculas.RemoveAt(Blockbuster.BuscarIndicePelicula(peliculaElegida));
+            }
+            else
+            {
+                Blockbuster.ListaDeProductos.RemoveAt(Blockbuster.BuscarIndiceProducto(productoElegido));
+            }
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            DialogResult eleccion = MessageBox.Show($"¿Esta seguro que desea borrar este item?", "Borrar item", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if(eleccion == DialogResult.Yes)
+            {
+                EliminarObjeto();
+                this.DialogResult = DialogResult.OK;
+            }
+        }
     }
 }

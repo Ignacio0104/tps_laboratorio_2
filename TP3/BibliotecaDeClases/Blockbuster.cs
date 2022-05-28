@@ -112,30 +112,43 @@ namespace BibliotecaDeClases
             return null;
         }
 
-
-
-
-      /*  private static void HardcodeoProductos()
+        public static int BuscarIndiceProducto(Producto producto)
         {
-            listaDeProductos.Add(new Producto("Pochoclos Grandes", 600, 50));
-            listaDeProductos.Add(new Producto("Pochoclos Medianos", 450, 60));
-            listaDeProductos.Add(new Producto("Pochoclos Chicos", 370, 70));
-            listaDeProductos.Add(new Producto("Sugus", 290, 30));
-            listaDeProductos.Add(new Producto("Mani con chocolate", 200, 25));
-            listaDeProductos.Add(new Producto("Confites M&M", 700, 10));
-            listaDeProductos.Add(new Producto("Gomitas Mogul", 160, 20));
-            listaDeProductos.Add(new Producto("Tita", 100, 15));
-            listaDeProductos.Add(new Producto("Papas Pringles", 500, 100));
-            listaDeProductos.Add(new Producto("Bananita Dolca", 90, 10));
-            listaDeProductos.Add(new Producto("Rocklets", 300, 20));
-            listaDeProductos.Add(new Producto("Lenguetazo", 150, 30));
-            listaDeProductos.Add(new Producto("Rhodesia", 100, 60));
-            listaDeProductos.Add(new Producto("Bon o Bon", 120, 80));
-            listaDeProductos.Add(new Producto("Flynn Paff", 80, 10));
-            listaDeProductos.Add(new Producto("Huevo Kinder", 400, 20));
-            listaDeProductos.Add(new Producto("Nugaton", 200, 40));
-            listaDeProductos.Add(new Producto("Galletitas Oreo", 400, 20));
-            listaDeProductos.Add(new Producto("Mentitas", 70, 20));
-        }*/
+            int indice = -1;
+            for (int i = 0; i < listaDeProductos.Count; i++)
+            {
+                if (listaDeProductos[i].IdProducto == producto.IdProducto)
+                {
+                    indice = i;
+                }
+            }
+            return indice;
+        }
+
+
+
+
+        /*  private static void HardcodeoProductos()
+          {
+              listaDeProductos.Add(new Producto("Pochoclos Grandes", 600, 50));
+              listaDeProductos.Add(new Producto("Pochoclos Medianos", 450, 60));
+              listaDeProductos.Add(new Producto("Pochoclos Chicos", 370, 70));
+              listaDeProductos.Add(new Producto("Sugus", 290, 30));
+              listaDeProductos.Add(new Producto("Mani con chocolate", 200, 25));
+              listaDeProductos.Add(new Producto("Confites M&M", 700, 10));
+              listaDeProductos.Add(new Producto("Gomitas Mogul", 160, 20));
+              listaDeProductos.Add(new Producto("Tita", 100, 15));
+              listaDeProductos.Add(new Producto("Papas Pringles", 500, 100));
+              listaDeProductos.Add(new Producto("Bananita Dolca", 90, 10));
+              listaDeProductos.Add(new Producto("Rocklets", 300, 20));
+              listaDeProductos.Add(new Producto("Lenguetazo", 150, 30));
+              listaDeProductos.Add(new Producto("Rhodesia", 100, 60));
+              listaDeProductos.Add(new Producto("Bon o Bon", 120, 80));
+              listaDeProductos.Add(new Producto("Flynn Paff", 80, 10));
+              listaDeProductos.Add(new Producto("Huevo Kinder", 400, 20));
+              listaDeProductos.Add(new Producto("Nugaton", 200, 40));
+              listaDeProductos.Add(new Producto("Galletitas Oreo", 400, 20));
+              listaDeProductos.Add(new Producto("Mentitas", 70, 20));
+          }*/
     }
 }

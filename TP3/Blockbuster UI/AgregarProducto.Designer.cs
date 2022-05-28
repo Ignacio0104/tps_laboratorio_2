@@ -61,6 +61,7 @@
             this.txtBoxNombreProducto = new System.Windows.Forms.TextBox();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
+            this.btnBorrar = new System.Windows.Forms.Button();
             this.panPeliculas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupStock)).BeginInit();
             this.grpGenero.SuspendLayout();
@@ -424,11 +425,27 @@
             this.lblError.Text = "Mensaje de error";
             this.lblError.Visible = false;
             // 
+            // btnBorrar
+            // 
+            this.btnBorrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBorrar.BackgroundImage")));
+            this.btnBorrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBorrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBorrar.Location = new System.Drawing.Point(165, 16);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnBorrar.Size = new System.Drawing.Size(65, 52);
+            this.btnBorrar.TabIndex = 15;
+            this.btnBorrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Visible = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            // 
             // AgregarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(418, 448);
+            this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.rdtProductos);
@@ -488,5 +505,6 @@
         private System.Windows.Forms.PictureBox picPopcorn;
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Button btnBorrar;
     }
 }

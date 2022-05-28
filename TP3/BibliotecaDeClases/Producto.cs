@@ -16,7 +16,7 @@
 
         static Producto()
         {
-            ultimoId = 100;
+            ultimoId = 2000;
         }
 
         public Producto() { }
