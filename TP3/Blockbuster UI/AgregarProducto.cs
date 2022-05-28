@@ -173,11 +173,11 @@ namespace Blockbuster_UI
         {
             if(peliculaElegida is not null)
             {
-                Blockbuster.ListaDePeliculas.RemoveAt(Blockbuster.BuscarIndicePelicula(peliculaElegida));
+                Blockbuster.ListaDePeliculas.Remove(peliculaElegida);
             }
             else
             {
-                Blockbuster.ListaDeProductos.RemoveAt(Blockbuster.BuscarIndiceProducto(productoElegido));
+                Blockbuster.ListaDeProductos.Remove(productoElegido);
             }
         }
 

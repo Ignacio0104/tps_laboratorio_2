@@ -129,6 +129,7 @@ namespace Blockbuster_UI
                 lblIdSocio.Visible = true;
                 lblId.Visible = true;
                 lblIdSocio.Text = socioElegido.IdSocio.ToString();
+                btnBorrar.Visible = true;
             }
             else
             {
@@ -138,7 +139,20 @@ namespace Blockbuster_UI
         }
         public void EliminarObjeto()
         {
+            if(socioElegido is not null)
+            {
+                Blockbuster.ListaDeSocios.Remove(socioElegido);
+            }
+        }
 
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            DialogResult eleccion = MessageBox.Show($"¿Esta seguro que desea dar de baja a este socio?", "Dar de baja socio", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (eleccion == DialogResult.Yes)
+            {
+                EliminarObjeto();
+                this.DialogResult = DialogResult.OK;
+            }
         }
     }
 }

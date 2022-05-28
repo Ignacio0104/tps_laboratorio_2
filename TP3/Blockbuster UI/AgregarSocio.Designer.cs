@@ -47,6 +47,7 @@
             this.lblError = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.lblIdSocio = new System.Windows.Forms.Label();
+            this.btnBorrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picMemberCard)).BeginInit();
             this.panTarjeta.SuspendLayout();
             this.SuspendLayout();
@@ -219,11 +220,27 @@
             this.lblIdSocio.Text = "label1";
             this.lblIdSocio.Visible = false;
             // 
+            // btnBorrar
+            // 
+            this.btnBorrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBorrar.BackgroundImage")));
+            this.btnBorrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBorrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBorrar.Location = new System.Drawing.Point(403, 43);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnBorrar.Size = new System.Drawing.Size(65, 52);
+            this.btnBorrar.TabIndex = 16;
+            this.btnBorrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Visible = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            // 
             // AgregarSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 497);
+            this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.lblIdSocio);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.lblError);
@@ -274,5 +291,6 @@
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblIdSocio;
+        private System.Windows.Forms.Button btnBorrar;
     }
 }
