@@ -45,6 +45,8 @@
             this.txtBoxTarjetaSocio = new System.Windows.Forms.TextBox();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
+            this.lblIdSocio = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picMemberCard)).BeginInit();
             this.panTarjeta.SuspendLayout();
             this.SuspendLayout();
@@ -195,11 +197,35 @@
             this.lblError.Text = "label1";
             this.lblError.Visible = false;
             // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblId.Location = new System.Drawing.Point(19, 2);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(40, 28);
+            this.lblId.TabIndex = 14;
+            this.lblId.Text = "ID: ";
+            this.lblId.Visible = false;
+            // 
+            // lblIdSocio
+            // 
+            this.lblIdSocio.AutoSize = true;
+            this.lblIdSocio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblIdSocio.Location = new System.Drawing.Point(12, 30);
+            this.lblIdSocio.Name = "lblIdSocio";
+            this.lblIdSocio.Size = new System.Drawing.Size(52, 21);
+            this.lblIdSocio.TabIndex = 15;
+            this.lblIdSocio.Text = "label1";
+            this.lblIdSocio.Visible = false;
+            // 
             // AgregarSocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 497);
+            this.Controls.Add(this.lblIdSocio);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.panTarjeta);
@@ -246,5 +272,7 @@
         private System.Windows.Forms.TextBox txtBoxTarjetaSocio;
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Label lblIdSocio;
     }
 }

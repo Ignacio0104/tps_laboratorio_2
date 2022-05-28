@@ -30,7 +30,6 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dGridSocios = new System.Windows.Forms.DataGridView();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,6 +38,7 @@
             this.colLimitePeliculas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPenalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTarjetaCredito = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAgregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGridSocios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,16 +63,7 @@
             this.dGridSocios.ShowEditingIcon = false;
             this.dGridSocios.Size = new System.Drawing.Size(872, 378);
             this.dGridSocios.TabIndex = 0;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(696, 476);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(188, 46);
-            this.btnAgregar.TabIndex = 1;
-            this.btnAgregar.Text = "Agregar +";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.dGridSocios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridSocios_CellClick);
             // 
             // colId
             // 
@@ -121,6 +112,16 @@
             // 
             this.colTarjetaCredito.HeaderText = "Tarjeta garantia";
             this.colTarjetaCredito.Name = "colTarjetaCredito";
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(696, 476);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(188, 46);
+            this.btnAgregar.TabIndex = 1;
+            this.btnAgregar.Text = "Agregar +";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // ListaSocios
             // 

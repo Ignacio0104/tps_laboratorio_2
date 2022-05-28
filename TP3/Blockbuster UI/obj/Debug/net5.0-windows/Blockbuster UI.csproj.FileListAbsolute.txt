@@ -28,3 +28,4 @@ C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\De
 C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.AgregarAlquiler.resources
 C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.AgregarProducto.resources
 C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.AgregarSocio.resources
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.ListaEmpleados.resources

@@ -53,5 +53,27 @@ namespace Blockbuster_UI
                 CargarSocios();
             }
         }
+
+        private void dGridSocios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                int idSocio = (int)dGridSocios.Rows[e.RowIndex].Cells[0].Value;
+                Socio socioAux = Blockbuster.BuscarSocio(idSocio);
+
+                if(socioAux is not null)
+                {
+                    AgregarSocio frmModificacion = new AgregarSocio(socioAux);
+
+                    frmModificacion.ShowDialog();
+
+                    if (frmModificacion.DialogResult == DialogResult.OK)
+                    {
+                        dGridSocios.Rows.Clear();
+                        CargarSocios();
+                    }
+                }
+            }
+        }
     }
 }

@@ -13,16 +13,31 @@ using BibliotecaDeClases.Excepciones;
 
 namespace Blockbuster_UI
 {
-    public partial class AgregarSocio : Form
+    public partial class AgregarSocio : Form, IModificarse
     {
+        Socio socioElegido;
         public AgregarSocio()
         {
             InitializeComponent();
         }
 
-        private void AgregarSocio_Load(object sender, EventArgs e)
+        public AgregarSocio(Socio socioElegido):this()
         {
+            this.socioElegido = socioElegido;
+        }
 
+        public void ActualizarInfo()
+        {
+            if(socioElegido is not null)
+            {
+                Validaciones();
+                socioElegido.NombreSocio = txtBoxNombreSocio.Text;
+                socioElegido.ApellidoSocio = txtBoxApellidoSocio.Text;
+                socioElegido.EmailSocio = txtBoxEmailSocio.Text;
+                socioElegido.TelefonoSocio = txtBoxTelefono.Text;
+                if (socioElegido is SocioClasico socioClasico)
+                    socioClasico.TarjetaDeCredito = txtBoxTarjetaSocio.Text;
+            }
         }
 
         private void rdtSocioPremium_CheckedChanged(object sender, EventArgs e)
@@ -40,19 +55,27 @@ namespace Blockbuster_UI
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             try
-            {
+            { 
                 Validaciones();
-                if (rdtSocioClasico.Checked)
+                if (socioElegido is not null)
                 {
-                    Blockbuster.ListaDeSocios.Add(new SocioClasico(txtBoxNombreSocio.Text, txtBoxApellidoSocio.Text,
-                        txtBoxEmailSocio.Text, txtBoxTelefono.Text, txtBoxTarjetaSocio.Text));
+                    ActualizarInfo();
                 }
                 else
                 {
-                    Blockbuster.ListaDeSocios.Add(new SocioPremium(txtBoxNombreSocio.Text, txtBoxApellidoSocio.Text,
-                                           txtBoxEmailSocio.Text, txtBoxTelefono.Text));
+                    if (rdtSocioClasico.Checked)
+                    {
+                        Blockbuster.ListaDeSocios.Add(new SocioClasico(txtBoxNombreSocio.Text, txtBoxApellidoSocio.Text,
+                            txtBoxEmailSocio.Text, txtBoxTelefono.Text, txtBoxTarjetaSocio.Text));
+                    }
+                    else
+                    {
+                        Blockbuster.ListaDeSocios.Add(new SocioPremium(txtBoxNombreSocio.Text, txtBoxApellidoSocio.Text,
+                                               txtBoxEmailSocio.Text, txtBoxTelefono.Text));
+                    }
+                    lblError.Visible = false;
                 }
-                lblError.Visible = false; ;
+
                 this.DialogResult = DialogResult.OK;
             }catch(Exception exc)
             {
@@ -60,6 +83,7 @@ namespace Blockbuster_UI
                 lblError.Text = $"* {exc.Message}";
             }
         }
+
 
         private void Validaciones()
         {
@@ -87,6 +111,29 @@ namespace Blockbuster_UI
             {
                 if(rdtSocioClasico.Checked)
                     throw new TarjetaCreditoInvalida("Favor verificar la tarjeta de crédito ingresada");
+            }
+        }
+
+        private void AgregarSocio_Load(object sender, EventArgs e)
+        {
+            if(socioElegido is not null)
+            {
+                txtBoxNombreSocio.Text = socioElegido.NombreSocio;
+                txtBoxApellidoSocio.Text = socioElegido.ApellidoSocio;
+                txtBoxEmailSocio.Text = socioElegido.EmailSocio;
+                txtBoxTelefono.Text = socioElegido.TelefonoSocio;
+
+                if (socioElegido is SocioClasico socioClasico)
+                    txtBoxTarjetaSocio.Text = socioClasico.TarjetaDeCredito;
+
+                lblIdSocio.Visible = true;
+                lblId.Visible = true;
+                lblIdSocio.Text = socioElegido.IdSocio.ToString();
+            }
+            else
+            {
+                lblIdSocio.Visible = false;
+                lblId.Visible = false;
             }
         }
     }
