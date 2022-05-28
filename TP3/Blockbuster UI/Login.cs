@@ -38,7 +38,7 @@ namespace Blockbuster_UI
 
         private void login_Load(object sender, EventArgs e)
         {
-            Blockbuster.ListaDeEmpleados = ClaseSerializadora<List<Usuario>>.Leer("baseDatosEmpleados");
+            Blockbuster.ListaDeEmpleados = ClaseSerializadora<List<Usuario>>.LeerJson("baseDatosEmpleados");
         }
     }
 }

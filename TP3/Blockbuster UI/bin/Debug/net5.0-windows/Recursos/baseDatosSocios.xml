@@ -3798,19 +3798,6 @@
       <AlquilerOfPelicula>
         <Pelicula>
           <IdPelicula>0</IdPelicula>
-          <TituloPelicula>13 Beloved (13 game sayawng)</TituloPelicula>
-          <DuracionPelicula>110</DuracionPelicula>
-          <GeneroPelicula>CienciaFiccion</GeneroPelicula>
-          <DiasDeAlquiler>Regular</DiasDeAlquiler>
-          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
-          <Stock>16</Stock>
-        </Pelicula>
-        <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-05-23T17:37:53.4098163-03:00</FechaDeAlquiler>
-      </AlquilerOfPelicula>
-      <AlquilerOfPelicula>
-        <Pelicula>
-          <IdPelicula>0</IdPelicula>
           <TituloPelicula>My Kidnapper</TituloPelicula>
           <DuracionPelicula>97</DuracionPelicula>
           <GeneroPelicula>CienciaFiccion</GeneroPelicula>

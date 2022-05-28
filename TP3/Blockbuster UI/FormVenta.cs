@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BibliotecaDeClases;
+using System.Media;
 
 namespace Blockbuster_UI
 {
     public partial class FormVenta : Form
     {
         Socio socioAtendido;
+        Color color;
         public FormVenta()
         {
             InitializeComponent();
@@ -134,6 +136,12 @@ namespace Blockbuster_UI
         private void FormVenta_Load(object sender, EventArgs e)
         {
             pnlInfoUsuario.Visible = false;
+        }
+
+        private void panTarjetaSocio_Paint(object sender, PaintEventArgs e)
+        {
+            color = ColorTranslator.FromHtml("#ffd60a");
+            ControlPaint.DrawBorder(e.Graphics, this.panTarjetaSocio.ClientRectangle, color, ButtonBorderStyle.Solid) ;
         }
     }
 }

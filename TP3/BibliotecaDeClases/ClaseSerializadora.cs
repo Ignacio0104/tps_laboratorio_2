@@ -14,7 +14,7 @@ namespace BibliotecaDeClases
             ruta = ".\\Recursos";//Conseguir la ruta desde cualquier PC
         }
 
-        public static void Escribir(T datos,string archivo)
+        public static void EscribirJson(T datos,string archivo)
         {
             string completa = ruta + @"\" + archivo + ".json";
 
@@ -39,7 +39,7 @@ namespace BibliotecaDeClases
             }
         }
 
-        public static T Leer(string nombreArchivo)
+        public static T LeerJson(string nombreArchivo)
         {
             T datos = default;
             string archivo = string.Empty;

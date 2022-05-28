@@ -61,28 +61,13 @@ namespace Blockbuster_UI
             try
             {
                 ClaseSerializadora<List<Socio>>.EscribirXml(Blockbuster.ListaDeSocios, "baseDatosSocios");
-                ClaseSerializadora<List<Producto>>.Escribir(Blockbuster.ListaDeProductos, "baseDatosProductos");
-                ClaseSerializadora<List<Pelicula>>.Escribir(Blockbuster.ListaDePeliculas, "baseDatosPeliculas");
+                ClaseSerializadora<List<Producto>>.EscribirJson(Blockbuster.ListaDeProductos, "baseDatosProductos");
+                ClaseSerializadora<List<Pelicula>>.EscribirJson(Blockbuster.ListaDePeliculas, "baseDatosPeliculas");
             }
             catch (Exception exc)
             {
                 MessageBox.Show(exc.Message);
             }
-            /* List<SocioClasico> listaClasicosAux = new List<SocioClasico>();
-             List<SocioPremium> listaPremiumAux = new List<SocioPremium>();
-             foreach (Socio item in Blockbuster.ListaDeSocios)
-             {
-                 if (item is SocioClasico)
-                 {
-                     listaClasicosAux.Add((SocioClasico)item);
-                 }
-                 else
-                 {
-                     listaPremiumAux.Add((SocioPremium)item);
-                 }
-             }
-             ClaseSerializadora<List<SocioClasico>>.Escribir(listaClasicosAux, "baseDatosSocioClasico");
-             ClaseSerializadora<List<SocioPremium>>.Escribir(listaPremiumAux, "baseDatosSocioPremium");*/
            
         }
 
@@ -93,12 +78,8 @@ namespace Blockbuster_UI
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
-            Blockbuster.ListaDeProductos = ClaseSerializadora<List<Producto>>.Leer("baseDatosProductos");
-            Blockbuster.ListaDePeliculas = ClaseSerializadora<List<Pelicula>>.Leer("baseDatosPeliculas");
-            /*List<SocioClasico> sociosAux = ClaseSerializadora<List<SocioClasico>>.Leer("baseDatosSocioClasico");
-            List<SocioPremium> sociosPremiumAux = ClaseSerializadora<List<SocioPremium>>.Leer("baseDatosSocioPremium");
-            Blockbuster.ListaDeSocios.AddRange(sociosPremiumAux);
-            Blockbuster.ListaDeSocios.AddRange(sociosAux);*/
+            Blockbuster.ListaDeProductos = ClaseSerializadora<List<Producto>>.LeerJson("baseDatosProductos");
+            Blockbuster.ListaDePeliculas = ClaseSerializadora<List<Pelicula>>.LeerJson("baseDatosPeliculas");
             Blockbuster.ListaDeSocios = ClaseSerializadora<List<Socio>>.LeerXml("baseDatosSocios");
             usuarioLogueado = Blockbuster.BuscarUsuario(numeroLegajo);
             lblNombreUsuario.Text = $"{usuarioLogueado.Nombre} {usuarioLogueado.Apellido}";
