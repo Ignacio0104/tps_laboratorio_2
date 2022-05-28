@@ -5047,7 +5047,47 @@
     <ApellidoSocio>Bellew</ApellidoSocio>
     <EmailSocio>pbellew3b@a8.net</EmailSocio>
     <TelefonoSocio>911-578-9401</TelefonoSocio>
-    <ListaDeAlquileres />
+    <ListaDeAlquileres>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>4</IdPelicula>
+          <TituloPelicula>Mad Money</TituloPelicula>
+          <DuracionPelicula>123</DuracionPelicula>
+          <GeneroPelicula>Suspenso</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
+          <Stock>13</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-05-28T15:20:13.6774026-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>598</IdPelicula>
+          <TituloPelicula>Any Number Can Play</TituloPelicula>
+          <DuracionPelicula>138</DuracionPelicula>
+          <GeneroPelicula>Drama</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
+          <Stock>21</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-05-28T15:20:16.2244974-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>4</IdPelicula>
+          <TituloPelicula>Mad Money</TituloPelicula>
+          <DuracionPelicula>123</DuracionPelicula>
+          <GeneroPelicula>Suspenso</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
+          <Stock>13</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-05-28T15:20:16.7565534-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+    </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
     <Penalidad>100</Penalidad>
     <TarjetaDeCredito>3556474884930982</TarjetaDeCredito>
