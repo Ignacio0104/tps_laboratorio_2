@@ -60,6 +60,7 @@
             this.lblNombreProducto = new System.Windows.Forms.Label();
             this.txtBoxNombreProducto = new System.Windows.Forms.TextBox();
             this.btnConfirmar = new System.Windows.Forms.Button();
+            this.lblError = new System.Windows.Forms.Label();
             this.panPeliculas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupStock)).BeginInit();
             this.grpGenero.SuspendLayout();
@@ -412,11 +413,23 @@
             this.btnConfirmar.UseVisualStyleBackColor = true;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(12, 407);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(95, 15);
+            this.lblError.TabIndex = 14;
+            this.lblError.Text = "Mensaje de error";
+            this.lblError.Visible = false;
+            // 
             // AgregarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(418, 448);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.rdtProductos);
             this.Controls.Add(this.rdtPeliculas);
@@ -474,5 +487,6 @@
         private System.Windows.Forms.TextBox txtBoxNombreProducto;
         private System.Windows.Forms.PictureBox picPopcorn;
         private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.Label lblError;
     }
 }

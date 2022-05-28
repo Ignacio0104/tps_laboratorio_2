@@ -58,5 +58,18 @@ namespace TestUnitarios
 
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void ValidarTelefono_SiIngresoUnaCadenaVacia_DebeDevolverFalse()
+        {
+            bool expected = false;
+
+            string cadena = "";
+
+            bool actual = Logica.VerificarEmail(cadena);
+
+            Assert.AreEqual(expected, actual);
+
+        }
+
     }
 }

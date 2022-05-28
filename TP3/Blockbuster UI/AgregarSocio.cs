@@ -63,9 +63,14 @@ namespace Blockbuster_UI
 
         private void Validaciones()
         {
-            if(!txtBoxNombreSocio.Text.Any(char.IsLetter)||!txtBoxApellidoSocio.Text.Any(char.IsLetter))
+            if(!txtBoxNombreSocio.Text.All(char.IsLetter))
             {
-                throw new NombreOApellidoInvalido("Los campos nombre y apellido solo deben contener letras");
+                throw new NombreOApellidoInvalido("Favor revisar el campo nombre");
+            }
+
+            if (!txtBoxApellidoSocio.Text.All(char.IsLetter))
+            {
+                throw new NombreOApellidoInvalido("Favor revisar el campo apellido");
             }
 
             if(!Logica.VerificarEmail(txtBoxEmailSocio.Text.Trim().ToLower()))

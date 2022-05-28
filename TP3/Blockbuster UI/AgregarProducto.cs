@@ -55,9 +55,9 @@ namespace Blockbuster_UI
                 }
 
                 this.DialogResult = DialogResult.OK;
-            }catch(Exception exc)
+            }catch(Exception ex)
             {
-                MessageBox.Show("Favor verificar los datos");
+                lblError.Text = $"*Favor verificar los datos";
             }
 
         }
