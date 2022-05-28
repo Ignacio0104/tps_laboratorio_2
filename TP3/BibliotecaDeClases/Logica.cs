@@ -21,8 +21,7 @@ namespace BibliotecaDeClases
 
         public static bool VerificarTarjetaCredito(string dato)
         {
-            if (!dato.StartsWith("4") || !dato.StartsWith("5") || !dato.StartsWith("3")
-                || dato.Length != 16 || dato.Length != 15)
+            if ((dato[0]!= '5'&& dato[0] != '4' && dato[0] != '3') || (dato.Length != 16 && dato.Length != 15) || !dato.All(char.IsNumber))
             {
                 return false;
             }
