@@ -139,7 +139,7 @@
             // 
             // btnAgregarAlquiler
             // 
-            this.btnAgregarAlquiler.Location = new System.Drawing.Point(480, 395);
+            this.btnAgregarAlquiler.Location = new System.Drawing.Point(480, 408);
             this.btnAgregarAlquiler.Name = "btnAgregarAlquiler";
             this.btnAgregarAlquiler.Size = new System.Drawing.Size(137, 45);
             this.btnAgregarAlquiler.TabIndex = 10;
@@ -160,6 +160,8 @@
             // 
             // dGridAlquileres
             // 
+            this.dGridAlquileres.AllowUserToAddRows = false;
+            this.dGridAlquileres.AllowUserToDeleteRows = false;
             this.dGridAlquileres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGridAlquileres.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colTitulo,
@@ -167,7 +169,7 @@
             this.colPrecio,
             this.colDias,
             this.colFecha});
-            this.dGridAlquileres.Location = new System.Drawing.Point(34, 157);
+            this.dGridAlquileres.Location = new System.Drawing.Point(34, 183);
             this.dGridAlquileres.Name = "dGridAlquileres";
             this.dGridAlquileres.RowTemplate.Height = 25;
             this.dGridAlquileres.Size = new System.Drawing.Size(583, 196);

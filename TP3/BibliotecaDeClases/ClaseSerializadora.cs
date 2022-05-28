@@ -26,7 +26,7 @@ namespace BibliotecaDeClases
                 }
                 JsonSerializerOptions options = new JsonSerializerOptions
                 {
-                                Converters ={new JsonStringEnumConverter()}
+                    Converters ={new JsonStringEnumConverter()}
                 };
                 string objetoJson = JsonSerializer.Serialize(datos,options);
 
@@ -77,7 +77,8 @@ namespace BibliotecaDeClases
             }
         }
 
-        /*public static void EscribirXml(T datos, string nombreArchivo)
+        [XmlInclude(typeof(SocioClasico)), XmlInclude(typeof(SocioPremium))]
+        public static void EscribirXml(T datos, string nombreArchivo)
         {
             string completa = ruta + @"\" + nombreArchivo + ".xml";
 
@@ -98,7 +99,7 @@ namespace BibliotecaDeClases
             }
             catch (Exception e)
             {
-                throw new Exception($"Error en el archivo {completa}");
+               
             }
         }
 
@@ -116,7 +117,7 @@ namespace BibliotecaDeClases
 
                     foreach (string item in archivos)
                     {
-                        if (item.Contains(nombre))
+                        if (item.Contains(nombreArchivo))
                         {
                             archivo = item;
                             break;
@@ -137,6 +138,6 @@ namespace BibliotecaDeClases
             {
                 throw new Exception($"Error en el archivo {completa}");
             }
-        }*/
+        }
     }
 }

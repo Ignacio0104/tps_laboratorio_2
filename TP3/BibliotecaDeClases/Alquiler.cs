@@ -14,6 +14,10 @@ namespace BibliotecaDeClases
         private int penalidad;
         private DateTime fechaDeAlquiler;
 
+        public Alquiler()
+        {
+
+        }
         public Alquiler(T pelicula)
         {
             this.pelicula = pelicula;
