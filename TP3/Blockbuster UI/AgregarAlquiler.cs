@@ -17,6 +17,7 @@ namespace Blockbuster_UI
         public List<Alquiler<Pelicula>> listaAlquilerAux;
         public List<Producto> listaProductosAux;
         public double acumuladorPrecio;
+        public bool Editar = false;
         public AgregarAlquiler(Socio socioAtendido)
         {
             InitializeComponent();
@@ -111,6 +112,7 @@ namespace Blockbuster_UI
         private void ActualizarCuenta()
         {
             StringBuilder sb = new StringBuilder();
+            checkEditar.Items.Clear();
             richAlquileresParcial.Text = "";
             acumuladorPrecio = 0;
             if (listaAlquilerAux.Count > 0)
@@ -119,6 +121,7 @@ namespace Blockbuster_UI
                 {
                     sb.AppendLine($"{item.Pelicula.ToString()}");
                     sb.AppendLine("---------------------------");
+                    checkEditar.Items.Add(item);
                     acumuladorPrecio += (int)item.Pelicula.PrecioDeAlquiler;
                 }
             }
@@ -129,6 +132,7 @@ namespace Blockbuster_UI
                 {
                     sb.AppendLine($"{item.ToString()}");
                     sb.AppendLine("---------------------------");
+                    checkEditar.Items.Add(item);
                     acumuladorPrecio += item.PrecioProducto;
                 }
             }
@@ -141,6 +145,58 @@ namespace Blockbuster_UI
         {
             CargarPeliculas();
             CargarProductos();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Editar = !Editar;
+            if (Editar)
+            {
+                btnBorrar.Visible = true;
+                checkEditar.Visible = true;
+
+            }
+            else
+            {
+                btnBorrar.Visible = false;
+                checkEditar.Visible = false;
+            }
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            btnBorrar.Visible = false;
+            checkEditar.Visible = false;
+            foreach (int indexChecked in checkEditar.CheckedIndices)
+            {
+                if (listaAlquilerAux.Count > 0 || listaProductosAux.Count > 0)
+                {
+                    
+                    if (Blockbuster.BuscarPelicula(listaAlquilerAux[indexChecked].Pelicula.IdPelicula) is not null)
+                    {
+                        Blockbuster.BuscarPelicula(listaAlquilerAux[indexChecked].Pelicula.IdPelicula).Stock++;
+                        listaAlquilerAux.RemoveAt(indexChecked);
+                    }
+                    else
+                    {
+                        if (Blockbuster.BuscarProducto(listaProductosAux[indexChecked].IdProducto) is not null)
+                        {
+                            Blockbuster.BuscarProducto(listaProductosAux[indexChecked].IdProducto).StockProducto++;
+                            listaProductosAux.RemoveAt(indexChecked);
+                        }
+                    }
+
+                }
+
+            }
+
+            StringBuilder sb = new StringBuilder();
+            checkEditar.Items.Clear();//Se refresca el checkboxlist con los items actualizados
+            ActualizarCuenta();
+            dGridProducto.Rows.Clear();
+            CargarProductos();
+            dGridPeliculas.Rows.Clear();
+            CargarPeliculas();
         }
     }
 

@@ -45,6 +45,9 @@
             this.picLogoBlockbuster = new System.Windows.Forms.PictureBox();
             this.lblFacturacion = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.checkEditar = new System.Windows.Forms.CheckedListBox();
+            this.btnBorrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGridPeliculas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGridProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoBlockbuster)).BeginInit();
@@ -64,12 +67,12 @@
             this.colStock,
             this.colPrecio});
             this.dGridPeliculas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
-            this.dGridPeliculas.Location = new System.Drawing.Point(12, 30);
+            this.dGridPeliculas.Location = new System.Drawing.Point(12, 41);
             this.dGridPeliculas.MultiSelect = false;
             this.dGridPeliculas.Name = "dGridPeliculas";
             this.dGridPeliculas.ReadOnly = true;
             this.dGridPeliculas.RowTemplate.Height = 25;
-            this.dGridPeliculas.Size = new System.Drawing.Size(604, 221);
+            this.dGridPeliculas.Size = new System.Drawing.Size(604, 210);
             this.dGridPeliculas.TabIndex = 0;
             this.dGridPeliculas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridPeliculas_CellClick);
             // 
@@ -117,9 +120,9 @@
             // 
             // richAlquileresParcial
             // 
-            this.richAlquileresParcial.Location = new System.Drawing.Point(734, 30);
+            this.richAlquileresParcial.Location = new System.Drawing.Point(734, 41);
             this.richAlquileresParcial.Name = "richAlquileresParcial";
-            this.richAlquileresParcial.Size = new System.Drawing.Size(408, 426);
+            this.richAlquileresParcial.Size = new System.Drawing.Size(408, 415);
             this.richAlquileresParcial.TabIndex = 1;
             this.richAlquileresParcial.Text = "";
             // 
@@ -203,11 +206,45 @@
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(734, 12);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(113, 23);
+            this.btnEditar.TabIndex = 8;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // checkEditar
+            // 
+            this.checkEditar.BackColor = System.Drawing.SystemColors.Window;
+            this.checkEditar.CheckOnClick = true;
+            this.checkEditar.FormattingEnabled = true;
+            this.checkEditar.Location = new System.Drawing.Point(734, 42);
+            this.checkEditar.Name = "checkEditar";
+            this.checkEditar.Size = new System.Drawing.Size(408, 418);
+            this.checkEditar.TabIndex = 9;
+            this.checkEditar.Visible = false;
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Location = new System.Drawing.Point(1029, 12);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(113, 23);
+            this.btnBorrar.TabIndex = 10;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            // 
             // AgregarAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1154, 541);
+            this.Controls.Add(this.btnBorrar);
+            this.Controls.Add(this.checkEditar);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.lblFacturacion);
             this.Controls.Add(this.picLogoBlockbuster);
             this.Controls.Add(this.btnAceptar);
@@ -246,5 +283,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.CheckedListBox checkEditar;
+        private System.Windows.Forms.Button btnBorrar;
     }
 }
