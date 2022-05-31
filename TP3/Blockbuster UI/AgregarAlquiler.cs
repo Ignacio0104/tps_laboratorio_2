@@ -171,25 +171,30 @@ namespace Blockbuster_UI
             {
                 if (listaAlquilerAux.Count > 0 || listaProductosAux.Count > 0)
                 {
-                    
-                    if (Blockbuster.BuscarPelicula(listaAlquilerAux[indexChecked].Pelicula.IdPelicula) is not null)
+                    try
                     {
-                        Blockbuster.BuscarPelicula(listaAlquilerAux[indexChecked].Pelicula.IdPelicula).Stock++;
-                        listaAlquilerAux.RemoveAt(indexChecked);
-                    }
-                    else
-                    {
-                        if (Blockbuster.BuscarProducto(listaProductosAux[indexChecked].IdProducto) is not null)
+                        if (checkEditar.Items[indexChecked] is Alquiler<Pelicula> alquiler)
                         {
-                            Blockbuster.BuscarProducto(listaProductosAux[indexChecked].IdProducto).StockProducto++;
-                            listaProductosAux.RemoveAt(indexChecked);
+                            Blockbuster.BuscarPelicula(alquiler.Pelicula.IdPelicula).Stock++;
+                            listaAlquilerAux.Remove(alquiler);
                         }
+                        else
+                        {
+                            if(checkEditar.Items[indexChecked] is Producto producto)
+                            {
+                                Blockbuster.BuscarProducto(producto.IdProducto).StockProducto++;
+                                listaProductosAux.Remove(producto);
+                            }
+
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
                     }
 
                 }
-
             }
-
             StringBuilder sb = new StringBuilder();
             checkEditar.Items.Clear();//Se refresca el checkboxlist con los items actualizados
             ActualizarCuenta();
