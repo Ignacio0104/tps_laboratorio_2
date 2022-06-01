@@ -129,6 +129,7 @@
             // 
             // pnlInfoUsuario
             // 
+            this.pnlInfoUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlInfoUsuario.Controls.Add(this.panTarjetaSocio);
             this.pnlInfoUsuario.Controls.Add(this.btnAgregarAlquiler);
             this.pnlInfoUsuario.Controls.Add(this.lblNoHayPeliculas);
@@ -194,7 +195,8 @@
             // 
             this.dGridAlquileres.AllowUserToAddRows = false;
             this.dGridAlquileres.AllowUserToDeleteRows = false;
-            this.dGridAlquileres.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(102)))));
+            this.dGridAlquileres.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(157)))));
+            this.dGridAlquileres.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dGridAlquileres.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
             this.dGridAlquileres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGridAlquileres.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

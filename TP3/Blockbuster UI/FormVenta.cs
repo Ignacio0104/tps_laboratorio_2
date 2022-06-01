@@ -74,7 +74,11 @@ namespace Blockbuster_UI
                     dGridAlquileres.Visible = true;
                     dGridAlquileres.Rows.Clear();
                     lblNoHayPeliculas.Visible = false;
-                    
+                    color = ColorTranslator.FromHtml("#003566");
+                    dGridAlquileres.DefaultCellStyle.BackColor = color;
+                    color = ColorTranslator.FromHtml("#ffc300");
+                    dGridAlquileres.DefaultCellStyle.ForeColor = color;
+
                     for (int i = 0; i < socioAtendido.ListaDeAlquileres.Count; i++)
                     {
 
@@ -84,11 +88,7 @@ namespace Blockbuster_UI
                         dGridAlquileres.Rows[indice].Cells[2].Value = "$ " + (int)socioAtendido.ListaDeAlquileres[i].Pelicula.PrecioDeAlquiler;
                         dGridAlquileres.Rows[indice].Cells[3].Value = (int)socioAtendido.ListaDeAlquileres[i].Pelicula.DiasDeAlquiler;
                         dGridAlquileres.Rows[indice].Cells[4].Value = socioAtendido.ListaDeAlquileres[i].FechaDeAlquiler.ToShortDateString();
-                        color = ColorTranslator.FromHtml("#003566");
-                        dGridAlquileres.Rows[indice].DefaultCellStyle.BackColor = color;
-                        color = ColorTranslator.FromHtml("#ffc300");
                         
-                        dGridAlquileres.Rows[indice].DefaultCellStyle.ForeColor = color;
                         int difereciaDias = (int)(DateTime.Now - socioAtendido.ListaDeAlquileres[i].FechaDeAlquiler).TotalDays;
 
                         if (difereciaDias > (int)socioAtendido.ListaDeAlquileres[i].Pelicula.DiasDeAlquiler)

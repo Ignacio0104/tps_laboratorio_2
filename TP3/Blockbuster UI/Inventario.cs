@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BibliotecaDeClases;
+using System.Media;
 
 namespace Blockbuster_UI
 {
     public partial class Inventario : Form
     {
+        Color color;
         public Inventario()
         {
             InitializeComponent();
@@ -38,9 +40,14 @@ namespace Blockbuster_UI
 
         private void ActualizarInfo()
         {
+            color = ColorTranslator.FromHtml("#003566");
+            dGridInventario.DefaultCellStyle.BackColor = color;
+            color = ColorTranslator.FromHtml("#ffc300");
+            dGridInventario.DefaultCellStyle.ForeColor = color;
             if (cmbFiltroBusqueda.SelectedItem == "Peliculas")
             {
                 dGridInventario.DataSource = Blockbuster.ListaDePeliculas;
+       
             }
             else
             {

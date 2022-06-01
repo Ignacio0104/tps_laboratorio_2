@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BibliotecaDeClases;
+using System.Media;
 
 namespace Blockbuster_UI
 {
     public partial class ListaSocios : Form
     {
+        Color color;
         public ListaSocios()
         {
             InitializeComponent();    
@@ -20,6 +22,10 @@ namespace Blockbuster_UI
 
         private void CargarSocios()
         {
+            color = ColorTranslator.FromHtml("#003566");
+            dGridSocios.DefaultCellStyle.BackColor = color;
+            color = ColorTranslator.FromHtml("#ffc300");
+            dGridSocios.DefaultCellStyle.ForeColor = color;
             foreach (Socio item in Blockbuster.ListaDeSocios)
             {
                 int indice = dGridSocios.Rows.Add();
