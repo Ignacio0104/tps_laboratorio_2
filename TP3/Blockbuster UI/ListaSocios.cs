@@ -17,7 +17,12 @@ namespace Blockbuster_UI
         Color color;
         public ListaSocios()
         {
-            InitializeComponent();    
+            InitializeComponent();
+            cmbCriterioBusqueda.Items.Add("ID");
+            cmbCriterioBusqueda.Items.Add("Nombre");
+            cmbCriterioBusqueda.Items.Add("Apellido");
+            cmbCriterioBusqueda.Items.Add("Mail");
+            cmbCriterioBusqueda.SelectedIndex = 0;
         }
 
         private void CargarSocios()
@@ -29,15 +34,8 @@ namespace Blockbuster_UI
             foreach (Socio item in Blockbuster.ListaDeSocios)
             {
                 int indice = dGridSocios.Rows.Add();
-                dGridSocios.Rows[indice].Cells[0].Value = item.IdSocio;
-                dGridSocios.Rows[indice].Cells[1].Value = item.NombreSocio;
-                dGridSocios.Rows[indice].Cells[2].Value = item.ApellidoSocio;
-                dGridSocios.Rows[indice].Cells[3].Value = item.EmailSocio;
-                dGridSocios.Rows[indice].Cells[4].Value = item.TelefonoSocio;
-                dGridSocios.Rows[indice].Cells[5].Value = item.LimitePeliculas;
-                dGridSocios.Rows[indice].Cells[6].Value = item.Penalidad + "%";
-                dGridSocios.Rows[indice].Cells[7].Value = (item is SocioClasico socioClasico
-                    ? socioClasico.TarjetaDeCredito : "N/A");
+                CargarSociosConFiltro(item, indice);
+                indice++;
                 indice++;
             }
         }
@@ -79,6 +77,86 @@ namespace Blockbuster_UI
                         CargarSocios();
                     }
                 }
+            }
+        }
+
+        private void dGridSocios_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                dGridSocios.Rows[e.RowIndex].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#468faf");
+            }
+        }
+
+        private void dGridSocios_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < dGridSocios.RowCount - 1)
+            {
+                dGridSocios.Rows[e.RowIndex].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#003566");
+            }
+        }
+
+
+        private void CargarSociosConFiltro(Socio socio, int indice)
+        {
+ 
+            dGridSocios.Rows[indice].Cells[0].Value = socio.IdSocio;
+            dGridSocios.Rows[indice].Cells[1].Value = socio.NombreSocio;
+            dGridSocios.Rows[indice].Cells[2].Value = socio.ApellidoSocio;
+            dGridSocios.Rows[indice].Cells[3].Value = socio.EmailSocio;
+            dGridSocios.Rows[indice].Cells[4].Value = socio.TelefonoSocio;
+            dGridSocios.Rows[indice].Cells[5].Value = socio.LimitePeliculas;
+            dGridSocios.Rows[indice].Cells[6].Value = socio.Penalidad + "%";
+            dGridSocios.Rows[indice].Cells[7].Value = (socio is SocioClasico socioClasico
+                ? socioClasico.TarjetaDeCredito : "N/A");
+                                         
+        }
+
+
+        private void txtInputBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            dGridSocios.Rows.Clear();
+            foreach (Socio item in Blockbuster.ListaDeSocios)
+            {
+                int idAux;
+                int indice;
+                switch (cmbCriterioBusqueda.SelectedItem)
+                {
+                    case "ID":
+                        int.TryParse(txtInputBusqueda.Text, out idAux);
+                        if (item.IdSocio == idAux)
+                        {
+                            indice = dGridSocios.Rows.Add();
+                            CargarSociosConFiltro(item, indice);
+                            indice++;
+                        }
+                        break;
+                    case "Nombre":
+                        if (item.NombreSocio.Contains(txtInputBusqueda.Text))
+                        {
+                            indice = dGridSocios.Rows.Add();
+                            CargarSociosConFiltro(item, indice);
+                            indice++;
+                        }
+                        break;
+                    case "Apellido":
+                        if (item.ApellidoSocio.Contains(txtInputBusqueda.Text))
+                        {
+                            indice = dGridSocios.Rows.Add();
+                            CargarSociosConFiltro(item, indice);
+                            indice++;
+                        }
+                        break;
+                    case "Mail":
+                        if (item.EmailSocio.Contains(txtInputBusqueda.Text))
+                        {
+                            indice = dGridSocios.Rows.Add();
+                            CargarSociosConFiltro(item, indice);
+                            indice++;
+                        }
+                        break;
+                }
+
             }
         }
     }

@@ -26,8 +26,6 @@ namespace BibliotecaDeClases
         {
 
         }
-
-
         public Pelicula(string tituloPelicula, int duracion,GenerosPeliculas generoPelicula,
             DiasCategoriasAlquiler diasDeAlquiler, PrecioCategoriasAlquiler precioDeAlquiler, int stock)
         {

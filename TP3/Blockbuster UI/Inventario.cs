@@ -93,5 +93,10 @@ namespace Blockbuster_UI
      
             }
         }
+
+        private void dGridInventario_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+        }
     }
 }

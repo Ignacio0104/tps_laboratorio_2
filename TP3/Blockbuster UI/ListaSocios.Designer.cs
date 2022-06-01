@@ -39,6 +39,8 @@
             this.colPenalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTarjetaCredito = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.cmbCriterioBusqueda = new System.Windows.Forms.ComboBox();
+            this.txtInputBusqueda = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dGridSocios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,6 +66,8 @@
             this.dGridSocios.Size = new System.Drawing.Size(872, 378);
             this.dGridSocios.TabIndex = 0;
             this.dGridSocios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridSocios_CellClick);
+            this.dGridSocios.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridSocios_CellMouseLeave);
+            this.dGridSocios.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dGridSocios_CellMouseMove);
             // 
             // colId
             // 
@@ -126,12 +130,31 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // cmbCriterioBusqueda
+            // 
+            this.cmbCriterioBusqueda.FormattingEnabled = true;
+            this.cmbCriterioBusqueda.Location = new System.Drawing.Point(80, 21);
+            this.cmbCriterioBusqueda.Name = "cmbCriterioBusqueda";
+            this.cmbCriterioBusqueda.Size = new System.Drawing.Size(158, 23);
+            this.cmbCriterioBusqueda.TabIndex = 2;
+            // 
+            // txtInputBusqueda
+            // 
+            this.txtInputBusqueda.Location = new System.Drawing.Point(355, 21);
+            this.txtInputBusqueda.Name = "txtInputBusqueda";
+            this.txtInputBusqueda.Size = new System.Drawing.Size(370, 23);
+            this.txtInputBusqueda.TabIndex = 3;
+            this.txtInputBusqueda.TextChanged += new System.EventHandler(this.txtInputBusqueda_TextChanged);
+           
+            // 
             // ListaSocios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(157)))));
             this.ClientSize = new System.Drawing.Size(896, 534);
+            this.Controls.Add(this.txtInputBusqueda);
+            this.Controls.Add(this.cmbCriterioBusqueda);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dGridSocios);
             this.ForeColor = System.Drawing.Color.Black;
@@ -142,6 +165,7 @@
             this.Load += new System.EventHandler(this.ListaSocios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGridSocios)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -157,5 +181,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colLimitePeliculas;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPenalidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTarjetaCredito;
+        private System.Windows.Forms.ComboBox cmbCriterioBusqueda;
+        private System.Windows.Forms.TextBox txtInputBusqueda;
     }
 }

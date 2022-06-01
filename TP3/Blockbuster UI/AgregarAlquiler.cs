@@ -71,14 +71,14 @@ namespace Blockbuster_UI
                     }
                     else
                     {
-                        throw new Exception("Error, no hay mas lugar");
+                        throw new Exception("Error, este socio no tiene lugar para alquilar más películas");
                     }
 
                 }
    
             }catch(Exception exception)
             {
-                MessageBox.Show(exception.Message);
+                MessageBox.Show(exception.Message,"Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
         }
