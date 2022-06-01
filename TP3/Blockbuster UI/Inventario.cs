@@ -96,7 +96,18 @@ namespace Blockbuster_UI
 
         private void dGridInventario_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
         {
+            if (e.RowIndex >= 0)
+            {
+                dGridInventario.Rows[e.RowIndex].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#468faf");
+            }
+        }
 
+        private void dGridInventario_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < dGridInventario.RowCount - 1)
+            {
+                dGridInventario.Rows[e.RowIndex].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#003566");
+            }
         }
     }
 }

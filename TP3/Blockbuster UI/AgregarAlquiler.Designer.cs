@@ -48,6 +48,8 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.checkEditar = new System.Windows.Forms.CheckedListBox();
             this.btnBorrar = new System.Windows.Forms.Button();
+            this.txtTitulo = new System.Windows.Forms.TextBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dGridPeliculas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGridProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoBlockbuster)).BeginInit();
@@ -227,8 +229,9 @@
             // 
             // checkEditar
             // 
-            this.checkEditar.BackColor = System.Drawing.SystemColors.Window;
+            this.checkEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(8)))), ((int)(((byte)(20)))));
             this.checkEditar.CheckOnClick = true;
+            this.checkEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(10)))));
             this.checkEditar.FormattingEnabled = true;
             this.checkEditar.Location = new System.Drawing.Point(734, 42);
             this.checkEditar.Name = "checkEditar";
@@ -251,12 +254,33 @@
             this.btnBorrar.Visible = false;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
+            // txtTitulo
+            // 
+            this.txtTitulo.Location = new System.Drawing.Point(132, 12);
+            this.txtTitulo.Name = "txtTitulo";
+            this.txtTitulo.Size = new System.Drawing.Size(321, 23);
+            this.txtTitulo.TabIndex = 11;
+            this.txtTitulo.TextChanged += new System.EventHandler(this.txtTitulo_TextChanged);
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.lblTitulo.Location = new System.Drawing.Point(58, 12);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(47, 17);
+            this.lblTitulo.TabIndex = 12;
+            this.lblTitulo.Text = "Titulo: ";
+            // 
             // AgregarAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(1154, 541);
+            this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.checkEditar);
             this.Controls.Add(this.btnEditar);
@@ -301,5 +325,7 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.CheckedListBox checkEditar;
         private System.Windows.Forms.Button btnBorrar;
+        private System.Windows.Forms.TextBox txtTitulo;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }

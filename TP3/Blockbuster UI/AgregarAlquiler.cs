@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BibliotecaDeClases;
+using System.Media;
 
 namespace Blockbuster_UI
 {
@@ -18,12 +19,17 @@ namespace Blockbuster_UI
         public List<Producto> listaProductosAux;
         public double acumuladorPrecio;
         public bool Editar = false;
+
         public AgregarAlquiler(Socio socioAtendido)
         {
             InitializeComponent();
             listaAlquilerAux = new List<Alquiler<Pelicula>>();
             listaProductosAux = new List<Producto>();
-            this.socioAtendido = socioAtendido;        
+            this.socioAtendido = socioAtendido;
+            dGridPeliculas.DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#003566");
+            dGridProducto.DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#003566");
+            dGridProducto.DefaultCellStyle.ForeColor = ColorTranslator.FromHtml("#ffc300");
+            dGridPeliculas.DefaultCellStyle.ForeColor = ColorTranslator.FromHtml("#ffc300");
         }
 
         private void CargarPeliculas()
@@ -202,6 +208,26 @@ namespace Blockbuster_UI
             CargarProductos();
             dGridPeliculas.Rows.Clear();
             CargarPeliculas();
+        }
+
+        private void txtTitulo_TextChanged(object sender, EventArgs e)
+        {
+            dGridPeliculas.Rows.Clear();
+            foreach (Pelicula item in Blockbuster.ListaDePeliculas)
+            {
+                int indice;
+                if (item.TituloPelicula.ToLower().Contains(txtTitulo.Text.ToLower()))
+                {
+                    indice = dGridPeliculas.Rows.Add();
+                    dGridPeliculas.Rows[indice].Cells[0].Value = item.IdPelicula;
+                    dGridPeliculas.Rows[indice].Cells[1].Value = item.TituloPelicula;
+                    dGridPeliculas.Rows[indice].Cells[2].Value = item.DuracionPelicula + " min";
+                    dGridPeliculas.Rows[indice].Cells[3].Value = item.GeneroPelicula.ToString();
+                    dGridPeliculas.Rows[indice].Cells[4].Value = item.Stock.ToString();
+                    dGridPeliculas.Rows[indice].Cells[5].Value = "$" + (int)item.PrecioDeAlquiler;
+                    indice++;
+                }             
+            }
         }
     }
 

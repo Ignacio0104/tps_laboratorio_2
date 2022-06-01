@@ -49,6 +49,7 @@
             this.dGridInventario.Size = new System.Drawing.Size(825, 392);
             this.dGridInventario.TabIndex = 0;
             this.dGridInventario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridInventario_CellClick);
+            this.dGridInventario.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridInventario_CellMouseLeave);
             this.dGridInventario.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dGridInventario_CellMouseMove);
             // 
             // cmbFiltroBusqueda
