@@ -2079,19 +2079,6 @@
     <ListaDeAlquileres>
       <AlquilerOfPelicula>
         <Pelicula>
-          <IdPelicula>3</IdPelicula>
-          <TituloPelicula>Corruptor, The</TituloPelicula>
-          <DuracionPelicula>92</DuracionPelicula>
-          <GeneroPelicula>Suspenso</GeneroPelicula>
-          <DiasDeAlquiler>Regular</DiasDeAlquiler>
-          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
-          <Stock>1</Stock>
-        </Pelicula>
-        <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-05-24T16:47:27.7073034-03:00</FechaDeAlquiler>
-      </AlquilerOfPelicula>
-      <AlquilerOfPelicula>
-        <Pelicula>
           <IdPelicula>5</IdPelicula>
           <TituloPelicula>Terumae romae (Thermae Romae)</TituloPelicula>
           <DuracionPelicula>124</DuracionPelicula>
@@ -2115,19 +2102,6 @@
         </Pelicula>
         <Penalidad>50</Penalidad>
         <FechaDeAlquiler>2022-05-24T16:47:28.6933099-03:00</FechaDeAlquiler>
-      </AlquilerOfPelicula>
-      <AlquilerOfPelicula>
-        <Pelicula>
-          <IdPelicula>9</IdPelicula>
-          <TituloPelicula>North Face (Nordwand)</TituloPelicula>
-          <DuracionPelicula>100</DuracionPelicula>
-          <GeneroPelicula>Animada</GeneroPelicula>
-          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
-          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
-          <Stock>10</Stock>
-        </Pelicula>
-        <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-05-24T16:47:29.1152582-03:00</FechaDeAlquiler>
       </AlquilerOfPelicula>
     </ListaDeAlquileres>
     <LimitePeliculas>20</LimitePeliculas>
@@ -3819,19 +3793,6 @@
           <Stock>37</Stock>
         </Pelicula>
         <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-05-24T16:47:09.028885-03:00</FechaDeAlquiler>
-      </AlquilerOfPelicula>
-      <AlquilerOfPelicula>
-        <Pelicula>
-          <IdPelicula>8</IdPelicula>
-          <TituloPelicula>Bananaz</TituloPelicula>
-          <DuracionPelicula>106</DuracionPelicula>
-          <GeneroPelicula>Drama</GeneroPelicula>
-          <DiasDeAlquiler>Regular</DiasDeAlquiler>
-          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
-          <Stock>37</Stock>
-        </Pelicula>
-        <Penalidad>50</Penalidad>
         <FechaDeAlquiler>2022-05-24T16:47:09.9733595-03:00</FechaDeAlquiler>
       </AlquilerOfPelicula>
     </ListaDeAlquileres>
@@ -4717,7 +4678,34 @@
     <ApellidoSocio>Beckhurst</ApellidoSocio>
     <EmailSocio>rbeckhurst2h@nyu.edu</EmailSocio>
     <TelefonoSocio>728-915-1517</TelefonoSocio>
-    <ListaDeAlquileres />
+    <ListaDeAlquileres>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>58</IdPelicula>
+          <TituloPelicula>Back in the Saddle (Back in the Saddle Again)</TituloPelicula>
+          <DuracionPelicula>95</DuracionPelicula>
+          <GeneroPelicula>Suspenso</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>6</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-01T20:55:15.2995648-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>26</IdPelicula>
+          <TituloPelicula>Art School Confidential</TituloPelicula>
+          <DuracionPelicula>130</DuracionPelicula>
+          <GeneroPelicula>Terror</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
+          <Stock>23</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-01T20:55:17.3158053-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+    </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
     <Penalidad>100</Penalidad>
     <TarjetaDeCredito>5002359919617560</TarjetaDeCredito>

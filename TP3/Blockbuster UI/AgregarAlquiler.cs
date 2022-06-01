@@ -91,6 +91,9 @@ namespace Blockbuster_UI
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"{DateTime.Now} - Total ${acumuladorPrecio} - Socio {socioAtendido.IdSocio}/{socioAtendido.ApellidoSocio }");
+            Blockbuster.FacturacionDiaria += sb.ToString();
             this.DialogResult = DialogResult.OK;
         }
 

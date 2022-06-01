@@ -53,27 +53,34 @@ namespace Blockbuster_UI
 
         private void MenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
-        }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            try
+            DialogResult opcion = MessageBox.Show("Esta seguro que desea salir?", "Salir", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if(opcion == DialogResult.Cancel)
             {
-                ClaseSerializadora<List<Socio>>.EscribirXml(Blockbuster.ListaDeSocios, "baseDatosSocios");
-                ClaseSerializadora<List<Producto>>.EscribirJson(Blockbuster.ListaDeProductos, "baseDatosProductos");
-                ClaseSerializadora<List<Pelicula>>.EscribirJson(Blockbuster.ListaDePeliculas, "baseDatosPeliculas");
+                e.Cancel = true;
             }
-            catch (Exception exc)
+            else
             {
-                MessageBox.Show(exc.Message);
+                try
+                {
+                    ClaseSerializadora<List<Socio>>.EscribirXml(Blockbuster.ListaDeSocios, "baseDatosSocios");
+                    ClaseSerializadora<List<Producto>>.EscribirJson(Blockbuster.ListaDeProductos, "baseDatosProductos");
+                    ClaseSerializadora<List<Pelicula>>.EscribirJson(Blockbuster.ListaDePeliculas, "baseDatosPeliculas");
+                    MessageBox.Show("Todos los datos han sido guardados exitósamente", "Guardado con exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                }
+                catch (Exception exc)
+                {
+                    DialogResult opcionDos = MessageBox.Show("Hubo un error al guardar los datos \n ¿Desea salir y perder los datos no guardados?", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop);
+                    if (opcionDos == DialogResult.Cancel)
+                    {
+                        e.Cancel = true;
+                    }
+                    
+                }
+                
+                
             }
-           
-        }
-
-        private void btnEmpleados_Click(object sender, EventArgs e)
-        {
-
+            
         }
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
@@ -83,6 +90,11 @@ namespace Blockbuster_UI
             Blockbuster.ListaDeSocios = ClaseSerializadora<List<Socio>>.LeerXml("baseDatosSocios");
             usuarioLogueado = Blockbuster.BuscarUsuario(numeroLegajo);
             lblNombreUsuario.Text = $"{usuarioLogueado.Nombre} {usuarioLogueado.Apellido}";
+        }
+
+        private void MenuPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

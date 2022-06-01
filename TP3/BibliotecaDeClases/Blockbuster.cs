@@ -16,6 +16,7 @@ namespace BibliotecaDeClases
         private static List<Pelicula> listaDePeliculas;
         private static List<Socio> listaDeSocios;
         private static List<Producto> listaDeProductos;
+        private static string facturacionDiaria;
 
         static Blockbuster()
         {
@@ -23,13 +24,13 @@ namespace BibliotecaDeClases
             listaDePeliculas = new List<Pelicula>();
             listaDeSocios = new List<Socio>();
             listaDeProductos = new List<Producto>();
-            //HardcodeoProductos();
         }
 
         public static List<Usuario> ListaDeEmpleados { get => listaDeEmpleados; set => listaDeEmpleados = value; }
         public static List<Pelicula> ListaDePeliculas { get => listaDePeliculas; set => listaDePeliculas = value; }
         public static List<Socio> ListaDeSocios { get => listaDeSocios; set => listaDeSocios = value; }
         public static List<Producto> ListaDeProductos { get => listaDeProductos; set => listaDeProductos = value; }
+        public static string FacturacionDiaria { get => facturacionDiaria; set => facturacionDiaria = value; }
 
         public static Usuario CheckLogIn(string usuario, string clave)
         {
@@ -125,30 +126,5 @@ namespace BibliotecaDeClases
             return indice;
         }
 
-
-
-
-        /*  private static void HardcodeoProductos()
-          {
-              listaDeProductos.Add(new Producto("Pochoclos Grandes", 600, 50));
-              listaDeProductos.Add(new Producto("Pochoclos Medianos", 450, 60));
-              listaDeProductos.Add(new Producto("Pochoclos Chicos", 370, 70));
-              listaDeProductos.Add(new Producto("Sugus", 290, 30));
-              listaDeProductos.Add(new Producto("Mani con chocolate", 200, 25));
-              listaDeProductos.Add(new Producto("Confites M&M", 700, 10));
-              listaDeProductos.Add(new Producto("Gomitas Mogul", 160, 20));
-              listaDeProductos.Add(new Producto("Tita", 100, 15));
-              listaDeProductos.Add(new Producto("Papas Pringles", 500, 100));
-              listaDeProductos.Add(new Producto("Bananita Dolca", 90, 10));
-              listaDeProductos.Add(new Producto("Rocklets", 300, 20));
-              listaDeProductos.Add(new Producto("Lenguetazo", 150, 30));
-              listaDeProductos.Add(new Producto("Rhodesia", 100, 60));
-              listaDeProductos.Add(new Producto("Bon o Bon", 120, 80));
-              listaDeProductos.Add(new Producto("Flynn Paff", 80, 10));
-              listaDeProductos.Add(new Producto("Huevo Kinder", 400, 20));
-              listaDeProductos.Add(new Producto("Nugaton", 200, 40));
-              listaDeProductos.Add(new Producto("Galletitas Oreo", 400, 20));
-              listaDeProductos.Add(new Producto("Mentitas", 70, 20));
-          }*/
     }
 }
