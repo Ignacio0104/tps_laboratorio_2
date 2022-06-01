@@ -70,7 +70,7 @@
             this.lblError.BackColor = System.Drawing.Color.Transparent;
             this.lblError.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(24, 47);
+            this.lblError.Location = new System.Drawing.Point(27, 47);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(176, 15);
             this.lblError.TabIndex = 2;
@@ -169,6 +169,7 @@
             // 
             this.btnAgregarAlquiler.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarAlquiler.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAgregarAlquiler.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(197)))), ((int)(((byte)(0)))));
             this.btnAgregarAlquiler.Location = new System.Drawing.Point(480, 446);
             this.btnAgregarAlquiler.Name = "btnAgregarAlquiler";
             this.btnAgregarAlquiler.Size = new System.Drawing.Size(137, 45);
@@ -181,6 +182,7 @@
             // 
             this.lblNoHayPeliculas.AutoSize = true;
             this.lblNoHayPeliculas.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNoHayPeliculas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(197)))), ((int)(((byte)(0)))));
             this.lblNoHayPeliculas.Location = new System.Drawing.Point(71, 256);
             this.lblNoHayPeliculas.Name = "lblNoHayPeliculas";
             this.lblNoHayPeliculas.Size = new System.Drawing.Size(473, 37);
@@ -192,6 +194,7 @@
             // 
             this.dGridAlquileres.AllowUserToAddRows = false;
             this.dGridAlquileres.AllowUserToDeleteRows = false;
+            this.dGridAlquileres.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dGridAlquileres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGridAlquileres.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colTitulo,
@@ -250,6 +253,7 @@
             // 
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBuscar.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(197)))), ((int)(((byte)(0)))));
             this.btnBuscar.Location = new System.Drawing.Point(12, 94);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(181, 33);
@@ -269,7 +273,7 @@
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.txtNumeroSocio);
             this.Controls.Add(this.pictureBox1);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(197)))), ((int)(((byte)(0)))));
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

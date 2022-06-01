@@ -61,7 +61,7 @@
   <data name="picBannerBlockBuster.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAASwAAABQCAYAAACj6kh7AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAQ3BJREFUeF7tvXdYlVfaNZ7rva7v/b75vfPOTLq9914RRREQO9h7xYYFC9hAUSyA
+        vwAADr8BOAVTJAAAQ3BJREFUeF7tvXdYlVfaNZ7rva7v/b75vfPOTLq9914RRREQO9h7xYYFC9hAUSyA
         qBQpFmyxazQm9hI1Go29a2LqTNqkzCQzk15MTNZvrX148HB4zgGUyaScP9Z14Jzd932vfd+7PtBu8Dq0
         7rcJLXpvI7Z64YUXXvwE2Aa/PltQqXVakfBAef8sDB8Wh9S40UieOdYLL372SIkdiyWzw5E1dySWzbsL
         /a/vU2ziePHzQsrs0ZgzeZItKXnCAyWaL8UzaQOBl0oB18s6Pr3wwhMkJ5crEhWcwP9vlLEPf69wzeda
@@ -352,21 +352,6 @@
         k8X82TeOAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="colTitulo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="colDuracion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="colPrecio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="colDias.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="colFecha.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="colTitulo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
