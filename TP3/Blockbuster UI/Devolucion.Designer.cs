@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Devolucion));
             this.lblPelicula = new System.Windows.Forms.Label();
             this.lblTituloPelicula = new System.Windows.Forms.Label();
             this.lblFechaAlquiler = new System.Windows.Forms.Label();
@@ -156,6 +157,7 @@
             this.Controls.Add(this.lblTituloPelicula);
             this.Controls.Add(this.lblPelicula);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Devolucion";

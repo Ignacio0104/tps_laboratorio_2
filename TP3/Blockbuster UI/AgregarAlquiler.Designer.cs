@@ -122,6 +122,8 @@
             // 
             // richAlquileresParcial
             // 
+            this.richAlquileresParcial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(8)))), ((int)(((byte)(20)))));
+            this.richAlquileresParcial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(10)))));
             this.richAlquileresParcial.Location = new System.Drawing.Point(734, 41);
             this.richAlquileresParcial.Name = "richAlquileresParcial";
             this.richAlquileresParcial.Size = new System.Drawing.Size(408, 415);
@@ -282,15 +284,16 @@
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.btnBorrar);
-            this.Controls.Add(this.checkEditar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.lblFacturacion);
             this.Controls.Add(this.picLogoBlockbuster);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.richAlquileresParcial);
             this.Controls.Add(this.dGridPeliculas);
             this.Controls.Add(this.dGridProducto);
+            this.Controls.Add(this.checkEditar);
+            this.Controls.Add(this.richAlquileresParcial);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AgregarAlquiler";

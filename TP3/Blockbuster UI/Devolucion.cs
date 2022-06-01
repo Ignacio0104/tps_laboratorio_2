@@ -24,7 +24,7 @@ namespace Blockbuster_UI
 
         private double CalculoPenalidad()
         {
-            int difereciaDias = DateTime.Now.Day - alquilerDevolver.FechaDeAlquiler.Day;
+            int difereciaDias = (int)(DateTime.Now - alquilerDevolver.FechaDeAlquiler).TotalDays;
             int penalidad = 0;
 
             if (difereciaDias > (int)alquilerDevolver.Pelicula.DiasDeAlquiler)

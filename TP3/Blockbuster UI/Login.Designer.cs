@@ -105,6 +105,7 @@
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtClave);
             this.Controls.Add(this.txtUsuario);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "login";

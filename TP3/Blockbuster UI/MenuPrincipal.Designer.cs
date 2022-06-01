@@ -142,6 +142,7 @@
             this.ClientSize = new System.Drawing.Size(1100, 534);
             this.Controls.Add(this.panelPrincipal);
             this.Controls.Add(this.panelMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MenuPrincipal";
