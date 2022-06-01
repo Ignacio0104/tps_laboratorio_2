@@ -40,5 +40,11 @@ namespace Blockbuster_UI
         {
             Blockbuster.ListaDeEmpleados = ClaseSerializadora<List<Usuario>>.LeerJson("baseDatosEmpleados");
         }
+
+        private void btnAutoComplete_Click(object sender, EventArgs e)
+        {
+            txtUsuario.Text = "nacho2022";
+            txtClave.Text = "1234";
+        }
     }
 }

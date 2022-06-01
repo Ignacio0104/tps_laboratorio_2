@@ -33,6 +33,7 @@
             this.txtClave = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.picBlockLogin = new System.Windows.Forms.PictureBox();
+            this.btnAutoComplete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBlockLogin)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,13 +79,28 @@
             this.picBlockLogin.TabIndex = 3;
             this.picBlockLogin.TabStop = false;
             // 
+            // btnAutoComplete
+            // 
+            this.btnAutoComplete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(157)))));
+            this.btnAutoComplete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAutoComplete.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAutoComplete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(197)))), ((int)(((byte)(0)))));
+            this.btnAutoComplete.Location = new System.Drawing.Point(29, 310);
+            this.btnAutoComplete.Name = "btnAutoComplete";
+            this.btnAutoComplete.Size = new System.Drawing.Size(245, 38);
+            this.btnAutoComplete.TabIndex = 4;
+            this.btnAutoComplete.Text = "Auto-complete";
+            this.btnAutoComplete.UseVisualStyleBackColor = false;
+            this.btnAutoComplete.Click += new System.EventHandler(this.btnAutoComplete_Click);
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(303, 333);
+            this.ClientSize = new System.Drawing.Size(303, 379);
+            this.Controls.Add(this.btnAutoComplete);
             this.Controls.Add(this.picBlockLogin);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtClave);
@@ -106,5 +122,6 @@
         private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.PictureBox picBlockLogin;
+        private System.Windows.Forms.Button btnAutoComplete;
     }
 }

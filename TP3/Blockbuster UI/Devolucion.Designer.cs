@@ -42,10 +42,11 @@
             // lblPelicula
             // 
             this.lblPelicula.AutoSize = true;
-            this.lblPelicula.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPelicula.Location = new System.Drawing.Point(29, 19);
+            this.lblPelicula.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPelicula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.lblPelicula.Location = new System.Drawing.Point(29, 21);
             this.lblPelicula.Name = "lblPelicula";
-            this.lblPelicula.Size = new System.Drawing.Size(107, 37);
+            this.lblPelicula.Size = new System.Drawing.Size(116, 37);
             this.lblPelicula.TabIndex = 0;
             this.lblPelicula.Text = "Pelicula";
             // 
@@ -53,6 +54,7 @@
             // 
             this.lblTituloPelicula.AutoSize = true;
             this.lblTituloPelicula.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTituloPelicula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.lblTituloPelicula.Location = new System.Drawing.Point(29, 77);
             this.lblTituloPelicula.Name = "lblTituloPelicula";
             this.lblTituloPelicula.Size = new System.Drawing.Size(142, 25);
@@ -62,10 +64,11 @@
             // lblFechaAlquiler
             // 
             this.lblFechaAlquiler.AutoSize = true;
-            this.lblFechaAlquiler.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblFechaAlquiler.Location = new System.Drawing.Point(38, 151);
+            this.lblFechaAlquiler.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblFechaAlquiler.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.lblFechaAlquiler.Location = new System.Drawing.Point(29, 151);
             this.lblFechaAlquiler.Name = "lblFechaAlquiler";
-            this.lblFechaAlquiler.Size = new System.Drawing.Size(164, 31);
+            this.lblFechaAlquiler.Size = new System.Drawing.Size(174, 31);
             this.lblFechaAlquiler.TabIndex = 2;
             this.lblFechaAlquiler.Text = "Fecha Alquiler:";
             // 
@@ -73,6 +76,7 @@
             // 
             this.lblAlquiler.AutoSize = true;
             this.lblAlquiler.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAlquiler.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.lblAlquiler.Location = new System.Drawing.Point(258, 158);
             this.lblAlquiler.Name = "lblAlquiler";
             this.lblAlquiler.Size = new System.Drawing.Size(119, 25);
@@ -82,10 +86,11 @@
             // lblFechaDevolucion
             // 
             this.lblFechaDevolucion.AutoSize = true;
-            this.lblFechaDevolucion.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblFechaDevolucion.Location = new System.Drawing.Point(38, 215);
+            this.lblFechaDevolucion.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblFechaDevolucion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.lblFechaDevolucion.Location = new System.Drawing.Point(29, 215);
             this.lblFechaDevolucion.Name = "lblFechaDevolucion";
-            this.lblFechaDevolucion.Size = new System.Drawing.Size(198, 31);
+            this.lblFechaDevolucion.Size = new System.Drawing.Size(209, 31);
             this.lblFechaDevolucion.TabIndex = 4;
             this.lblFechaDevolucion.Text = "Fecha Devolucion:";
             // 
@@ -93,6 +98,7 @@
             // 
             this.lblDevolucion.AutoSize = true;
             this.lblDevolucion.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDevolucion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.lblDevolucion.Location = new System.Drawing.Point(258, 215);
             this.lblDevolucion.Name = "lblDevolucion";
             this.lblDevolucion.Size = new System.Drawing.Size(149, 25);
@@ -102,10 +108,11 @@
             // lblPenalidad
             // 
             this.lblPenalidad.AutoSize = true;
-            this.lblPenalidad.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPenalidad.Location = new System.Drawing.Point(38, 273);
+            this.lblPenalidad.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPenalidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.lblPenalidad.Location = new System.Drawing.Point(29, 273);
             this.lblPenalidad.Name = "lblPenalidad";
-            this.lblPenalidad.Size = new System.Drawing.Size(126, 31);
+            this.lblPenalidad.Size = new System.Drawing.Size(131, 31);
             this.lblPenalidad.TabIndex = 6;
             this.lblPenalidad.Text = "Penalidad: ";
             // 
@@ -113,6 +120,7 @@
             // 
             this.lblPenalidadFinal.AutoSize = true;
             this.lblPenalidadFinal.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPenalidadFinal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.lblPenalidadFinal.Location = new System.Drawing.Point(258, 273);
             this.lblPenalidadFinal.Name = "lblPenalidadFinal";
             this.lblPenalidadFinal.Size = new System.Drawing.Size(88, 25);
@@ -121,6 +129,9 @@
             // 
             // btnConfirmar
             // 
+            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmar.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnConfirmar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.btnConfirmar.Location = new System.Drawing.Point(262, 344);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(136, 39);
@@ -133,6 +144,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(434, 410);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.lblPenalidadFinal);

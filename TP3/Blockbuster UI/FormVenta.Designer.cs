@@ -194,7 +194,8 @@
             // 
             this.dGridAlquileres.AllowUserToAddRows = false;
             this.dGridAlquileres.AllowUserToDeleteRows = false;
-            this.dGridAlquileres.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dGridAlquileres.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(102)))));
+            this.dGridAlquileres.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
             this.dGridAlquileres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGridAlquileres.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colTitulo,
@@ -202,6 +203,7 @@
             this.colPrecio,
             this.colDias,
             this.colFecha});
+            this.dGridAlquileres.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(102)))));
             this.dGridAlquileres.Location = new System.Drawing.Point(34, 221);
             this.dGridAlquileres.Name = "dGridAlquileres";
             this.dGridAlquileres.RowTemplate.Height = 25;

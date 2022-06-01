@@ -76,10 +76,11 @@
             // 
             this.rdtPeliculas.AutoSize = true;
             this.rdtPeliculas.Checked = true;
-            this.rdtPeliculas.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdtPeliculas.Location = new System.Drawing.Point(48, 26);
+            this.rdtPeliculas.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdtPeliculas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.rdtPeliculas.Location = new System.Drawing.Point(12, 26);
             this.rdtPeliculas.Name = "rdtPeliculas";
-            this.rdtPeliculas.Size = new System.Drawing.Size(95, 29);
+            this.rdtPeliculas.Size = new System.Drawing.Size(124, 29);
             this.rdtPeliculas.TabIndex = 0;
             this.rdtPeliculas.TabStop = true;
             this.rdtPeliculas.Text = "Peliculas";
@@ -89,10 +90,11 @@
             // rdtProductos
             // 
             this.rdtProductos.AutoSize = true;
-            this.rdtProductos.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdtProductos.Location = new System.Drawing.Point(260, 26);
+            this.rdtProductos.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdtProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.rdtProductos.Location = new System.Drawing.Point(268, 26);
             this.rdtProductos.Name = "rdtProductos";
-            this.rdtProductos.Size = new System.Drawing.Size(111, 29);
+            this.rdtProductos.Size = new System.Drawing.Size(138, 29);
             this.rdtProductos.TabIndex = 1;
             this.rdtProductos.Text = "Productos";
             this.rdtProductos.UseVisualStyleBackColor = true;
@@ -120,6 +122,7 @@
             // 
             this.lblStock.AutoSize = true;
             this.lblStock.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.lblStock.Location = new System.Drawing.Point(22, 246);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(54, 21);
@@ -128,6 +131,7 @@
             // 
             // nupStock
             // 
+            this.nupStock.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.nupStock.Location = new System.Drawing.Point(128, 246);
             this.nupStock.Name = "nupStock";
             this.nupStock.Size = new System.Drawing.Size(67, 23);
@@ -137,6 +141,7 @@
             // 
             this.lblPrecioAlquiler.AutoSize = true;
             this.lblPrecioAlquiler.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPrecioAlquiler.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.lblPrecioAlquiler.Location = new System.Drawing.Point(22, 185);
             this.lblPrecioAlquiler.Name = "lblPrecioAlquiler";
             this.lblPrecioAlquiler.Size = new System.Drawing.Size(161, 21);
@@ -145,6 +150,7 @@
             // 
             // cmbPrecioAlquiler
             // 
+            this.cmbPrecioAlquiler.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cmbPrecioAlquiler.FormattingEnabled = true;
             this.cmbPrecioAlquiler.Location = new System.Drawing.Point(22, 209);
             this.cmbPrecioAlquiler.Name = "cmbPrecioAlquiler";
@@ -155,6 +161,7 @@
             // 
             this.lblDiasAlquiler.AutoSize = true;
             this.lblDiasAlquiler.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDiasAlquiler.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.lblDiasAlquiler.Location = new System.Drawing.Point(22, 117);
             this.lblDiasAlquiler.Name = "lblDiasAlquiler";
             this.lblDiasAlquiler.Size = new System.Drawing.Size(124, 21);
@@ -163,6 +170,7 @@
             // 
             // cmbDiasDeAlquiler
             // 
+            this.cmbDiasDeAlquiler.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cmbDiasDeAlquiler.FormattingEnabled = true;
             this.cmbDiasDeAlquiler.Location = new System.Drawing.Point(22, 141);
             this.cmbDiasDeAlquiler.Name = "cmbDiasDeAlquiler";
@@ -178,6 +186,7 @@
             this.grpGenero.Controls.Add(this.rdtComedia);
             this.grpGenero.Controls.Add(this.rdtCienciaFiccion);
             this.grpGenero.Controls.Add(this.rdtAccion);
+            this.grpGenero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.grpGenero.Location = new System.Drawing.Point(251, 70);
             this.grpGenero.Name = "grpGenero";
             this.grpGenero.Size = new System.Drawing.Size(113, 204);
@@ -272,6 +281,7 @@
             // lblAclaracion
             // 
             this.lblAclaracion.AutoSize = true;
+            this.lblAclaracion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.lblAclaracion.Location = new System.Drawing.Point(22, 88);
             this.lblAclaracion.Name = "lblAclaracion";
             this.lblAclaracion.Size = new System.Drawing.Size(72, 15);
@@ -282,6 +292,7 @@
             // 
             this.lblDuracion.AutoSize = true;
             this.lblDuracion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDuracion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.lblDuracion.Location = new System.Drawing.Point(22, 67);
             this.lblDuracion.Name = "lblDuracion";
             this.lblDuracion.Size = new System.Drawing.Size(76, 21);
@@ -290,6 +301,7 @@
             // 
             // nupDuracion
             // 
+            this.nupDuracion.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.nupDuracion.Location = new System.Drawing.Point(128, 70);
             this.nupDuracion.Maximum = new decimal(new int[] {
             6000,
@@ -304,6 +316,7 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.lblTitulo.Location = new System.Drawing.Point(22, 12);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(52, 21);
@@ -312,6 +325,7 @@
             // 
             // txtBoxTituloPelicula
             // 
+            this.txtBoxTituloPelicula.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtBoxTituloPelicula.Location = new System.Drawing.Point(22, 36);
             this.txtBoxTituloPelicula.Name = "txtBoxTituloPelicula";
             this.txtBoxTituloPelicula.Size = new System.Drawing.Size(342, 23);
@@ -346,6 +360,7 @@
             // 
             this.lblStockProducto.AutoSize = true;
             this.lblStockProducto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblStockProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.lblStockProducto.Location = new System.Drawing.Point(22, 127);
             this.lblStockProducto.Name = "lblStockProducto";
             this.lblStockProducto.Size = new System.Drawing.Size(54, 21);
@@ -354,6 +369,7 @@
             // 
             // nupStockProducto
             // 
+            this.nupStockProducto.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.nupStockProducto.Location = new System.Drawing.Point(128, 127);
             this.nupStockProducto.Maximum = new decimal(new int[] {
             500,
@@ -368,6 +384,7 @@
             // 
             this.lblPrecioProducto.AutoSize = true;
             this.lblPrecioProducto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPrecioProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.lblPrecioProducto.Location = new System.Drawing.Point(22, 67);
             this.lblPrecioProducto.Name = "lblPrecioProducto";
             this.lblPrecioProducto.Size = new System.Drawing.Size(60, 21);
@@ -376,6 +393,7 @@
             // 
             // nupPrecioProducto
             // 
+            this.nupPrecioProducto.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.nupPrecioProducto.DecimalPlaces = 2;
             this.nupPrecioProducto.Location = new System.Drawing.Point(128, 70);
             this.nupPrecioProducto.Maximum = new decimal(new int[] {
@@ -391,6 +409,7 @@
             // 
             this.lblNombreProducto.AutoSize = true;
             this.lblNombreProducto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNombreProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.lblNombreProducto.Location = new System.Drawing.Point(22, 12);
             this.lblNombreProducto.Name = "lblNombreProducto";
             this.lblNombreProducto.Size = new System.Drawing.Size(73, 21);
@@ -399,6 +418,7 @@
             // 
             // txtBoxNombreProducto
             // 
+            this.txtBoxNombreProducto.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtBoxNombreProducto.Location = new System.Drawing.Point(22, 36);
             this.txtBoxNombreProducto.Name = "txtBoxNombreProducto";
             this.txtBoxNombreProducto.Size = new System.Drawing.Size(342, 23);
@@ -406,6 +426,9 @@
             // 
             // btnConfirmar
             // 
+            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmar.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnConfirmar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.btnConfirmar.Location = new System.Drawing.Point(228, 393);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(173, 43);
@@ -417,10 +440,11 @@
             // lblError
             // 
             this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblError.ForeColor = System.Drawing.Color.Red;
             this.lblError.Location = new System.Drawing.Point(12, 407);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(95, 15);
+            this.lblError.Size = new System.Drawing.Size(102, 15);
             this.lblError.TabIndex = 14;
             this.lblError.Text = "Mensaje de error";
             this.lblError.Visible = false;
@@ -429,6 +453,8 @@
             // 
             this.btnBorrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBorrar.BackgroundImage")));
             this.btnBorrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.btnBorrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBorrar.Location = new System.Drawing.Point(165, 16);
             this.btnBorrar.Name = "btnBorrar";
@@ -444,14 +470,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(418, 448);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.rdtProductos);
             this.Controls.Add(this.rdtPeliculas);
-            this.Controls.Add(this.panPeliculas);
             this.Controls.Add(this.panProductos);
+            this.Controls.Add(this.panPeliculas);
             this.Name = "AgregarProducto";
             this.Text = "AgregarProducto";
             this.Load += new System.EventHandler(this.AgregarProducto_Load);

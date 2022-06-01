@@ -40,6 +40,7 @@
             this.dGridInventario.AllowUserToDeleteRows = false;
             this.dGridInventario.AllowUserToOrderColumns = true;
             this.dGridInventario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dGridInventario.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dGridInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGridInventario.Location = new System.Drawing.Point(31, 57);
             this.dGridInventario.Name = "dGridInventario";
@@ -51,6 +52,8 @@
             // 
             // cmbFiltroBusqueda
             // 
+            this.cmbFiltroBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(102)))));
+            this.cmbFiltroBusqueda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.cmbFiltroBusqueda.FormattingEnabled = true;
             this.cmbFiltroBusqueda.Location = new System.Drawing.Point(31, 12);
             this.cmbFiltroBusqueda.Name = "cmbFiltroBusqueda";
@@ -60,6 +63,9 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.btnAgregar.Location = new System.Drawing.Point(680, 464);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(176, 50);
@@ -72,6 +78,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(896, 534);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.cmbFiltroBusqueda);

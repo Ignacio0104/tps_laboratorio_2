@@ -74,22 +74,34 @@ namespace Blockbuster_UI
                     dGridAlquileres.Visible = true;
                     dGridAlquileres.Rows.Clear();
                     lblNoHayPeliculas.Visible = false;
+                    
                     for (int i = 0; i < socioAtendido.ListaDeAlquileres.Count; i++)
                     {
+
                         int indice = dGridAlquileres.Rows.Add();
                         dGridAlquileres.Rows[indice].Cells[0].Value = socioAtendido.ListaDeAlquileres[i].Pelicula.TituloPelicula;
                         dGridAlquileres.Rows[indice].Cells[1].Value = socioAtendido.ListaDeAlquileres[i].Pelicula.DuracionPelicula + " min";
                         dGridAlquileres.Rows[indice].Cells[2].Value = "$ " + (int)socioAtendido.ListaDeAlquileres[i].Pelicula.PrecioDeAlquiler;
                         dGridAlquileres.Rows[indice].Cells[3].Value = (int)socioAtendido.ListaDeAlquileres[i].Pelicula.DiasDeAlquiler;
                         dGridAlquileres.Rows[indice].Cells[4].Value = socioAtendido.ListaDeAlquileres[i].FechaDeAlquiler.ToShortDateString();
-                        //int difereciaDias = DateTime.Now.Day - socioAtendido.ListaDeAlquileres[i].FechaDeAlquiler.Day;
+                        color = ColorTranslator.FromHtml("#003566");
+                        dGridAlquileres.Rows[indice].DefaultCellStyle.BackColor = color;
+                        color = ColorTranslator.FromHtml("#ffc300");
+                        
+                        dGridAlquileres.Rows[indice].DefaultCellStyle.ForeColor = color;
                         int difereciaDias = (int)(DateTime.Now - socioAtendido.ListaDeAlquileres[i].FechaDeAlquiler).TotalDays;
 
-
                         if (difereciaDias > (int)socioAtendido.ListaDeAlquileres[i].Pelicula.DiasDeAlquiler)
-                            dGridAlquileres.Rows[indice].DefaultCellStyle.BackColor = Color.Red;
+                        {
+                            dGridAlquileres.Rows[indice].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#e63946");
+                            dGridAlquileres.Rows[indice].DefaultCellStyle.ForeColor = ColorTranslator.FromHtml("#f1faee");
+                        }
                         else if(difereciaDias == (int)socioAtendido.ListaDeAlquileres[i].Pelicula.DiasDeAlquiler)
-                            dGridAlquileres.Rows[indice].DefaultCellStyle.BackColor = Color.Orange;
+                        {
+                            dGridAlquileres.Rows[indice].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#f77f00");
+                            dGridAlquileres.Rows[indice].DefaultCellStyle.ForeColor = ColorTranslator.FromHtml("#f1faee");
+                        }
+                           
                     }
                 }
                 else

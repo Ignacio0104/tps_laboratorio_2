@@ -72,18 +72,20 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblNombre.Location = new System.Drawing.Point(12, 182);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(60, 15);
+            this.lblNombre.Size = new System.Drawing.Size(62, 15);
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "Nombre : ";
             // 
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
+            this.lblApellido.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblApellido.Location = new System.Drawing.Point(12, 235);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(60, 15);
+            this.lblApellido.Size = new System.Drawing.Size(61, 15);
             this.lblApellido.TabIndex = 4;
             this.lblApellido.Text = "Apellido : ";
             // 
@@ -97,6 +99,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblEmail.Location = new System.Drawing.Point(12, 293);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(47, 15);
@@ -105,7 +108,7 @@
             // 
             // txtBoxEmailSocio
             // 
-            this.txtBoxEmailSocio.Location = new System.Drawing.Point(12, 311);
+            this.txtBoxEmailSocio.Location = new System.Drawing.Point(12, 312);
             this.txtBoxEmailSocio.Name = "txtBoxEmailSocio";
             this.txtBoxEmailSocio.Size = new System.Drawing.Size(177, 23);
             this.txtBoxEmailSocio.TabIndex = 5;
@@ -113,9 +116,10 @@
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTelefono.Location = new System.Drawing.Point(12, 350);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(58, 15);
+            this.lblTelefono.Size = new System.Drawing.Size(62, 15);
             this.lblTelefono.TabIndex = 8;
             this.lblTelefono.Text = "Telefono :";
             // 
@@ -129,10 +133,10 @@
             // rdtSocioClasico
             // 
             this.rdtSocioClasico.AutoSize = true;
-            this.rdtSocioClasico.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdtSocioClasico.Location = new System.Drawing.Point(275, 226);
+            this.rdtSocioClasico.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdtSocioClasico.Location = new System.Drawing.Point(256, 200);
             this.rdtSocioClasico.Name = "rdtSocioClasico";
-            this.rdtSocioClasico.Size = new System.Drawing.Size(134, 29);
+            this.rdtSocioClasico.Size = new System.Drawing.Size(162, 29);
             this.rdtSocioClasico.TabIndex = 9;
             this.rdtSocioClasico.Text = "Socio Clasico";
             this.rdtSocioClasico.UseVisualStyleBackColor = true;
@@ -141,10 +145,10 @@
             // 
             this.rdtSocioPremium.AutoSize = true;
             this.rdtSocioPremium.Checked = true;
-            this.rdtSocioPremium.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdtSocioPremium.Location = new System.Drawing.Point(275, 293);
+            this.rdtSocioPremium.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdtSocioPremium.Location = new System.Drawing.Point(256, 267);
             this.rdtSocioPremium.Name = "rdtSocioPremium";
-            this.rdtSocioPremium.Size = new System.Drawing.Size(150, 29);
+            this.rdtSocioPremium.Size = new System.Drawing.Size(188, 29);
             this.rdtSocioPremium.TabIndex = 10;
             this.rdtSocioPremium.TabStop = true;
             this.rdtSocioPremium.Text = "Socio Premium";
@@ -164,9 +168,10 @@
             // lblTarjetaSocio
             // 
             this.lblTarjetaSocio.AutoSize = true;
+            this.lblTarjetaSocio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTarjetaSocio.Location = new System.Drawing.Point(27, 22);
             this.lblTarjetaSocio.Name = "lblTarjetaSocio";
-            this.lblTarjetaSocio.Size = new System.Drawing.Size(105, 15);
+            this.lblTarjetaSocio.Size = new System.Drawing.Size(112, 15);
             this.lblTarjetaSocio.TabIndex = 13;
             this.lblTarjetaSocio.Text = "Tarjeta de Credito :";
             // 
@@ -179,12 +184,16 @@
             // 
             // btnConfirmar
             // 
+            this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(102)))));
+            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmar.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnConfirmar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.btnConfirmar.Location = new System.Drawing.Point(152, 441);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(156, 44);
             this.btnConfirmar.TabIndex = 12;
             this.btnConfirmar.Text = "Confirmar";
-            this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.UseVisualStyleBackColor = false;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // lblError
@@ -193,7 +202,7 @@
             this.lblError.ForeColor = System.Drawing.Color.Red;
             this.lblError.Location = new System.Drawing.Point(12, 413);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(38, 15);
+            this.lblError.Size = new System.Drawing.Size(40, 15);
             this.lblError.TabIndex = 13;
             this.lblError.Text = "label1";
             this.lblError.Visible = false;
@@ -201,10 +210,10 @@
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblId.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblId.Location = new System.Drawing.Point(19, 2);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(40, 28);
+            this.lblId.Size = new System.Drawing.Size(39, 20);
             this.lblId.TabIndex = 14;
             this.lblId.Text = "ID: ";
             this.lblId.Visible = false;
@@ -212,18 +221,21 @@
             // lblIdSocio
             // 
             this.lblIdSocio.AutoSize = true;
-            this.lblIdSocio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblIdSocio.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblIdSocio.Location = new System.Drawing.Point(12, 30);
             this.lblIdSocio.Name = "lblIdSocio";
-            this.lblIdSocio.Size = new System.Drawing.Size(52, 21);
+            this.lblIdSocio.Size = new System.Drawing.Size(62, 20);
             this.lblIdSocio.TabIndex = 15;
             this.lblIdSocio.Text = "label1";
             this.lblIdSocio.Visible = false;
             // 
             // btnBorrar
             // 
+            this.btnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(102)))));
             this.btnBorrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBorrar.BackgroundImage")));
             this.btnBorrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.btnBorrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBorrar.Location = new System.Drawing.Point(403, 43);
             this.btnBorrar.Name = "btnBorrar";
@@ -231,7 +243,7 @@
             this.btnBorrar.Size = new System.Drawing.Size(65, 52);
             this.btnBorrar.TabIndex = 16;
             this.btnBorrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.UseVisualStyleBackColor = false;
             this.btnBorrar.Visible = false;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
@@ -239,6 +251,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(480, 497);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.lblIdSocio);
@@ -257,6 +270,7 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txtBoxNombreSocio);
             this.Controls.Add(this.picMemberCard);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
