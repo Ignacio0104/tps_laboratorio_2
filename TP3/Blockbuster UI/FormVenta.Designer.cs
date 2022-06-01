@@ -67,11 +67,12 @@
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.BackColor = System.Drawing.SystemColors.Control;
+            this.lblError.BackColor = System.Drawing.Color.Transparent;
+            this.lblError.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(33, 47);
+            this.lblError.Location = new System.Drawing.Point(24, 47);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(165, 15);
+            this.lblError.Size = new System.Drawing.Size(176, 15);
             this.lblError.TabIndex = 2;
             this.lblError.Text = "*Error, favor verificar los datos";
             this.lblError.Visible = false;
@@ -166,6 +167,8 @@
             // 
             // btnAgregarAlquiler
             // 
+            this.btnAgregarAlquiler.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregarAlquiler.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAgregarAlquiler.Location = new System.Drawing.Point(480, 446);
             this.btnAgregarAlquiler.Name = "btnAgregarAlquiler";
             this.btnAgregarAlquiler.Size = new System.Drawing.Size(137, 45);
@@ -245,6 +248,8 @@
             // 
             // btnBuscar
             // 
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscar.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnBuscar.Location = new System.Drawing.Point(12, 94);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(181, 33);
@@ -257,12 +262,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(157)))));
             this.ClientSize = new System.Drawing.Size(896, 534);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.pnlInfoUsuario);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.txtNumeroSocio);
             this.Controls.Add(this.pictureBox1);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(197)))), ((int)(((byte)(0)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
