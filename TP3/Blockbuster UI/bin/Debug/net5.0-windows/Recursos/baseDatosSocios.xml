@@ -3745,7 +3745,21 @@
     <ApellidoSocio>Moresby</ApellidoSocio>
     <EmailSocio>smoresbyl@netlog.com</EmailSocio>
     <TelefonoSocio>245-963-9144</TelefonoSocio>
-    <ListaDeAlquileres />
+    <ListaDeAlquileres>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>238</IdPelicula>
+          <TituloPelicula>District 13: Ultimatum (Banlieue 13 - Ultimatum)</TituloPelicula>
+          <DuracionPelicula>107</DuracionPelicula>
+          <GeneroPelicula>Drama</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
+          <Stock>13</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-01T22:56:49.6811531-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+    </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
     <Penalidad>100</Penalidad>
     <TarjetaDeCredito>4758456988228</TarjetaDeCredito>
@@ -3943,19 +3957,6 @@
         </Pelicula>
         <Penalidad>50</Penalidad>
         <FechaDeAlquiler>2022-05-25T16:55:09.0102171-03:00</FechaDeAlquiler>
-      </AlquilerOfPelicula>
-      <AlquilerOfPelicula>
-        <Pelicula>
-          <IdPelicula>4</IdPelicula>
-          <TituloPelicula>Mad Money</TituloPelicula>
-          <DuracionPelicula>123</DuracionPelicula>
-          <GeneroPelicula>Suspenso</GeneroPelicula>
-          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
-          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
-          <Stock>14</Stock>
-        </Pelicula>
-        <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-05-25T16:55:09.3611521-03:00</FechaDeAlquiler>
       </AlquilerOfPelicula>
     </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
@@ -5129,19 +5130,6 @@
         </Pelicula>
         <Penalidad>50</Penalidad>
         <FechaDeAlquiler>2022-05-28T15:20:16.2244974-03:00</FechaDeAlquiler>
-      </AlquilerOfPelicula>
-      <AlquilerOfPelicula>
-        <Pelicula>
-          <IdPelicula>4</IdPelicula>
-          <TituloPelicula>Mad Money</TituloPelicula>
-          <DuracionPelicula>123</DuracionPelicula>
-          <GeneroPelicula>Suspenso</GeneroPelicula>
-          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
-          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
-          <Stock>13</Stock>
-        </Pelicula>
-        <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-05-28T15:20:16.7565534-03:00</FechaDeAlquiler>
       </AlquilerOfPelicula>
     </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>

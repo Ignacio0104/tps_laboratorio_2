@@ -1,7 +1,9 @@
-01/06/2022 21:16:05 - Alquiler/Producto - Total $150 - Socio 45/Pidgley
+01/06/2022 22:56:32 - Penalidad - Total $200 - Alquiler Mad Money
+01/06/2022 22:56:52 - Alquiler/Producto - Total $1040 - Socio 22/Moresby
+01/06/2022 22:57:34 - Alquiler/Producto - Total $200 - Socio 76/Kaine
 
-01/06/2022 21:17:34 - Penalidad - Total $350 - Alquiler Mad Money
-01/06/2022 21:17:37 - Alquiler/Producto - Total $300 - Socio 78/Hosier
-01/06/2022 21:17:41 - Penalidad - Total $350 - Alquiler Mad Money
-01/06/2022 21:17:44 - Alquiler/Producto - Total $870 - Socio 78/Hosier
+01/06/2022 23:00:32 - Alquiler/Producto - Total $200 - Socio 67/Pember
+
+01/06/2022 23:03:38 - Penalidad - Total $350 - Alquiler Mad Money
+01/06/2022 23:03:45 - Alquiler/Producto - Total $150 - Socio 34/Bruckenthal
 

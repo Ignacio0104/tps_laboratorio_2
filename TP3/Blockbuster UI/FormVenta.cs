@@ -135,7 +135,8 @@ namespace Blockbuster_UI
 
                     if (frmDevolucion.DialogResult == DialogResult.OK)
                     {
-                        socioAtendido.ListaDeAlquileres.RemoveAt(e.RowIndex);
+                        Blockbuster.ListaDePeliculas[Blockbuster.BuscarIndicePelicula(socioAtendido.ListaDeAlquileres[e.RowIndex].Pelicula)].Stock++;
+                        socioAtendido.ListaDeAlquileres.RemoveAt(e.RowIndex);                     
                         CargarInformacionSocios();
                     }
                 }

@@ -78,11 +78,8 @@ namespace Blockbuster_UI
                     if (opcionDos == DialogResult.Cancel)
                     {
                         e.Cancel = true;
-                    }
-                    
-                }
-                
-                
+                    }                  
+                }                              
             }
             
         }
