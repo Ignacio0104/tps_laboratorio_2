@@ -65,6 +65,10 @@ namespace Blockbuster_UI
                     ClaseSerializadora<List<Socio>>.EscribirXml(Blockbuster.ListaDeSocios, "baseDatosSocios");
                     ClaseSerializadora<List<Producto>>.EscribirJson(Blockbuster.ListaDeProductos, "baseDatosProductos");
                     ClaseSerializadora<List<Pelicula>>.EscribirJson(Blockbuster.ListaDePeliculas, "baseDatosPeliculas");
+                    using (StreamWriter outputfile = File.AppendText($".\\Recursos\\Facturacion-{DateTime.Now.ToString("MM-dd-yyyy")}.txt"))
+                    {
+                        outputfile.WriteLine(Blockbuster.FacturacionDiaria);
+                    }
                     MessageBox.Show("Todos los datos han sido guardados exitósamente", "Guardado con exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     
                 }

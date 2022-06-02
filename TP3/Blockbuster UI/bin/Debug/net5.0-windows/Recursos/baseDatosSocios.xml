@@ -2090,19 +2090,6 @@
         <Penalidad>50</Penalidad>
         <FechaDeAlquiler>2022-05-24T16:47:28.2073259-03:00</FechaDeAlquiler>
       </AlquilerOfPelicula>
-      <AlquilerOfPelicula>
-        <Pelicula>
-          <IdPelicula>7</IdPelicula>
-          <TituloPelicula>Sex Tape</TituloPelicula>
-          <DuracionPelicula>108</DuracionPelicula>
-          <GeneroPelicula>Comedia</GeneroPelicula>
-          <DiasDeAlquiler>Regular</DiasDeAlquiler>
-          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
-          <Stock>30</Stock>
-        </Pelicula>
-        <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-05-24T16:47:28.6933099-03:00</FechaDeAlquiler>
-      </AlquilerOfPelicula>
     </ListaDeAlquileres>
     <LimitePeliculas>20</LimitePeliculas>
     <Penalidad>30</Penalidad>
@@ -3612,7 +3599,21 @@
     <ApellidoSocio>Mathou</ApellidoSocio>
     <EmailSocio>kmathou9@boston.com</EmailSocio>
     <TelefonoSocio>808-773-7856</TelefonoSocio>
-    <ListaDeAlquileres />
+    <ListaDeAlquileres>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>24</IdPelicula>
+          <TituloPelicula>Once in a Lifetime: The Extraordinary Story of the New York Cosmos</TituloPelicula>
+          <DuracionPelicula>97</DuracionPelicula>
+          <GeneroPelicula>CienciaFiccion</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>48</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-01T21:14:53.8331808-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+    </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
     <Penalidad>100</Penalidad>
     <TarjetaDeCredito>3583775043891783</TarjetaDeCredito>
@@ -3784,16 +3785,29 @@
       </AlquilerOfPelicula>
       <AlquilerOfPelicula>
         <Pelicula>
-          <IdPelicula>8</IdPelicula>
-          <TituloPelicula>Bananaz</TituloPelicula>
-          <DuracionPelicula>106</DuracionPelicula>
+          <IdPelicula>538</IdPelicula>
+          <TituloPelicula>Planet B-Boy</TituloPelicula>
+          <DuracionPelicula>114</DuracionPelicula>
           <GeneroPelicula>Drama</GeneroPelicula>
-          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
           <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
-          <Stock>37</Stock>
+          <Stock>34</Stock>
         </Pelicula>
         <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-05-24T16:47:09.9733595-03:00</FechaDeAlquiler>
+        <FechaDeAlquiler>2022-06-01T21:14:43.8848398-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>599</IdPelicula>
+          <TituloPelicula>Zozo</TituloPelicula>
+          <DuracionPelicula>115</DuracionPelicula>
+          <GeneroPelicula>Comedia</GeneroPelicula>
+          <DiasDeAlquiler>Clasica</DiasDeAlquiler>
+          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
+          <Stock>20</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-01T21:14:46.1352232-03:00</FechaDeAlquiler>
       </AlquilerOfPelicula>
     </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
@@ -4064,7 +4078,21 @@
     <ApellidoSocio>Pidgley</ApellidoSocio>
     <EmailSocio>epidgley18@google.nl</EmailSocio>
     <TelefonoSocio>707-688-9151</TelefonoSocio>
-    <ListaDeAlquileres />
+    <ListaDeAlquileres>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>6</IdPelicula>
+          <TituloPelicula>I Love You, Don't Touch Me!</TituloPelicula>
+          <DuracionPelicula>95</DuracionPelicula>
+          <GeneroPelicula>Terror</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
+          <Stock>28</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-01T21:16:04.9124138-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+    </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
     <Penalidad>100</Penalidad>
     <TarjetaDeCredito>4405318708735781</TarjetaDeCredito>
@@ -4456,19 +4484,6 @@
       </AlquilerOfPelicula>
       <AlquilerOfPelicula>
         <Pelicula>
-          <IdPelicula>4</IdPelicula>
-          <TituloPelicula>Mad Money</TituloPelicula>
-          <DuracionPelicula>123</DuracionPelicula>
-          <GeneroPelicula>Suspenso</GeneroPelicula>
-          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
-          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
-          <Stock>12</Stock>
-        </Pelicula>
-        <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-05-25T15:36:18.9299916-03:00</FechaDeAlquiler>
-      </AlquilerOfPelicula>
-      <AlquilerOfPelicula>
-        <Pelicula>
           <IdPelicula>5</IdPelicula>
           <TituloPelicula>Terumae romae (Thermae Romae)</TituloPelicula>
           <DuracionPelicula>124</DuracionPelicula>
@@ -4482,16 +4497,29 @@
       </AlquilerOfPelicula>
       <AlquilerOfPelicula>
         <Pelicula>
-          <IdPelicula>4</IdPelicula>
-          <TituloPelicula>Mad Money</TituloPelicula>
-          <DuracionPelicula>123</DuracionPelicula>
-          <GeneroPelicula>Suspenso</GeneroPelicula>
-          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
-          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
-          <Stock>12</Stock>
+          <IdPelicula>5</IdPelicula>
+          <TituloPelicula>Terumae romae (Thermae Romae)</TituloPelicula>
+          <DuracionPelicula>124</DuracionPelicula>
+          <GeneroPelicula>Drama</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
+          <Stock>25</Stock>
         </Pelicula>
         <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-05-25T15:36:20.6039688-03:00</FechaDeAlquiler>
+        <FechaDeAlquiler>2022-06-01T21:17:36.433287-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>10</IdPelicula>
+          <TituloPelicula>L'homme qui rit</TituloPelicula>
+          <DuracionPelicula>128</DuracionPelicula>
+          <GeneroPelicula>CienciaFiccion</GeneroPelicula>
+          <DiasDeAlquiler>Clasica</DiasDeAlquiler>
+          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
+          <Stock>18</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-01T21:17:43.8559328-03:00</FechaDeAlquiler>
       </AlquilerOfPelicula>
     </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
@@ -4815,7 +4843,47 @@
     <ApellidoSocio>Reveland</ApellidoSocio>
     <EmailSocio>creveland2r@google.co.uk</EmailSocio>
     <TelefonoSocio>727-610-7986</TelefonoSocio>
-    <ListaDeAlquileres />
+    <ListaDeAlquileres>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>5</IdPelicula>
+          <TituloPelicula>Terumae romae (Thermae Romae)</TituloPelicula>
+          <DuracionPelicula>124</DuracionPelicula>
+          <GeneroPelicula>Drama</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
+          <Stock>26</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-01T21:03:26.192236-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>3</IdPelicula>
+          <TituloPelicula>Corruptor, The</TituloPelicula>
+          <DuracionPelicula>92</DuracionPelicula>
+          <GeneroPelicula>Suspenso</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>1</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-01T21:03:26.5842655-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>2</IdPelicula>
+          <TituloPelicula>Help!</TituloPelicula>
+          <DuracionPelicula>137</DuracionPelicula>
+          <GeneroPelicula>Terror</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
+          <Stock>17</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-01T21:03:26.9681717-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+    </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
     <Penalidad>100</Penalidad>
     <TarjetaDeCredito>30051377217713</TarjetaDeCredito>
@@ -9942,7 +10010,47 @@
     <ApellidoSocio>Raymond</ApellidoSocio>
     <EmailSocio>araymondfj@sogou.com</EmailSocio>
     <TelefonoSocio>514-888-3508</TelefonoSocio>
-    <ListaDeAlquileres />
+    <ListaDeAlquileres>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>571</IdPelicula>
+          <TituloPelicula>Sherlock Holmes</TituloPelicula>
+          <DuracionPelicula>107</DuracionPelicula>
+          <GeneroPelicula>Animada</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
+          <Stock>16</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-01T21:02:53.0079194-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>4</IdPelicula>
+          <TituloPelicula>Mad Money</TituloPelicula>
+          <DuracionPelicula>123</DuracionPelicula>
+          <GeneroPelicula>Suspenso</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
+          <Stock>12</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-01T21:02:58.4203987-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>43</IdPelicula>
+          <TituloPelicula>You're Next</TituloPelicula>
+          <DuracionPelicula>90</DuracionPelicula>
+          <GeneroPelicula>Comedia</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
+          <Stock>35</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-01T21:03:02.4986424-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+    </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
     <Penalidad>100</Penalidad>
     <TarjetaDeCredito>3572030067463066</TarjetaDeCredito>

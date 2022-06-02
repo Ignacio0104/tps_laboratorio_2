@@ -15,6 +15,7 @@ namespace Blockbuster_UI
     {
         Alquiler<Pelicula> alquilerDevolver;
         bool esPremium;
+        int penalidad;
         public Devolucion(Alquiler <Pelicula> alquiler,bool esPremium)
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace Blockbuster_UI
         private double CalculoPenalidad()
         {
             int difereciaDias = (int)(DateTime.Now - alquilerDevolver.FechaDeAlquiler).TotalDays;
-            int penalidad = 0;
+            penalidad = 0;
 
             if (difereciaDias > (int)alquilerDevolver.Pelicula.DiasDeAlquiler)
             {
@@ -44,6 +45,13 @@ namespace Blockbuster_UI
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+            if(penalidad > 0)
+            {
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine($"{DateTime.Now} - Penalidad - Total ${penalidad} - Alquiler {alquilerDevolver.Pelicula.TituloPelicula}");
+                Blockbuster.FacturacionDiaria += sb.ToString();
+            }
+
             this.DialogResult = DialogResult.OK;
         }
 
