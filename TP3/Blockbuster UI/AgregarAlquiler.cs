@@ -36,14 +36,19 @@ namespace Blockbuster_UI
         {
             foreach (Pelicula item in Blockbuster.ListaDePeliculas)
             {
-                int indice = dGridPeliculas.Rows.Add();
-                dGridPeliculas.Rows[indice].Cells[0].Value = item.IdPelicula;
-                dGridPeliculas.Rows[indice].Cells[1].Value = item.TituloPelicula;
-                dGridPeliculas.Rows[indice].Cells[2].Value = item.DuracionPelicula + " min";
-                dGridPeliculas.Rows[indice].Cells[3].Value = item.GeneroPelicula.ToString();
-                dGridPeliculas.Rows[indice].Cells[4].Value = item.Stock.ToString();
-                dGridPeliculas.Rows[indice].Cells[5].Value = "$" + (int)item.PrecioDeAlquiler;
-                indice++;
+                
+                if (item.Stock > 0)
+                {
+                    int indice = dGridPeliculas.Rows.Add();
+                    dGridPeliculas.Rows[indice].Cells[0].Value = item.IdPelicula;
+                    dGridPeliculas.Rows[indice].Cells[1].Value = item.TituloPelicula;
+                    dGridPeliculas.Rows[indice].Cells[2].Value = item.DuracionPelicula + " min";
+                    dGridPeliculas.Rows[indice].Cells[3].Value = item.GeneroPelicula.ToString();
+                    dGridPeliculas.Rows[indice].Cells[4].Value = item.Stock.ToString();
+                    dGridPeliculas.Rows[indice].Cells[5].Value = "$" + (int)item.PrecioDeAlquiler;
+                    indice++;
+                }
+
             }
         }
 
@@ -51,12 +56,17 @@ namespace Blockbuster_UI
         {
             foreach (Producto item in Blockbuster.ListaDeProductos)
             {
-                int indice = dGridProducto.Rows.Add();
-                dGridProducto.Rows[indice].Cells[0].Value = item.IdProducto;
-                dGridProducto.Rows[indice].Cells[1].Value = item.NombreProducto;
-                dGridProducto.Rows[indice].Cells[2].Value = "$" + item.PrecioProducto;
-                dGridProducto.Rows[indice].Cells[3].Value = item.StockProducto;
-                indice++;
+               
+                if(item.StockProducto > 0)
+                {
+                    int indice = dGridProducto.Rows.Add();
+                    dGridProducto.Rows[indice].Cells[0].Value = item.IdProducto;
+                    dGridProducto.Rows[indice].Cells[1].Value = item.NombreProducto;
+                    dGridProducto.Rows[indice].Cells[2].Value = "$" + item.PrecioProducto;
+                    dGridProducto.Rows[indice].Cells[3].Value = item.StockProducto;
+                    indice++;
+                }
+
             }
         }
 
