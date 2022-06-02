@@ -70,31 +70,10 @@ namespace BibliotecaDeClases
             return clave == this.Password;
         }
 
-        /// <summary>
-        /// Metodo para actualizar informacion de un usuario
-        /// </summary>
-        /// <param name="nombre"></param>
-        /// <param name="apellido"></param>
-        /// <param name="dni"></param>
-        /// <param name="esAdmin"></param>
-        /// <param name="fechaNacimiento"></param>
-        /// <param name="salario"></param>
-        public void ActualizarDatos(string nombre, string apellido,
-            int dni, bool esAdmin, DateTime fechaNacimiento, double salario)
-        {
-            this.nombre = nombre;
-            this.apellido = apellido;
-            this.dni = dni;
-            this.esAdmin = esAdmin;
-            this.fechaNacimiento = fechaNacimiento;
-            this.salario = salario;
-        }
-
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-
-            
+          
             sb.AppendLine($"ID :{legajo} - {nombre} - {apellido}");
             sb.AppendLine($"DNI {dni} - Usuario: {nombreUsuario} - Clave: {Password}");
             sb.AppendLine($"Es admin {esAdmin} - Fecha de ingreso: {fechaIngreso.ToShortDateString()} - Nacimiento: {fechaNacimiento.ToShortDateString()}");

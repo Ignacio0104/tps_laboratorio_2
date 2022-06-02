@@ -479,9 +479,8 @@
             this.Controls.Add(this.rdtPeliculas);
             this.Controls.Add(this.panProductos);
             this.Controls.Add(this.panPeliculas);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AgregarProducto";

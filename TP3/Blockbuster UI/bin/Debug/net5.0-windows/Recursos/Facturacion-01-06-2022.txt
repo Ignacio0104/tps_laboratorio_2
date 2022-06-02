@@ -1,0 +1,8 @@
+01/06/2022 23:16:27 - Alquiler/Producto - Total $1140 - Socio 1000/Gonzalez
+01/06/2022 23:16:34 - Alquiler/Producto - Total $150 - Socio 1000/Gonzalez
+01/06/2022 23:16:55 - Alquiler/Producto - Total $150 - Socio 56/Oxteby
+01/06/2022 23:17:05 - Alquiler/Producto - Total $500 - Socio 56/Oxteby
+
+01/06/2022 23:24:11 - Alquiler/Producto - Total $300 - Socio 1000/Gonzalez
+
+

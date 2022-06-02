@@ -4214,7 +4214,21 @@
     <ApellidoSocio>Oxteby</ApellidoSocio>
     <EmailSocio>moxteby1j@google.de</EmailSocio>
     <TelefonoSocio>235-816-2247</TelefonoSocio>
-    <ListaDeAlquileres />
+    <ListaDeAlquileres>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>125</IdPelicula>
+          <TituloPelicula>Paralyzing Fear: The Story of Polio in America, A</TituloPelicula>
+          <DuracionPelicula>129</DuracionPelicula>
+          <GeneroPelicula>Animada</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
+          <Stock>48</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-01T23:16:54.6633492-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+    </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
     <Penalidad>100</Penalidad>
     <TarjetaDeCredito>5018505549842702139</TarjetaDeCredito>
@@ -14894,16 +14908,55 @@
       </AlquilerOfPelicula>
       <AlquilerOfPelicula>
         <Pelicula>
-          <IdPelicula>9</IdPelicula>
-          <TituloPelicula>North Face (Nordwand)</TituloPelicula>
-          <DuracionPelicula>100</DuracionPelicula>
-          <GeneroPelicula>Animada</GeneroPelicula>
-          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
-          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
-          <Stock>10</Stock>
+          <IdPelicula>3</IdPelicula>
+          <TituloPelicula>Corruptor, The</TituloPelicula>
+          <DuracionPelicula>92</DuracionPelicula>
+          <GeneroPelicula>Accion</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>4</Stock>
         </Pelicula>
         <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-06-01T23:12:20.5413611-03:00</FechaDeAlquiler>
+        <FechaDeAlquiler>2022-06-01T23:16:21.6708658-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>4</IdPelicula>
+          <TituloPelicula>Mad Money</TituloPelicula>
+          <DuracionPelicula>123</DuracionPelicula>
+          <GeneroPelicula>Suspenso</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
+          <Stock>12</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-01T23:16:24.6655912-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>6</IdPelicula>
+          <TituloPelicula>I Love You, Don't Touch Me!</TituloPelicula>
+          <DuracionPelicula>95</DuracionPelicula>
+          <GeneroPelicula>Terror</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
+          <Stock>27</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-01T23:16:30.447413-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>600</IdPelicula>
+          <TituloPelicula>Batman</TituloPelicula>
+          <DuracionPelicula>156</DuracionPelicula>
+          <GeneroPelicula>Accion</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
+          <Stock>8</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-01T23:24:09.8861688-03:00</FechaDeAlquiler>
       </AlquilerOfPelicula>
     </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>

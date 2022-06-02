@@ -194,7 +194,7 @@ namespace Blockbuster_UI
                     {
                         if (checkEditar.Items[indexChecked] is Alquiler<Pelicula> alquiler)
                         {
-                            Blockbuster.BuscarPelicula(alquiler.Pelicula.IdPelicula).Stock++;
+                            Blockbuster.BuscarPelicula(alquiler.Pelicula.IdPelicula).Stock++; //Se aumenta el stock de la pelicula que se saco de la lista
                             listaAlquilerAux.Remove(alquiler);
                         }
                         else

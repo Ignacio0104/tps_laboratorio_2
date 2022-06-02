@@ -11,7 +11,7 @@ namespace BibliotecaDeClases
         static string ruta;
         static ClaseSerializadora()
         {
-            ruta = ".\\Recursos";//Conseguir la ruta desde cualquier PC
+            ruta = ".\\Recursos";//El . me indica que la ruta es relativa al lugar donde se encuentre el usuario ejecutando el programa
         }
 
         public static void EscribirJson(T datos,string archivo)
@@ -20,7 +20,7 @@ namespace BibliotecaDeClases
 
             try
             {
-                if (!Directory.Exists(ruta))//Esto significa que la carpeta NO EXISTE
+                if (!Directory.Exists(ruta))//Esto valida que si la carpeta no existe, se cree en el paso siguiente
                 {
                     Directory.CreateDirectory(ruta); //Aca la creamos
                 }
@@ -46,13 +46,13 @@ namespace BibliotecaDeClases
             string completa = ruta + @"\" + nombreArchivo + ".json";
             try
             {
-                if (Directory.Exists(ruta))//Esto significa que la carpeta NO EXISTE
+                if (Directory.Exists(ruta))//Validamos que la carpeta exista
                 {
                     string[] archivos = Directory.GetFiles(ruta); //Trae todas las rutas de los archivos
 
                     foreach (string item in archivos)
                     {
-                        if (item.Contains(nombreArchivo))
+                        if (item.Contains(nombreArchivo)) //Buscamos el archivo por nombre
                         {
                             archivo = item;
                             break;
@@ -77,16 +77,16 @@ namespace BibliotecaDeClases
             }
         }
 
-        [XmlInclude(typeof(SocioClasico)), XmlInclude(typeof(SocioPremium))]
+
         public static void EscribirXml(T datos, string nombreArchivo)
         {
             string completa = ruta + @"\" + nombreArchivo + ".xml";
 
             try
             {
-                if (!Directory.Exists(ruta))//Esto significa que la carpeta NO EXISTE
+                if (!Directory.Exists(ruta))
                 {
-                    Directory.CreateDirectory(ruta); //Aca la creamos
+                    Directory.CreateDirectory(ruta); 
                 }
 
                 using (StreamWriter sw = new StreamWriter(completa))
@@ -111,9 +111,9 @@ namespace BibliotecaDeClases
 
             try
             {
-                if (Directory.Exists(ruta))//Esto significa que la carpeta NO EXISTE
+                if (Directory.Exists(ruta))
                 {
-                    string[] archivos = Directory.GetFiles(ruta); //Trae todas las rutas de los archivos
+                    string[] archivos = Directory.GetFiles(ruta); 
 
                     foreach (string item in archivos)
                     {
