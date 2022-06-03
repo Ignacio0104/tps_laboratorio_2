@@ -132,6 +132,7 @@
             // 
             // cmbCriterioBusqueda
             // 
+            this.cmbCriterioBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCriterioBusqueda.FormattingEnabled = true;
             this.cmbCriterioBusqueda.Location = new System.Drawing.Point(80, 21);
             this.cmbCriterioBusqueda.Name = "cmbCriterioBusqueda";
@@ -145,7 +146,6 @@
             this.txtInputBusqueda.Size = new System.Drawing.Size(370, 23);
             this.txtInputBusqueda.TabIndex = 3;
             this.txtInputBusqueda.TextChanged += new System.EventHandler(this.txtInputBusqueda_TextChanged);
-           
             // 
             // ListaSocios
             // 

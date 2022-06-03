@@ -56,6 +56,7 @@
             // cmbFiltroBusqueda
             // 
             this.cmbFiltroBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(102)))));
+            this.cmbFiltroBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFiltroBusqueda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.cmbFiltroBusqueda.FormattingEnabled = true;
             this.cmbFiltroBusqueda.Location = new System.Drawing.Point(31, 12);
