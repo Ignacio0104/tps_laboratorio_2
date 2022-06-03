@@ -73,7 +73,7 @@ namespace BibliotecaDeClases
             }
             catch (Exception e)
             {
-                throw;
+                throw new Exception($"Error en el archivo {completa}");
             }
         }
 
@@ -94,12 +94,10 @@ namespace BibliotecaDeClases
                     XmlSerializer xmlSerializer = new XmlSerializer(typeof(T));
                     xmlSerializer.Serialize(sw, datos);
                 }
-
-
             }
             catch (Exception e)
             {
-               
+                throw new Exception($"Error en el archivo {completa}");
             }
         }
 

@@ -14,16 +14,12 @@
         public int StockProducto { get => stockProducto; set => stockProducto = value; }
 
 
-        static Producto()
-        {
-            ultimoId = 2000;
-        }
-
         public Producto() { }
 
         public Producto(string nombreProducto,double precioProducto, int stockProducto)
         {
-            this.idProducto = ultimoId;
+            ultimoId = Blockbuster.BuscarUltimoIdProducto();
+            this.idProducto = ultimoId + 1;
             this.nombreProducto = nombreProducto;
             this.precioProducto = precioProducto;
             this.stockProducto = stockProducto;

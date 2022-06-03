@@ -17,11 +17,6 @@ namespace BibliotecaDeClases
         protected string telefonoSocio;
         protected List<Alquiler<Pelicula>> listaDeAlquileres;
 
-        static Socio()
-        {
-            ultimoId = 1000;       
-        }
-
         public Socio()
         {
             this.listaDeAlquileres = new List<Alquiler<Pelicula>>();
@@ -29,7 +24,8 @@ namespace BibliotecaDeClases
 
         public Socio(string nombre,string apellido,string email,string telefono):this()
         {
-            this.idSocio = ultimoId;
+            ultimoId = Blockbuster.BuscarUltimoIdSocios();
+            this.idSocio = ultimoId +1;
             this.nombreSocio = nombre;
             this.apellidoSocio = apellido;
             this.emailSocio = email;

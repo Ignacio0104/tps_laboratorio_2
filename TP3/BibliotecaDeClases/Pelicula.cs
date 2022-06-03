@@ -18,10 +18,6 @@ namespace BibliotecaDeClases
         private static int ultimoId;
         private int idPelicula;
 
-        static Pelicula()
-        {
-            ultimoId = 600;
-        }
         public Pelicula()
         {
 
@@ -29,7 +25,8 @@ namespace BibliotecaDeClases
         public Pelicula(string tituloPelicula, int duracion,GenerosPeliculas generoPelicula,
             DiasCategoriasAlquiler diasDeAlquiler, PrecioCategoriasAlquiler precioDeAlquiler, int stock)
         {
-            this.idPelicula = ultimoId;
+            ultimoId = Blockbuster.BuscarUltimoIdPelicula();
+            this.idPelicula = ultimoId + 1;
             this.tituloPelicula = tituloPelicula;
             this.duracionPelicula = duracion;
             this.generoPelicula = generoPelicula;

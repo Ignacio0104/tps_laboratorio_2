@@ -3176,7 +3176,47 @@
     <ApellidoSocio>Di Matteo</ApellidoSocio>
     <EmailSocio>idimatteoop@ameblo.jp</EmailSocio>
     <TelefonoSocio>759-428-4671</TelefonoSocio>
-    <ListaDeAlquileres />
+    <ListaDeAlquileres>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>5</IdPelicula>
+          <TituloPelicula>Terumae romae (Thermae Romae)</TituloPelicula>
+          <DuracionPelicula>124</DuracionPelicula>
+          <GeneroPelicula>Drama</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
+          <Stock>26</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-02T22:32:47.1119944-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>17</IdPelicula>
+          <TituloPelicula>Mr. Moto Takes a Chance</TituloPelicula>
+          <DuracionPelicula>113</DuracionPelicula>
+          <GeneroPelicula>CienciaFiccion</GeneroPelicula>
+          <DiasDeAlquiler>Clasica</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>36</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-02T22:32:48.7090231-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>362</IdPelicula>
+          <TituloPelicula>Batman: Mystery of the Batwoman</TituloPelicula>
+          <DuracionPelicula>91</DuracionPelicula>
+          <GeneroPelicula>Terror</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>45</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-02T22:33:12.0431681-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+    </ListaDeAlquileres>
     <LimitePeliculas>20</LimitePeliculas>
     <Penalidad>30</Penalidad>
   </Socio>
@@ -3366,7 +3406,47 @@
     <ApellidoSocio>Pilger</ApellidoSocio>
     <EmailSocio>mpilgerp8@pagesperso-orange.fr</EmailSocio>
     <TelefonoSocio>282-268-5445</TelefonoSocio>
-    <ListaDeAlquileres />
+    <ListaDeAlquileres>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>28</IdPelicula>
+          <TituloPelicula>Gimme the Loot</TituloPelicula>
+          <DuracionPelicula>102</DuracionPelicula>
+          <GeneroPelicula>Comedia</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>46</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-02T22:34:28.9282817-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>81</IdPelicula>
+          <TituloPelicula>Misfortunates, The (De helaasheid der dingen)</TituloPelicula>
+          <DuracionPelicula>98</DuracionPelicula>
+          <GeneroPelicula>Animada</GeneroPelicula>
+          <DiasDeAlquiler>Clasica</DiasDeAlquiler>
+          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
+          <Stock>28</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-02T22:34:31.3903328-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>70</IdPelicula>
+          <TituloPelicula>52 Pick-Up</TituloPelicula>
+          <DuracionPelicula>90</DuracionPelicula>
+          <GeneroPelicula>CienciaFiccion</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>31</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-02T22:34:33.5483199-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+    </ListaDeAlquileres>
     <LimitePeliculas>20</LimitePeliculas>
     <Penalidad>30</Penalidad>
   </Socio>
@@ -4459,45 +4539,6 @@
     <ListaDeAlquileres>
       <AlquilerOfPelicula>
         <Pelicula>
-          <IdPelicula>196</IdPelicula>
-          <TituloPelicula>How to Survive a Plague</TituloPelicula>
-          <DuracionPelicula>126</DuracionPelicula>
-          <GeneroPelicula>Animada</GeneroPelicula>
-          <DiasDeAlquiler>Regular</DiasDeAlquiler>
-          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
-          <Stock>47</Stock>
-        </Pelicula>
-        <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-05-25T15:36:17.6009118-03:00</FechaDeAlquiler>
-      </AlquilerOfPelicula>
-      <AlquilerOfPelicula>
-        <Pelicula>
-          <IdPelicula>5</IdPelicula>
-          <TituloPelicula>Terumae romae (Thermae Romae)</TituloPelicula>
-          <DuracionPelicula>124</DuracionPelicula>
-          <GeneroPelicula>Drama</GeneroPelicula>
-          <DiasDeAlquiler>Regular</DiasDeAlquiler>
-          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
-          <Stock>25</Stock>
-        </Pelicula>
-        <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-05-25T15:36:18.0699273-03:00</FechaDeAlquiler>
-      </AlquilerOfPelicula>
-      <AlquilerOfPelicula>
-        <Pelicula>
-          <IdPelicula>5</IdPelicula>
-          <TituloPelicula>Terumae romae (Thermae Romae)</TituloPelicula>
-          <DuracionPelicula>124</DuracionPelicula>
-          <GeneroPelicula>Drama</GeneroPelicula>
-          <DiasDeAlquiler>Regular</DiasDeAlquiler>
-          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
-          <Stock>25</Stock>
-        </Pelicula>
-        <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-05-25T15:36:19.4079113-03:00</FechaDeAlquiler>
-      </AlquilerOfPelicula>
-      <AlquilerOfPelicula>
-        <Pelicula>
           <IdPelicula>5</IdPelicula>
           <TituloPelicula>Terumae romae (Thermae Romae)</TituloPelicula>
           <DuracionPelicula>124</DuracionPelicula>
@@ -4860,19 +4901,6 @@
       </AlquilerOfPelicula>
       <AlquilerOfPelicula>
         <Pelicula>
-          <IdPelicula>3</IdPelicula>
-          <TituloPelicula>Corruptor, The</TituloPelicula>
-          <DuracionPelicula>92</DuracionPelicula>
-          <GeneroPelicula>Suspenso</GeneroPelicula>
-          <DiasDeAlquiler>Regular</DiasDeAlquiler>
-          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
-          <Stock>1</Stock>
-        </Pelicula>
-        <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-06-01T21:03:26.5842655-03:00</FechaDeAlquiler>
-      </AlquilerOfPelicula>
-      <AlquilerOfPelicula>
-        <Pelicula>
           <IdPelicula>2</IdPelicula>
           <TituloPelicula>Help!</TituloPelicula>
           <DuracionPelicula>137</DuracionPelicula>
@@ -5177,19 +5205,6 @@
         </Pelicula>
         <Penalidad>50</Penalidad>
         <FechaDeAlquiler>2022-05-27T23:22:17.9564824-03:00</FechaDeAlquiler>
-      </AlquilerOfPelicula>
-      <AlquilerOfPelicula>
-        <Pelicula>
-          <IdPelicula>7</IdPelicula>
-          <TituloPelicula>Sex Tape</TituloPelicula>
-          <DuracionPelicula>108</DuracionPelicula>
-          <GeneroPelicula>Comedia</GeneroPelicula>
-          <DiasDeAlquiler>Regular</DiasDeAlquiler>
-          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
-          <Stock>30</Stock>
-        </Pelicula>
-        <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-05-27T23:22:22.3594501-03:00</FechaDeAlquiler>
       </AlquilerOfPelicula>
     </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
@@ -14971,22 +14986,34 @@
         <Penalidad>50</Penalidad>
         <FechaDeAlquiler>2022-06-01T23:24:09.8861688-03:00</FechaDeAlquiler>
       </AlquilerOfPelicula>
-      <AlquilerOfPelicula>
-        <Pelicula>
-          <IdPelicula>600</IdPelicula>
-          <TituloPelicula>Batman</TituloPelicula>
-          <DuracionPelicula>156</DuracionPelicula>
-          <GeneroPelicula>Accion</GeneroPelicula>
-          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
-          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
-          <Stock>7</Stock>
-        </Pelicula>
-        <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-06-01T23:54:55.23431-03:00</FechaDeAlquiler>
-      </AlquilerOfPelicula>
     </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
     <Penalidad>100</Penalidad>
     <TarjetaDeCredito>4567900023412346</TarjetaDeCredito>
+  </Socio>
+  <Socio xsi:type="SocioClasico">
+    <IdSocio>1001</IdSocio>
+    <NombreSocio>Matias</NombreSocio>
+    <ApellidoSocio>Perez</ApellidoSocio>
+    <EmailSocio>mati@gmail.com</EmailSocio>
+    <TelefonoSocio>45601234</TelefonoSocio>
+    <ListaDeAlquileres>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>599</IdPelicula>
+          <TituloPelicula>Avengers Endgame</TituloPelicula>
+          <DuracionPelicula>120</DuracionPelicula>
+          <GeneroPelicula>CienciaFiccion</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
+          <Stock>19</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-02T23:14:57.4212861-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+    </ListaDeAlquileres>
+    <LimitePeliculas>5</LimitePeliculas>
+    <Penalidad>100</Penalidad>
+    <TarjetaDeCredito>4234567890123453</TarjetaDeCredito>
   </Socio>
 </ArrayOfSocio>

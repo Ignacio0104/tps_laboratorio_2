@@ -151,5 +151,39 @@ namespace BibliotecaDeClases
             return indice;
         }
 
+        public static int BuscarUltimoIdSocios()
+        {
+            int maximo = 0;
+            for (int i = 0; i < listaDeSocios.Count; i++)
+            {
+                if (listaDeSocios[i].IdSocio > maximo)
+                    maximo = listaDeSocios[i].IdSocio;
+            }
+            return maximo;
+        }
+
+        public static int BuscarUltimoIdPelicula()
+        {
+            int maximo = 0;
+            for (int i = 0; i < listaDePeliculas.Count; i++)
+            {
+                if (listaDePeliculas[i].IdPelicula > maximo)
+                    maximo = listaDePeliculas[i].IdPelicula;
+            }
+            return maximo;
+        }
+
+        public static int BuscarUltimoIdProducto()
+        {
+            int maximo = 0;
+            for (int i = 0; i < listaDeProductos.Count; i++)
+            {
+                if (listaDeProductos[i].IdProducto > maximo)
+                    maximo = listaDeProductos[i].IdProducto;
+            }
+            return maximo;
+        }
+
+       
     }
 }

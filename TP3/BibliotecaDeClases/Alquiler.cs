@@ -9,7 +9,7 @@ namespace BibliotecaDeClases
 {
     public class Alquiler <T>
     {
-        private T pelicula;
+        private T pelicula; 
 
         private int penalidad;
         private DateTime fechaDeAlquiler;

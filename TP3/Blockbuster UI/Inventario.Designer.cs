@@ -43,6 +43,7 @@
             this.dGridInventario.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dGridInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGridInventario.Location = new System.Drawing.Point(31, 57);
+            this.dGridInventario.MultiSelect = false;
             this.dGridInventario.Name = "dGridInventario";
             this.dGridInventario.ReadOnly = true;
             this.dGridInventario.RowTemplate.Height = 25;
