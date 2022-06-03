@@ -49,7 +49,7 @@ namespace Blockbuster_UI
             {
                 StringBuilder sb = new StringBuilder();
                 sb.AppendLine($"{DateTime.Now} - Penalidad - Total ${penalidad} - Alquiler {alquilerDevolver.Pelicula.TituloPelicula}");
-                Blockbuster.FacturacionDiaria += sb.ToString();
+                Blockbuster.FacturacionDiaria += sb.ToString(); //Acá se agrega la información a la facturación diaria
             }
 
             this.DialogResult = DialogResult.OK;

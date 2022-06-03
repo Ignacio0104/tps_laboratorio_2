@@ -60,23 +60,30 @@ namespace Blockbuster_UI
 
         private void dGridSocios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            try
             {
-                int idSocio = (int)dGridSocios.Rows[e.RowIndex].Cells[0].Value;
-                Socio socioAux = Blockbuster.BuscarSocio(idSocio);
-
-                if(socioAux is not null)
+                if (e.RowIndex >= 0)
                 {
-                    AgregarSocio frmModificacion = new AgregarSocio(socioAux);
+                    int idSocio = (int)dGridSocios.Rows[e.RowIndex].Cells[0].Value;
+                    Socio socioAux = Blockbuster.BuscarSocio(idSocio);
 
-                    frmModificacion.ShowDialog();
-
-                    if (frmModificacion.DialogResult == DialogResult.OK)
+                    if(socioAux is not null)
                     {
-                        dGridSocios.Rows.Clear();
-                        CargarSocios();
+                        AgregarSocio frmModificacion = new AgregarSocio(socioAux);
+
+                        frmModificacion.ShowDialog();
+
+                        if (frmModificacion.DialogResult == DialogResult.OK)
+                        {
+                            dGridSocios.Rows.Clear();
+                            CargarSocios();
+                        }
                     }
                 }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK);
             }
         }
 
@@ -99,7 +106,6 @@ namespace Blockbuster_UI
 
         private void CargarSociosConFiltro(Socio socio, int indice)
         {
- 
             dGridSocios.Rows[indice].Cells[0].Value = socio.IdSocio;
             dGridSocios.Rows[indice].Cells[1].Value = socio.NombreSocio;
             dGridSocios.Rows[indice].Cells[2].Value = socio.ApellidoSocio;
@@ -108,8 +114,7 @@ namespace Blockbuster_UI
             dGridSocios.Rows[indice].Cells[5].Value = socio.LimitePeliculas;
             dGridSocios.Rows[indice].Cells[6].Value = socio.Penalidad + "%";
             dGridSocios.Rows[indice].Cells[7].Value = (socio is SocioClasico socioClasico
-                ? socioClasico.TarjetaDeCredito : "N/A");
-                                         
+                ? socioClasico.TarjetaDeCredito : "N/A");                                        
         }
 
 

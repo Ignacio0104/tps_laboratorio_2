@@ -38,7 +38,15 @@ namespace Blockbuster_UI
 
         private void login_Load(object sender, EventArgs e)
         {
-            Blockbuster.ListaDeEmpleados = ClaseSerializadora<List<Usuario>>.LeerJson("baseDatosEmpleados");
+            try
+            {
+                Blockbuster.ListaDeEmpleados = ClaseSerializadora<List<Usuario>>.LeerJson("baseDatosEmpleados");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hubo un error al descargar base de datos de usuarios, favor verificar\nFavor reiniciar el programa", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
         }
 
         private void btnAutoComplete_Click(object sender, EventArgs e)

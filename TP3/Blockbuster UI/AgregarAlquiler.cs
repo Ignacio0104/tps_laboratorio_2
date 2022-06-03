@@ -121,7 +121,7 @@ namespace Blockbuster_UI
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception.Message);
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK);
             }
         }
 
@@ -206,7 +206,7 @@ namespace Blockbuster_UI
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK);
                     }
 
                 }

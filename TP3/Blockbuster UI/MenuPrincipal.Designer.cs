@@ -36,6 +36,7 @@
             this.btnInventario = new System.Windows.Forms.Button();
             this.btnVenta = new System.Windows.Forms.Button();
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.btnSalirSinGuardar = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).BeginInit();
             this.SuspendLayout();
@@ -43,6 +44,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(157)))));
+            this.panelMenu.Controls.Add(this.btnSalirSinGuardar);
             this.panelMenu.Controls.Add(this.picUsuario);
             this.panelMenu.Controls.Add(this.lblNombreUsuario);
             this.panelMenu.Controls.Add(this.btnSocios);
@@ -135,6 +137,25 @@
             this.panelPrincipal.Size = new System.Drawing.Size(896, 534);
             this.panelPrincipal.TabIndex = 1;
             // 
+            // btnSalirSinGuardar
+            // 
+            this.btnSalirSinGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(197)))), ((int)(((byte)(0)))));
+            this.btnSalirSinGuardar.FlatAppearance.BorderSize = 0;
+            this.btnSalirSinGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalirSinGuardar.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSalirSinGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(157)))));
+            this.btnSalirSinGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalirSinGuardar.Image")));
+            this.btnSalirSinGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalirSinGuardar.Location = new System.Drawing.Point(0, 462);
+            this.btnSalirSinGuardar.Name = "btnSalirSinGuardar";
+            this.btnSalirSinGuardar.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.btnSalirSinGuardar.Size = new System.Drawing.Size(204, 41);
+            this.btnSalirSinGuardar.TabIndex = 7;
+            this.btnSalirSinGuardar.Text = "Salir sin guardar";
+            this.btnSalirSinGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalirSinGuardar.UseVisualStyleBackColor = false;
+            this.btnSalirSinGuardar.Click += new System.EventHandler(this.btnSalirSinGuardar_Click);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -168,5 +189,6 @@
         private System.Windows.Forms.Button btnSocios;
         private System.Windows.Forms.Label lblNombreUsuario;
         private System.Windows.Forms.PictureBox picUsuario;
+        private System.Windows.Forms.Button btnSalirSinGuardar;
     }
 }

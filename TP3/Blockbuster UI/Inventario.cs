@@ -88,7 +88,7 @@ namespace Blockbuster_UI
                     }
                 }catch(Exception ex)
                 {
-
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK);
                 }
      
             }

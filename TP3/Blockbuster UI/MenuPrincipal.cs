@@ -29,8 +29,11 @@ namespace Blockbuster_UI
         }
 
 
-
-        private void CargarMenu(Form formulario)
+        /// <summary>
+        /// Metodo para cambiar las diferentes pantallas del menu principal
+        /// </summary>
+        /// <param name="formulario"></param>
+        private void CargarMenu(Form formulario) 
         {
             if (this.panelPrincipal.Controls.Count > 0)
             {
@@ -53,34 +56,39 @@ namespace Blockbuster_UI
 
         private void MenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult opcion = MessageBox.Show("Esta seguro que desea salir?", "Salir", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            if(opcion == DialogResult.Cancel)
+            if (e.CloseReason == CloseReason.UserClosing)
             {
-                e.Cancel = true;
-            }
-            else
-            {
-                try
+                DialogResult opcion = MessageBox.Show("Esta seguro que desea salir?", "Salir", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                if (opcion == DialogResult.Cancel)
                 {
-                    ClaseSerializadora<List<Socio>>.EscribirXml(Blockbuster.ListaDeSocios, "baseDatosSocios");
-                    ClaseSerializadora<List<Producto>>.EscribirJson(Blockbuster.ListaDeProductos, "baseDatosProductos");
-                    ClaseSerializadora<List<Pelicula>>.EscribirJson(Blockbuster.ListaDePeliculas, "baseDatosPeliculas");
-                    using (StreamWriter outputfile = File.AppendText($".\\Recursos\\Facturacion-{DateTime.Now.ToString("dd-MM-yyyy")}.txt"))
-                    {
-                        outputfile.WriteLine(Blockbuster.FacturacionDiaria);
-                    }
-                    MessageBox.Show("Todos los datos han sido guardados exitósamente", "Guardado con exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+                    e.Cancel = true;
                 }
-                catch (Exception exc)
+                else
                 {
-                    DialogResult opcionDos = MessageBox.Show("Hubo un error al guardar los datos \n ¿Desea salir y perder los datos no guardados?", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop);
-                    if (opcionDos == DialogResult.Cancel)
+                    try
                     {
-                        e.Cancel = true;
-                    }                  
-                }                              
+                        ClaseSerializadora<List<Socio>>.EscribirXml(Blockbuster.ListaDeSocios, "baseDatosSocios");
+                        ClaseSerializadora<List<Producto>>.EscribirJson(Blockbuster.ListaDeProductos, "baseDatosProductos");
+                        ClaseSerializadora<List<Pelicula>>.EscribirJson(Blockbuster.ListaDePeliculas, "baseDatosPeliculas");
+                        using (StreamWriter outputfile = File.AppendText($".\\Recursos\\Facturacion-{DateTime.Now.ToString("dd-MM-yyyy")}.txt"))
+                        {
+                            outputfile.WriteLine(Blockbuster.FacturacionDiaria);
+                        }
+                        MessageBox.Show("Todos los datos han sido guardados exitósamente", "Guardado con exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    catch (Exception exc)
+                    {
+                        DialogResult opcionDos = MessageBox.Show("Hubo un error al guardar los datos \n ¿Desea salir y perder los datos no guardados?", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop);
+                        if (opcionDos == DialogResult.Cancel)
+                        {
+
+                            e.Cancel = true;
+                        }
+                    }
+                }
             }
+           
             
         }
 
@@ -96,6 +104,15 @@ namespace Blockbuster_UI
         private void MenuPrincipal_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnSalirSinGuardar_Click(object sender, EventArgs e)
+        {
+            DialogResult opcion = MessageBox.Show("Esta a punto de salir sin guardar los datos\n¿Esta seguro de que desea continuar?", "Salir sin guardar", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            if (opcion == DialogResult.OK)
+            {
+                Application.Exit();
+            }
         }
     }
 }
