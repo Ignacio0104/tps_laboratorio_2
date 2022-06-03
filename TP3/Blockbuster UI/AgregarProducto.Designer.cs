@@ -151,6 +151,7 @@
             // cmbPrecioAlquiler
             // 
             this.cmbPrecioAlquiler.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.cmbPrecioAlquiler.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPrecioAlquiler.FormattingEnabled = true;
             this.cmbPrecioAlquiler.Location = new System.Drawing.Point(22, 209);
             this.cmbPrecioAlquiler.Name = "cmbPrecioAlquiler";
@@ -171,6 +172,7 @@
             // cmbDiasDeAlquiler
             // 
             this.cmbDiasDeAlquiler.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.cmbDiasDeAlquiler.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDiasDeAlquiler.FormattingEnabled = true;
             this.cmbDiasDeAlquiler.Location = new System.Drawing.Point(22, 141);
             this.cmbDiasDeAlquiler.Name = "cmbDiasDeAlquiler";
@@ -477,8 +479,8 @@
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.rdtProductos);
             this.Controls.Add(this.rdtPeliculas);
-            this.Controls.Add(this.panProductos);
             this.Controls.Add(this.panPeliculas);
+            this.Controls.Add(this.panProductos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

@@ -62,7 +62,7 @@ namespace Blockbuster_UI
                     {
                         string nombrePelicula = txtBoxTituloPelicula.Text;
                         int duracionPelicula = (int)nupDuracion.Value;
-                        Enumerados.DiasCategoriasAlquiler diasAlquiler = (Enumerados.DiasCategoriasAlquiler)cmbDiasDeAlquiler.SelectedItem;
+                        Enumerados.DiasCategoriasAlquiler diasAlquiler = (Enumerados.DiasCategoriasAlquiler)cmbDiasDeAlquiler.SelectedItem; //Casteo la seleccion 
                         Enumerados.PrecioCategoriasAlquiler precioAlquiler = (Enumerados.PrecioCategoriasAlquiler)cmbPrecioAlquiler.SelectedItem;
                         int stockPelicula = (int)nupStock.Value;
 
@@ -118,11 +118,14 @@ namespace Blockbuster_UI
             cmbDiasDeAlquiler.Items.Add(Enumerados.DiasCategoriasAlquiler.Clasica);
             cmbDiasDeAlquiler.Items.Add(Enumerados.DiasCategoriasAlquiler.Estreno);
             cmbDiasDeAlquiler.Items.Add(Enumerados.DiasCategoriasAlquiler.Regular);
+            cmbDiasDeAlquiler.SelectedIndex = 0;
             cmbPrecioAlquiler.Items.Add(Enumerados.PrecioCategoriasAlquiler.Especial);
             cmbPrecioAlquiler.Items.Add(Enumerados.PrecioCategoriasAlquiler.Normal);
             cmbPrecioAlquiler.Items.Add(Enumerados.PrecioCategoriasAlquiler.Promo);
+            cmbPrecioAlquiler.SelectedIndex = 0;
+            rdtAccion.Checked = true;
 
-            if (productoElegido is not null || peliculaElegida is not null)
+            if (productoElegido is not null || peliculaElegida is not null) //Verifico si es una nuevo producto o una edicion
             {
                 btnBorrar.Visible = true;
                 if (productoElegido is not null)

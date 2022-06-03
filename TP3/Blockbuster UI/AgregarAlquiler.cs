@@ -35,9 +35,8 @@ namespace Blockbuster_UI
         private void CargarPeliculas()
         {
             foreach (Pelicula item in Blockbuster.ListaDePeliculas)
-            {
-                
-                if (item.Stock > 0)
+            {             
+                if (item is not null && item.Stock > 0)
                 {
                     int indice = dGridPeliculas.Rows.Add();
                     dGridPeliculas.Rows[indice].Cells[0].Value = item.IdPelicula;
@@ -48,7 +47,6 @@ namespace Blockbuster_UI
                     dGridPeliculas.Rows[indice].Cells[5].Value = "$" + (int)item.PrecioDeAlquiler;
                     indice++;
                 }
-
             }
         }
 
@@ -56,8 +54,7 @@ namespace Blockbuster_UI
         {
             foreach (Producto item in Blockbuster.ListaDeProductos)
             {
-               
-                if(item.StockProducto > 0)
+                if (item is not null && item.StockProducto > 0)
                 {
                     int indice = dGridProducto.Rows.Add();
                     dGridProducto.Rows[indice].Cells[0].Value = item.IdProducto;
@@ -223,6 +220,11 @@ namespace Blockbuster_UI
             CargarPeliculas();
         }
 
+        /// <summary>
+        /// Buscador automatico de peliculas
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtTitulo_TextChanged(object sender, EventArgs e)
         {
             dGridPeliculas.Rows.Clear();

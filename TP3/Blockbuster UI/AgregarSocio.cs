@@ -75,7 +75,6 @@ namespace Blockbuster_UI
                     }
                     lblError.Visible = false;
                 }
-
                 this.DialogResult = DialogResult.OK;
             }catch(Exception exc)
             {

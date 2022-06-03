@@ -2076,21 +2076,7 @@
     <ApellidoSocio>Tootin</ApellidoSocio>
     <EmailSocio>ktootinln@google.com</EmailSocio>
     <TelefonoSocio>402-465-0916</TelefonoSocio>
-    <ListaDeAlquileres>
-      <AlquilerOfPelicula>
-        <Pelicula>
-          <IdPelicula>5</IdPelicula>
-          <TituloPelicula>Terumae romae (Thermae Romae)</TituloPelicula>
-          <DuracionPelicula>124</DuracionPelicula>
-          <GeneroPelicula>Drama</GeneroPelicula>
-          <DiasDeAlquiler>Regular</DiasDeAlquiler>
-          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
-          <Stock>26</Stock>
-        </Pelicula>
-        <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-05-24T16:47:28.2073259-03:00</FechaDeAlquiler>
-      </AlquilerOfPelicula>
-    </ListaDeAlquileres>
+    <ListaDeAlquileres />
     <LimitePeliculas>20</LimitePeliculas>
     <Penalidad>30</Penalidad>
   </Socio>
@@ -6426,7 +6412,47 @@
     <ApellidoSocio>Martello</ApellidoSocio>
     <EmailSocio>mmartello6h@bandcamp.com</EmailSocio>
     <TelefonoSocio>939-157-2056</TelefonoSocio>
-    <ListaDeAlquileres />
+    <ListaDeAlquileres>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>3</IdPelicula>
+          <TituloPelicula>Corruptor, The</TituloPelicula>
+          <DuracionPelicula>92</DuracionPelicula>
+          <GeneroPelicula>Accion</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>4</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-01T23:52:33.1266266-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>5</IdPelicula>
+          <TituloPelicula>Terumae romae (Thermae Romae)</TituloPelicula>
+          <DuracionPelicula>124</DuracionPelicula>
+          <GeneroPelicula>Drama</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
+          <Stock>25</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-01T23:52:33.7354618-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>54</IdPelicula>
+          <TituloPelicula>Happy Feet</TituloPelicula>
+          <DuracionPelicula>112</DuracionPelicula>
+          <GeneroPelicula>CienciaFiccion</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>27</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-01T23:52:51.7972032-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+    </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
     <Penalidad>100</Penalidad>
     <TarjetaDeCredito>3577411674936816</TarjetaDeCredito>
@@ -14908,19 +14934,6 @@
       </AlquilerOfPelicula>
       <AlquilerOfPelicula>
         <Pelicula>
-          <IdPelicula>3</IdPelicula>
-          <TituloPelicula>Corruptor, The</TituloPelicula>
-          <DuracionPelicula>92</DuracionPelicula>
-          <GeneroPelicula>Accion</GeneroPelicula>
-          <DiasDeAlquiler>Regular</DiasDeAlquiler>
-          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
-          <Stock>4</Stock>
-        </Pelicula>
-        <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-06-01T23:16:21.6708658-03:00</FechaDeAlquiler>
-      </AlquilerOfPelicula>
-      <AlquilerOfPelicula>
-        <Pelicula>
           <IdPelicula>4</IdPelicula>
           <TituloPelicula>Mad Money</TituloPelicula>
           <DuracionPelicula>123</DuracionPelicula>
@@ -14957,6 +14970,19 @@
         </Pelicula>
         <Penalidad>50</Penalidad>
         <FechaDeAlquiler>2022-06-01T23:24:09.8861688-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>600</IdPelicula>
+          <TituloPelicula>Batman</TituloPelicula>
+          <DuracionPelicula>156</DuracionPelicula>
+          <GeneroPelicula>Accion</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
+          <Stock>7</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-01T23:54:55.23431-03:00</FechaDeAlquiler>
       </AlquilerOfPelicula>
     </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
