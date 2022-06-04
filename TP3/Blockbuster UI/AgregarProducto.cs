@@ -125,28 +125,7 @@ namespace Blockbuster_UI
             cmbPrecioAlquiler.SelectedIndex = 0;
             rdtAccion.Checked = true;
 
-            if (productoElegido is not null || peliculaElegida is not null) //Verifico si es una nuevo producto o una edicion
-            {
-                btnBorrar.Visible = true;
-                if (productoElegido is not null)
-                {
-                    txtBoxNombreProducto.Text = productoElegido.NombreProducto;
-                    nupPrecioProducto.Value = (decimal)productoElegido.PrecioProducto;
-                    nupStockProducto.Value = productoElegido.StockProducto;
-                    rdtProductos.Checked = true;
-                    rdtPeliculas.Enabled = false;
-                }
-                else
-                {
-                    txtBoxTituloPelicula.Text = peliculaElegida.TituloPelicula;
-                    nupDuracion.Value = peliculaElegida.DuracionPelicula;
-                    cmbDiasDeAlquiler.SelectedItem = peliculaElegida.DiasDeAlquiler;
-                    cmbPrecioAlquiler.SelectedItem = peliculaElegida.PrecioDeAlquiler;
-                    nupStock.Value = peliculaElegida.Stock;
-                    rdtProductos.Enabled = false;
-                    rdtPeliculas.Checked = true;
-                }
-            }
+            CargarDatosForm();
 
         }
 
@@ -191,6 +170,32 @@ namespace Blockbuster_UI
             {
                 EliminarObjeto();
                 this.DialogResult = DialogResult.OK;
+            }
+        }
+
+        public void CargarDatosForm()
+        {
+            if (productoElegido is not null || peliculaElegida is not null) //Verifico si es una nuevo producto o una edicion
+            {
+                btnBorrar.Visible = true;
+                if (productoElegido is not null)
+                {
+                    txtBoxNombreProducto.Text = productoElegido.NombreProducto;
+                    nupPrecioProducto.Value = (decimal)productoElegido.PrecioProducto;
+                    nupStockProducto.Value = productoElegido.StockProducto;
+                    rdtProductos.Checked = true;
+                    rdtPeliculas.Enabled = false;
+                }
+                else
+                {
+                    txtBoxTituloPelicula.Text = peliculaElegida.TituloPelicula;
+                    nupDuracion.Value = peliculaElegida.DuracionPelicula;
+                    cmbDiasDeAlquiler.SelectedItem = peliculaElegida.DiasDeAlquiler;
+                    cmbPrecioAlquiler.SelectedItem = peliculaElegida.PrecioDeAlquiler;
+                    nupStock.Value = peliculaElegida.Stock;
+                    rdtProductos.Enabled = false;
+                    rdtPeliculas.Checked = true;
+                }
             }
         }
     }

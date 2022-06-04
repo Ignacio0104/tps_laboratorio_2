@@ -137,7 +137,7 @@ namespace Blockbuster_UI
                         }
                         break;
                     case "Nombre":
-                        if (item.NombreSocio.Contains(txtInputBusqueda.Text))
+                        if (item.NombreSocio.ToLower().Contains(txtInputBusqueda.Text.ToLower()))
                         {
                             indice = dGridSocios.Rows.Add();
                             CargarSociosConFiltro(item, indice);
@@ -145,7 +145,7 @@ namespace Blockbuster_UI
                         }
                         break;
                     case "Apellido":
-                        if (item.ApellidoSocio.Contains(txtInputBusqueda.Text))
+                        if (item.ApellidoSocio.ToLower().Contains(txtInputBusqueda.Text.ToLower()))
                         {
                             indice = dGridSocios.Rows.Add();
                             CargarSociosConFiltro(item, indice);
@@ -153,7 +153,7 @@ namespace Blockbuster_UI
                         }
                         break;
                     case "Mail":
-                        if (item.EmailSocio.Contains(txtInputBusqueda.Text))
+                        if (item.EmailSocio.ToLower().Contains(txtInputBusqueda.Text.ToLower()))
                         {
                             indice = dGridSocios.Rows.Add();
                             CargarSociosConFiltro(item, indice);

@@ -83,7 +83,6 @@ namespace Blockbuster_UI
             }
         }
 
-
         private void Validaciones()
         {
             if(!txtBoxNombreSocio.Text.All(char.IsLetter))
@@ -115,7 +114,29 @@ namespace Blockbuster_UI
 
         private void AgregarSocio_Load(object sender, EventArgs e)
         {
+            CargarDatosForm();
+        }
+        public void EliminarObjeto()
+        {
             if(socioElegido is not null)
+            {
+                Blockbuster.ListaDeSocios.Remove(socioElegido);
+            }
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            DialogResult eleccion = MessageBox.Show($"¿Esta seguro que desea dar de baja a este socio?", "Dar de baja socio", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (eleccion == DialogResult.Yes)
+            {
+                EliminarObjeto();
+                this.DialogResult = DialogResult.OK;
+            }
+        }
+
+        public void CargarDatosForm()
+        {
+            if (socioElegido is not null)
             {
                 txtBoxNombreSocio.Text = socioElegido.NombreSocio;
                 txtBoxApellidoSocio.Text = socioElegido.ApellidoSocio;
@@ -134,23 +155,6 @@ namespace Blockbuster_UI
             {
                 lblIdSocio.Visible = false;
                 lblId.Visible = false;
-            }
-        }
-        public void EliminarObjeto()
-        {
-            if(socioElegido is not null)
-            {
-                Blockbuster.ListaDeSocios.Remove(socioElegido);
-            }
-        }
-
-        private void btnBorrar_Click(object sender, EventArgs e)
-        {
-            DialogResult eleccion = MessageBox.Show($"¿Esta seguro que desea dar de baja a este socio?", "Dar de baja socio", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (eleccion == DialogResult.Yes)
-            {
-                EliminarObjeto();
-                this.DialogResult = DialogResult.OK;
             }
         }
     }
