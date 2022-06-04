@@ -4876,7 +4876,34 @@
     <ApellidoSocio>Sieur</ApellidoSocio>
     <EmailSocio>zsieur2p@ning.com</EmailSocio>
     <TelefonoSocio>639-455-9287</TelefonoSocio>
-    <ListaDeAlquileres />
+    <ListaDeAlquileres>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>22</IdPelicula>
+          <TituloPelicula>Battle for the Planet of the Apes</TituloPelicula>
+          <DuracionPelicula>136</DuracionPelicula>
+          <GeneroPelicula>CienciaFiccion</GeneroPelicula>
+          <DiasDeAlquiler>Clasica</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>36</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-04T11:36:26.5891197-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>59</IdPelicula>
+          <TituloPelicula>Trapped in Paradise</TituloPelicula>
+          <DuracionPelicula>120</DuracionPelicula>
+          <GeneroPelicula>Animada</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
+          <Stock>25</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-04T11:36:28.8334085-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+    </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
     <Penalidad>100</Penalidad>
     <TarjetaDeCredito>4905427151529180566</TarjetaDeCredito>
@@ -5161,16 +5188,29 @@
       </AlquilerOfPelicula>
       <AlquilerOfPelicula>
         <Pelicula>
-          <IdPelicula>598</IdPelicula>
-          <TituloPelicula>Any Number Can Play</TituloPelicula>
-          <DuracionPelicula>138</DuracionPelicula>
+          <IdPelicula>529</IdPelicula>
+          <TituloPelicula>Sarafina!</TituloPelicula>
+          <DuracionPelicula>90</DuracionPelicula>
           <GeneroPelicula>Drama</GeneroPelicula>
-          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
-          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
-          <Stock>21</Stock>
+          <DiasDeAlquiler>Clasica</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>3</Stock>
         </Pelicula>
         <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-05-28T15:20:16.2244974-03:00</FechaDeAlquiler>
+        <FechaDeAlquiler>2022-06-04T11:37:06.0408015-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>442</IdPelicula>
+          <TituloPelicula>Mondo Topless</TituloPelicula>
+          <DuracionPelicula>140</DuracionPelicula>
+          <GeneroPelicula>Drama</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>45</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-04T11:37:10.446856-03:00</FechaDeAlquiler>
       </AlquilerOfPelicula>
     </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
@@ -5340,7 +5380,34 @@
     <ApellidoSocio>Prowse</ApellidoSocio>
     <EmailSocio>eprowse3p@printfriendly.com</EmailSocio>
     <TelefonoSocio>883-362-8374</TelefonoSocio>
-    <ListaDeAlquileres />
+    <ListaDeAlquileres>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>100</IdPelicula>
+          <TituloPelicula>Citadel, The</TituloPelicula>
+          <DuracionPelicula>117</DuracionPelicula>
+          <GeneroPelicula>Terror</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
+          <Stock>49</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-04T11:36:44.6209853-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>440</IdPelicula>
+          <TituloPelicula>Drained (O cheiro do Ralo)</TituloPelicula>
+          <DuracionPelicula>113</DuracionPelicula>
+          <GeneroPelicula>Suspenso</GeneroPelicula>
+          <DiasDeAlquiler>Clasica</DiasDeAlquiler>
+          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
+          <Stock>6</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-04T11:36:46.5069141-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+    </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
     <Penalidad>100</Penalidad>
     <TarjetaDeCredito>3532918775026242</TarjetaDeCredito>

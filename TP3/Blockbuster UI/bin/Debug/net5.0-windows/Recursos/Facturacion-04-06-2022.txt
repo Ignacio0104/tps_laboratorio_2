@@ -8,3 +8,8 @@
 
 04/06/2022 10:30:06 - Alquiler/Producto - Total $1890 - Socio 1004/Scrofani
 
+04/06/2022 11:36:31 - Alquiler/Producto - Total $920 - Socio 98/Sieur
+04/06/2022 11:36:49 - Alquiler/Producto - Total $1720 - Socio 134/Prowse
+04/06/2022 11:37:02 - Penalidad - Total $300 - Alquiler Any Number Can Play
+04/06/2022 11:37:13 - Alquiler/Producto - Total $1170 - Socio 120/Bellew
+
