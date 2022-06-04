@@ -80,50 +80,50 @@
             // lblNombreUsuario
             // 
             this.lblNombreUsuario.AutoSize = true;
-            this.lblNombreUsuario.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNombreUsuario.Font = new System.Drawing.Font("Stencil", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblNombreUsuario.Location = new System.Drawing.Point(35, 14);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
-            this.lblNombreUsuario.Size = new System.Drawing.Size(102, 32);
+            this.lblNombreUsuario.Size = new System.Drawing.Size(101, 26);
             this.lblNombreUsuario.TabIndex = 3;
             this.lblNombreUsuario.Text = "Nombre";
             // 
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblApellido.Font = new System.Drawing.Font("Stencil", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblApellido.Location = new System.Drawing.Point(236, 14);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(102, 32);
+            this.lblApellido.Size = new System.Drawing.Size(114, 26);
             this.lblApellido.TabIndex = 4;
             this.lblApellido.Text = "Apellido";
             // 
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblID.Font = new System.Drawing.Font("Stencil", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblID.Location = new System.Drawing.Point(439, 14);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(49, 32);
+            this.lblID.Size = new System.Drawing.Size(48, 26);
             this.lblID.TabIndex = 5;
             this.lblID.Text = "ID: ";
             // 
             // lblLimite
             // 
             this.lblLimite.AutoSize = true;
-            this.lblLimite.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblLimite.Font = new System.Drawing.Font("Stencil", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblLimite.Location = new System.Drawing.Point(35, 86);
             this.lblLimite.Name = "lblLimite";
-            this.lblLimite.Size = new System.Drawing.Size(141, 21);
+            this.lblLimite.Size = new System.Drawing.Size(155, 17);
             this.lblLimite.TabIndex = 6;
             this.lblLimite.Text = "Limite de películas:";
             // 
             // lblDisponible
             // 
             this.lblDisponible.AutoSize = true;
-            this.lblDisponible.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDisponible.Font = new System.Drawing.Font("Stencil", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblDisponible.Location = new System.Drawing.Point(286, 86);
             this.lblDisponible.Name = "lblDisponible";
-            this.lblDisponible.Size = new System.Drawing.Size(136, 21);
+            this.lblDisponible.Size = new System.Drawing.Size(147, 17);
             this.lblDisponible.TabIndex = 7;
             this.lblDisponible.Text = "Limite disponible: ";
             // 

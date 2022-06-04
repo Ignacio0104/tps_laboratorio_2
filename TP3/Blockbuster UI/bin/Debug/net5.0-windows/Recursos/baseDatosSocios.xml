@@ -4010,21 +4010,7 @@
     <ApellidoSocio>Bruckenthal</ApellidoSocio>
     <EmailSocio>abruckenthalx@hatena.ne.jp</EmailSocio>
     <TelefonoSocio>133-869-9629</TelefonoSocio>
-    <ListaDeAlquileres>
-      <AlquilerOfPelicula>
-        <Pelicula>
-          <IdPelicula>2</IdPelicula>
-          <TituloPelicula>Help!</TituloPelicula>
-          <DuracionPelicula>137</DuracionPelicula>
-          <GeneroPelicula>Terror</GeneroPelicula>
-          <DiasDeAlquiler>Regular</DiasDeAlquiler>
-          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
-          <Stock>17</Stock>
-        </Pelicula>
-        <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-05-25T16:55:09.0102171-03:00</FechaDeAlquiler>
-      </AlquilerOfPelicula>
-    </ListaDeAlquileres>
+    <ListaDeAlquileres />
     <LimitePeliculas>5</LimitePeliculas>
     <Penalidad>100</Penalidad>
     <TarjetaDeCredito>6395097460182500</TarjetaDeCredito>
@@ -4393,7 +4379,34 @@
     <ApellidoSocio>Dautry</ApellidoSocio>
     <EmailSocio>mdautry1s@answers.com</EmailSocio>
     <TelefonoSocio>123-677-0506</TelefonoSocio>
-    <ListaDeAlquileres />
+    <ListaDeAlquileres>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>3</IdPelicula>
+          <TituloPelicula>Corruptor, The</TituloPelicula>
+          <DuracionPelicula>92</DuracionPelicula>
+          <GeneroPelicula>Accion</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>4</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-04T11:18:13.9529635-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>595</IdPelicula>
+          <TituloPelicula>Waste Land</TituloPelicula>
+          <DuracionPelicula>96</DuracionPelicula>
+          <GeneroPelicula>Comedia</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
+          <Stock>13</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-04T11:18:17.9096787-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+    </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
     <Penalidad>100</Penalidad>
     <TarjetaDeCredito>3555258336253031</TarjetaDeCredito>
@@ -15116,5 +15129,55 @@
     <LimitePeliculas>5</LimitePeliculas>
     <Penalidad>100</Penalidad>
     <TarjetaDeCredito>4567123490005677</TarjetaDeCredito>
+  </Socio>
+  <Socio xsi:type="SocioPremium">
+    <IdSocio>1004</IdSocio>
+    <NombreSocio>Carolina</NombreSocio>
+    <ApellidoSocio>Scrofani</ApellidoSocio>
+    <EmailSocio>caro@gmail.com</EmailSocio>
+    <TelefonoSocio>1543216789</TelefonoSocio>
+    <ListaDeAlquileres>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>79</IdPelicula>
+          <TituloPelicula>Tale of Despereaux, The</TituloPelicula>
+          <DuracionPelicula>124</DuracionPelicula>
+          <GeneroPelicula>Animada</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
+          <Stock>8</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-04T10:29:58.9322272-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>596</IdPelicula>
+          <TituloPelicula>Tall Tale</TituloPelicula>
+          <DuracionPelicula>113</DuracionPelicula>
+          <GeneroPelicula>Animada</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>2</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-04T10:30:01.9486775-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>176</IdPelicula>
+          <TituloPelicula>Bushwhacked</TituloPelicula>
+          <DuracionPelicula>93</DuracionPelicula>
+          <GeneroPelicula>Comedia</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>25</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-04T10:30:03.7723792-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+    </ListaDeAlquileres>
+    <LimitePeliculas>20</LimitePeliculas>
+    <Penalidad>30</Penalidad>
   </Socio>
 </ArrayOfSocio>
