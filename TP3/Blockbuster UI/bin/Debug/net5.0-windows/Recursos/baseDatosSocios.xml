@@ -15016,4 +15016,105 @@
     <Penalidad>100</Penalidad>
     <TarjetaDeCredito>4234567890123453</TarjetaDeCredito>
   </Socio>
+  <Socio xsi:type="SocioPremium">
+    <IdSocio>1002</IdSocio>
+    <NombreSocio>Lucas</NombreSocio>
+    <ApellidoSocio>Rodriguez</ApellidoSocio>
+    <EmailSocio>lucas.rodriguez@gmail.com</EmailSocio>
+    <TelefonoSocio>45671234</TelefonoSocio>
+    <ListaDeAlquileres>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>600</IdPelicula>
+          <TituloPelicula>Toy Story</TituloPelicula>
+          <DuracionPelicula>98</DuracionPelicula>
+          <GeneroPelicula>Animada</GeneroPelicula>
+          <DiasDeAlquiler>Clasica</DiasDeAlquiler>
+          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
+          <Stock>29</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-04T10:02:42.5866392-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>598</IdPelicula>
+          <TituloPelicula>Avengers</TituloPelicula>
+          <DuracionPelicula>98</DuracionPelicula>
+          <GeneroPelicula>Accion</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
+          <Stock>22</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-04T10:02:47.521478-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>29</IdPelicula>
+          <TituloPelicula>Chasing Mavericks</TituloPelicula>
+          <DuracionPelicula>122</DuracionPelicula>
+          <GeneroPelicula>Drama</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>32</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-04T10:02:52.9511627-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+    </ListaDeAlquileres>
+    <LimitePeliculas>20</LimitePeliculas>
+    <Penalidad>30</Penalidad>
+  </Socio>
+  <Socio xsi:type="SocioClasico">
+    <IdSocio>1003</IdSocio>
+    <NombreSocio>Lautaro</NombreSocio>
+    <ApellidoSocio>Galarza</ApellidoSocio>
+    <EmailSocio>lauti.g@hotmail.com</EmailSocio>
+    <TelefonoSocio>45678902</TelefonoSocio>
+    <ListaDeAlquileres>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>2</IdPelicula>
+          <TituloPelicula>Help!</TituloPelicula>
+          <DuracionPelicula>137</DuracionPelicula>
+          <GeneroPelicula>Terror</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
+          <Stock>16</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-04T10:03:02.8070863-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>398</IdPelicula>
+          <TituloPelicula>Joan Rivers: A Piece of Work</TituloPelicula>
+          <DuracionPelicula>125</DuracionPelicula>
+          <GeneroPelicula>Comedia</GeneroPelicula>
+          <DiasDeAlquiler>Clasica</DiasDeAlquiler>
+          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
+          <Stock>39</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-04T10:03:05.4511123-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>575</IdPelicula>
+          <TituloPelicula>Screamers</TituloPelicula>
+          <DuracionPelicula>97</DuracionPelicula>
+          <GeneroPelicula>Terror</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
+          <Stock>17</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-04T10:03:08.1131278-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+    </ListaDeAlquileres>
+    <LimitePeliculas>5</LimitePeliculas>
+    <Penalidad>100</Penalidad>
+    <TarjetaDeCredito>4567123490005677</TarjetaDeCredito>
+  </Socio>
 </ArrayOfSocio>

@@ -11,7 +11,9 @@ namespace BibliotecaDeClases
         static string ruta;
         static ClaseSerializadora()
         {
-            ruta = ".\\Recursos";//El . me indica que la ruta es relativa al lugar donde se encuentre el usuario ejecutando el programa
+            string path = AppDomain.CurrentDomain.BaseDirectory;
+
+            ruta = path + @"Recursos";
         }
 
         public static void EscribirJson(T datos,string archivo)

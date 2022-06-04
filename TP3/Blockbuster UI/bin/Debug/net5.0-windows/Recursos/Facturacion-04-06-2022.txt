@@ -1,0 +1,5 @@
+
+04/06/2022 10:02:56 - Alquiler/Producto - Total $1470 - Socio 1002/Rodriguez
+04/06/2022 10:03:12 - Alquiler/Producto - Total $1370 - Socio 1003/Galarza
+
+
