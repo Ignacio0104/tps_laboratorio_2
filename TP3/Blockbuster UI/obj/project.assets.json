@@ -11,6 +11,16 @@
         "runtime": {
           "bin/placeholder/BibliotecaDeClases.dll": {}
         }
+      },
+      "Excepciones/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Excepciones.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Excepciones.dll": {}
+        }
       }
     }
   },
@@ -19,11 +29,17 @@
       "type": "project",
       "path": "../BibliotecaDeClases/BibliotecaDeClases.csproj",
       "msbuildProject": "../BibliotecaDeClases/BibliotecaDeClases.csproj"
+    },
+    "Excepciones/1.0.0": {
+      "type": "project",
+      "path": "../Excepciones/Excepciones.csproj",
+      "msbuildProject": "../Excepciones/Excepciones.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
-      "BibliotecaDeClases >= 1.0.0"
+      "BibliotecaDeClases >= 1.0.0",
+      "Excepciones >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -60,6 +76,9 @@
           "projectReferences": {
             "C:\\Users\\Nacho\\Desktop\\Programacion\\UTN\\TPLaboratorio2\\TP3\\BibliotecaDeClases\\BibliotecaDeClases.csproj": {
               "projectPath": "C:\\Users\\Nacho\\Desktop\\Programacion\\UTN\\TPLaboratorio2\\TP3\\BibliotecaDeClases\\BibliotecaDeClases.csproj"
+            },
+            "C:\\Users\\Nacho\\Desktop\\Programacion\\UTN\\TPLaboratorio2\\TP3\\Excepciones\\Excepciones.csproj": {
+              "projectPath": "C:\\Users\\Nacho\\Desktop\\Programacion\\UTN\\TPLaboratorio2\\TP3\\Excepciones\\Excepciones.csproj"
             }
           }
         }

@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v5.0": {
       "Blockbuster UI/1.0.0": {
         "dependencies": {
-          "BibliotecaDeClases": "1.0.0"
+          "BibliotecaDeClases": "1.0.0",
+          "Excepciones": "1.0.0"
         },
         "runtime": {
           "Blockbuster UI.dll": {}
@@ -17,6 +18,11 @@
       "BibliotecaDeClases/1.0.0": {
         "runtime": {
           "BibliotecaDeClases.dll": {}
+        }
+      },
+      "Excepciones/1.0.0": {
+        "runtime": {
+          "Excepciones.dll": {}
         }
       }
     }
@@ -28,6 +34,11 @@
       "sha512": ""
     },
     "BibliotecaDeClases/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Excepciones/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
