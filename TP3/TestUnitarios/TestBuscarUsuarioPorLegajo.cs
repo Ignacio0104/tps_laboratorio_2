@@ -1,18 +1,18 @@
-using BibliotecaDeClases;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using BibliotecaDeClases;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TestUnitarios
 {
     [TestClass]
-    public class TestCheckLogIn
+    public class TestBuscarUsuarioPorLegajo
     {
         [TestMethod]
-        public void ValidarCheckIn_SiIngresoDatosCorrectos_DebeDevolverUnUsuario()
+        public void BuscarUsuario_SiIngresoUnLegajoValido_DebeDevolverUnUsuario()
         {
             string path = AppDomain.CurrentDomain.BaseDirectory;
 
@@ -55,16 +55,15 @@ namespace TestUnitarios
 
             Usuario expected = Blockbuster.ListaDeEmpleados[48];
 
-            string usuario = "nacho2022";
-            string clave = "1234";
+            int legajo = 49;
 
-            Usuario actual = Blockbuster.CheckLogIn(usuario, clave);
+            Usuario actual = Blockbuster.BuscarUsuario(legajo);
 
             Assert.AreEqual(expected, actual);
         }
-
+        
         [TestMethod]
-        public void ValidarCheckIn_SiIngresoDatosIncorrectos_DebeDevolverNull()
+        public void BuscarUsuario_SiIngresoUnLegajoInvalido_DebeDevolverNull()
         {
             string path = AppDomain.CurrentDomain.BaseDirectory;
 
@@ -107,12 +106,12 @@ namespace TestUnitarios
 
             Usuario expected = null;
 
-            string usuario = "nacho20222";
-            string clave = "12345";
+            int legajo = 1000;
 
-            Usuario actual = Blockbuster.CheckLogIn(usuario, clave);
+            Usuario actual = Blockbuster.BuscarUsuario(legajo);
 
             Assert.AreEqual(expected, actual);
         }
+       
     }
 }
