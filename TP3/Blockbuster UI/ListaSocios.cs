@@ -36,7 +36,6 @@ namespace Blockbuster_UI
                 int indice = dGridSocios.Rows.Add();
                 CargarSociosConFiltro(item, indice);
                 indice++;
-                indice++;
             }
         }
 

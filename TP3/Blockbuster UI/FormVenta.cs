@@ -24,7 +24,13 @@ namespace Blockbuster_UI
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            CargarInformacionSocios();
+            try
+            {
+                CargarInformacionSocios();
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error en la carga de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }                   
         }
 
         private void btnAgregarAlquiler_Click(object sender, EventArgs e)

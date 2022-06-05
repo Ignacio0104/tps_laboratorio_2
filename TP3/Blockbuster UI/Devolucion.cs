@@ -32,7 +32,7 @@ namespace Blockbuster_UI
             {
                 if (esPremium)
                 {
-                    penalidad = (alquilerDevolver.Penalidad * 30) / 100 * difereciaDias;
+                    penalidad = ((alquilerDevolver.Penalidad * 30) / 100 )* difereciaDias;
                 }
                 else
                 {
