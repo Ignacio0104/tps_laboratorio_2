@@ -119,48 +119,55 @@ namespace Blockbuster_UI
 
         private void txtInputBusqueda_TextChanged(object sender, EventArgs e)
         {
-            dGridSocios.Rows.Clear();
-            foreach (Socio item in Blockbuster.ListaDeSocios)
+            if (txtInputBusqueda.Text.Length > 0)
             {
-                int idAux;
-                int indice;
-                switch (cmbCriterioBusqueda.SelectedItem)
+                dGridSocios.Rows.Clear();
+                foreach (Socio item in Blockbuster.ListaDeSocios)
                 {
-                    case "ID":
-                        int.TryParse(txtInputBusqueda.Text, out idAux);
-                        if (item.IdSocio == idAux)
-                        {
-                            indice = dGridSocios.Rows.Add();
-                            CargarSociosConFiltro(item, indice);
-                            indice++;
-                        }
-                        break;
-                    case "Nombre":
-                        if (item.NombreSocio.ToLower().Contains(txtInputBusqueda.Text.ToLower()))
-                        {
-                            indice = dGridSocios.Rows.Add();
-                            CargarSociosConFiltro(item, indice);
-                            indice++;
-                        }
-                        break;
-                    case "Apellido":
-                        if (item.ApellidoSocio.ToLower().Contains(txtInputBusqueda.Text.ToLower()))
-                        {
-                            indice = dGridSocios.Rows.Add();
-                            CargarSociosConFiltro(item, indice);
-                            indice++;
-                        }
-                        break;
-                    case "Mail":
-                        if (item.EmailSocio.ToLower().Contains(txtInputBusqueda.Text.ToLower()))
-                        {
-                            indice = dGridSocios.Rows.Add();
-                            CargarSociosConFiltro(item, indice);
-                            indice++;
-                        }
-                        break;
+                    int idAux;
+                    int indice;
+                    switch (cmbCriterioBusqueda.SelectedItem)
+                    {
+                        case "ID":
+                            int.TryParse(txtInputBusqueda.Text, out idAux);
+                            if (item.IdSocio == idAux)
+                            {
+                                indice = dGridSocios.Rows.Add();
+                                CargarSociosConFiltro(item, indice);
+                                indice++;
+                            }
+                            break;
+                        case "Nombre":
+                            if (item.NombreSocio.ToLower().Contains(txtInputBusqueda.Text.ToLower()))
+                            {
+                                indice = dGridSocios.Rows.Add();
+                                CargarSociosConFiltro(item, indice);
+                                indice++;
+                            }
+                            break;
+                        case "Apellido":
+                            if (item.ApellidoSocio.ToLower().Contains(txtInputBusqueda.Text.ToLower()))
+                            {
+                                indice = dGridSocios.Rows.Add();
+                                CargarSociosConFiltro(item, indice);
+                                indice++;
+                            }
+                            break;
+                        case "Mail":
+                            if (item.EmailSocio.ToLower().Contains(txtInputBusqueda.Text.ToLower()))
+                            {
+                                indice = dGridSocios.Rows.Add();
+                                CargarSociosConFiltro(item, indice);
+                                indice++;
+                            }
+                            break;
+                    }
                 }
 
+            }
+            else
+            {
+                CargarSocios();
             }
         }
     }
