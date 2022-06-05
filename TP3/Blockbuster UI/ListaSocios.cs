@@ -119,9 +119,10 @@ namespace Blockbuster_UI
 
         private void txtInputBusqueda_TextChanged(object sender, EventArgs e)
         {
+            dGridSocios.Rows.Clear();
             if (txtInputBusqueda.Text.Length > 0)
             {
-                dGridSocios.Rows.Clear();
+                
                 foreach (Socio item in Blockbuster.ListaDeSocios)
                 {
                     int idAux;
