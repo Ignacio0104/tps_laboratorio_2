@@ -40,7 +40,7 @@ namespace Blockbuster_UI
         {
             try
             {
-                Blockbuster.ListaDeEmpleados = ClaseSerializadora<List<Usuario>>.LeerJson("baseDatosEmpleados");
+                Blockbuster.ListaDeEmpleados = MetodosSQL.LeerListaUsuarios();
             }
             catch (Exception ex)
             {

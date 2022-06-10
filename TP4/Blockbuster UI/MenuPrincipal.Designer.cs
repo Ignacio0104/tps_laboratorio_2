@@ -37,23 +37,21 @@
             this.btnInventario = new System.Windows.Forms.Button();
             this.btnVenta = new System.Windows.Forms.Button();
             this.panelPrincipal = new System.Windows.Forms.Panel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnListaEmpleados = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(157)))));
+            this.panelMenu.Controls.Add(this.btnListaEmpleados);
             this.panelMenu.Controls.Add(this.btnSalirSinGuardar);
             this.panelMenu.Controls.Add(this.picUsuario);
             this.panelMenu.Controls.Add(this.lblNombreUsuario);
             this.panelMenu.Controls.Add(this.btnSocios);
             this.panelMenu.Controls.Add(this.btnInventario);
             this.panelMenu.Controls.Add(this.btnVenta);
-            this.panelMenu.Controls.Add(this.menuStrip1);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(197)))), ((int)(((byte)(0)))));
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -70,7 +68,7 @@
             this.btnSalirSinGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(157)))));
             this.btnSalirSinGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalirSinGuardar.Image")));
             this.btnSalirSinGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalirSinGuardar.Location = new System.Drawing.Point(0, 462);
+            this.btnSalirSinGuardar.Location = new System.Drawing.Point(0, 475);
             this.btnSalirSinGuardar.Name = "btnSalirSinGuardar";
             this.btnSalirSinGuardar.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.btnSalirSinGuardar.Size = new System.Drawing.Size(204, 41);
@@ -84,7 +82,7 @@
             // 
             this.picUsuario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picUsuario.BackgroundImage")));
             this.picUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picUsuario.Location = new System.Drawing.Point(-3, 32);
+            this.picUsuario.Location = new System.Drawing.Point(-3, 10);
             this.picUsuario.Name = "picUsuario";
             this.picUsuario.Size = new System.Drawing.Size(204, 132);
             this.picUsuario.TabIndex = 6;
@@ -94,7 +92,7 @@
             // 
             this.lblNombreUsuario.AutoSize = true;
             this.lblNombreUsuario.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNombreUsuario.Location = new System.Drawing.Point(9, 177);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(9, 154);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
             this.lblNombreUsuario.Size = new System.Drawing.Size(78, 25);
             this.lblNombreUsuario.TabIndex = 2;
@@ -160,22 +158,22 @@
             this.panelPrincipal.Size = new System.Drawing.Size(896, 534);
             this.panelPrincipal.TabIndex = 1;
             // 
-            // menuStrip1
+            // btnListaEmpleados
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usuariosToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(204, 24);
-            this.menuStrip1.TabIndex = 8;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // usuariosToolStripMenuItem
-            // 
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
-            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            this.btnListaEmpleados.FlatAppearance.BorderSize = 0;
+            this.btnListaEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnListaEmpleados.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnListaEmpleados.Image = ((System.Drawing.Image)(resources.GetObject("btnListaEmpleados.Image")));
+            this.btnListaEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnListaEmpleados.Location = new System.Drawing.Point(0, 396);
+            this.btnListaEmpleados.Name = "btnListaEmpleados";
+            this.btnListaEmpleados.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnListaEmpleados.Size = new System.Drawing.Size(204, 41);
+            this.btnListaEmpleados.TabIndex = 8;
+            this.btnListaEmpleados.Text = "Lista de empleados";
+            this.btnListaEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListaEmpleados.UseVisualStyleBackColor = true;
+            this.btnListaEmpleados.Click += new System.EventHandler(this.btnListaEmpleados_Click);
             // 
             // MenuPrincipal
             // 
@@ -197,8 +195,6 @@
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -213,7 +209,6 @@
         private System.Windows.Forms.Label lblNombreUsuario;
         private System.Windows.Forms.PictureBox picUsuario;
         private System.Windows.Forms.Button btnSalirSinGuardar;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.Button btnListaEmpleados;
     }
 }

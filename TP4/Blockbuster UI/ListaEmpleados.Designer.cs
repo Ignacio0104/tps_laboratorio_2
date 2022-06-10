@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.dGridEmpleados = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGridEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,28 +38,21 @@
             this.dGridEmpleados.Location = new System.Drawing.Point(45, 29);
             this.dGridEmpleados.Name = "dGridEmpleados";
             this.dGridEmpleados.RowTemplate.Height = 25;
-            this.dGridEmpleados.Size = new System.Drawing.Size(691, 373);
+            this.dGridEmpleados.Size = new System.Drawing.Size(799, 445);
             this.dGridEmpleados.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(661, 408);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.dGridEmpleados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridEmpleados_CellClick);
             // 
             // ListaEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(157)))));
+            this.ClientSize = new System.Drawing.Size(896, 534);
             this.Controls.Add(this.dGridEmpleados);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListaEmpleados";
-            this.Text = "ListaEmpleados";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Lista de Empleados";
             ((System.ComponentModel.ISupportInitialize)(this.dGridEmpleados)).EndInit();
             this.ResumeLayout(false);
 
@@ -69,6 +61,5 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dGridEmpleados;
-        private System.Windows.Forms.Button button1;
     }
 }

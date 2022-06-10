@@ -16,14 +16,32 @@ namespace Blockbuster_UI
         public ListaEmpleados()
         {
             InitializeComponent();
-           
+            dGridEmpleados.DataSource = Blockbuster.ListaDeEmpleados;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void dGridEmpleados_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            List<Usuario> listaAux = new List<Usuario>();
-            listaAux = MetodosSQL.LeerListaUsuarios();
-            dGridEmpleados.DataSource = listaAux;
+            if (e.RowIndex >= 0)
+            {
+                try
+                {
+                    int id = (int)dGridEmpleados.Rows[e.RowIndex].Cells[0].Value;
+                    AgregarEmpleado frmModificacion = new AgregarEmpleado(Blockbuster.BuscarUsuario(id));                 
+                    frmModificacion.ShowDialog();
+                    if (frmModificacion.DialogResult == DialogResult.OK)
+                    {
+                        MetodosSQL.GuardarUsuario(frmModificacion.usuario);
+                        Blockbuster.ListaDeEmpleados = MetodosSQL.LeerListaUsuarios();
+                        dGridEmpleados.DataSource = null;
+                        dGridEmpleados.DataSource = Blockbuster.ListaDeEmpleados;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK);
+                }
+
+            }
         }
     }
 }

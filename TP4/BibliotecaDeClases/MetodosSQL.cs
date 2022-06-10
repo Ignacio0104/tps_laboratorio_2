@@ -55,6 +55,74 @@ namespace BibliotecaDeClases
             }
         }
 
+        public static void ModificarUsuario(Usuario usuario)
+        {
+            try
+            {
+                connection.Open();
+                command.Parameters.Clear();
+                command.CommandText = $"UPDATE EMPLEADOS SET nombre=@nombre, apellido=@apellido, dni=@dni, " +
+                    $"nombreUsuario=@nombreUsuario,password=@password,esAdmin=@esAdmin,salario=@salario, " +
+                    $"fechaIngreso=@fechaIngreso,fechaNacimiento=@fechaNacimiento " +
+                    $"WHERE legajoEmpleado = {usuario.Legajo}";
+                command.Parameters.AddWithValue("@nombre", usuario.Nombre);
+                command.Parameters.AddWithValue("@apellido", usuario.Apellido);
+                command.Parameters.AddWithValue("@dni", usuario.DNI);
+                command.Parameters.AddWithValue("@nombreUsuario", usuario.NombreUsuario);
+                command.Parameters.AddWithValue("@password", usuario.Password);
+                command.Parameters.AddWithValue("@esAdmin", usuario.EsAdmin ? 1 : 0);
+                command.Parameters.AddWithValue("@salario", usuario.Salario);
+                command.Parameters.AddWithValue("@fechaIngreso", usuario.FechaIngreso);
+                command.Parameters.AddWithValue("@fechaNacimiento", usuario.FechaNacimiento);
+                command.ExecuteNonQuery();
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+
+        public static void GuardarListaUsuarios(List<Usuario> usuarios)
+        {
+            try
+            {             
+                connection.Open();
+                foreach (Usuario usuario in Blockbuster.ListaDeEmpleados)
+                {
+                    command.Parameters.Clear();
+                    command.CommandText = $"INSERT INTO EMPLEADOS(legajoEmpleado,nombre,apellido,dni,nombreUsuario,password," +
+                        $"esAdmin,salario,fechaIngreso,fechaNacimiento) VALUES(@legajo,@nombre,@apellido,@dni,@nombreUsuario," +
+                        $"@password,@esAdmin,@salario,@fechaIngreso,@fechaNacimiento)";
+                    command.Parameters.AddWithValue("@legajo", usuario.Legajo);
+                    command.Parameters.AddWithValue("@nombre", usuario.Nombre);
+                    command.Parameters.AddWithValue("@apellido", usuario.Apellido);
+                    command.Parameters.AddWithValue("@dni", usuario.DNI);
+                    command.Parameters.AddWithValue("@nombreUsuario", usuario.NombreUsuario);
+                    command.Parameters.AddWithValue("@password", usuario.Password);
+                    command.Parameters.AddWithValue("@esAdmin", usuario.EsAdmin ? 1 : 0);
+                    command.Parameters.AddWithValue("@salario", usuario.Salario);
+                    command.Parameters.AddWithValue("@fechaIngreso", usuario.FechaIngreso);
+                    command.Parameters.AddWithValue("@fechaNacimiento", usuario.FechaNacimiento);
+                    command.ExecuteNonQuery();
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
         public static List<Usuario> LeerListaUsuarios()
         {
             List<Usuario> listaUsuariosAux = new List<Usuario>();

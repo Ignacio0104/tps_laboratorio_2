@@ -67,9 +67,11 @@ namespace Blockbuster_UI
                 {
                     try
                     {
+                        MetodosSQL.GuardarListaUsuarios(Blockbuster.ListaDeEmpleados);
                         ClaseSerializadora<List<Socio>>.EscribirXml(Blockbuster.ListaDeSocios, "baseDatosSocios");
                         ClaseSerializadora<List<Producto>>.EscribirJson(Blockbuster.ListaDeProductos, "baseDatosProductos");
                         ClaseSerializadora<List<Pelicula>>.EscribirJson(Blockbuster.ListaDePeliculas, "baseDatosPeliculas");
+                        
                         using (StreamWriter outputfile = File.AppendText($".\\Recursos\\Facturacion-{DateTime.Now.ToString("dd-MM-yyyy")}.txt"))
                         {
                             outputfile.WriteLine(Blockbuster.FacturacionDiaria);
@@ -113,10 +115,9 @@ namespace Blockbuster_UI
             }
         }
 
-        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnListaEmpleados_Click(object sender, EventArgs e)
         {
-            ListaEmpleados frmEmpleados = new ListaEmpleados();
-            frmEmpleados.ShowDialog();
+            CargarMenu(new ListaEmpleados());
         }
     }
 }
