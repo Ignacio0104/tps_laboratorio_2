@@ -1,0 +1,65 @@
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\bin\Debug\net5.0-windows\Blockbuster UI.exe
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\bin\Debug\net5.0-windows\Blockbuster UI.deps.json
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\bin\Debug\net5.0-windows\Blockbuster UI.runtimeconfig.json
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\bin\Debug\net5.0-windows\Blockbuster UI.runtimeconfig.dev.json
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\bin\Debug\net5.0-windows\Blockbuster UI.dll
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\bin\Debug\net5.0-windows\Blockbuster UI.pdb
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster UI.csproj.AssemblyReference.cache
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.Inventario.resources
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.ListaSocios.resources
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.login.resources
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.MenuPrincipal.resources
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster UI.csproj.GenerateResource.cache
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster UI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster UI.AssemblyInfoInputs.cache
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster UI.AssemblyInfo.cs
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster UI.csproj.CoreCompileInputs.cache
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster UI.dll
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\refint\Blockbuster UI.dll
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster UI.pdb
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster UI.genruntimeconfig.cache
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\ref\Blockbuster UI.dll
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.Devolucion.resources
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.FormVenta.resources
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.Properties.Resources.resources
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\bin\Debug\net5.0-windows\BibliotecaDeClases.dll
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\bin\Debug\net5.0-windows\BibliotecaDeClases.pdb
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster UI.csproj.CopyComplete
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.AgregarAlquiler.resources
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.AgregarProducto.resources
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.AgregarSocio.resources
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\bin\Debug\net5.0-windows\Excepciones.dll
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Blockbuster UI\bin\Debug\net5.0-windows\Excepciones.pdb
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\bin\Debug\net5.0-windows\Blockbuster UI.exe
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\bin\Debug\net5.0-windows\Blockbuster UI.deps.json
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\bin\Debug\net5.0-windows\Blockbuster UI.runtimeconfig.json
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\bin\Debug\net5.0-windows\Blockbuster UI.runtimeconfig.dev.json
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\bin\Debug\net5.0-windows\Blockbuster UI.dll
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\bin\Debug\net5.0-windows\Blockbuster UI.pdb
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\bin\Debug\net5.0-windows\BibliotecaDeClases.dll
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\bin\Debug\net5.0-windows\Excepciones.dll
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\bin\Debug\net5.0-windows\BibliotecaDeClases.pdb
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\bin\Debug\net5.0-windows\Excepciones.pdb
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster UI.csproj.AssemblyReference.cache
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.AgregarAlquiler.resources
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.AgregarProducto.resources
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.AgregarSocio.resources
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.Devolucion.resources
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.FormVenta.resources
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.Inventario.resources
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.ListaSocios.resources
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.login.resources
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.MenuPrincipal.resources
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.Properties.Resources.resources
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster UI.csproj.GenerateResource.cache
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster UI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster UI.AssemblyInfoInputs.cache
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster UI.AssemblyInfo.cs
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster UI.csproj.CoreCompileInputs.cache
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster UI.csproj.CopyComplete
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster UI.dll
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\refint\Blockbuster UI.dll
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster UI.pdb
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster UI.genruntimeconfig.cache
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\ref\Blockbuster UI.dll
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.ListaEmpleados.resources
