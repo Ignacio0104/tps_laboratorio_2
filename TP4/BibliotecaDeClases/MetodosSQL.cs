@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BibliotecaDeClases;
 
 namespace BibliotecaDeClases
 {
@@ -22,7 +23,7 @@ namespace BibliotecaDeClases
             command.Connection = connection;
         }
 
-        public static void Guardar(Usuario usuario)
+        public static void GuardarUsuario(Usuario usuario)
         {
             try
             {
@@ -42,6 +43,38 @@ namespace BibliotecaDeClases
                 command.Parameters.AddWithValue("@fechaIngreso", usuario.FechaIngreso);
                 command.Parameters.AddWithValue("@fechaNacimiento", usuario.FechaNacimiento);
                 command.ExecuteNonQuery();
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        public static List<Usuario> LeerListaUsuarios()
+        {
+            List<Usuario> listaUsuariosAux = new List<Usuario>();
+            try
+            {
+                connection.Open();
+                command.CommandText = $"SELECT legajoEmpleado,nombre,apellido,dni,nombreUsuario,password,esAdmin,salario,fechaIngreso,fechaNacimiento" +
+                    $" FROM EMPLEADOS ";
+                using (SqlDataReader dataReader = command.ExecuteReader())
+                {
+                    while (dataReader.Read())
+                    {
+                        listaUsuariosAux.Add(new Usuario(Convert.ToInt32(dataReader["legajoEmpleado"]), dataReader["nombre"].ToString(), 
+                            dataReader["apellido"].ToString(), Convert.ToInt32(dataReader["dni"]), dataReader["nombreUsuario"].ToString(),
+                            dataReader["password"].ToString(), Convert.ToInt32(dataReader["esAdmin"])==0? true:false,Convert.ToDateTime(dataReader["fechaIngreso"]),
+                            Convert.ToDateTime(dataReader["fechaNacimiento"]), Convert.ToDouble(dataReader["salario"])));
+                    }
+                }
+
+                return listaUsuariosAux;
 
             }
             catch (Exception)

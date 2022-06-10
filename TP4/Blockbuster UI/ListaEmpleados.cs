@@ -16,16 +16,14 @@ namespace Blockbuster_UI
         public ListaEmpleados()
         {
             InitializeComponent();
-            dGridEmpleados.DataSource = Blockbuster.ListaDeEmpleados;
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach (Usuario item in Blockbuster.ListaDeEmpleados)
-            {
-                MetodosSQL.Guardar(item);
-            }
-            
+            List<Usuario> listaAux = new List<Usuario>();
+            listaAux = MetodosSQL.LeerListaUsuarios();
+            dGridEmpleados.DataSource = listaAux;
         }
     }
 }

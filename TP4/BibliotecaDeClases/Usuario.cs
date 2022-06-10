@@ -26,6 +26,21 @@ namespace BibliotecaDeClases
 
         }
 
+        public Usuario(int legajo,string nombre, string apellido,int dni, string nombreUsuario, string password, bool esAdmin,
+                        DateTime fechaIngreso, DateTime fechaNacimiento, double salario)
+        {
+            this.legajo = legajo;
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.dni = dni;
+            this.nombreUsuario = nombreUsuario;
+            this.Password = password;
+            this.esAdmin = esAdmin;
+            this.fechaIngreso = fechaIngreso;
+            this.fechaNacimiento = fechaNacimiento;
+            this.salario = salario;
+        }
+
         public Usuario(string nombre, string apellido,
             int dni, string nombreUsuario, string password, bool esAdmin,
             DateTime fechaIngreso, DateTime fechaNacimiento, double salario)
