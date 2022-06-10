@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dGridEmpleados = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGridEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,11 +42,22 @@
             this.dGridEmpleados.Size = new System.Drawing.Size(691, 373);
             this.dGridEmpleados.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(661, 408);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ListaEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dGridEmpleados);
             this.Name = "ListaEmpleados";
             this.Text = "ListaEmpleados";
@@ -57,5 +69,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dGridEmpleados;
+        private System.Windows.Forms.Button button1;
     }
 }

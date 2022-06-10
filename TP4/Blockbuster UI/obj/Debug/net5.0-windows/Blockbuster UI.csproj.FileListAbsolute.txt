@@ -63,3 +63,9 @@ C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\De
 C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster UI.genruntimeconfig.cache
 C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\ref\Blockbuster UI.dll
 C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\obj\Debug\net5.0-windows\Blockbuster_UI.ListaEmpleados.resources
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Blockbuster UI\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

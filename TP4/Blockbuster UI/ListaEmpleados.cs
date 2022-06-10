@@ -19,7 +19,13 @@ namespace Blockbuster_UI
             dGridEmpleados.DataSource = Blockbuster.ListaDeEmpleados;
         }
 
-
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (Usuario item in Blockbuster.ListaDeEmpleados)
+            {
+                MetodosSQL.Guardar(item);
+            }
+            
+        }
     }
 }
