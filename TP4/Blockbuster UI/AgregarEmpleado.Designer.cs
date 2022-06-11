@@ -50,22 +50,25 @@
             this.picOcultar = new System.Windows.Forms.PictureBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
+            this.lblLegajo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picMostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOcultar)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombreEmpleado
             // 
-            this.txtNombreEmpleado.Location = new System.Drawing.Point(42, 45);
+            this.txtNombreEmpleado.Location = new System.Drawing.Point(40, 69);
             this.txtNombreEmpleado.Name = "txtNombreEmpleado";
             this.txtNombreEmpleado.Size = new System.Drawing.Size(188, 23);
             this.txtNombreEmpleado.TabIndex = 0;
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(388, 347);
+            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmar.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnConfirmar.Location = new System.Drawing.Point(322, 325);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(75, 23);
+            this.btnConfirmar.Size = new System.Drawing.Size(141, 39);
             this.btnConfirmar.TabIndex = 23;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = true;
@@ -74,7 +77,8 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(42, 27);
+            this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.lblNombre.Location = new System.Drawing.Point(40, 51);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(57, 15);
             this.lblNombre.TabIndex = 2;
@@ -83,7 +87,8 @@
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(42, 71);
+            this.lblApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.lblApellido.Location = new System.Drawing.Point(40, 95);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(54, 15);
             this.lblApellido.TabIndex = 4;
@@ -91,7 +96,7 @@
             // 
             // txtApellidoEmpleado
             // 
-            this.txtApellidoEmpleado.Location = new System.Drawing.Point(42, 89);
+            this.txtApellidoEmpleado.Location = new System.Drawing.Point(40, 113);
             this.txtApellidoEmpleado.Name = "txtApellidoEmpleado";
             this.txtApellidoEmpleado.Size = new System.Drawing.Size(188, 23);
             this.txtApellidoEmpleado.TabIndex = 3;
@@ -99,7 +104,8 @@
             // lblDni
             // 
             this.lblDni.AutoSize = true;
-            this.lblDni.Location = new System.Drawing.Point(42, 115);
+            this.lblDni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.lblDni.Location = new System.Drawing.Point(40, 139);
             this.lblDni.Name = "lblDni";
             this.lblDni.Size = new System.Drawing.Size(30, 15);
             this.lblDni.TabIndex = 6;
@@ -107,7 +113,7 @@
             // 
             // txtDni
             // 
-            this.txtDni.Location = new System.Drawing.Point(42, 133);
+            this.txtDni.Location = new System.Drawing.Point(40, 157);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(188, 23);
             this.txtDni.TabIndex = 5;
@@ -115,7 +121,8 @@
             // lblNombreUsuario
             // 
             this.lblNombreUsuario.AutoSize = true;
-            this.lblNombreUsuario.Location = new System.Drawing.Point(42, 159);
+            this.lblNombreUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.lblNombreUsuario.Location = new System.Drawing.Point(40, 183);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
             this.lblNombreUsuario.Size = new System.Drawing.Size(66, 15);
             this.lblNombreUsuario.TabIndex = 8;
@@ -123,7 +130,7 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(42, 177);
+            this.txtUsername.Location = new System.Drawing.Point(40, 201);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(188, 23);
             this.txtUsername.TabIndex = 7;
@@ -131,7 +138,8 @@
             // lblClave
             // 
             this.lblClave.AutoSize = true;
-            this.lblClave.Location = new System.Drawing.Point(42, 203);
+            this.lblClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.lblClave.Location = new System.Drawing.Point(40, 227);
             this.lblClave.Name = "lblClave";
             this.lblClave.Size = new System.Drawing.Size(39, 15);
             this.lblClave.TabIndex = 10;
@@ -139,7 +147,7 @@
             // 
             // txtClave
             // 
-            this.txtClave.Location = new System.Drawing.Point(42, 221);
+            this.txtClave.Location = new System.Drawing.Point(40, 245);
             this.txtClave.Name = "txtClave";
             this.txtClave.PasswordChar = '*';
             this.txtClave.Size = new System.Drawing.Size(188, 23);
@@ -148,7 +156,8 @@
             // chkEsAdmin
             // 
             this.chkEsAdmin.AutoSize = true;
-            this.chkEsAdmin.Location = new System.Drawing.Point(42, 311);
+            this.chkEsAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.chkEsAdmin.Location = new System.Drawing.Point(40, 335);
             this.chkEsAdmin.Name = "chkEsAdmin";
             this.chkEsAdmin.Size = new System.Drawing.Size(102, 19);
             this.chkEsAdmin.TabIndex = 11;
@@ -158,7 +167,8 @@
             // lblSalario
             // 
             this.lblSalario.AutoSize = true;
-            this.lblSalario.Location = new System.Drawing.Point(93, 247);
+            this.lblSalario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.lblSalario.Location = new System.Drawing.Point(91, 271);
             this.lblSalario.Name = "lblSalario";
             this.lblSalario.Size = new System.Drawing.Size(45, 15);
             this.lblSalario.TabIndex = 15;
@@ -166,7 +176,7 @@
             // 
             // txtSalario
             // 
-            this.txtSalario.Location = new System.Drawing.Point(93, 265);
+            this.txtSalario.Location = new System.Drawing.Point(91, 289);
             this.txtSalario.Name = "txtSalario";
             this.txtSalario.Size = new System.Drawing.Size(137, 23);
             this.txtSalario.TabIndex = 14;
@@ -174,7 +184,8 @@
             // lblSignoPesos
             // 
             this.lblSignoPesos.AutoSize = true;
-            this.lblSignoPesos.Location = new System.Drawing.Point(59, 268);
+            this.lblSignoPesos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.lblSignoPesos.Location = new System.Drawing.Point(57, 292);
             this.lblSignoPesos.Name = "lblSignoPesos";
             this.lblSignoPesos.Size = new System.Drawing.Size(13, 15);
             this.lblSignoPesos.TabIndex = 16;
@@ -182,14 +193,17 @@
             // 
             // dateFechaNacimiento
             // 
-            this.dateFechaNacimiento.Location = new System.Drawing.Point(271, 51);
+            this.dateFechaNacimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(102)))));
+            this.dateFechaNacimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.dateFechaNacimiento.Location = new System.Drawing.Point(272, 75);
             this.dateFechaNacimiento.Name = "dateFechaNacimiento";
             this.dateFechaNacimiento.TabIndex = 18;
             // 
             // lblFechaNacimiento
             // 
             this.lblFechaNacimiento.AutoSize = true;
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(271, 27);
+            this.lblFechaNacimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(272, 51);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
             this.lblFechaNacimiento.Size = new System.Drawing.Size(104, 15);
             this.lblFechaNacimiento.TabIndex = 19;
@@ -199,7 +213,7 @@
             // 
             this.picMostrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picMostrar.BackgroundImage")));
             this.picMostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picMostrar.Location = new System.Drawing.Point(236, 221);
+            this.picMostrar.Location = new System.Drawing.Point(234, 245);
             this.picMostrar.Name = "picMostrar";
             this.picMostrar.Size = new System.Drawing.Size(36, 27);
             this.picMostrar.TabIndex = 20;
@@ -210,7 +224,7 @@
             // 
             this.picOcultar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picOcultar.BackgroundImage")));
             this.picOcultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picOcultar.Location = new System.Drawing.Point(236, 221);
+            this.picOcultar.Location = new System.Drawing.Point(234, 245);
             this.picOcultar.Name = "picOcultar";
             this.picOcultar.Size = new System.Drawing.Size(36, 27);
             this.picOcultar.TabIndex = 21;
@@ -222,9 +236,10 @@
             // 
             this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnEliminar.Location = new System.Drawing.Point(388, 221);
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Location = new System.Drawing.Point(387, 245);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 56);
+            this.btnEliminar.Size = new System.Drawing.Size(76, 53);
             this.btnEliminar.TabIndex = 22;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Visible = false;
@@ -240,11 +255,24 @@
             this.lblError.TabIndex = 24;
             this.lblError.Visible = false;
             // 
+            // lblLegajo
+            // 
+            this.lblLegajo.AutoSize = true;
+            this.lblLegajo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblLegajo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.lblLegajo.Location = new System.Drawing.Point(36, 9);
+            this.lblLegajo.Name = "lblLegajo";
+            this.lblLegajo.Size = new System.Drawing.Size(61, 20);
+            this.lblLegajo.TabIndex = 25;
+            this.lblLegajo.Text = "Legajo: ";
+            // 
             // AgregarEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(505, 382);
+            this.Controls.Add(this.lblLegajo);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.lblFechaNacimiento);
@@ -266,8 +294,12 @@
             this.Controls.Add(this.txtNombreEmpleado);
             this.Controls.Add(this.picMostrar);
             this.Controls.Add(this.picOcultar);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AgregarEmpleado";
-            this.Text = "AgregarEmpleado";
+            this.Text = "Agregar empleado";
             this.Load += new System.EventHandler(this.AgregarEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picMostrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOcultar)).EndInit();
@@ -299,5 +331,6 @@
         private System.Windows.Forms.PictureBox picOcultar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Label lblLegajo;
     }
 }

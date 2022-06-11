@@ -61,6 +61,7 @@ namespace Blockbuster_UI
 
         private void CargarDatosUsuario()
         {
+            lblLegajo.Text += $" {usuarioElegido.Legajo}";
             txtNombreEmpleado.Text = usuarioElegido.Nombre;
             txtApellidoEmpleado.Text = usuarioElegido.Apellido;
             txtDni.Text= usuarioElegido.DNI.ToString();
