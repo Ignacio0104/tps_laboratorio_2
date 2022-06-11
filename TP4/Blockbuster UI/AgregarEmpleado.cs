@@ -58,6 +58,7 @@ namespace Blockbuster_UI
             dateFechaNacimiento.SelectionStart = usuario.FechaNacimiento;
             dateFechaNacimiento.SelectionEnd = usuario.FechaNacimiento;
             chkEsAdmin.Checked = usuario.EsAdmin;
+            btnEliminar.Visible = true;
         }
 
         private void ActualizarDatosUsuario()
@@ -84,6 +85,17 @@ namespace Blockbuster_UI
             picMostrar.Visible = false;
             picOcultar.Visible = true;
             txtClave.PasswordChar = '\0';
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult opcion = MessageBox.Show($"Esta a punto de borrar al usuario {usuario.Nombre} {usuario.Apellido}\n ¿Desea continuar?", $"Eliminar usuario {usuario.Legajo}", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if(opcion == DialogResult.OK)
+            {
+                Blockbuster.ListaDeEmpleados.Remove(usuario);
+                this.DialogResult = DialogResult.OK;
+            }
+            
         }
     }
 }

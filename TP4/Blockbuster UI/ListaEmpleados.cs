@@ -48,8 +48,8 @@ namespace Blockbuster_UI
             frmModificacion.ShowDialog();
             if (frmModificacion.DialogResult == DialogResult.OK)
             {
-                dGridEmpleados.DataSource = null;
-                dGridEmpleados.DataSource = Blockbuster.ListaDeEmpleados;
+                dGridEmpleados.Rows.Clear();
+                CargarEmpleados();
             }
         }
 

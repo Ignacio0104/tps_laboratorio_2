@@ -48,6 +48,7 @@
             this.lblFechaNacimiento = new System.Windows.Forms.Label();
             this.picMostrar = new System.Windows.Forms.PictureBox();
             this.picOcultar = new System.Windows.Forms.PictureBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picMostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOcultar)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +65,7 @@
             this.btnConfirmar.Location = new System.Drawing.Point(388, 347);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(75, 23);
-            this.btnConfirmar.TabIndex = 1;
+            this.btnConfirmar.TabIndex = 23;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = true;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
@@ -216,11 +217,24 @@
             this.picOcultar.Visible = false;
             this.picOcultar.Click += new System.EventHandler(this.picOcultar_Click);
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnEliminar.Location = new System.Drawing.Point(388, 221);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 56);
+            this.btnEliminar.TabIndex = 22;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Visible = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // AgregarEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(505, 382);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.lblFechaNacimiento);
             this.Controls.Add(this.dateFechaNacimiento);
             this.Controls.Add(this.lblSignoPesos);
@@ -271,5 +285,6 @@
         private System.Windows.Forms.Label lblFechaNacimiento;
         private System.Windows.Forms.PictureBox picMostrar;
         private System.Windows.Forms.PictureBox picOcultar;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }
