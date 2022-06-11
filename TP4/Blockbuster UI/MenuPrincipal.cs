@@ -14,12 +14,15 @@ namespace Blockbuster_UI
     {
         Usuario usuarioLogueado;
         int numeroLegajo;
+        CancellationTokenSource cancelacionAutoguardado;
+        bool autoguardadoActivado = false;
         public MenuPrincipal(int numeroLegajo)
         {
             InitializeComponent();
             this.numeroLegajo = numeroLegajo;
             MostrarHora();
-            AutoGuardado();
+            cancelacionAutoguardado= new CancellationTokenSource();
+            lblAutoGuardado.Text = "Autoguardado OFF";
         }
 
         private void btnVenta_Click(object sender, EventArgs e)
@@ -70,6 +73,7 @@ namespace Blockbuster_UI
                 {
                     try
                     {
+                        cancelacionAutoguardado.Cancel();
                         MetodosSQL.GuardarListaUsuarios(Blockbuster.ListaDeEmpleados);
                         ClaseSerializadora<List<Socio>>.EscribirXml(Blockbuster.ListaDeSocios, "baseDatosSocios");
                         ClaseSerializadora<List<Producto>>.EscribirJson(Blockbuster.ListaDeProductos, "baseDatosProductos");
@@ -152,29 +156,61 @@ namespace Blockbuster_UI
             }
         }
 
-        private void AutoGuardado()
+        private void AutoGuardado(CancellationToken cancelacion)
         {
             Task task = Task.Run(() =>
             {
-                do
+                while(!cancelacion.IsCancellationRequested)
                 {
                     ActualizarBaseDeDatos();
+                    MostrarInfoActualizacion();
                     Thread.Sleep(5000);
-                } while (true);
+                }
             });
         }
 
         private void ActualizarBaseDeDatos()
         {
-            MetodosSQL.GuardarListaUsuarios(Blockbuster.ListaDeEmpleados);
             ClaseSerializadora<List<Socio>>.EscribirXml(Blockbuster.ListaDeSocios, "baseDatosSocios");
             ClaseSerializadora<List<Producto>>.EscribirJson(Blockbuster.ListaDeProductos, "baseDatosProductos");
             ClaseSerializadora<List<Pelicula>>.EscribirJson(Blockbuster.ListaDePeliculas, "baseDatosPeliculas");
-
+            MetodosSQL.GuardarListaUsuarios(Blockbuster.ListaDeEmpleados);
             using (StreamWriter outputfile = File.AppendText($".\\Recursos\\Facturacion-{DateTime.Now.ToString("dd-MM-yyyy")}.txt"))
             {
                 outputfile.WriteLine(Blockbuster.FacturacionDiaria);
             }
+        }
+
+        private void MostrarInfoActualizacion()
+        {
+            if (lblActualizacionInfo.InvokeRequired)
+            {
+                Action delegadoMostrarInfo = MostrarInfoActualizacion;
+                lblActualizacionInfo.Invoke(delegadoMostrarInfo);
+            }
+            else
+            {
+                lblActualizacionInfo.Text = "Ult actualización: " + DateTime.Now.ToString();
+            }
+        }
+
+        private void picSwitchOn_Click(object sender, EventArgs e)
+        {
+            lblAutoGuardado.Text = "Autoguardado ON";
+            AutoGuardado(cancelacionAutoguardado.Token);
+            autoguardadoActivado = true;
+            picSwitchOff.Visible = true;
+            picSwitchOn.Visible = false;           
+        }
+
+        private void picSwitchOff_Click(object sender, EventArgs e)
+        {
+            lblAutoGuardado.Text = "Autoguardado OFF";
+            cancelacionAutoguardado.Cancel();
+            autoguardadoActivado = false;
+            picSwitchOff.Visible = false;
+            picSwitchOn.Visible = true; 
+            cancelacionAutoguardado = new CancellationTokenSource();
         }
     }
 }
