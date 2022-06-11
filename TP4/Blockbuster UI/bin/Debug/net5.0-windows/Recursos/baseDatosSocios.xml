@@ -2,7 +2,7 @@
 <ArrayOfSocio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Socio xsi:type="SocioClasico">
     <IdSocio>1</IdSocio>
-    <NombreSocio>Carree</NombreSocio>
+    <NombreSocio>Carla</NombreSocio>
     <ApellidoSocio>Scarlon</ApellidoSocio>
     <EmailSocio>cscarlon0@goodreads.com</EmailSocio>
     <TelefonoSocio>43567890</TelefonoSocio>
@@ -868,7 +868,34 @@
     <ApellidoSocio>Pember</ApellidoSocio>
     <EmailSocio>dpember1u@mapy.cz</EmailSocio>
     <TelefonoSocio>875-733-1123</TelefonoSocio>
-    <ListaDeAlquileres />
+    <ListaDeAlquileres>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>3</IdPelicula>
+          <TituloPelicula>Corruptor, The</TituloPelicula>
+          <DuracionPelicula>92</DuracionPelicula>
+          <GeneroPelicula>Accion</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>3</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-11T11:22:58.3025199-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>5</IdPelicula>
+          <TituloPelicula>Terumae romae (Thermae Romae)</TituloPelicula>
+          <DuracionPelicula>124</DuracionPelicula>
+          <GeneroPelicula>Drama</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
+          <Stock>25</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-11T11:22:59.3802223-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+    </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
     <Penalidad>100</Penalidad>
     <TarjetaDeCredito>3577818200868513</TarjetaDeCredito>
@@ -1694,10 +1721,23 @@
           <GeneroPelicula>Suspenso</GeneroPelicula>
           <DiasDeAlquiler>Estreno</DiasDeAlquiler>
           <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
-          <Stock>7</Stock>
+          <Stock>6</Stock>
         </Pelicula>
         <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-05-27T23:22:17.9564824-03:00</FechaDeAlquiler>
+        <FechaDeAlquiler>2022-06-11T11:23:12.7154047-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>504</IdPelicula>
+          <TituloPelicula>Secret Honor</TituloPelicula>
+          <DuracionPelicula>109</DuracionPelicula>
+          <GeneroPelicula>Drama</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
+          <Stock>19</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-11T11:23:14.4753798-03:00</FechaDeAlquiler>
       </AlquilerOfPelicula>
     </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>

@@ -150,7 +150,7 @@
             // 
             this.lblNombreUsuario.AutoSize = true;
             this.lblNombreUsuario.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNombreUsuario.Location = new System.Drawing.Point(12, 183);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(3, 180);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
             this.lblNombreUsuario.Size = new System.Drawing.Size(78, 25);
             this.lblNombreUsuario.TabIndex = 2;

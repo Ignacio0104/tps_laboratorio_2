@@ -120,7 +120,7 @@ namespace Blockbuster_UI
 
         private void btnListaEmpleados_Click(object sender, EventArgs e)
         {
-            CargarMenu(new ListaEmpleados());
+            CargarMenu(new ListaEmpleados(usuarioLogueado));
         }
 
         private void MostrarHora()

@@ -14,20 +14,22 @@ namespace Blockbuster_UI
 {
     public partial class AgregarEmpleado : Form
     {
-        public Usuario usuario;
+        public Usuario usuarioElegido;
+        public Usuario usuarioLogueado;
         public AgregarEmpleado()
         {
             InitializeComponent();
         }
 
-        public AgregarEmpleado(Usuario usuario):this()
+        public AgregarEmpleado(Usuario usuarioElegido,Usuario usuarioLogueado):this()
         {
-            this.usuario = usuario;
+            this.usuarioElegido = usuarioElegido;
+            this.usuarioLogueado = usuarioLogueado;
         }
 
         private void AgregarEmpleado_Load(object sender, EventArgs e)
         {
-            if(usuario is not null)
+            if(usuarioElegido is not null)
             {
                 CargarDatosUsuario();
             }
@@ -39,7 +41,7 @@ namespace Blockbuster_UI
             try
             {
                 Validaciones();
-                if (usuario is not null)
+                if (usuarioElegido is not null)
                 {
                     ActualizarDatosUsuario();
                 }
@@ -59,28 +61,28 @@ namespace Blockbuster_UI
 
         private void CargarDatosUsuario()
         {
-            txtNombreEmpleado.Text = usuario.Nombre;
-            txtApellidoEmpleado.Text = usuario.Apellido;
-            txtDni.Text= usuario.DNI.ToString();
-            txtUsername.Text = usuario.NombreUsuario;
-            txtClave.Text = usuario.Password;
-            txtSalario.Text = usuario.Salario.ToString();
-            dateFechaNacimiento.SelectionStart = usuario.FechaNacimiento;
-            dateFechaNacimiento.SelectionEnd = usuario.FechaNacimiento;
-            chkEsAdmin.Checked = usuario.EsAdmin;
+            txtNombreEmpleado.Text = usuarioElegido.Nombre;
+            txtApellidoEmpleado.Text = usuarioElegido.Apellido;
+            txtDni.Text= usuarioElegido.DNI.ToString();
+            txtUsername.Text = usuarioElegido.NombreUsuario;
+            txtClave.Text = usuarioElegido.Password;
+            txtSalario.Text = usuarioElegido.Salario.ToString();
+            dateFechaNacimiento.SelectionStart = usuarioElegido.FechaNacimiento;
+            dateFechaNacimiento.SelectionEnd = usuarioElegido.FechaNacimiento;
+            chkEsAdmin.Checked = usuarioElegido.EsAdmin;
             btnEliminar.Visible = true;
         }
 
         private void ActualizarDatosUsuario()
         {
-            usuario.Nombre = txtNombreEmpleado.Text;
-            usuario.Apellido = txtApellidoEmpleado.Text;
-            usuario.DNI = Convert.ToInt32(txtDni.Text);
-            usuario.NombreUsuario = txtUsername.Text;
-            usuario.Password = txtClave.Text;
-            usuario.EsAdmin = chkEsAdmin.Checked;
-            usuario.Salario = Convert.ToDouble(txtSalario.Text);
-            usuario.FechaNacimiento = dateFechaNacimiento.SelectionStart;
+            usuarioElegido.Nombre = txtNombreEmpleado.Text;
+            usuarioElegido.Apellido = txtApellidoEmpleado.Text;
+            usuarioElegido.DNI = Convert.ToInt32(txtDni.Text);
+            usuarioElegido.NombreUsuario = txtUsername.Text;
+            usuarioElegido.Password = txtClave.Text;
+            usuarioElegido.EsAdmin = chkEsAdmin.Checked;
+            usuarioElegido.Salario = Convert.ToDouble(txtSalario.Text);
+            usuarioElegido.FechaNacimiento = dateFechaNacimiento.SelectionStart;
         }
 
         private void picOcultar_Click(object sender, EventArgs e)
@@ -99,13 +101,20 @@ namespace Blockbuster_UI
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            DialogResult opcion = MessageBox.Show($"Esta a punto de borrar al usuario {usuario.Nombre} {usuario.Apellido}\n ¿Desea continuar?", $"Eliminar usuario {usuario.Legajo}", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            if(opcion == DialogResult.OK)
+            if (usuarioLogueado.Legajo == usuarioElegido.Legajo)
             {
-                Blockbuster.ListaDeEmpleados.Remove(usuario);
-                this.DialogResult = DialogResult.OK;
+                MessageBox.Show("No puede eliminar el usuario del que está logueado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+            else
+            {
+                DialogResult opcion = MessageBox.Show($"Esta a punto de borrar al usuario {usuarioElegido.Nombre} {usuarioElegido.Apellido}\n ¿Desea continuar?", $"Eliminar usuario {usuarioElegido.Legajo}", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                if (opcion == DialogResult.OK)
+                {
+                    Blockbuster.ListaDeEmpleados.Remove(usuarioElegido);
+                    this.DialogResult = DialogResult.OK;
+                }
+            }
+
         }
 
         private void Validaciones()

@@ -13,9 +13,11 @@ namespace Blockbuster_UI
 {
     public partial class ListaEmpleados : Form
     {
-        public ListaEmpleados()
+        Usuario usuarioLogueado;
+        public ListaEmpleados(Usuario usuarioLogueado)
         {
             InitializeComponent();
+            this.usuarioLogueado = usuarioLogueado;
             CargarEmpleados();
         }
 
@@ -26,7 +28,7 @@ namespace Blockbuster_UI
                 try
                 {
                     int id = (int)dGridEmpleados.Rows[e.RowIndex].Cells[0].Value;
-                    AgregarEmpleado frmModificacion = new AgregarEmpleado(Blockbuster.BuscarUsuario(id));                 
+                    AgregarEmpleado frmModificacion = new AgregarEmpleado(Blockbuster.BuscarUsuario(id), usuarioLogueado);                 
                     frmModificacion.ShowDialog();
                     if (frmModificacion.DialogResult == DialogResult.OK)
                     {
