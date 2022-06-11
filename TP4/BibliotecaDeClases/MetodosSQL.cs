@@ -139,7 +139,7 @@ namespace BibliotecaDeClases
                     {
                         listaUsuariosAux.Add(new Usuario(Convert.ToInt32(dataReader["legajoEmpleado"]), dataReader["nombre"].ToString(), 
                             dataReader["apellido"].ToString(), Convert.ToInt32(dataReader["dni"]), dataReader["nombreUsuario"].ToString(),
-                            dataReader["password"].ToString(), Convert.ToInt32(dataReader["esAdmin"])==0? true:false,Convert.ToDateTime(dataReader["fechaIngreso"]),
+                            dataReader["password"].ToString(), Convert.ToInt32(dataReader["esAdmin"])== 1 ? true:false,Convert.ToDateTime(dataReader["fechaIngreso"]),
                             Convert.ToDateTime(dataReader["fechaNacimiento"]), Convert.ToDouble(dataReader["salario"])));
                     }
                 }

@@ -115,7 +115,6 @@
             this.btnListaEmpleados.Text = "Lista de empleados";
             this.btnListaEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnListaEmpleados.UseVisualStyleBackColor = true;
-            this.btnListaEmpleados.Visible = false;
             this.btnListaEmpleados.Click += new System.EventHandler(this.btnListaEmpleados_Click);
             // 
             // btnSalirSinGuardar
