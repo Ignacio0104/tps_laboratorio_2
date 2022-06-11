@@ -93,11 +93,13 @@ namespace BibliotecaDeClases
             try
             {             
                 connection.Open();
+                command.CommandText = $"DELETE FROM EMPLEADOS";
+                command.ExecuteNonQuery();
                 foreach (Usuario usuario in Blockbuster.ListaDeEmpleados)
                 {
                     command.Parameters.Clear();
                     command.CommandText = $"INSERT INTO EMPLEADOS(legajoEmpleado,nombre,apellido,dni,nombreUsuario,password," +
-                        $"esAdmin,salario,fechaIngreso,fechaNacimiento) VALUES(@legajo,@nombre,@apellido,@dni,@nombreUsuario," +
+                        $"esAdmin,salario,fechaIngreso,fechaNacimiento) VALUES (@legajo,@nombre,@apellido,@dni,@nombreUsuario," +
                         $"@password,@esAdmin,@salario,@fechaIngreso,@fechaNacimiento)";
                     command.Parameters.AddWithValue("@legajo", usuario.Legajo);
                     command.Parameters.AddWithValue("@nombre", usuario.Nombre);

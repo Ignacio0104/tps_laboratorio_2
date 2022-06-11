@@ -10,3 +10,15 @@ C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Excepciones\obj\Debug
 C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Excepciones\obj\Debug\net5.0\refint\Excepciones.dll
 C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Excepciones\obj\Debug\net5.0\Excepciones.pdb
 C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP3\Excepciones\obj\Debug\net5.0\ref\Excepciones.dll
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Excepciones\bin\Debug\net5.0\Excepciones.deps.json
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Excepciones\bin\Debug\net5.0\Excepciones.dll
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Excepciones\bin\Debug\net5.0\Excepciones.pdb
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Excepciones\obj\Debug\net5.0\Excepciones.csproj.AssemblyReference.cache
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Excepciones\obj\Debug\net5.0\Excepciones.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Excepciones\obj\Debug\net5.0\Excepciones.AssemblyInfoInputs.cache
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Excepciones\obj\Debug\net5.0\Excepciones.AssemblyInfo.cs
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Excepciones\obj\Debug\net5.0\Excepciones.csproj.CoreCompileInputs.cache
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Excepciones\obj\Debug\net5.0\Excepciones.dll
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Excepciones\obj\Debug\net5.0\refint\Excepciones.dll
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Excepciones\obj\Debug\net5.0\Excepciones.pdb
+C:\Users\Nacho\Desktop\Programacion\UTN\TPLaboratorio2\TP4\Excepciones\obj\Debug\net5.0\ref\Excepciones.dll

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarEmpleado));
             this.txtNombreEmpleado = new System.Windows.Forms.TextBox();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -38,13 +39,17 @@
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblClave = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtClave = new System.Windows.Forms.TextBox();
             this.chkEsAdmin = new System.Windows.Forms.CheckBox();
             this.lblSalario = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSalario = new System.Windows.Forms.TextBox();
             this.lblSignoPesos = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.dateFechaNacimiento = new System.Windows.Forms.MonthCalendar();
             this.lblFechaNacimiento = new System.Windows.Forms.Label();
+            this.picMostrar = new System.Windows.Forms.PictureBox();
+            this.picOcultar = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picMostrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picOcultar)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombreEmpleado
@@ -56,7 +61,7 @@
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(328, 347);
+            this.btnConfirmar.Location = new System.Drawing.Point(388, 347);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(75, 23);
             this.btnConfirmar.TabIndex = 1;
@@ -130,13 +135,13 @@
             this.lblClave.TabIndex = 10;
             this.lblClave.Text = "Clave:";
             // 
-            // textBox1
+            // txtClave
             // 
-            this.textBox1.Location = new System.Drawing.Point(42, 221);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(188, 23);
-            this.textBox1.TabIndex = 9;
+            this.txtClave.Location = new System.Drawing.Point(42, 221);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '*';
+            this.txtClave.Size = new System.Drawing.Size(188, 23);
+            this.txtClave.TabIndex = 9;
             // 
             // chkEsAdmin
             // 
@@ -157,13 +162,12 @@
             this.lblSalario.TabIndex = 15;
             this.lblSalario.Text = "Salario:";
             // 
-            // textBox2
+            // txtSalario
             // 
-            this.textBox2.Location = new System.Drawing.Point(93, 265);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(137, 23);
-            this.textBox2.TabIndex = 14;
+            this.txtSalario.Location = new System.Drawing.Point(93, 265);
+            this.txtSalario.Name = "txtSalario";
+            this.txtSalario.Size = new System.Drawing.Size(137, 23);
+            this.txtSalario.TabIndex = 14;
             // 
             // lblSignoPesos
             // 
@@ -174,11 +178,11 @@
             this.lblSignoPesos.TabIndex = 16;
             this.lblSignoPesos.Text = "$";
             // 
-            // monthCalendar1
+            // dateFechaNacimiento
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(271, 51);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 18;
+            this.dateFechaNacimiento.Location = new System.Drawing.Point(271, 51);
+            this.dateFechaNacimiento.Name = "dateFechaNacimiento";
+            this.dateFechaNacimiento.TabIndex = 18;
             // 
             // lblFechaNacimiento
             // 
@@ -189,19 +193,42 @@
             this.lblFechaNacimiento.TabIndex = 19;
             this.lblFechaNacimiento.Text = "Fecha nacimiento:";
             // 
+            // picMostrar
+            // 
+            this.picMostrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picMostrar.BackgroundImage")));
+            this.picMostrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.picMostrar.Location = new System.Drawing.Point(236, 221);
+            this.picMostrar.Name = "picMostrar";
+            this.picMostrar.Size = new System.Drawing.Size(36, 27);
+            this.picMostrar.TabIndex = 20;
+            this.picMostrar.TabStop = false;
+            this.picMostrar.Click += new System.EventHandler(this.picMostrar_Click);
+            // 
+            // picOcultar
+            // 
+            this.picOcultar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picOcultar.BackgroundImage")));
+            this.picOcultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.picOcultar.Location = new System.Drawing.Point(236, 221);
+            this.picOcultar.Name = "picOcultar";
+            this.picOcultar.Size = new System.Drawing.Size(36, 27);
+            this.picOcultar.TabIndex = 21;
+            this.picOcultar.TabStop = false;
+            this.picOcultar.Visible = false;
+            this.picOcultar.Click += new System.EventHandler(this.picOcultar_Click);
+            // 
             // AgregarEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(505, 382);
             this.Controls.Add(this.lblFechaNacimiento);
-            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.dateFechaNacimiento);
             this.Controls.Add(this.lblSignoPesos);
             this.Controls.Add(this.lblSalario);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtSalario);
             this.Controls.Add(this.chkEsAdmin);
             this.Controls.Add(this.lblClave);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtClave);
             this.Controls.Add(this.lblNombreUsuario);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblDni);
@@ -211,9 +238,13 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.txtNombreEmpleado);
+            this.Controls.Add(this.picMostrar);
+            this.Controls.Add(this.picOcultar);
             this.Name = "AgregarEmpleado";
             this.Text = "AgregarEmpleado";
             this.Load += new System.EventHandler(this.AgregarEmpleado_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picMostrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picOcultar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,12 +262,14 @@
         private System.Windows.Forms.Label lblNombreUsuario;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblClave;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.CheckBox chkEsAdmin;
         private System.Windows.Forms.Label lblSalario;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSalario;
         private System.Windows.Forms.Label lblSignoPesos;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.MonthCalendar dateFechaNacimiento;
         private System.Windows.Forms.Label lblFechaNacimiento;
+        private System.Windows.Forms.PictureBox picMostrar;
+        private System.Windows.Forms.PictureBox picOcultar;
     }
 }

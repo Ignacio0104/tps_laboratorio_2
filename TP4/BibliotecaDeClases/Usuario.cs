@@ -46,7 +46,7 @@ namespace BibliotecaDeClases
             DateTime fechaIngreso, DateTime fechaNacimiento, double salario)
         {
             ultimoLegajo = Blockbuster.BuscarUltimoLegajoEmpleado();
-            this.legajo = ultimoLegajo;
+            this.legajo = ultimoLegajo+1;
             this.nombre = nombre;
             this.apellido = apellido;
             this.dni = dni;

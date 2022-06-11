@@ -57,4 +57,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="picMostrar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAEGSURBVDhPzdFPK0RRGMfxs2TY+LMlZacx2bJDaigLeQOy
+        m1KamppmI97AbCfvAW/C0obFsGBJSRYoFhS+39s5dec2xXJ+9alzn+c598+5YaAziYVowsJ/MooWrvFT
+        0EUTzvTNKh7g8Av2MRft4RH27rGMnmzjEw48YwZmE77RFKZhzxlnt5Clgg/Y0A5SDpFuOovdeK13zCOc
+        x0IyhipqeIo1teFh5mfdG+5yBZXQKdR0jJFC7RbZd37HgtawhK9czbW19VzNPRvIcoTUuMAQPOmTaAXD
+        uEGaO0BPGkhPvcQiUnz6Fez5B+roG0/1DOlGr3iLazeeoow/42n7ff4JuR7HwCWEX7bQXHYEghuOAAAA
+        AElFTkSuQmCC
+</value>
+  </data>
+  <data name="picOcultar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAEHSURBVDhPrZM9TgJRFEZfTYGYYG+FhS7BglhKjCvQRBbg
+        zy4sFalYAywIbbQTQ8EGjJwzeTd5jEghfMkJcJn55rv3vkm71GH+/Je8+Qu61a+UGnAJD3AHvVzbqFOY
+        wRlcwzf8FCzgEf40akJpcgUv8ASvEEZvcAQrOoFP6INtRDt7udaCEYTJHDpQ6QA+wD+MbfzSRAMT7INP
+        D5NprqVJLgTP4JPrJjcwgPJa7/1lYM9eXG/HGdUNxlDFME4UjWnN2HWTcjvv0IZKDsTBhIkDc3AmWdeO
+        Az+GFbmackh+N/IQXGm5YttZKw+Jh8VDE0YS2ylNNkqjc7iFe7jINRXtbP3u7EIpLQGHi1kZMJ/NQgAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
 </root>

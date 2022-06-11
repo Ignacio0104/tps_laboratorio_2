@@ -16,7 +16,7 @@ namespace Blockbuster_UI
         public ListaEmpleados()
         {
             InitializeComponent();
-            dGridEmpleados.DataSource = Blockbuster.ListaDeEmpleados;
+            CargarEmpleados();
         }
 
         private void dGridEmpleados_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -30,10 +30,8 @@ namespace Blockbuster_UI
                     frmModificacion.ShowDialog();
                     if (frmModificacion.DialogResult == DialogResult.OK)
                     {
-                        MetodosSQL.GuardarUsuario(frmModificacion.usuario);
-                        Blockbuster.ListaDeEmpleados = MetodosSQL.LeerListaUsuarios();
-                        dGridEmpleados.DataSource = null;
-                        dGridEmpleados.DataSource = Blockbuster.ListaDeEmpleados;
+                        dGridEmpleados.Rows.Clear();
+                        CargarEmpleados();
                     }
                 }
                 catch (Exception ex)
@@ -41,6 +39,34 @@ namespace Blockbuster_UI
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK);
                 }
 
+            }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            AgregarEmpleado frmModificacion = new AgregarEmpleado();
+            frmModificacion.ShowDialog();
+            if (frmModificacion.DialogResult == DialogResult.OK)
+            {
+                dGridEmpleados.DataSource = null;
+                dGridEmpleados.DataSource = Blockbuster.ListaDeEmpleados;
+            }
+        }
+
+        private void CargarEmpleados()
+        {
+            foreach (Usuario item in Blockbuster.ListaDeEmpleados)
+            {
+                int indice = dGridEmpleados.Rows.Add();
+                dGridEmpleados.Rows[indice].Cells[0].Value = item.Legajo;
+                dGridEmpleados.Rows[indice].Cells[1].Value = item.Nombre;
+                dGridEmpleados.Rows[indice].Cells[2].Value = item.Apellido;
+                dGridEmpleados.Rows[indice].Cells[3].Value = item.DNI.ToString();
+                dGridEmpleados.Rows[indice].Cells[4].Value = item.NombreUsuario;
+                dGridEmpleados.Rows[indice].Cells[5].Value = "$" + item.Salario.ToString();
+                dGridEmpleados.Rows[indice].Cells[6].Value = item.FechaIngreso.ToShortDateString();
+                dGridEmpleados.Rows[indice].Cells[7].Value = item.FechaNacimiento.ToShortDateString();
+                indice++;
             }
         }
     }
