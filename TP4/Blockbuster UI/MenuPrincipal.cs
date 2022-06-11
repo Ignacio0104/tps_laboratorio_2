@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Text.Json;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Blockbuster_UI
@@ -16,6 +18,8 @@ namespace Blockbuster_UI
         {
             InitializeComponent();
             this.numeroLegajo = numeroLegajo;
+            MostrarHora();
+            AutoGuardado();
         }
 
         private void btnVenta_Click(object sender, EventArgs e)
@@ -47,7 +51,6 @@ namespace Blockbuster_UI
             formulario.Show();
         }
 
- 
 
         private void btnSocios_Click(object sender, EventArgs e)
         {
@@ -99,6 +102,10 @@ namespace Blockbuster_UI
             Blockbuster.ListaDeSocios = ClaseSerializadora<List<Socio>>.LeerXml("baseDatosSocios");
             usuarioLogueado = Blockbuster.BuscarUsuario(numeroLegajo);
             lblNombreUsuario.Text = $"{usuarioLogueado.Nombre} {usuarioLogueado.Apellido}";
+            if (usuarioLogueado.EsAdmin)
+                btnListaEmpleados.Visible = true;
+            else
+                btnListaEmpleados.Visible = false;
         }
 
         private void MenuPrincipal_FormClosed(object sender, FormClosedEventArgs e)
@@ -118,6 +125,56 @@ namespace Blockbuster_UI
         private void btnListaEmpleados_Click(object sender, EventArgs e)
         {
             CargarMenu(new ListaEmpleados());
+        }
+
+        private void MostrarHora()
+        {
+            Task task = Task.Run(() =>
+            {
+                do
+                {
+                    ActualizarReloj();
+                    Thread.Sleep(1000);
+                } while (true);
+            });
+        }
+
+        private void ActualizarReloj()
+        {
+            if(lblReloj.InvokeRequired)
+            {
+                Action delegadoActualizarHora = ActualizarReloj;
+                lblReloj.Invoke(delegadoActualizarHora);
+            }
+            else
+            {
+                lblReloj.Text = DateTime.Now.ToString("dd/MM/yyy HH:mm:ss");
+            }
+        }
+
+        private void AutoGuardado()
+        {
+            Task task = Task.Run(() =>
+            {
+                do
+                {
+                    ActualizarBaseDeDatos();
+                    Thread.Sleep(5000);
+                } while (true);
+            });
+        }
+
+        private void ActualizarBaseDeDatos()
+        {
+            MetodosSQL.GuardarListaUsuarios(Blockbuster.ListaDeEmpleados);
+            ClaseSerializadora<List<Socio>>.EscribirXml(Blockbuster.ListaDeSocios, "baseDatosSocios");
+            ClaseSerializadora<List<Producto>>.EscribirJson(Blockbuster.ListaDeProductos, "baseDatosProductos");
+            ClaseSerializadora<List<Pelicula>>.EscribirJson(Blockbuster.ListaDePeliculas, "baseDatosPeliculas");
+
+            using (StreamWriter outputfile = File.AppendText($".\\Recursos\\Facturacion-{DateTime.Now.ToString("dd-MM-yyyy")}.txt"))
+            {
+                outputfile.WriteLine(Blockbuster.FacturacionDiaria);
+            }
         }
     }
 }

@@ -49,6 +49,7 @@
             this.picMostrar = new System.Windows.Forms.PictureBox();
             this.picOcultar = new System.Windows.Forms.PictureBox();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.lblError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picMostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOcultar)).BeginInit();
             this.SuspendLayout();
@@ -229,11 +230,22 @@
             this.btnEliminar.Visible = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(12, 351);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 15);
+            this.lblError.TabIndex = 24;
+            this.lblError.Visible = false;
+            // 
             // AgregarEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(505, 382);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.lblFechaNacimiento);
             this.Controls.Add(this.dateFechaNacimiento);
@@ -286,5 +298,6 @@
         private System.Windows.Forms.PictureBox picMostrar;
         private System.Windows.Forms.PictureBox picOcultar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Label lblError;
     }
 }

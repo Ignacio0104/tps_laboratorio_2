@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BibliotecaDeClases;
+using BibliotecaDeClases.Excepciones;
 
 namespace Blockbuster_UI
 {
@@ -35,16 +36,25 @@ namespace Blockbuster_UI
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if(usuario is not null)
+            try
             {
-                ActualizarDatosUsuario();
-            }
-            else
+                Validaciones();
+                if (usuario is not null)
+                {
+                    ActualizarDatosUsuario();
+                }
+                else
+                {
+                    Blockbuster.ListaDeEmpleados.Add(new Usuario(txtNombreEmpleado.Text, txtApellidoEmpleado.Text, Convert.ToInt32(txtDni.Text), txtUsername.Text,
+                                        txtClave.Text, chkEsAdmin.Checked, DateTime.Now, dateFechaNacimiento.SelectionStart, Convert.ToDouble(txtSalario.Text)));
+                }
+                this.DialogResult = DialogResult.OK;
+            }catch (Exception ex)
             {
-                Blockbuster.ListaDeEmpleados.Add(new Usuario(txtNombreEmpleado.Text, txtApellidoEmpleado.Text, Convert.ToInt32(txtDni.Text), txtUsername.Text,
-                                    txtClave.Text, chkEsAdmin.Checked,DateTime.Now, dateFechaNacimiento.SelectionStart, Convert.ToDouble(txtSalario.Text)));
+                lblError.Visible = true;
+                lblError.Text = "*" + ex.Message;
             }
-            this.DialogResult = DialogResult.OK;
+
         }
 
         private void CargarDatosUsuario()
@@ -97,5 +107,42 @@ namespace Blockbuster_UI
             }
             
         }
+
+        private void Validaciones()
+        {
+            if (!txtNombreEmpleado.Text.All(char.IsLetter))
+            {
+                throw new NombreOApellidoInvalido("Favor revisar el campo nombre");
+            }
+
+            if (!txtApellidoEmpleado.Text.All(char.IsLetter))
+            {
+                throw new NombreOApellidoInvalido("Favor revisar el campo apellido");
+            }
+            int dniAux;
+            int.TryParse(txtDni.Text, out dniAux);
+            if (dniAux < 15000000 || dniAux > 60000000)
+            {
+                throw new DniInvalido("Favor verificar el DNI ingresado (sin puntos ni espacios)");
+            }
+
+            if ((txtUsername.Text.Length < 6 || txtUsername.Text.Length > 16) || (txtClave.Text.Length < 4 || txtClave.Text.Length > 16))
+            {
+                throw new DatosIncompletos("Favor verificar el nombre de usuario y/o clave ingresados");
+            }
+
+            double salarioAux;
+            double.TryParse(txtSalario.Text, out salarioAux);
+            if (salarioAux < 20000 || salarioAux > 1000000)
+            {
+                throw new DatosIncompletos("Favor verificar salario ingresado");
+            }
+
+            if (dateFechaNacimiento.SelectionStart.Year > 2005 || dateFechaNacimiento.SelectionStart.Year < 1925)
+            {
+                throw new DatosIncompletos("Favor verificar la fecha de nacimiento ingresada");
+            }
+        }
+
     }
 }
