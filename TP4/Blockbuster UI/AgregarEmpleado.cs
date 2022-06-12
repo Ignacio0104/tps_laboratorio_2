@@ -131,12 +131,12 @@ namespace Blockbuster_UI
             }
             int dniAux;
             int.TryParse(txtDni.Text, out dniAux);
-            if (dniAux < 15000000 || dniAux > 60000000)
+            if (!dniAux.ValidarDni())
             {
                 throw new DniInvalido("Favor verificar el DNI ingresado (sin puntos ni espacios)");
             }
 
-            if ((txtUsername.Text.Length < 6 || txtUsername.Text.Length > 16) || (txtClave.Text.Length < 4 || txtClave.Text.Length > 16))
+            if ((!txtUsername.Text.ValidarUsuario()) || (!txtClave.Text.ValidarClave()))
             {
                 throw new DatosIncompletos("Favor verificar el nombre de usuario y/o clave ingresados");
             }
