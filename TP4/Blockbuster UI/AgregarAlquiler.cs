@@ -12,6 +12,7 @@ using System.Media;
 
 namespace Blockbuster_UI
 {
+    public delegate void MostrarLimitePeliculas();
     public partial class AgregarAlquiler : Form
     {
         public Socio socioAtendido;
@@ -72,29 +73,21 @@ namespace Blockbuster_UI
             try
             {
                 if (e.RowIndex >= 0)
-                {
-                    if ((listaAlquilerAux.Count + socioAtendido.ListaDeAlquileres.Count) < socioAtendido.LimitePeliculas)
-                    {
-                        DataGridViewTextBoxCell cell = (DataGridViewTextBoxCell)dGridPeliculas.Rows[e.RowIndex].Cells[0];
-                        listaAlquilerAux.Add(new Alquiler<Pelicula>(Blockbuster.BuscarPelicula((int)cell.Value)));
-                        Blockbuster.BuscarPelicula((int)cell.Value).Stock--;
-                        dGridPeliculas.Rows.Clear();
-                        CargarPeliculas();
-                        ActualizarCuenta();
-                    }
-                    else
-                    {
-                        throw new Exception("Error, este socio no tiene lugar para alquilar más películas");
-                    }
-
+                {                
+                    DataGridViewTextBoxCell cell = (DataGridViewTextBoxCell)dGridPeliculas.Rows[e.RowIndex].Cells[0];
+                    socioAtendido.AgregarAlquiler(listaAlquilerAux, Blockbuster.BuscarPelicula((int)cell.Value), MostrarLimitePeliculas);
+                    dGridPeliculas.Rows.Clear();
+                    CargarPeliculas();
+                    ActualizarCuenta();
                 }
-   
-            }catch(Exception exception)
+            }
+            catch (Exception ex)
             {
-                MessageBox.Show(exception.Message,"Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
+
             }
 
         }
+   
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
@@ -243,6 +236,11 @@ namespace Blockbuster_UI
                     indice++;
                 }             
             }
+        }
+
+        public void MostrarLimitePeliculas()
+        {
+            MessageBox.Show($"Error, este usuario ya llegó a su límite de alquileres", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 

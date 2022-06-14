@@ -12,8 +12,6 @@ namespace Blockbuster_UI
 {
     public partial class MenuPrincipal : Form
     {
-        //public delegate void delegadoParaActulizarInfo();
-    
         Usuario usuarioLogueado;
         int numeroLegajo;
         CancellationTokenSource cancelacionAutoguardado;

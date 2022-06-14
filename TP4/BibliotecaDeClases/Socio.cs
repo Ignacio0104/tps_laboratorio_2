@@ -57,5 +57,18 @@ namespace BibliotecaDeClases
 
             return sb.ToString();
         }
+
+        public void AgregarAlquiler(List<Alquiler<Pelicula>> peliculasElegidas, Pelicula pelicula, Action delegadoInformacion)
+        {
+            if((peliculasElegidas.Count + this.listaDeAlquileres.Count) < this.LimitePeliculas)
+            {
+                peliculasElegidas.Add(new Alquiler<Pelicula>(pelicula));
+                Blockbuster.BuscarPelicula(pelicula.IdPelicula).Stock--;
+            }
+            else
+            {
+                delegadoInformacion.Invoke();
+            }
+        }
     }
 }
