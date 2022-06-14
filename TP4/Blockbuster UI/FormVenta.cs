@@ -19,7 +19,6 @@ namespace Blockbuster_UI
         public FormVenta()
         {
             InitializeComponent();
-
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

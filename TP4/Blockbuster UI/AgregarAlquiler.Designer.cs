@@ -235,7 +235,7 @@
             this.checkEditar.CheckOnClick = true;
             this.checkEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(10)))));
             this.checkEditar.FormattingEnabled = true;
-            this.checkEditar.Location = new System.Drawing.Point(734, 42);
+            this.checkEditar.Location = new System.Drawing.Point(733, 40);
             this.checkEditar.Name = "checkEditar";
             this.checkEditar.Size = new System.Drawing.Size(408, 418);
             this.checkEditar.TabIndex = 9;

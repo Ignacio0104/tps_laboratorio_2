@@ -8,17 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BibliotecaDeClases;
+using System.Media;
 
 namespace Blockbuster_UI
 {
     public partial class ListaEmpleados : Form
     {
         Usuario usuarioLogueado;
+        Color color;
+
         public ListaEmpleados(Usuario usuarioLogueado)
         {
             InitializeComponent();
             this.usuarioLogueado = usuarioLogueado;
             CargarEmpleados();
+            color = ColorTranslator.FromHtml("#003566");
+            dGridEmpleados.DefaultCellStyle.BackColor = color;
+            color = ColorTranslator.FromHtml("#ffc300");
+            dGridEmpleados.DefaultCellStyle.ForeColor = color;
         }
 
         private void dGridEmpleados_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -69,6 +76,22 @@ namespace Blockbuster_UI
                 dGridEmpleados.Rows[indice].Cells[6].Value = item.FechaIngreso.ToShortDateString();
                 dGridEmpleados.Rows[indice].Cells[7].Value = item.FechaNacimiento.ToShortDateString();
                 indice++;
+            }
+        }
+
+        private void dGridEmpleados_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < dGridEmpleados.RowCount - 1)
+            {
+                dGridEmpleados.Rows[e.RowIndex].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#003566");
+            }
+        }
+
+        private void dGridEmpleados_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                dGridEmpleados.Rows[e.RowIndex].DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#468faf");
             }
         }
     }

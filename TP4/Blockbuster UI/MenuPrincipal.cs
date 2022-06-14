@@ -12,10 +12,11 @@ namespace Blockbuster_UI
 {
     public partial class MenuPrincipal : Form
     {
+        //public delegate void delegadoParaActulizarInfo();
+    
         Usuario usuarioLogueado;
         int numeroLegajo;
         CancellationTokenSource cancelacionAutoguardado;
-        bool autoguardadoActivado = false;
         public MenuPrincipal(int numeroLegajo)
         {
             InitializeComponent();
@@ -190,7 +191,6 @@ namespace Blockbuster_UI
         {
             lblAutoGuardado.Text = "Autoguardado ON";
             AutoGuardado(cancelacionAutoguardado.Token);
-            autoguardadoActivado = true;
             picSwitchOff.Visible = true;
             picSwitchOn.Visible = false;           
         }
@@ -199,7 +199,6 @@ namespace Blockbuster_UI
         {
             lblAutoGuardado.Text = "Autoguardado OFF";
             cancelacionAutoguardado.Cancel();
-            autoguardadoActivado = false;
             picSwitchOff.Visible = false;
             picSwitchOn.Visible = true; 
             cancelacionAutoguardado = new CancellationTokenSource();

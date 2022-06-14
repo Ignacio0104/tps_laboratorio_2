@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.dGridEmpleados = new System.Windows.Forms.DataGridView();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.colLegajo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,6 +37,7 @@
             this.colSalario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colIngreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAgregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGridEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,19 +61,8 @@
             this.dGridEmpleados.Size = new System.Drawing.Size(831, 417);
             this.dGridEmpleados.TabIndex = 0;
             this.dGridEmpleados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridEmpleados_CellClick);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
-            this.btnAgregar.Location = new System.Drawing.Point(668, 462);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(176, 50);
-            this.btnAgregar.TabIndex = 3;
-            this.btnAgregar.Text = "Agregar +";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.dGridEmpleados.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridEmpleados_CellMouseLeave);
+            this.dGridEmpleados.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dGridEmpleados_CellMouseMove);
             // 
             // colLegajo
             // 
@@ -115,6 +104,19 @@
             // 
             this.colNacimiento.HeaderText = "Fecha de nacimiento";
             this.colNacimiento.Name = "colNacimiento";
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.btnAgregar.Location = new System.Drawing.Point(668, 462);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(176, 50);
+            this.btnAgregar.TabIndex = 3;
+            this.btnAgregar.Text = "Agregar +";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // ListaEmpleados
             // 
