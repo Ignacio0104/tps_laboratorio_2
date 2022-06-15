@@ -19,7 +19,7 @@ namespace Blockbuster_UI
         {
             InitializeComponent();
             this.numeroLegajo = numeroLegajo;
-            MostrarHora();
+            //MostrarHora();
             cancelacionAutoguardado= new CancellationTokenSource();
             lblAutoGuardado.Text = "Autoguardado OFF";
         }

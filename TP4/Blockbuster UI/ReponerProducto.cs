@@ -14,11 +14,12 @@ namespace Blockbuster_UI
 {
     public partial class ReponerProducto : Form
     {
+        public List<Task> listaTareas;
         public ReponerProducto()
         {
             InitializeComponent();
             AnimarMensaje();
-
+            panLlamada.Visible = true;
         }
 
         private void AnimarMensaje()
@@ -27,28 +28,54 @@ namespace Blockbuster_UI
             {
                 do
                 {
-                    CambiarColor();
+                    CambiarColor(Color.Red);
                     Thread.Sleep(500);
-                    lblMensaje.ForeColor = ColorTranslator.FromHtml("#ffc300");
+                    CambiarColor(ColorTranslator.FromHtml("#ffc300"));
+                    Thread.Sleep(500);
                 } while (true);
             });
         }
 
-        private void CambiarColor()
+        private void CambiarColor(Color color)
         {
             if (lblMensaje.InvokeRequired)
             {
-                Action delegadoCambioColor = CambiarColor;
-                lblMensaje.Invoke(delegadoCambioColor);
+                Action<Color> delegadoCambioColor = color => CambiarColor(color);
+                lblMensaje.Invoke(delegadoCambioColor,color);
             }
             else
             {
-                lblMensaje.ForeColor = Color.Red;
-                
+                lblMensaje.ForeColor = color;
             }
         }
 
+        private void btnLlamarProveedor_Click(object sender, EventArgs e)
+        {
+            picNoStock.Visible = false;
+            btnCancelar.Enabled = false;
+            btnLlamarProveedor.Enabled = false;
+            Task llamar = Task.Run(() =>
+            {
+                MostrarPanel();
+                Thread.Sleep(5000);
+                MessageBox.Show("Llamado exitoso, actualice el inventario al recibir los productos");
+            });
+            
+            //this.DialogResult = DialogResult.OK;
+        }
 
+        private void MostrarPanel()
+        {
+            if (panLlamada.InvokeRequired)
+            {
+                Action mostrarPanelDelegado = MostrarPanel;
+                panLlamada.Invoke(mostrarPanelDelegado);
+            }
+            else
+            {
+                panLlamada.Visible = true;
+            }
+        }
 
     }
 }
