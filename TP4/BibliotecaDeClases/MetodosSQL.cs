@@ -8,6 +8,7 @@ using BibliotecaDeClases;
 
 namespace BibliotecaDeClases
 {
+
     public static class MetodosSQL
     {
         static string connectionString;
@@ -137,10 +138,18 @@ namespace BibliotecaDeClases
                 {
                     while (dataReader.Read())
                     {
-                        listaUsuariosAux.Add(new Usuario(Convert.ToInt32(dataReader["legajoEmpleado"]), dataReader["nombre"].ToString(), 
+                        try
+                        {
+                            listaUsuariosAux.Add(new Usuario(Convert.ToInt32(dataReader["legajoEmpleado"]), dataReader["nombre"].ToString(),
                             dataReader["apellido"].ToString(), Convert.ToInt32(dataReader["dni"]), dataReader["nombreUsuario"].ToString(),
-                            dataReader["password"].ToString(), Convert.ToInt32(dataReader["esAdmin"])== 1 ? true:false,Convert.ToDateTime(dataReader["fechaIngreso"]),
+                            dataReader["password"].ToString(), Convert.ToInt32(dataReader["esAdmin"]) == 1 ? true : false, Convert.ToDateTime(dataReader["fechaIngreso"]),
                             Convert.ToDateTime(dataReader["fechaNacimiento"]), Convert.ToDouble(dataReader["salario"])));
+                        }
+                        catch 
+                        {
+
+                        }
+
                     }
                 }
 
@@ -156,5 +165,7 @@ namespace BibliotecaDeClases
                 connection.Close();
             }
         }
+
+
     }
 }

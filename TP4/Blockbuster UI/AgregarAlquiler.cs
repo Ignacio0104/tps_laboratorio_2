@@ -12,7 +12,6 @@ using System.Media;
 
 namespace Blockbuster_UI
 {
-    public delegate void MostrarLimitePeliculas();
     public partial class AgregarAlquiler : Form
     {
         public Socio socioAtendido;
@@ -83,7 +82,7 @@ namespace Blockbuster_UI
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message, "Error desconocido", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -104,13 +103,17 @@ namespace Blockbuster_UI
                 if (e.RowIndex >= 0)
                 {                                
                     DataGridViewTextBoxCell cell = (DataGridViewTextBoxCell)dGridProducto.Rows[e.RowIndex].Cells[0];
-                    listaProductosAux.Add(Blockbuster.BuscarProducto((int)cell.Value));
-                    Blockbuster.BuscarProducto((int)cell.Value).StockProducto--;
+                    Producto productoAux = Blockbuster.BuscarProducto((int)cell.Value);
+                    if (productoAux.ValidarQueElEventoNoEsteAsignado())
+                    {
+                        productoAux.InformarNoHayStock += LlamarAlProveedor;
+                    }
+                    listaProductosAux.Add(productoAux);                 
+                    productoAux.ActualizarStock();              
                     dGridProducto.Rows.Clear();
                     CargarProductos();
                     ActualizarCuenta();
                 }
-
             }
             catch (Exception exception)
             {
@@ -241,6 +244,12 @@ namespace Blockbuster_UI
         public void MostrarLimitePeliculas()
         {
             MessageBox.Show($"Error, este usuario ya llegó a su límite de alquileres", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        public void LlamarAlProveedor()
+        {
+            ReponerProducto frmReposicion = new ReponerProducto();
+            frmReposicion.ShowDialog();
         }
     }
 

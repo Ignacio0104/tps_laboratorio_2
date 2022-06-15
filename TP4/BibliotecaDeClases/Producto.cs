@@ -1,7 +1,9 @@
 ﻿namespace BibliotecaDeClases
 {
+    public delegate void DelegadoStock();
     public class Producto
     {
+        public event DelegadoStock InformarNoHayStock;
         private string nombreProducto;
         private double precioProducto;
         private int stockProducto;
@@ -29,6 +31,29 @@
         public override string ToString()
         {
             return nombreProducto + " - $" + precioProducto;
+        }
+
+        public void ActualizarStock()
+        {
+            Blockbuster.BuscarProducto(this.IdProducto).StockProducto--;
+
+            if(Blockbuster.BuscarProducto(this.IdProducto).StockProducto < 1)
+            {
+                if(InformarNoHayStock is not null)
+                {
+                    InformarNoHayStock();
+                }
+            }
+        }
+
+        public bool ValidarQueElEventoNoEsteAsignado()
+        {
+            if(InformarNoHayStock is not null)
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

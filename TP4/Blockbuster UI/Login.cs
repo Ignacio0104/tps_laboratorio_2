@@ -45,7 +45,7 @@ namespace Blockbuster_UI
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Hubo un error al descargar base de datos de usuarios, favor verificar\nFavor reiniciar el programa", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Hubo un error al descargar base de datos de usuarios, favor verificar y reiniciar el programa", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
         }

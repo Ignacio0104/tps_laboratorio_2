@@ -450,7 +450,73 @@
     <ApellidoSocio>Bruckenthal</ApellidoSocio>
     <EmailSocio>abruckenthalx@hatena.ne.jp</EmailSocio>
     <TelefonoSocio>133-869-9629</TelefonoSocio>
-    <ListaDeAlquileres />
+    <ListaDeAlquileres>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>4</IdPelicula>
+          <TituloPelicula>Mad Money</TituloPelicula>
+          <DuracionPelicula>123</DuracionPelicula>
+          <GeneroPelicula>Suspenso</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
+          <Stock>11</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-14T19:58:40.1121295-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>17</IdPelicula>
+          <TituloPelicula>Mr. Moto Takes a Chance</TituloPelicula>
+          <DuracionPelicula>112</DuracionPelicula>
+          <GeneroPelicula>Accion</GeneroPelicula>
+          <DiasDeAlquiler>Clasica</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>35</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-14T19:58:41.1186103-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>19</IdPelicula>
+          <TituloPelicula>Fool's Gold</TituloPelicula>
+          <DuracionPelicula>128</DuracionPelicula>
+          <GeneroPelicula>Terror</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>49</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-14T19:58:42.1425118-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>3</IdPelicula>
+          <TituloPelicula>Corruptor, The</TituloPelicula>
+          <DuracionPelicula>92</DuracionPelicula>
+          <GeneroPelicula>Accion</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>2</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-14T19:58:42.7986292-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>2</IdPelicula>
+          <TituloPelicula>Help!</TituloPelicula>
+          <DuracionPelicula>137</DuracionPelicula>
+          <GeneroPelicula>Terror</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
+          <Stock>16</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-14T19:58:43.3866669-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+    </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
     <Penalidad>100</Penalidad>
     <TarjetaDeCredito>6395097460182500</TarjetaDeCredito>
