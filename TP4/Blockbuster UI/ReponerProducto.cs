@@ -53,17 +53,24 @@ namespace Blockbuster_UI
         private void btnLlamarProveedor_Click(object sender, EventArgs e)
         {
             picNoStock.Visible = false;
-            btnCancelar.Enabled = false;
             btnLlamarProveedor.Enabled = false;
-            Task llamar = new Task(() =>
+            Task esperarLlamada = Task.Run(() =>
             {
+                int vueltas = 0;
                 MostrarPanel();
-                Thread.Sleep(5000);
-                MessageBox.Show("Llamado exitoso, actualice el inventario al recibir los productos","Llamada exitosa");
-                this.DialogResult = DialogResult.OK;
-            }, cts.Token);
+                while (!cts.IsCancellationRequested && vueltas < 5)
+                {
+                    Thread.Sleep(1000);
+                    vueltas++;
+                }
+                if (!cts.IsCancellationRequested)
+                {
+                    MessageBox.Show("Llamado exitoso, actualice el inventario al recibir los productos",
+                        "Llamada exitosa");
+                    this.DialogResult = DialogResult.OK;
+                }
 
-            llamar.Start();
+            }, cts.Token);
 
         }
 
@@ -82,12 +89,20 @@ namespace Blockbuster_UI
 
         private void ReponerProducto_FormClosing(object sender, FormClosingEventArgs e)
         {
-            cts.Cancel();
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                if (!cts.IsCancellationRequested)
+                {
+                    cts.Cancel();
+                    MessageBox.Show("Llamada cancelada");
+                }
+            }
+          
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close();         
         }
     }
 }

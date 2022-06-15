@@ -124,6 +124,7 @@
             // 
             this.lblLlamando.AutoSize = true;
             this.lblLlamando.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblLlamando.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.lblLlamando.Location = new System.Drawing.Point(116, 45);
             this.lblLlamando.Name = "lblLlamando";
             this.lblLlamando.Size = new System.Drawing.Size(176, 19);
