@@ -49,6 +49,10 @@ namespace Blockbuster_UI
                 {
                     Blockbuster.ListaDePeliculas[Blockbuster.BuscarIndicePelicula(item.Pelicula)].Stock++;
                 }
+                foreach (Producto item in frmAlquiler.listaProductosAux)
+                {
+                    Blockbuster.ListaDeProductos[Blockbuster.BuscarIndiceProducto(item)].StockProducto++;
+                }
             }
         }
 

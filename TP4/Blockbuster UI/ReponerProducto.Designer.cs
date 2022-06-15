@@ -34,22 +34,25 @@
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Location = new System.Drawing.Point(90, 57);
+            this.lblMensaje.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblMensaje.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.lblMensaje.Location = new System.Drawing.Point(69, 59);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(109, 15);
+            this.lblMensaje.Size = new System.Drawing.Size(203, 23);
             this.lblMensaje.TabIndex = 0;
             this.lblMensaje.Text = "Producto agotado!!";
             // 
-            // LlamadaAlProveedor
+            // ReponerProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(342, 295);
             this.Controls.Add(this.lblMensaje);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "LlamadaAlProveedor";
+            this.Name = "ReponerProducto";
             this.Text = "Reponer producto";
             this.ResumeLayout(false);
             this.PerformLayout();
