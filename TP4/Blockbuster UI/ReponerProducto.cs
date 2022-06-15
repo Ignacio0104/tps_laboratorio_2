@@ -55,13 +55,15 @@ namespace Blockbuster_UI
             picNoStock.Visible = false;
             btnCancelar.Enabled = false;
             btnLlamarProveedor.Enabled = false;
-            Task llamar = Task.Run(() =>    
+            Task llamar = new Task(() =>
             {
                 MostrarPanel();
                 Thread.Sleep(5000);
-                MessageBox.Show("Llamado exitoso, actualice el inventario al recibir los productos");
+                MessageBox.Show("Llamado exitoso, actualice el inventario al recibir los productos","Llamada exitosa");
                 this.DialogResult = DialogResult.OK;
             }, cts.Token);
+
+            llamar.Start();
 
         }
 
@@ -71,7 +73,7 @@ namespace Blockbuster_UI
             {
                 Action mostrarPanelDelegado = MostrarPanel;
                 panLlamada.Invoke(mostrarPanelDelegado);
-            }
+            }   
             else
             {
                 panLlamada.Visible = true;
@@ -81,6 +83,11 @@ namespace Blockbuster_UI
         private void ReponerProducto_FormClosing(object sender, FormClosingEventArgs e)
         {
             cts.Cancel();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

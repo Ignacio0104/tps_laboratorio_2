@@ -36,6 +36,7 @@
             this.picPhone = new System.Windows.Forms.PictureBox();
             this.picNoStock = new System.Windows.Forms.PictureBox();
             this.panLlamada = new System.Windows.Forms.Panel();
+            this.lblLlamando = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picPhone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNoStock)).BeginInit();
             this.panLlamada.SuspendLayout();
@@ -76,6 +77,7 @@
             this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblPuntoUno
             // 
@@ -109,6 +111,7 @@
             // 
             // panLlamada
             // 
+            this.panLlamada.Controls.Add(this.lblLlamando);
             this.panLlamada.Controls.Add(this.picPhone);
             this.panLlamada.Controls.Add(this.lblPuntoUno);
             this.panLlamada.Location = new System.Drawing.Point(23, 76);
@@ -116,6 +119,16 @@
             this.panLlamada.Size = new System.Drawing.Size(292, 134);
             this.panLlamada.TabIndex = 14;
             this.panLlamada.Visible = false;
+            // 
+            // lblLlamando
+            // 
+            this.lblLlamando.AutoSize = true;
+            this.lblLlamando.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblLlamando.Location = new System.Drawing.Point(116, 45);
+            this.lblLlamando.Name = "lblLlamando";
+            this.lblLlamando.Size = new System.Drawing.Size(176, 19);
+            this.lblLlamando.TabIndex = 13;
+            this.lblLlamando.Text = "Llamando, por favor espere";
             // 
             // ReponerProducto
             // 
@@ -126,13 +139,13 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnLlamarProveedor);
             this.Controls.Add(this.lblMensaje);
-            this.Controls.Add(this.picNoStock);
             this.Controls.Add(this.panLlamada);
+            this.Controls.Add(this.picNoStock);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ReponerProducto";
-            this.Text = "d";
+            this.Text = "Reponer productos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ReponerProducto_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.picPhone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNoStock)).EndInit();
@@ -152,5 +165,6 @@
         private System.Windows.Forms.PictureBox picPhone;
         private System.Windows.Forms.PictureBox picNoStock;
         private System.Windows.Forms.Panel panLlamada;
+        private System.Windows.Forms.Label lblLlamando;
     }
 }
