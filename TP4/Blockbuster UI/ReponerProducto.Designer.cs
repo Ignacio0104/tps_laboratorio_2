@@ -87,7 +87,6 @@
             this.lblPuntoUno.TabIndex = 12;
             this.lblPuntoUno.Text = ".  .  .";
             this.lblPuntoUno.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblPuntoUno.Visible = false;
             // 
             // picPhone
             // 
@@ -97,7 +96,6 @@
             this.picPhone.Size = new System.Drawing.Size(125, 118);
             this.picPhone.TabIndex = 11;
             this.picPhone.TabStop = false;
-            this.picPhone.Visible = false;
             // 
             // picNoStock
             // 
@@ -124,17 +122,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(652, 309);
+            this.ClientSize = new System.Drawing.Size(349, 309);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnLlamarProveedor);
             this.Controls.Add(this.lblMensaje);
-            this.Controls.Add(this.panLlamada);
             this.Controls.Add(this.picNoStock);
+            this.Controls.Add(this.panLlamada);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ReponerProducto";
-            this.Text = "Reponer producto";
+            this.Text = "d";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ReponerProducto_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.picPhone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNoStock)).EndInit();
             this.panLlamada.ResumeLayout(false);

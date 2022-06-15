@@ -15,11 +15,12 @@ namespace Blockbuster_UI
     public partial class ReponerProducto : Form
     {
         public List<Task> listaTareas;
+        public CancellationTokenSource cts;
         public ReponerProducto()
         {
             InitializeComponent();
             AnimarMensaje();
-            panLlamada.Visible = true;
+            cts = new CancellationTokenSource();
         }
 
         private void AnimarMensaje()
@@ -54,14 +55,14 @@ namespace Blockbuster_UI
             picNoStock.Visible = false;
             btnCancelar.Enabled = false;
             btnLlamarProveedor.Enabled = false;
-            Task llamar = Task.Run(() =>
+            Task llamar = Task.Run(() =>    
             {
                 MostrarPanel();
                 Thread.Sleep(5000);
                 MessageBox.Show("Llamado exitoso, actualice el inventario al recibir los productos");
-            });
-            
-            //this.DialogResult = DialogResult.OK;
+                this.DialogResult = DialogResult.OK;
+            }, cts.Token);
+
         }
 
         private void MostrarPanel()
@@ -77,5 +78,9 @@ namespace Blockbuster_UI
             }
         }
 
+        private void ReponerProducto_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            cts.Cancel();
+        }
     }
 }
