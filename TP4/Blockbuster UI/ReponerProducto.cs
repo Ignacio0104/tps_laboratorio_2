@@ -94,7 +94,7 @@ namespace Blockbuster_UI
                 if (!cts.IsCancellationRequested)
                 {
                     cts.Cancel();
-                    MessageBox.Show("Llamada cancelada");
+                    MessageBox.Show("Llamada cancelada","Cancelar");
                 }
             }
           

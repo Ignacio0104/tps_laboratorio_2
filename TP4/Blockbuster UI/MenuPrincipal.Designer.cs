@@ -96,9 +96,9 @@
             this.lblReloj.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblReloj.Location = new System.Drawing.Point(12, 9);
             this.lblReloj.Name = "lblReloj";
-            this.lblReloj.Size = new System.Drawing.Size(50, 20);
+            this.lblReloj.Size = new System.Drawing.Size(137, 20);
             this.lblReloj.TabIndex = 9;
-            this.lblReloj.Text = "label1";
+            this.lblReloj.Text = "Error al cargar reloj";
             // 
             // btnListaEmpleados
             // 

@@ -3,7 +3,7 @@
     public delegate void DelegadoStock();
     public class Producto
     {
-        public event DelegadoStock InformarNoHayStock;
+        public event DelegadoStock InformarNoHayStock; //Se crea este evento para que ser llamado al acabarse el stock
         private string nombreProducto;
         private double precioProducto;
         private int stockProducto;
@@ -21,7 +21,7 @@
         public Producto(string nombreProducto,double precioProducto, int stockProducto)
         {
             ultimoId = Blockbuster.BuscarUltimoIdProducto();
-            this.idProducto = ultimoId + 1;
+            this.idProducto = ultimoId + 100;
             this.nombreProducto = nombreProducto;
             this.precioProducto = precioProducto;
             this.stockProducto = stockProducto;
@@ -39,15 +39,15 @@
 
             if(Blockbuster.BuscarProducto(this.IdProducto).StockProducto < 1)
             {
-                if(InformarNoHayStock is not null)
+                if(InformarNoHayStock is not null) //Verificamos que alguien este suscripto al evento
                 {
                     InformarNoHayStock();
                 }
             }
         }
 
-        public bool ValidarQueElEventoNoEsteAsignado()
-        {
+        public bool ValidarQueElEventoNoEsteAsignado() //Este evente sirve para no asignar multiples veces el evento.
+        {                                               //al asignar el metodo en el evento CellClick, tengo que evitar asignarlo cada vez que hago click
             if(InformarNoHayStock is not null)
             {
                 return false;

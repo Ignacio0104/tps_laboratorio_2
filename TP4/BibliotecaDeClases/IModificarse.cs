@@ -10,7 +10,6 @@ namespace BibliotecaDeClases
     {
         public void ActualizarInfo();
         public void EliminarObjeto();
-
         public void CargarDatosForm();
     }
 }

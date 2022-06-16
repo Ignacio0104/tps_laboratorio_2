@@ -151,6 +151,7 @@ namespace BibliotecaDeClases
             return indice;
         }
 
+        //Estos 4 metodos sirven para cargar un nuevo item y no repetir el ID
         public static int BuscarUltimoIdSocios()
         {
             int maximo = 0;

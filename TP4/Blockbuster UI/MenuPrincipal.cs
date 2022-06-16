@@ -19,7 +19,7 @@ namespace Blockbuster_UI
         {
             InitializeComponent();
             this.numeroLegajo = numeroLegajo;
-            //MostrarHora();
+            MostrarHora();
             cancelacionAutoguardado= new CancellationTokenSource();
             lblAutoGuardado.Text = "Autoguardado OFF";
         }
@@ -74,6 +74,10 @@ namespace Blockbuster_UI
                     {
                         cancelacionAutoguardado.Cancel();
                         ActualizarBaseDeDatos();
+                        using (StreamWriter outputfile = File.AppendText($".\\Recursos\\Facturacion-{DateTime.Now.ToString("dd-MM-yyyy")}.txt"))
+                        {
+                            outputfile.WriteLine(Blockbuster.FacturacionDiaria);
+                        }
                         MessageBox.Show("Todos los datos han sido guardados exitósamente", "Guardado con exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     }
@@ -166,10 +170,7 @@ namespace Blockbuster_UI
             ClaseSerializadora<List<Producto>>.EscribirJson(Blockbuster.ListaDeProductos, "baseDatosProductos");
             ClaseSerializadora<List<Pelicula>>.EscribirJson(Blockbuster.ListaDePeliculas, "baseDatosPeliculas");
             MetodosSQL.GuardarListaUsuarios(Blockbuster.ListaDeEmpleados);
-            using (StreamWriter outputfile = File.AppendText($".\\Recursos\\Facturacion-{DateTime.Now.ToString("dd-MM-yyyy")}.txt"))
-            {
-                outputfile.WriteLine(Blockbuster.FacturacionDiaria);
-            }
+
         }
 
         private void MostrarInfoActualizacion()

@@ -303,32 +303,6 @@
         <Penalidad>50</Penalidad>
         <FechaDeAlquiler>2022-05-23T17:37:53.4098193-03:00</FechaDeAlquiler>
       </AlquilerOfPelicula>
-      <AlquilerOfPelicula>
-        <Pelicula>
-          <IdPelicula>538</IdPelicula>
-          <TituloPelicula>Planet B-Boy</TituloPelicula>
-          <DuracionPelicula>114</DuracionPelicula>
-          <GeneroPelicula>Drama</GeneroPelicula>
-          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
-          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
-          <Stock>34</Stock>
-        </Pelicula>
-        <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-06-01T21:14:43.8848398-03:00</FechaDeAlquiler>
-      </AlquilerOfPelicula>
-      <AlquilerOfPelicula>
-        <Pelicula>
-          <IdPelicula>599</IdPelicula>
-          <TituloPelicula>Zozo</TituloPelicula>
-          <DuracionPelicula>115</DuracionPelicula>
-          <GeneroPelicula>Comedia</GeneroPelicula>
-          <DiasDeAlquiler>Clasica</DiasDeAlquiler>
-          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
-          <Stock>20</Stock>
-        </Pelicula>
-        <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-06-01T21:14:46.1352232-03:00</FechaDeAlquiler>
-      </AlquilerOfPelicula>
     </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
     <Penalidad>100</Penalidad>
@@ -1085,29 +1059,42 @@
     <ListaDeAlquileres>
       <AlquilerOfPelicula>
         <Pelicula>
-          <IdPelicula>5</IdPelicula>
-          <TituloPelicula>Terumae romae (Thermae Romae)</TituloPelicula>
-          <DuracionPelicula>124</DuracionPelicula>
-          <GeneroPelicula>Drama</GeneroPelicula>
-          <DiasDeAlquiler>Regular</DiasDeAlquiler>
-          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
-          <Stock>25</Stock>
+          <IdPelicula>17</IdPelicula>
+          <TituloPelicula>Mr. Moto Takes a Chance</TituloPelicula>
+          <DuracionPelicula>112</DuracionPelicula>
+          <GeneroPelicula>Accion</GeneroPelicula>
+          <DiasDeAlquiler>Clasica</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>34</Stock>
         </Pelicula>
         <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-06-01T21:17:36.433287-03:00</FechaDeAlquiler>
+        <FechaDeAlquiler>2022-06-15T22:24:47.2012765-03:00</FechaDeAlquiler>
       </AlquilerOfPelicula>
       <AlquilerOfPelicula>
         <Pelicula>
-          <IdPelicula>10</IdPelicula>
-          <TituloPelicula>L'homme qui rit</TituloPelicula>
-          <DuracionPelicula>128</DuracionPelicula>
-          <GeneroPelicula>CienciaFiccion</GeneroPelicula>
-          <DiasDeAlquiler>Clasica</DiasDeAlquiler>
-          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
-          <Stock>18</Stock>
+          <IdPelicula>6</IdPelicula>
+          <TituloPelicula>I Love You, Don't Touch Me!</TituloPelicula>
+          <DuracionPelicula>95</DuracionPelicula>
+          <GeneroPelicula>Terror</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
+          <Stock>24</Stock>
         </Pelicula>
         <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-06-01T21:17:43.8559328-03:00</FechaDeAlquiler>
+        <FechaDeAlquiler>2022-06-15T22:24:47.5772749-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>45</IdPelicula>
+          <TituloPelicula>Little Princess, A</TituloPelicula>
+          <DuracionPelicula>120</DuracionPelicula>
+          <GeneroPelicula>CienciaFiccion</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>49</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-15T22:24:48.85325-03:00</FechaDeAlquiler>
       </AlquilerOfPelicula>
     </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
@@ -1233,42 +1220,42 @@
     <ListaDeAlquileres>
       <AlquilerOfPelicula>
         <Pelicula>
-          <IdPelicula>3</IdPelicula>
-          <TituloPelicula>Corruptor, The</TituloPelicula>
-          <DuracionPelicula>92</DuracionPelicula>
+          <IdPelicula>4</IdPelicula>
+          <TituloPelicula>Mad Money</TituloPelicula>
+          <DuracionPelicula>123</DuracionPelicula>
           <GeneroPelicula>Suspenso</GeneroPelicula>
-          <DiasDeAlquiler>Regular</DiasDeAlquiler>
-          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
-          <Stock>1</Stock>
-        </Pelicula>
-        <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-05-24T16:47:16.9773634-03:00</FechaDeAlquiler>
-      </AlquilerOfPelicula>
-      <AlquilerOfPelicula>
-        <Pelicula>
-          <IdPelicula>48</IdPelicula>
-          <TituloPelicula>Children of the Corn 666: Isaac's Return</TituloPelicula>
-          <DuracionPelicula>135</DuracionPelicula>
-          <GeneroPelicula>Animada</GeneroPelicula>
-          <DiasDeAlquiler>Clasica</DiasDeAlquiler>
-          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
-          <Stock>27</Stock>
-        </Pelicula>
-        <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-05-24T16:47:18.3754424-03:00</FechaDeAlquiler>
-      </AlquilerOfPelicula>
-      <AlquilerOfPelicula>
-        <Pelicula>
-          <IdPelicula>46</IdPelicula>
-          <TituloPelicula>Circus</TituloPelicula>
-          <DuracionPelicula>140</DuracionPelicula>
-          <GeneroPelicula>Drama</GeneroPelicula>
-          <DiasDeAlquiler>Clasica</DiasDeAlquiler>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
           <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
-          <Stock>7</Stock>
+          <Stock>9</Stock>
         </Pelicula>
         <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-05-24T16:47:20.2272863-03:00</FechaDeAlquiler>
+        <FechaDeAlquiler>2022-06-15T22:24:19.9585981-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>6</IdPelicula>
+          <TituloPelicula>I Love You, Don't Touch Me!</TituloPelicula>
+          <DuracionPelicula>95</DuracionPelicula>
+          <GeneroPelicula>Terror</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
+          <Stock>24</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-15T22:24:20.5515857-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>2</IdPelicula>
+          <TituloPelicula>Help!</TituloPelicula>
+          <DuracionPelicula>137</DuracionPelicula>
+          <GeneroPelicula>Terror</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
+          <Stock>15</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-15T22:24:20.9196398-03:00</FechaDeAlquiler>
       </AlquilerOfPelicula>
       <AlquilerOfPelicula>
         <Pelicula>
@@ -1278,10 +1265,10 @@
           <GeneroPelicula>Suspenso</GeneroPelicula>
           <DiasDeAlquiler>Estreno</DiasDeAlquiler>
           <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
-          <Stock>12</Stock>
+          <Stock>9</Stock>
         </Pelicula>
         <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-05-25T15:36:39.2017973-03:00</FechaDeAlquiler>
+        <FechaDeAlquiler>2022-06-15T22:24:21.5536153-03:00</FechaDeAlquiler>
       </AlquilerOfPelicula>
     </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
@@ -5535,7 +5522,73 @@
     <ApellidoSocio>Smitheram</ApellidoSocio>
     <EmailSocio>msmitheramcn@icio.us</EmailSocio>
     <TelefonoSocio>955-198-1253</TelefonoSocio>
-    <ListaDeAlquileres />
+    <ListaDeAlquileres>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>3</IdPelicula>
+          <TituloPelicula>Corruptor, The</TituloPelicula>
+          <DuracionPelicula>92</DuracionPelicula>
+          <GeneroPelicula>Accion</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>0</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-15T22:11:27.7423746-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>4</IdPelicula>
+          <TituloPelicula>Mad Money</TituloPelicula>
+          <DuracionPelicula>123</DuracionPelicula>
+          <GeneroPelicula>Suspenso</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
+          <Stock>11</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-15T22:11:28.1471636-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>6</IdPelicula>
+          <TituloPelicula>I Love You, Don't Touch Me!</TituloPelicula>
+          <DuracionPelicula>95</DuracionPelicula>
+          <GeneroPelicula>Terror</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
+          <Stock>26</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-15T22:11:28.5711912-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>8</IdPelicula>
+          <TituloPelicula>Bananaz</TituloPelicula>
+          <DuracionPelicula>106</DuracionPelicula>
+          <GeneroPelicula>Drama</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
+          <Stock>38</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-15T22:11:29.8072499-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>3</IdPelicula>
+          <TituloPelicula>Corruptor, The</TituloPelicula>
+          <DuracionPelicula>92</DuracionPelicula>
+          <GeneroPelicula>Accion</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>0</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-15T22:11:30.4251937-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+    </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
     <Penalidad>100</Penalidad>
     <TarjetaDeCredito>3575230289250310</TarjetaDeCredito>

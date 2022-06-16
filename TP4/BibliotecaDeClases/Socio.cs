@@ -59,7 +59,7 @@ namespace BibliotecaDeClases
         }
 
         public void AgregarAlquiler(List<Alquiler<Pelicula>> peliculasElegidas, Pelicula pelicula, Action delegadoInformacion)
-        {
+        {                               //El delegado se le pasa para ser invocado cuando el socio llegue al limite de peliculas
             if((peliculasElegidas.Count + this.listaDeAlquileres.Count) < this.LimitePeliculas)
             {
                 peliculasElegidas.Add(new Alquiler<Pelicula>(pelicula));

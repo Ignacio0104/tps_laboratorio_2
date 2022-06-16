@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -131,6 +132,9 @@ namespace BibliotecaDeClases
             List<Usuario> listaUsuariosAux = new List<Usuario>();
             try
             {
+                StringBuilder sb = new StringBuilder();
+                string log = string.Empty;
+                int registro = 0;
                 connection.Open();
                 command.CommandText = $"SELECT legajoEmpleado,nombre,apellido,dni,nombreUsuario,password,esAdmin,salario,fechaIngreso,fechaNacimiento" +
                     $" FROM EMPLEADOS ";
@@ -144,15 +148,21 @@ namespace BibliotecaDeClases
                             dataReader["apellido"].ToString(), Convert.ToInt32(dataReader["dni"]), dataReader["nombreUsuario"].ToString(),
                             dataReader["password"].ToString(), Convert.ToInt32(dataReader["esAdmin"]) == 1 ? true : false, Convert.ToDateTime(dataReader["fechaIngreso"]),
                             Convert.ToDateTime(dataReader["fechaNacimiento"]), Convert.ToDouble(dataReader["salario"])));
+                            registro++;
                         }
                         catch 
                         {
-
+                            sb.AppendLine(registro.ToString()); //Guardo las posiciones con error para mostrarlas pero sin cortar la carga
                         }
 
                     }
                 }
-
+                if (sb.Length > 0)
+                    log = $"Se produjo un error al ingresar los siguientes registros: {sb.ToString()}"; 
+                using (StreamWriter outputfile = File.AppendText($".\\Recursos\\ErroresLog.txt"))
+                {
+                    outputfile.WriteLine(log);
+                }
                 return listaUsuariosAux;
 
             }
