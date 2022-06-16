@@ -118,10 +118,17 @@ namespace Blockbuster_UI
         }
         public void EliminarObjeto()
         {
-            if(socioElegido is not null)
+            try
             {
-                Blockbuster.ListaDeSocios.Remove(socioElegido);
+                if (socioElegido is not null)
+                {
+                    Blockbuster.ListaDeSocios.Remove(socioElegido);
+                }
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
+
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)

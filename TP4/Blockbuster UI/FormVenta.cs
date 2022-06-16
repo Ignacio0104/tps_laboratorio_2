@@ -34,26 +34,33 @@ namespace Blockbuster_UI
 
         private void btnAgregarAlquiler_Click(object sender, EventArgs e)
         {
-            AgregarAlquiler frmAlquiler = new AgregarAlquiler(socioAtendido);
-
-            frmAlquiler.ShowDialog();
-
-            if(frmAlquiler.DialogResult == DialogResult.OK)
+            try
             {
-                socioAtendido.ListaDeAlquileres.AddRange(frmAlquiler.listaAlquilerAux);
-                CargarInformacionSocios();
-            }
-            else
+                AgregarAlquiler frmAlquiler = new AgregarAlquiler(socioAtendido);
+
+                frmAlquiler.ShowDialog();
+
+                if (frmAlquiler.DialogResult == DialogResult.OK)
+                {
+                    socioAtendido.ListaDeAlquileres.AddRange(frmAlquiler.listaAlquilerAux);
+                    CargarInformacionSocios();
+                }
+                else
+                {
+                    foreach (Alquiler<Pelicula> item in frmAlquiler.listaAlquilerAux)
+                    {
+                        Blockbuster.ListaDePeliculas[Blockbuster.BuscarIndicePelicula(item.Pelicula)].Stock++;
+                    }
+                    foreach (Producto item in frmAlquiler.listaProductosAux)
+                    {
+                        Blockbuster.ListaDeProductos[Blockbuster.BuscarIndiceProducto(item)].StockProducto++;
+                    }
+                }
+            }catch(Exception ex)
             {
-                foreach (Alquiler<Pelicula> item in frmAlquiler.listaAlquilerAux)
-                {
-                    Blockbuster.ListaDePeliculas[Blockbuster.BuscarIndicePelicula(item.Pelicula)].Stock++;
-                }
-                foreach (Producto item in frmAlquiler.listaProductosAux)
-                {
-                    Blockbuster.ListaDeProductos[Blockbuster.BuscarIndiceProducto(item)].StockProducto++;
-                }
+                MessageBox.Show(ex.Message);
             }
+  
         }
 
         private void CargarInformacionSocios()

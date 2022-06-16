@@ -19,7 +19,7 @@ namespace Blockbuster_UI
         {
             InitializeComponent();
             this.numeroLegajo = numeroLegajo;
-            MostrarHora();
+            MostrarHora(); //Reloj
             cancelacionAutoguardado= new CancellationTokenSource();
             lblAutoGuardado.Text = "Autoguardado OFF";
         }
@@ -159,7 +159,7 @@ namespace Blockbuster_UI
                 {
                     ActualizarBaseDeDatos();
                     MostrarInfoActualizacion();
-                    Thread.Sleep(5000);
+                    Thread.Sleep(5000); 
                 }
             });
         }

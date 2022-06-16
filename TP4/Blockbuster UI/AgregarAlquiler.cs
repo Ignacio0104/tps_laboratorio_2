@@ -104,12 +104,12 @@ namespace Blockbuster_UI
                 {                                
                     DataGridViewTextBoxCell cell = (DataGridViewTextBoxCell)dGridProducto.Rows[e.RowIndex].Cells[0];
                     Producto productoAux = Blockbuster.BuscarProducto((int)cell.Value);
-                    if (productoAux.ValidarQueElEventoNoEsteAsignado())
+                    if (productoAux.ValidarQueElEventoNoEsteAsignado()) //Aqui validamos que el evento no haya sido ya asignado
                     {
-                        productoAux.InformarNoHayStock += LlamarAlProveedor;
+                        productoAux.InformarNoHayStock += LlamarAlProveedor; //Sino, lo asignamos
                     }
                     listaProductosAux.Add(productoAux);                 
-                    productoAux.ActualizarStock();              
+                    productoAux.ActualizarStock(); //Aqui se puede o no ejecutar el evento que va a estar escuchando el metodo LlamarAlProveedor             
                     dGridProducto.Rows.Clear();
                     CargarProductos();
                     ActualizarCuenta();

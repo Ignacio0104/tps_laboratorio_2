@@ -129,8 +129,8 @@ namespace Blockbuster_UI
             {
                 throw new NombreOApellidoInvalido("Favor revisar el campo apellido");
             }
-            int dniAux;
-            int.TryParse(txtDni.Text, out dniAux);
+            ;
+            int.TryParse(txtDni.Text, out int dniAux);
             if (!dniAux.ValidarDni())
             {
                 throw new DniInvalido("Favor verificar el DNI ingresado (sin puntos ni espacios)");
@@ -141,8 +141,7 @@ namespace Blockbuster_UI
                 throw new DatosIncompletos("Favor verificar el nombre de usuario y/o clave ingresados");
             }
 
-            double salarioAux;
-            double.TryParse(txtSalario.Text, out salarioAux);
+            double.TryParse(txtSalario.Text, out double salarioAux);
             if (salarioAux < 20000 || salarioAux > 1000000)
             {
                 throw new DatosIncompletos("Favor verificar salario ingresado");

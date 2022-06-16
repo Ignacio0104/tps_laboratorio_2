@@ -43,7 +43,7 @@ namespace Blockbuster_UI
                 Blockbuster.ListaDeEmpleados = MetodosSQL.LeerListaUsuarios();
                 //Blockbuster.ListaDeEmpleados = ClaseSerializadora<List<Usuario>>.LeerJson("baseDatosEmpleados"); Sirve a modo de backup por si se daña la DB
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("Hubo un error al descargar base de datos de usuarios, favor verificar y reiniciar el programa", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

@@ -153,14 +153,21 @@ namespace Blockbuster_UI
 
         public void EliminarObjeto()
         {
-            if(peliculaElegida is not null)
+            try
             {
-                Blockbuster.ListaDePeliculas.Remove(peliculaElegida);
-            }
-            else
+                if (peliculaElegida is not null)
+                {
+                    Blockbuster.ListaDePeliculas.Remove(peliculaElegida);
+                }
+                else
+                {
+                    Blockbuster.ListaDeProductos.Remove(productoElegido);
+                }
+            }catch(Exception ex)
             {
-                Blockbuster.ListaDeProductos.Remove(productoElegido);
+                MessageBox.Show(ex.Message);
             }
+   
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)

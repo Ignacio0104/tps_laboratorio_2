@@ -1295,19 +1295,6 @@
         <Penalidad>50</Penalidad>
         <FechaDeAlquiler>2022-06-01T20:55:15.2995648-03:00</FechaDeAlquiler>
       </AlquilerOfPelicula>
-      <AlquilerOfPelicula>
-        <Pelicula>
-          <IdPelicula>26</IdPelicula>
-          <TituloPelicula>Art School Confidential</TituloPelicula>
-          <DuracionPelicula>130</DuracionPelicula>
-          <GeneroPelicula>Terror</GeneroPelicula>
-          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
-          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
-          <Stock>23</Stock>
-        </Pelicula>
-        <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-06-01T20:55:17.3158053-03:00</FechaDeAlquiler>
-      </AlquilerOfPelicula>
     </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
     <Penalidad>100</Penalidad>
