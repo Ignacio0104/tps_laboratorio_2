@@ -243,7 +243,8 @@ namespace Blockbuster_UI
 
         public void MostrarLimitePeliculas()
         {
-            MessageBox.Show($"Error, este usuario ya llegó a su límite de alquileres", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show($"Error, este usuario ya llegó a su límite de alquileres", "Error", 
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public void LlamarAlProveedor()

@@ -71,9 +71,7 @@ namespace Blockbuster_UI
                 }
 
             }, cts.Token);
-
         }
-
         private void MostrarPanel()
         {
             if (panLlamada.InvokeRequired)

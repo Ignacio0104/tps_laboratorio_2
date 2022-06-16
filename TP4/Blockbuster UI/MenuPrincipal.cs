@@ -163,7 +163,6 @@ namespace Blockbuster_UI
                 }
             });
         }
-
         private void ActualizarBaseDeDatos()
         {
             ClaseSerializadora<List<Socio>>.EscribirXml(Blockbuster.ListaDeSocios, "baseDatosSocios");
@@ -172,7 +171,6 @@ namespace Blockbuster_UI
             MetodosSQL.GuardarListaUsuarios(Blockbuster.ListaDeEmpleados);
 
         }
-
         private void MostrarInfoActualizacion()
         {
             if (lblActualizacionInfo.InvokeRequired)

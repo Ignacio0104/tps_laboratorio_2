@@ -46,7 +46,7 @@
             }
         }
 
-        public bool ValidarQueElEventoNoEsteAsignado() //Este evente sirve para no asignar multiples veces el evento.
+        public bool ValidarQueElEventoNoEsteAsignado() //Este evento sirve para no asignar multiples veces el evento.
         {                                               //al asignar el metodo en el evento CellClick, tengo que evitar asignarlo cada vez que hago click
             if(InformarNoHayStock is not null)
             {
