@@ -11626,4 +11626,15 @@
     <LimitePeliculas>20</LimitePeliculas>
     <Penalidad>30</Penalidad>
   </Socio>
+  <Socio xsi:type="SocioClasico">
+    <IdSocio>1007</IdSocio>
+    <NombreSocio>Eduardo</NombreSocio>
+    <ApellidoSocio>Pereyra</ApellidoSocio>
+    <EmailSocio>pereyra@gmail.com</EmailSocio>
+    <TelefonoSocio>45601235</TelefonoSocio>
+    <ListaDeAlquileres />
+    <LimitePeliculas>5</LimitePeliculas>
+    <Penalidad>100</Penalidad>
+    <TarjetaDeCredito>5678123400001111</TarjetaDeCredito>
+  </Socio>
 </ArrayOfSocio>

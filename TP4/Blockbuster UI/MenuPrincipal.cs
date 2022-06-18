@@ -83,7 +83,7 @@ namespace Blockbuster_UI
                     }
                     catch (Exception exc)
                     {
-                        DialogResult opcionDos = MessageBox.Show("Hubo un error al guardar los datos \n ¿Desea salir y perder los datos no guardados?", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop);
+                        DialogResult opcionDos = MessageBox.Show("Hubo un error al guardar los datos \n  ¿Desea salir y perder los datos no guardados?\n Presione Cancelar para reintentar", "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop);
                         if (opcionDos == DialogResult.Cancel)
                         {
 
