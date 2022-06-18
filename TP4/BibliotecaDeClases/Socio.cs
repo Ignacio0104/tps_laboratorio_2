@@ -22,15 +22,14 @@ namespace BibliotecaDeClases
             this.listaDeAlquileres = new List<Alquiler<Pelicula>>();
         }
 
+
         public Socio(string nombre,string apellido,string email,string telefono):this()
-        {
-            ultimoId = Blockbuster.BuscarUltimoIdSocios();
-            this.idSocio = ultimoId +1;
+        { 
+            this.idSocio = Blockbuster.BuscarUltimoIdSocios()+1;
             this.nombreSocio = nombre;
             this.apellidoSocio = apellido;
             this.emailSocio = email;
-            this.telefonoSocio = telefono;
-            ultimoId++;
+            this.telefonoSocio = telefono;      
         }
         public int IdSocio { get => idSocio; set => idSocio = value; }
         public string NombreSocio { get => nombreSocio; set => nombreSocio = value; }

@@ -35,7 +35,7 @@ namespace BibliotecaDeClases
                 File.WriteAllText(completa, objetoJson);
 
             }
-            catch (Exception e)
+            catch
             {
                 throw new Exception($"Error en el archivo {completa}");
             }
@@ -73,7 +73,7 @@ namespace BibliotecaDeClases
                 }
                 return datos;
             }
-            catch (Exception e)
+            catch
             {
                 throw new Exception($"Error en el archivo {completa}");
             }
@@ -134,7 +134,7 @@ namespace BibliotecaDeClases
                 }
                 return datos;
             }
-            catch (Exception e)
+            catch
             {
                 throw new Exception($"Error en el archivo {completa}");
             }

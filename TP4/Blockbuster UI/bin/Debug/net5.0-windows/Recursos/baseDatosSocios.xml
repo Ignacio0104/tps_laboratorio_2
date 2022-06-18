@@ -8822,7 +8822,47 @@
     <ApellidoSocio>Mynott</ApellidoSocio>
     <EmailSocio>emynottl8@ycombinator.com</EmailSocio>
     <TelefonoSocio>197-749-3041</TelefonoSocio>
-    <ListaDeAlquileres />
+    <ListaDeAlquileres>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>331</IdPelicula>
+          <TituloPelicula>Zizek!</TituloPelicula>
+          <DuracionPelicula>134</DuracionPelicula>
+          <GeneroPelicula>Animada</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>30</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-18T11:23:50.1255053-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>3</IdPelicula>
+          <TituloPelicula>Corruptor, The</TituloPelicula>
+          <DuracionPelicula>92</DuracionPelicula>
+          <GeneroPelicula>Accion</GeneroPelicula>
+          <DiasDeAlquiler>Regular</DiasDeAlquiler>
+          <PrecioDeAlquiler>Especial</PrecioDeAlquiler>
+          <Stock>0</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-18T11:23:50.5387429-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+      <AlquilerOfPelicula>
+        <Pelicula>
+          <IdPelicula>602</IdPelicula>
+          <TituloPelicula>Age of Ultron</TituloPelicula>
+          <DuracionPelicula>112</DuracionPelicula>
+          <GeneroPelicula>Accion</GeneroPelicula>
+          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
+          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
+          <Stock>29</Stock>
+        </Pelicula>
+        <Penalidad>50</Penalidad>
+        <FechaDeAlquiler>2022-06-18T11:23:56.9686688-03:00</FechaDeAlquiler>
+      </AlquilerOfPelicula>
+    </ListaDeAlquileres>
     <LimitePeliculas>20</LimitePeliculas>
     <Penalidad>30</Penalidad>
   </Socio>
@@ -11562,6 +11602,27 @@
         <FechaDeAlquiler>2022-06-04T10:30:03.7723792-03:00</FechaDeAlquiler>
       </AlquilerOfPelicula>
     </ListaDeAlquileres>
+    <LimitePeliculas>20</LimitePeliculas>
+    <Penalidad>30</Penalidad>
+  </Socio>
+  <Socio xsi:type="SocioClasico">
+    <IdSocio>1005</IdSocio>
+    <NombreSocio>John</NombreSocio>
+    <ApellidoSocio>Master</ApellidoSocio>
+    <EmailSocio>jMaster@gmail.com</EmailSocio>
+    <TelefonoSocio>12347642</TelefonoSocio>
+    <ListaDeAlquileres />
+    <LimitePeliculas>5</LimitePeliculas>
+    <Penalidad>100</Penalidad>
+    <TarjetaDeCredito>4567333390001234</TarjetaDeCredito>
+  </Socio>
+  <Socio xsi:type="SocioPremium">
+    <IdSocio>1006</IdSocio>
+    <NombreSocio>Lucas</NombreSocio>
+    <ApellidoSocio>Gonzales</ApellidoSocio>
+    <EmailSocio>lGonzalez@hotmail.com</EmailSocio>
+    <TelefonoSocio>45671234</TelefonoSocio>
+    <ListaDeAlquileres />
     <LimitePeliculas>20</LimitePeliculas>
     <Penalidad>30</Penalidad>
   </Socio>

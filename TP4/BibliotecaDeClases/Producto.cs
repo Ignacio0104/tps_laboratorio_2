@@ -15,12 +15,14 @@
         public double PrecioProducto { get => precioProducto; set => precioProducto = value; }
         public int StockProducto { get => stockProducto; set => stockProducto = value; }
 
-
+        static Producto()
+        {
+            ultimoId = Blockbuster.BuscarUltimoIdProducto();
+        }
         public Producto() { }
 
         public Producto(string nombreProducto,double precioProducto, int stockProducto)
         {
-            ultimoId = Blockbuster.BuscarUltimoIdProducto();
             this.idProducto = ultimoId + 100;
             this.nombreProducto = nombreProducto;
             this.precioProducto = precioProducto;

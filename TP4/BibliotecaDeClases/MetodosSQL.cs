@@ -15,6 +15,7 @@ namespace BibliotecaDeClases
         static string connectionString;
         static SqlCommand command;
         static SqlConnection connection;
+        static string logErrores;
 
         static MetodosSQL()
         {
@@ -56,39 +57,6 @@ namespace BibliotecaDeClases
                 connection.Close();
             }
         }
-
-        public static void ModificarUsuario(Usuario usuario)
-        {
-            try
-            {
-                connection.Open();
-                command.Parameters.Clear();
-                command.CommandText = $"UPDATE EMPLEADOS SET nombre=@nombre, apellido=@apellido, dni=@dni, " +
-                    $"nombreUsuario=@nombreUsuario,password=@password,esAdmin=@esAdmin,salario=@salario, " +
-                    $"fechaIngreso=@fechaIngreso,fechaNacimiento=@fechaNacimiento " +
-                    $"WHERE legajoEmpleado = {usuario.Legajo}";
-                command.Parameters.AddWithValue("@nombre", usuario.Nombre);
-                command.Parameters.AddWithValue("@apellido", usuario.Apellido);
-                command.Parameters.AddWithValue("@dni", usuario.DNI);
-                command.Parameters.AddWithValue("@nombreUsuario", usuario.NombreUsuario);
-                command.Parameters.AddWithValue("@password", usuario.Password);
-                command.Parameters.AddWithValue("@esAdmin", usuario.EsAdmin ? 1 : 0);
-                command.Parameters.AddWithValue("@salario", usuario.Salario);
-                command.Parameters.AddWithValue("@fechaIngreso", usuario.FechaIngreso);
-                command.Parameters.AddWithValue("@fechaNacimiento", usuario.FechaNacimiento);
-                command.ExecuteNonQuery();
-
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                connection.Close();
-            }
-        }
-
 
         public static void GuardarListaUsuarios(List<Usuario> usuarios)
         {
@@ -158,11 +126,9 @@ namespace BibliotecaDeClases
                     }
                 }
                 if (sb.Length > 0)
-                    log = $"Se produjo un error al ingresar los siguientes registros: {sb.ToString()}"; 
-                using (StreamWriter outputfile = File.AppendText($".\\Recursos\\ErroresLog.txt"))
-                {
-                    outputfile.WriteLine(log);
-                }
+                    log = $"Se produjo un error al ingresar los siguientes registros: {sb.ToString()}";
+
+                logErrores = log;
                 return listaUsuariosAux;
 
             }
