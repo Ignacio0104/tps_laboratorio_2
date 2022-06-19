@@ -477,19 +477,6 @@
         <Penalidad>50</Penalidad>
         <FechaDeAlquiler>2022-06-14T19:58:42.7986292-03:00</FechaDeAlquiler>
       </AlquilerOfPelicula>
-      <AlquilerOfPelicula>
-        <Pelicula>
-          <IdPelicula>2</IdPelicula>
-          <TituloPelicula>Help!</TituloPelicula>
-          <DuracionPelicula>137</DuracionPelicula>
-          <GeneroPelicula>Terror</GeneroPelicula>
-          <DiasDeAlquiler>Regular</DiasDeAlquiler>
-          <PrecioDeAlquiler>Normal</PrecioDeAlquiler>
-          <Stock>16</Stock>
-        </Pelicula>
-        <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-06-14T19:58:43.3866669-03:00</FechaDeAlquiler>
-      </AlquilerOfPelicula>
     </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
     <Penalidad>100</Penalidad>
@@ -1256,19 +1243,6 @@
         </Pelicula>
         <Penalidad>50</Penalidad>
         <FechaDeAlquiler>2022-06-15T22:24:20.9196398-03:00</FechaDeAlquiler>
-      </AlquilerOfPelicula>
-      <AlquilerOfPelicula>
-        <Pelicula>
-          <IdPelicula>4</IdPelicula>
-          <TituloPelicula>Mad Money</TituloPelicula>
-          <DuracionPelicula>123</DuracionPelicula>
-          <GeneroPelicula>Suspenso</GeneroPelicula>
-          <DiasDeAlquiler>Estreno</DiasDeAlquiler>
-          <PrecioDeAlquiler>Promo</PrecioDeAlquiler>
-          <Stock>9</Stock>
-        </Pelicula>
-        <Penalidad>50</Penalidad>
-        <FechaDeAlquiler>2022-06-15T22:24:21.5536153-03:00</FechaDeAlquiler>
       </AlquilerOfPelicula>
     </ListaDeAlquileres>
     <LimitePeliculas>5</LimitePeliculas>
